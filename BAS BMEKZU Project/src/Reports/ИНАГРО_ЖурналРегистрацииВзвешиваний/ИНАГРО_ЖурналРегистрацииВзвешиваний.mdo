@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d22c1520-6624-47dc-b9bf-1471906f8722">
+  <producedTypes>
+    <objectType typeId="b95c3259-52d4-49f6-b5da-9c1340c0089d" valueTypeId="d87afb5b-335e-4678-8449-845c90d5870d"/>
+    <managerType typeId="31ec9f5c-4db0-4e0c-9c9f-229bc5a0d36a" valueTypeId="1e91eb8b-1853-4db1-ac27-1ab96a3200c1"/>
+  </producedTypes>
+  <name>ИНАГРО_ЖурналРегистрацииВзвешиваний</name>
+  <synonym>
+    <key>ru</key>
+    <value>Журнал регистрации взвешиваний</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Журнал реєстрації зважувань</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.ИНАГРО_ЖурналРегистрацииВзвешиваний.Form.ФормаОтчета</defaultForm>
+  <mainDataCompositionSchema>Report.ИНАГРО_ЖурналРегистрацииВзвешиваний.Template.СКД_Ввоз</mainDataCompositionSchema>
+  <defaultSettingsForm>CommonForm.ВспомогательнаяФормаНастроекОтчета</defaultSettingsForm>
+  <variantsStorage>SettingsStorage.ХранилищеВариантовОтчетов</variantsStorage>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+    <pages>
+      <lang>uk</lang>
+    </pages>
+  </help>
+  <attributes uuid="418bf8e0-9998-4998-bf5b-4b3ab2ea96ee">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="36589c80-71ba-4487-b141-3b44a4d26e64">
+    <name>Период</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Період</value>
+    </synonym>
+    <type>
+      <types>StandardPeriod</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="b0995c1d-d72a-499d-b853-b473189a1931">
+    <name>ТипОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип отчета</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Тип звіту</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="933639b1-95d8-4d91-a825-0478fd919d1d">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма звіту</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="b61a11cb-72a6-4beb-8884-a72aef87d532">
+    <name>СКД_Ввоз</name>
+    <synonym>
+      <key>ru</key>
+      <value>СКД ввоз</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>СКД Ввезення</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="4408dacb-3b6e-4b5a-b0c7-8b8b649d3396">
+    <name>СКД_Вывоз</name>
+    <synonym>
+      <key>ru</key>
+      <value>СКД вывоз</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>СКД Вивезення</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="83a1c698-4f35-45f8-b5d5-f16c81cf4bb1">
+    <name>СКД_Взвешивание</name>
+    <synonym>
+      <key>ru</key>
+      <value>СКД взвешивание</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>СКД Зважування</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="d3a78a53-03c2-4199-b320-427d4ed21e17">
+    <name>СКД_ВнутреннеПеремещение</name>
+    <synonym>
+      <key>ru</key>
+      <value>СКД внутренне перемещение</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>СКД внутренне перемещение</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="a9033bd2-a335-4352-b82a-880689752ea9">
+    <name>СКД_ВвозВывоз</name>
+    <synonym>
+      <key>ru</key>
+      <value>СКД ввоз вывоз</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>СКД ввезення вивезення</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="aa92b044-ef86-4738-8066-76c9e5781ae1">
+    <name>СКД_ВвозЖД</name>
+    <synonym>
+      <key>ru</key>
+      <value>СКД ввоз ЖД</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>СКД Ввезення ЖД</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="f1a4fcbc-ca0c-4fe7-8e22-ada5c1cda37a">
+    <name>СКД_ВывозЖД</name>
+    <synonym>
+      <key>ru</key>
+      <value>СКД вывоз ЖД</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>СКД Вивезення ЖД</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="362e0c77-9398-44ca-a910-f81fccb62528">
+  <producedTypes>
+    <objectType typeId="61b0e68d-9669-4d98-b81f-d088ca0fd6aa" valueTypeId="ce1ebac2-0a1d-4080-99c9-7127683e871a"/>
+    <managerType typeId="17139270-f43b-4104-88af-8021481278da" valueTypeId="38bbdc0a-62cd-4470-bb93-f98a0502136e"/>
+  </producedTypes>
+  <name>ИНАГРО_РасчетныеЛисткиОрганизаций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Расчетные листки организаций</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Розрахункові листки організацій</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.ИНАГРО_РасчетныеЛисткиОрганизаций.Form.ФормаОтчета</defaultForm>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+    <pages>
+      <lang>uk</lang>
+    </pages>
+  </help>
+  <attributes uuid="bc50b109-1636-47bf-a0b4-57252673b7d4">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода организации</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення організації</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="baca98b3-074e-4025-b980-cbd7963d9d75">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Підрозділ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияОрганизаций</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода подразделения</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення підрозділу</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>Report.ИНАГРО_РасчетныеЛисткиОрганизаций.Attribute.Организация</field>
+    </choiceParameterLinks>
+  </attributes>
+  <attributes uuid="4d9f9336-ca02-41c0-8c15-2b1e966b0f6a">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Співробітник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода сотрудника</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення співробітника</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.ГоловнаяОрганизация</name>
+      <field>Report.ИНАГРО_РасчетныеЛисткиОрганизаций.Attribute.Организация</field>
+    </choiceParameterLinks>
+    <choiceParameterLinks>
+      <name>Подразделение</name>
+      <field>Report.ИНАГРО_РасчетныеЛисткиОрганизаций.Attribute.Подразделение</field>
+    </choiceParameterLinks>
+  </attributes>
+  <attributes uuid="521908b2-e0af-48a9-9b30-c19de4876a1e">
+    <name>НачалоПериода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начало периода</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Дата початку</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода даты начала</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення дати початку</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="e5026003-4f88-4e72-bd9a-09439a7fcd26">
+    <name>КонецПериода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Конец периода</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Дата кінця</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода даты конца</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення дати кінця</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="2385b5d5-65ab-4bce-8d66-931c48108f4b">
+    <name>СвернутьПоВидамРасчетов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Свернуть по видам расчетов</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Згорнути по видах розрахунків</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак свернуть по видам расчетов</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака згорнути за видами розрахунків</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="a15c6c1a-6276-4c3c-9d58-a3c5691f144c">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма звіту</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="417eba1e-e8a0-4492-8800-ce6e65b739a6">
+    <name>Макет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Макет</value>
+    </synonym>
+  </templates>
+</mdclass:Report>

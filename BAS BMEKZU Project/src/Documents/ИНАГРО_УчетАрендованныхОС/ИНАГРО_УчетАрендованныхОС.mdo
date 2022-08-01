@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5b5c9116-ece6-4646-9dc8-6b04b0962da4">
+  <producedTypes>
+    <objectType typeId="3ac4657a-8b21-4a14-8c48-e95c41d40e31" valueTypeId="0fbc8216-deaa-4fb4-bfd4-71d14b50a64f"/>
+    <refType typeId="0c970391-421a-46d8-8a6e-7b9f1fb8a8fa" valueTypeId="71cfad0b-4da4-45da-b006-8568cd76203e"/>
+    <selectionType typeId="bf5a97c7-5fd9-4cfe-bb61-eefd53e1c41d" valueTypeId="0e3eb3e5-aa5b-4725-b1b5-8dee713aa1c9"/>
+    <listType typeId="dbcb9bae-5383-4a34-abc5-7c9f33a990f6" valueTypeId="6e876b3b-945a-46c8-b74f-a2812b4ea1a5"/>
+    <managerType typeId="44545540-2dd4-4545-a74f-daabb6832c78" valueTypeId="ed59320a-aa3c-45ae-9188-af427a52ac14"/>
+  </producedTypes>
+  <name>ИНАГРО_УчетАрендованныхОС</name>
+  <synonym>
+    <key>ru</key>
+    <value>Учет арендованных ОС</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Облік орендованих ОЗ</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ИНАГРО_УчетАрендованныхОС.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Posted</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+    <pages>
+      <lang>uk</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <listPresentation>
+    <key>ru</key>
+    <value>Учет арендованных ОС</value>
+  </listPresentation>
+  <listPresentation>
+    <key>uk</key>
+    <value>Облік орендованих ОЗ</value>
+  </listPresentation>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ИНАГРО_УчетАрендованныхОС.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.ИНАГРО_УчетАрендованныхОС.Form.ФормаСписка</defaultListForm>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
+  <sequenceFilling>AutoFillOff</sequenceFilling>
+  <registerRecords>InformationRegister.МестонахождениеОСБухгалтерскийУчет</registerRecords>
+  <registerRecords>InformationRegister.СобытияОСОрганизаций</registerRecords>
+  <registerRecords>InformationRegister.ПервоначальныеСведенияОСБухгалтерскийУчет</registerRecords>
+  <registerRecords>AccountingRegister.Хозрасчетный</registerRecords>
+  <registerRecords>InformationRegister.СостоянияОСОрганизаций</registerRecords>
+  <registerRecords>InformationRegister.СчетаБухгалтерскогоУчетаОС</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="abbcf80a-d9bb-43c4-871f-2ee7692cc0dc">
+    <name>ВидОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид операции</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вид операції</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ИНАГРО_ВидыОперацийУчетАрендованныхОС</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак вида операции</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака виду операції</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="9ebd0d34-2f4a-46fd-b075-7128aee436ea">
+    <name>ВторойЧленКомиссии</name>
+    <synonym>
+      <key>ru</key>
+      <value>Второй член комиссии</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Другий член комісії</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания второго члена комиссии</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання другого члена комісії</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="6fc23080-2e48-4c92-b8f4-ba4162030679">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Коментар</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода комментария</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення коментаря</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="98f999aa-9d5a-4d6e-baa5-407efec673b1">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода контрагента</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення контрагента</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="725fd42d-59c3-4920-99f8-939526c2efa7">
+    <name>МОЛБУ</name>
+    <synonym>
+      <key>ru</key>
+      <value>МОЛ (бухгалтерский учет)</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>МВО (БО)</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания материально ответственного лица</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання матеріально відповідальної особи</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="01a3481a-6458-46d5-8167-04c1bb872c94">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода организации</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення організації</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="fd239d64-0b60-4e4e-8bfd-d6cd9de3a820">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відповідальний</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода ответственного</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення відповідального</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="da138fe5-d135-43f0-a414-e2038ebf52ee">
+    <name>ПервыйЧленКомиссии</name>
+    <synonym>
+      <key>ru</key>
+      <value>Первый член комиссии</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Перший член комісії</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания первого члена комиссии</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання першого члена комісії</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7f37763d-3491-4772-b345-1dacc23dd9df">
+    <name>ПодразделениеОрганизации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение организации</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Підрозділ організації</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияОрганизаций</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания подразделения организации</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання підрозділу організації</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>Document.ИНАГРО_УчетАрендованныхОС.Attribute.Организация</field>
+    </choiceParameterLinks>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1708d118-e8c6-48bc-82e0-b1f753fccaac">
+    <name>ПредседательКомиссии</name>
+    <synonym>
+      <key>ru</key>
+      <value>Председатель комиссии</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Голова комісії</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания председателя комиссии</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання голови комісії</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e0ab44c4-7ce3-4e3a-bb52-dd020889aca0">
+    <name>РучнаяКорректировка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ручная корректировка</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Ручне коригування</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак ручной корректировки движений документа</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака ручного коректування рухів документа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="da80ebf1-b2b8-4998-b756-cfaf2ce87383">
+    <name>СобытиеОС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Событие ОС</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Подія ОЗ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СобытияОС</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания события основного средства</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання події основного засобу</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="33d51c29-9e99-4fad-baf8-c496a2e86106">
+    <name>СчетУчетаБУ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет учета (бухгалтерский учет)</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Рахунок (БО)</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания счета учета бухгалтерского учета</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання рахунку обліку бухгалтерського обліку</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameters>
+      <name>Отбор.Забалансовый</name>
+      <value xsi:type="core:BooleanValue">
+        <value>true</value>
+      </value>
+    </choiceParameters>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="fd09358c-619d-4fe2-9725-8b2e74c4c668">
+    <name>ТретийЧленКомиссии</name>
+    <synonym>
+      <key>ru</key>
+      <value>Третий член комиссии</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Третій член комісії</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания третьего члена комиссии</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання третього члена комісії</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="1349f55d-ded6-4521-9560-cdbfef88445c">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="1b3d8df6-4fed-4f40-a8a4-4182a3d28f6e">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма списку</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="27006478-cc12-4252-8bb4-039efcca99ab">
+    <producedTypes>
+      <objectType typeId="2a843f07-9ffd-40dc-85e3-877202987868" valueTypeId="8ab1c063-d0ea-4f99-b2f0-06c3643529ec"/>
+      <rowType typeId="5628dbd0-a803-4964-964d-b357cb3740e7" valueTypeId="028c2ca2-8312-4b10-b8b2-c2e829cd43ff"/>
+    </producedTypes>
+    <name>ОС</name>
+    <synonym>
+      <key>ru</key>
+      <value>ОС</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>ОЗ</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="f7c04fb6-58c1-4094-9d5e-27848c7fe42f">
+      <name>ОсновноеСредство</name>
+      <synonym>
+        <key>ru</key>
+        <value>Основное средство</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Основний засіб</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ОсновныеСредства</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Ввод основного средства</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Введення основного засобу</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="be76aa6e-63d1-4428-9c4d-6afd57bab3e5">
+      <name>ИнвентарныйНомер</name>
+      <synonym>
+        <key>ru</key>
+        <value>Инвентарный номер</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Інвентарний номер</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>9</length>
+        </stringQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Ввод инвентарного номера</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Введення інвентарного номера</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c1a961a2-7361-4d5b-8388-d6715a0fee17">
+      <name>СтоимостьБУ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Стоимость (бух. учет)</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вартість (бух. облік)</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для стоимости бухгалтерского учета</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для вартості бухгалтерського обліку</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e4c25553-7115-4778-bf81-fa1636086dc1">
+  <producedTypes>
+    <selectionType typeId="289a76eb-2bf6-421f-9782-abe7a4996de8" valueTypeId="f3445df1-be06-4888-bc97-b102935d0c8f"/>
+    <listType typeId="2242fbc5-e0ab-4761-9f43-d4e7a208b11d" valueTypeId="bf55a252-a433-45f7-a0da-ba1b4044caba"/>
+    <managerType typeId="b852e49d-b2cb-4764-aab5-eb724eec7971" valueTypeId="1c4274b4-8539-47cc-8431-1bf46490f61c"/>
+    <recordSetType typeId="c9127bac-73ab-4565-8ca9-be82d66c0df3" valueTypeId="d5a8a446-a61e-4816-a18f-bde9442f19c2"/>
+    <recordKeyType typeId="113b395f-25e6-4988-af3a-33be39435fa4" valueTypeId="8c17914f-347e-4f32-a892-c64f29b1ea01"/>
+    <recordType typeId="605ff939-db6b-4033-88f2-9764f44641b7" valueTypeId="861c2153-93a7-4551-aece-0f9ab561c7ed"/>
+  </producedTypes>
+  <name>ИНАГРО_ВедомостьДвижений</name>
+  <synonym>
+    <key>ru</key>
+    <value>Ведомость движений</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Відомість руху</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+    <pages>
+      <lang>uk</lang>
+    </pages>
+  </help>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>RecordType</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода периода</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення періоду</value>
+    </toolTip>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <resources uuid="2ebc65a1-6845-4846-a0dd-10614dc15384">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Кількість</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для записи количества</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для запису кількості</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="bfbc9404-97ae-4005-ab76-cce796736c70">
+    <name>НаправлениеДвижения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Направление движения</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Напрямок руху</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИНАГРО_ВидыДвиженийВедомости</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для записи направления движения</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для запису напрямку руху</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="c047660c-af02-4521-8bbe-6c314e7a1720">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для записи номенклатуры</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для запису номенклатури</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="d2f2536b-0b20-4c88-b3ac-2a248014064b">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для записи склада</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для запису складу</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="ca4c025c-2020-495e-b4f8-6da213460bf2">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для записи организации</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для запису організації</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

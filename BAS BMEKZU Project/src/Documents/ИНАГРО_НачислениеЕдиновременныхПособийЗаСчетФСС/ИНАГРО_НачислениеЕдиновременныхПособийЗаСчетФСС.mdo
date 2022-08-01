@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f909b16f-fde7-4dfa-a599-38a0edaecffe">
+  <producedTypes>
+    <objectType typeId="1fceb59b-6d89-4e71-a804-b6414cb048eb" valueTypeId="27262a8e-1643-4603-be4e-18230ddbd461"/>
+    <refType typeId="54b5bd76-f4cd-4706-812c-e97d9d60a155" valueTypeId="156ac241-6a00-41df-95f2-b53c1a9cadc2"/>
+    <selectionType typeId="9e10deb6-4047-487d-8f51-6a6ba633c5a8" valueTypeId="1baa14bc-8abf-4c45-b3f9-729c6d6c84c9"/>
+    <listType typeId="e78e68be-9238-493e-b781-4e943bc8a070" valueTypeId="c53dbe30-734d-443b-8a0e-acc34c1a2ce9"/>
+    <managerType typeId="3a785b83-f046-4d80-8761-c469679148b9" valueTypeId="e5da5af5-0768-410c-9e55-54b47286a7b7"/>
+  </producedTypes>
+  <name>ИНАГРО_НачислениеЕдиновременныхПособийЗаСчетФСС</name>
+  <synonym>
+    <key>ru</key>
+    <value>Начисление единовременных пособий за счет ФСС</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Нарахування одноразових допомог за рахунок ФСС</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ИНАГРО_НачислениеЕдиновременныхПособийЗаСчетФСС.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Posted</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+    <pages>
+      <lang>uk</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <listPresentation>
+    <key>ru</key>
+    <value>Начисление единовременных пособий за счет ФСС</value>
+  </listPresentation>
+  <listPresentation>
+    <key>uk</key>
+    <value>Нарахування одноразових допомог за рахунок ФСС</value>
+  </listPresentation>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ИНАГРО_НачислениеЕдиновременныхПособийЗаСчетФСС.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.ИНАГРО_НачислениеЕдиновременныхПособийЗаСчетФСС.Form.ФормаСписка</defaultListForm>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecordsDeletion>AutoDelete</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <registerRecords>AccumulationRegister.ВзаиморасчетыССотрудниками</registerRecords>
+  <registerRecords>CalculationRegister.ИНАГРО_Начисления</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="23d62749-c989-423e-922c-4cf121235123">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания организации</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання організації</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="42683de0-f394-4d93-bc35-053cdb051dfe">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Коментар</value>
+    </synonym>
+    <comment>Любая дополнительная информация</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода комментария по документу</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення коментаря по документу</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2b788a9d-ea1d-4e1f-a3b0-1e537bd4e4fc">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відповідальний</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания ответственного за создание документа</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання відповідального за створення документу</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="0cc121a3-b1f0-455b-b789-a8b1796984e3">
+    <name>КраткийСоставДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Краткий состав документа</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Короткий зміст документа</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Служебное поле для записи краткого состава сотрудников по документу</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Службове поле для запису короткого складу працівників по документу</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="76c92fee-7d1a-46a8-bd40-5db16229344f">
+    <name>ПериодРегистрации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период регистрации</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Період реєстрації</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания месяца начисления</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання місяця нарахування</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="08acafad-cb16-4205-87d8-8c837c0e32e0">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма документу</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="f111d52d-0768-41e6-bfb1-8f3153c42174">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма списку</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="f93a21b6-c450-40bd-bf3f-724b81972a72">
+    <producedTypes>
+      <objectType typeId="abc4cbba-9ad8-495b-b325-0bbbfa2bb8ea" valueTypeId="7be3016a-9319-4a23-95e2-c218c6da9689"/>
+      <rowType typeId="317963b8-0162-4ed5-9ace-c3a513903924" valueTypeId="53ab8e72-e79d-41e2-a781-dcb184acc300"/>
+    </producedTypes>
+    <name>Начисления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начисления</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Нарахування</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="c745e6a4-ebac-4489-aa77-d524b1b56f4e">
+      <name>Сотрудник</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сотрудник</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Працівник</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Сотрудники</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для указания сотрудника</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для вказання працівника</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <choiceParameterLinks>
+        <name>Отбор.ГоловнаяОрганизация</name>
+        <field>Document.ИНАГРО_НачислениеЕдиновременныхПособийЗаСчетФСС.Attribute.Организация</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <choiceHistoryOnInput>DontUse</choiceHistoryOnInput>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="1a214d0c-f091-415c-8cb9-d9e7ef43171d">
+      <name>ДатаСобытия</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата события</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Дата події</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для указания даты начисления</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для вказання дати нарахування</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d0c9576b-cb4a-410e-9952-f219cfb99481">
+      <name>Результат</name>
+      <synonym>
+        <key>ru</key>
+        <value>Результат</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Результат</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения результата по строке</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для заповнення результата по рядку</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="bab7fd5f-7fcb-4c04-99fe-d0496f3890cf">
+      <name>ВидРасчета</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид расчета</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вид розрахунку</value>
+      </synonym>
+      <type>
+        <types>ChartOfCalculationTypesRef.ИНАГРО_Начисления</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для указания вида расчета</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для введення виду розрахунку</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <choiceParameters>
+        <name>Отбор.НачислениеЗаСчетФСС</name>
+        <value xsi:type="core:BooleanValue">
+          <value>true</value>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a5fbefa7-2cd1-4369-8e63-144ad2d2461c">
+      <name>Физлицо</name>
+      <synonym>
+        <key>ru</key>
+        <value>Физическое лицо</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Фізична особа</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ФизическиеЛица</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для указания физического лица</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для вказання фізичної особи</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="985e917a-d628-4d02-8f1d-721ab42e4b2e">
+      <name>СпособОтраженияВБухучете</name>
+      <synonym>
+        <key>ru</key>
+        <value>Способ отражения в бух. учете</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Спосіб відображення в бух. обліку</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СпособыОтраженияЗарплатыВРеглУчете</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для указания способа отражения начисления в бухгалтерском учете</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для вказання способу відображення нарахування в бухгалтерському обліку</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b992e7de-e5e7-4c4f-bc33-f40074db364f">
+      <name>ФамилияУмершего</name>
+      <synonym>
+        <key>ru</key>
+        <value>Фамилия умершего</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Прізвище померлого</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="70d9eb84-673c-473f-bbf4-206667c5075c">
+      <name>ИмяУмершего</name>
+      <synonym>
+        <key>ru</key>
+        <value>Имя умершего</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ім'я померлого</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d9cd5b3f-610d-45eb-9e21-ceb349ca205b">
+      <name>ОтчествоУмершего</name>
+      <synonym>
+        <key>ru</key>
+        <value>Отчество умершего</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>По батькові померлого</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="6d7bfda8-7ffc-4827-9151-01864b9107a4">
+      <name>СвидетельствоСерия</name>
+      <synonym>
+        <key>ru</key>
+        <value>Свидетельство серия</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Свідоцтво серія</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>10</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="95089988-e055-4947-8177-6604bcb47c93">
+      <name>СвидетельствоНомер</name>
+      <synonym>
+        <key>ru</key>
+        <value>Свидетельство номер</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Свідоцтво номер</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>10</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

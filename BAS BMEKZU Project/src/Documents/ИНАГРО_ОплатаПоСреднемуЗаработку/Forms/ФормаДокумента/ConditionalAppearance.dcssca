@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConditionalAppearance xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+	<item>
+		<selection>
+			<item>
+				<field>Начисления</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Начисления.Сторно</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>НачисленияПоказатель2</field>
+			</item>
+			<item>
+				<field>НачисленияИмяПоказатель2</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Начисления.ИмяПоказатель2</left>
+				<comparisonType>NotFilled</comparisonType>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>НачисленияПоказатель3</field>
+			</item>
+			<item>
+				<field>НачисленияИмяПоказатель3</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Начисления.ИмяПоказатель3</left>
+				<comparisonType>NotFilled</comparisonType>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>НачисленияДатаНачала</field>
+			</item>
+			<item>
+				<field>НачисленияДатаОкончания</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПоказатьПериодДействия</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>НачисленияБазовыйПериодНачало</field>
+			</item>
+			<item>
+				<field>НачисленияБазовыйПериодКонец</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПоказатьБазовыйПериод</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>НачисленияОтработаноДней</field>
+			</item>
+			<item>
+				<field>НачисленияОтработаноЧасов</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПоказатьОтработанноеВремя</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>НачисленияНормаДней</field>
+			</item>
+			<item>
+				<field>НачисленияНормаЧасов</field>
+			</item>
+			<item>
+				<field>НачисленияНормаДнейЗаМесяц</field>
+			</item>
+			<item>
+				<field>НачисленияНормаЧасовЗаМесяц</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПоказатьНормуВремени</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>НачисленияЗаменаСотрудник</field>
+			</item>
+			<item>
+				<field>НачисленияЗаменаВидРасчета</field>
+			</item>
+			<item>
+				<field>НачисленияЗаменаКоличествоСтавок</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПоказатьЗамены</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>НачисленияГрафикРаботы</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПоказатьГрафикРаботы</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>НачисленияВидУчетаВремениДляСредней</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПоказатьВидУчетаВремениДляСредней</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>НачисленияДополнительныеДанные</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПоказатьДополнительныеДанные</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+</ConditionalAppearance>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="652857f9-e2b7-46f1-9f37-1d653fcfde65">
+  <producedTypes>
+    <selectionType typeId="7456e78a-183b-4395-b01c-ed74df2f06de" valueTypeId="2520a681-a737-4182-8cb0-de51e7b5af97"/>
+    <listType typeId="92fdd32e-0ad5-42ed-9138-42f6db47f968" valueTypeId="41338be2-b362-4080-9ed9-76f2b8556994"/>
+    <managerType typeId="5e187d39-0983-4e89-b00d-313c90cd5c07" valueTypeId="3aaea9d6-6c98-4a3b-a0b0-05a78fb3b5ec"/>
+    <recordSetType typeId="160b7717-6357-472f-b383-de45277d3ddd" valueTypeId="4b150504-121e-4c0c-99a5-97d312d5d33f"/>
+    <recordKeyType typeId="899c0d78-2679-44f8-86d7-4dc499a07930" valueTypeId="734c8e62-ff91-4247-b78c-71dfb34ac307"/>
+    <recordType typeId="1788e83b-b980-4e03-966d-5b96ffe57789" valueTypeId="21f9c4ff-5a01-453a-af68-eae06a243d2d"/>
+  </producedTypes>
+  <name>ИНАГРО_РасчетныйВыпускПродукции</name>
+  <synonym>
+    <key>ru</key>
+    <value>Расчетный выпуск продукции (элеватор)</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Розрахунковий випуск продукції</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+    <pages>
+      <lang>uk</lang>
+    </pages>
+  </help>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>RecordType</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для введения периода</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення періода</value>
+    </toolTip>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <resources uuid="8d6cf0d7-1edb-4052-8dd0-846223152b3a">
+    <name>Вес</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вес</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вага</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для записи веса</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для запису ваги</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="76e92424-8f93-414c-a980-844d6ba5f385">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для записи организации</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для запису організації</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="f1c98916-b496-47a3-b289-cbf529f1c285">
+    <name>Владелец</name>
+    <synonym>
+      <key>ru</key>
+      <value>Владелец</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Власник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для записи владельца</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для запису власника</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="9cadb2ee-238f-4f7e-b606-a9bbbec9d576">
+    <name>Продукция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Продукция</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Продукція</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для записи продукции</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для запису продукції</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="1bb176fe-d66b-412c-9040-079fea5821e7">
+    <name>ПодразделениеОрганизации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение организации</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Підрозділ організації</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияОрганизаций</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для записи подразделения организации</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для запису підрозділу організації</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

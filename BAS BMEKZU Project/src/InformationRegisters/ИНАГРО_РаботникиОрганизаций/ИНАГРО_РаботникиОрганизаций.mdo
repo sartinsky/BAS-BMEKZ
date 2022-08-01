@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b67b373b-7e83-41de-889c-a4c4764cc944">
+  <producedTypes>
+    <selectionType typeId="8d781c35-c586-45e9-a059-333aa42af836" valueTypeId="00e6a539-91ec-4138-930d-84efa44ef4f0"/>
+    <listType typeId="f0d93c5a-08c6-45d4-8f80-a53e3fff0f56" valueTypeId="9f3b9c05-26ce-4110-ab5e-f4fa14ceb0b9"/>
+    <managerType typeId="6f65d50d-bacd-4afc-8153-581a7191457d" valueTypeId="e07b51c1-a58c-426c-9c79-09d2aab269e2"/>
+    <recordSetType typeId="cbf977f2-a4b1-4101-a416-633743d9ec64" valueTypeId="82c1c8e9-fd0f-40bf-9fe6-34a1b80480bd"/>
+    <recordKeyType typeId="5c426e04-05fc-404a-b8aa-e028675ccce8" valueTypeId="3efc7d82-1237-4ab1-9872-fcced5c9c5a1"/>
+    <recordType typeId="f52fcc3d-b10d-45f8-b3ec-c231dac069f4" valueTypeId="e1bcaba3-512b-4a67-86af-927c55d4bb01"/>
+    <recordManagerType typeId="13522f2f-2d29-45ba-b3cf-322f7c6b5588" valueTypeId="e922ed7a-0821-45df-b2df-5ee6c7ba525f"/>
+  </producedTypes>
+  <name>ИНАГРО_РаботникиОрганизаций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Работники организаций</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Працівники організацій</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.ИНАГРО_РаботникиОрганизаций.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания периода</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання періоду</value>
+    </toolTip>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+    <pages>
+      <lang>uk</lang>
+    </pages>
+  </help>
+  <resources uuid="16c132c5-88aa-429a-9e7e-386e2ad0b42b">
+    <name>ЗанимаемыхСтавок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Занимаемых ставок</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Займаних ставок</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>4</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания количества занимаемых ставок</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання кількості займаних ставок</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="f4b5deaf-e74e-4f7d-8b53-4af73baf5276">
+    <name>ПодразделениеОрганизации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Підрозділ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияОрганизаций</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания подразделения</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання підрозділу</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>InformationRegister.ИНАГРО_РаботникиОрганизаций.Dimension.Организация</field>
+    </choiceParameterLinks>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e9ffa618-d049-4df8-a512-1c0bc9070123">
+    <name>Должность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Должность</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Посада</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Должности</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания должности</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання посади</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="0baf043f-755b-47b4-94a0-2c970f38a1dd">
+    <name>ПричинаИзмененияСостояния</name>
+    <synonym>
+      <key>ru</key>
+      <value>Причина изменения состояния</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Причина зміни стану</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ПричиныИзмененияСостояния</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания причины изменения состояния сотрудника</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання причини зміни стану працівника</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e7823427-5b0e-41f3-83be-8c91f8eda784">
+    <name>ГрафикРаботы</name>
+    <synonym>
+      <key>ru</key>
+      <value>График работы</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Графік роботи</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИНАГРО_ГрафикиРаботы</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания графика работы</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання графіка роботи</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="b0472577-8c00-4553-b83f-71ad80c5fbfb">
+    <name>СпособОтраженияВБухучете</name>
+    <synonym>
+      <key>ru</key>
+      <value>Способ отражения в бух.учете</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Спосіб відображення в бух.обліку</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СпособыОтраженияЗарплатыВРеглУчете</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания способа отражения зарплаты сотрудника в регламентированном учете</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання способу відображення зарплати в регламентованому обліку</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e692e06f-1574-4fbe-b3c9-dfd77c94d451">
+    <name>ПринятНаНовоеРабочееМесто</name>
+    <synonym>
+      <key>ru</key>
+      <value>Принят на новое рабочее место</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Прийнятий на нове робоче місце</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак приёма на новое робочее место</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака прийому на нове робоче місце</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="2e554b02-387f-473f-830c-a339403c0821">
+    <name>ИзменениеДолжности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Изменение должности</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Зміна посади</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e597ef3d-177c-48b3-821b-c0eb43025147">
+    <name>ПредыдущаяДолжность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Предыдущая должность</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Попередня посада</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Должности</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания должности</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання посади</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="f30703fc-6bc3-42a8-bb83-f6ff2f56d376">
+    <name>УдалитьТабельныйНомер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удалить табельный номер</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Видалити табельний номер</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="da98e6c9-7b6a-40c6-8286-4a0b54e02db7">
+    <name>УдалитьПричинаИзмененияСостояния</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удалить причина изменения состояния</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Видалити причина зміни стану</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ПричиныИзмененияСостояния</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="6ed9bfb0-4fb8-483c-a238-1f0b84a5cebe">
+    <name>ДатаСозданияРабочегоМеста</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата создания рабочего места</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Дата створення робочого місця</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для введения даты создания рабочего места</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення дати створення робочого місця</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="8efb2e6f-a4a1-4680-9819-9b1fa1b5190e">
+    <name>СтатьяКЗоТ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья КЗоТ</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Стаття КЗпП</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ОснованияУвольнения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="4430f9c5-a01f-4ec6-b5a5-dbd531407e3a">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Працівник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания сотрудника</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання співробітника</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="90061694-4387-4235-a786-0baafd3f0db3">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания организации</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання організації</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="7715023c-8392-48bc-b39e-c26bdb509bd8">
+    <name>УдалитьФизлицо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удалить физлицо</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Видалити фіз.особа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="dc9eac71-a1d1-47ba-b9f5-2bd32aa88763">
+    <name>УдалитьПриказ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удалить приказ</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Видалити наказ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.УдалитьПриемНаРаботуВОрганизацию</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="be18b4c1-1fa8-4b5d-aef2-f21b84f848a1">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма списку</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

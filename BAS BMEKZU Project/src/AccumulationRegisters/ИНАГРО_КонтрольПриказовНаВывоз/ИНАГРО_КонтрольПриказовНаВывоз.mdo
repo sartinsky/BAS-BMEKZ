@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f128a70e-62e5-4a08-98c5-00951aa06a5d">
+  <producedTypes>
+    <selectionType typeId="d3ed5d38-13a3-4079-a854-e063a9fb0bb6" valueTypeId="79aaceec-4326-4008-8f7a-3159109836b4"/>
+    <listType typeId="1d988889-387e-4cb2-b600-eeeeec1d4e22" valueTypeId="8232a378-a312-4b91-ab46-fa3e125026c7"/>
+    <managerType typeId="6b115c2c-bead-4b05-8102-a5e945f9e823" valueTypeId="2fc885e1-12c9-451f-8340-be8061ca1525"/>
+    <recordSetType typeId="beb82215-68d3-4f36-8b9c-f064bf1c2f06" valueTypeId="1e6ebc36-88e2-4d01-b3b7-42279cd98e94"/>
+    <recordKeyType typeId="65691baa-c43d-4be1-a75d-8ac8da1871c9" valueTypeId="75e09aee-cdb4-4e4f-87d5-7612cdb574eb"/>
+    <recordType typeId="3de509d7-dd03-4644-b07e-81e42524e445" valueTypeId="32235355-5963-40ce-8f3e-2019122a3fb2"/>
+  </producedTypes>
+  <name>ИНАГРО_КонтрольПриказовНаВывоз</name>
+  <synonym>
+    <key>ru</key>
+    <value>Контроль приказов на вывоз</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Контроль наказів на вивезення</value>
+  </synonym>
+  <registerType>Turnovers</registerType>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+    <pages>
+      <lang>uk</lang>
+    </pages>
+  </help>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания периода</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення періоду</value>
+    </toolTip>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <resources uuid="e7ebb054-7d11-4e43-a702-e804fa8d23f2">
+    <name>ЗачетныйВесПлан</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зачетный вес плановый </value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Залікова вага план</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>16</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания зачетного веса план</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання залікової ваги план</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="324d77af-c66d-4cf2-b121-da04b9d284be">
+    <name>ФизическийВесПлан</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физический вес плановый</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Фізична вага план</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания физического веса план</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання фізичної ваги план</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="1a84a55e-8019-4c31-98fe-0b1e148c74c0">
+    <name>ЗачетныйВесФакт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зачетный вес по факту</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Залікова вага факт</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>16</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания зачетного веса факт</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання залікової ваги факт</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="6bfb3086-389b-4259-850e-99fa561175e0">
+    <name>ФизическийВесФакт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физический вес по факту</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Фізична вага факт</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания физического веса факт</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання фізичної ваги факт</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="30706a53-8c56-4a09-b95b-f1a72b63a51b">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания организации</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання організації</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="31f26cc1-d7c3-4040-8141-84f11aced925">
+    <name>Владелец</name>
+    <synonym>
+      <key>ru</key>
+      <value>Владелец</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Власник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания владельца</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання власника</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="2fa5a5b9-17d1-403c-882f-deb6fe170c44">
+    <name>Договор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Договір</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания договора контрагента</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення договору контрагента</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="ea3216f0-9ab6-47a4-a366-7458f37ce2b5">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <comment>Номенклатура</comment>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания номенклатуры </value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення номенклатури</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="3d7d9856-6582-4bfe-9be3-9d1853d7bd59">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Склад</value>
+    </synonym>
+    <comment>Склад</comment>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания склада</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання складу</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="d0044152-e5b1-4805-8a52-4fd1b1745885">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ИНАГРО_ПриказНаВывоз</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания документа</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання документа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

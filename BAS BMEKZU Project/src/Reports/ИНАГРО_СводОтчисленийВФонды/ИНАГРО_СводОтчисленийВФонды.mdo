@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ddf335bc-e00f-4e51-b0aa-d8452f757588">
+  <producedTypes>
+    <objectType typeId="0708f3a4-7362-4551-b273-21ac2307da28" valueTypeId="a9429fc4-02c5-47e7-baf3-7a041a01e4b7"/>
+    <managerType typeId="5eb2c91f-41f0-4b85-978a-06bf56d3609a" valueTypeId="1b15a211-1720-4d5b-ba24-e6c545d5bb2c"/>
+  </producedTypes>
+  <name>ИНАГРО_СводОтчисленийВФонды</name>
+  <synonym>
+    <key>ru</key>
+    <value>Свод отчислений в фонды (Ин-Агро)</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Звіт відрахувань до фондів (Ін-Агро)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.ИНАГРО_СводОтчисленийВФонды.Form.ФормаОтчета</defaultForm>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+    <pages>
+      <lang>uk</lang>
+    </pages>
+  </help>
+  <attributes uuid="96730c5f-1bc5-4233-8ef6-79664f2143fe">
+    <name>НачалоПериода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начало периода</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Початок періоду</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода начала периода</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення початку періоду</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="e0dcea0b-dc90-4e95-aac8-564395ad8ebf">
+    <name>КонецПериода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Конец периода</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Кінець періоду</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода конца периода</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення кінця періоду</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="453241df-8cd2-49c9-9a8c-9ed2ff00f5ad">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для выбора организации</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вибору організації</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="502e4133-9d16-4b46-8deb-9e928c66d08c">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Підрозділ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияОрганизаций</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для выбора подразделения</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вибору підрозділу</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>Report.ИНАГРО_СводОтчисленийВФонды.Attribute.Организация</field>
+    </choiceParameterLinks>
+  </attributes>
+  <attributes uuid="923ec2e9-ccf3-40fa-a313-3e126c6c35d0">
+    <name>ФлажокБаза</name>
+    <synonym>
+      <key>ru</key>
+      <value>База</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>База</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Выводить базу</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Виводити базу</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a8a8586c-a455-488f-923a-93e7687f52e7">
+    <name>ФлажокБазаВзноса</name>
+    <synonym>
+      <key>ru</key>
+      <value>База с ограничениями</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>База з обмеженнями</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Выводить базу с ограничениями</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Виводити базу з обмеженнями</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="573c2bf4-0055-49ec-b553-9067c4c53008">
+    <name>ФлажокРезультат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма взноса</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Сума внеску</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Выводить сумму взноса</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Виводити суму внеску</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="d87094aa-9e72-4fb2-a104-1d039edbfbeb">
+    <name>ФлажокСвернутьПодразделения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Свернуть по подразделениям</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Згорнути по підрозділам</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Свернуть данные в разрезе подразделений</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Згорнути дані в розрізі підрозділів</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="c2bd024e-4ed4-43fe-9e97-8c963c2882e9">
+    <name>РежимОтображения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Режим отображения</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Режим відображення</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Выбор режима отображения</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Вибір режиму відображення</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="ee55d5f4-e616-4bbd-8992-db5d0f5ba616">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма звіту</value>
+    </synonym>
+    <includeHelpInContents>true</includeHelpInContents>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+      <pages>
+        <lang>uk</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="4adab693-a044-43c2-b7b5-83e13441e542">
+    <name>СводОтчисленийВФонды</name>
+    <synonym>
+      <key>ru</key>
+      <value>Свод отчислений в фонды</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Звід відрахувань до фондів</value>
+    </synonym>
+  </templates>
+</mdclass:Report>

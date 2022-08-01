@@ -1,0 +1,2504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="997255c8-e5e5-41f1-8bf1-e64a798d0209">
+  <producedTypes>
+    <objectType typeId="846790e0-5f88-424a-baf2-9fee67f5b45c" valueTypeId="fa5a429b-7c5d-49ca-a6ce-b5865a1c2673"/>
+    <refType typeId="c7718e19-a6b0-43a7-853e-ff68648203cf" valueTypeId="8036deef-8528-4222-8787-9242db42843e"/>
+    <selectionType typeId="4d32be15-ff16-4c21-8f35-1c7ffd5f173f" valueTypeId="a504d096-1eac-4784-a4a9-3f313b27ea65"/>
+    <listType typeId="b9cc28c6-ef05-4423-ae0c-d2fbf608c806" valueTypeId="a31af330-da80-4b62-8176-3384531cd2b7"/>
+    <managerType typeId="02f3a46b-8377-4fb7-89f4-cbfcb37cb0a0" valueTypeId="e30f2686-f209-4296-80ae-fd7e4a55f09d"/>
+  </producedTypes>
+  <name>ИНАГРО_НачислениеОтпускаРаботникамОрганизаций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Начисление отпуска работникам организаций</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Нарахування відпустки робітникам організацій</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ИНАГРО_НачислениеОтпускаРаботникамОрганизаций.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Posted</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+    <pages>
+      <lang>uk</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <listPresentation>
+    <key>ru</key>
+    <value>Начисление отпусков работникам организаций</value>
+  </listPresentation>
+  <listPresentation>
+    <key>uk</key>
+    <value>Нарахування відпусток робітникам організацій</value>
+  </listPresentation>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ИНАГРО_НачислениеОтпускаРаботникамОрганизаций.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.ИНАГРО_НачислениеОтпускаРаботникамОрганизаций.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Document.ИНАГРО_НачислениеОтпускаРаботникамОрганизаций.Form.ФормаВыбора</defaultChoiceForm>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
+  <sequenceFilling>AutoFillOff</sequenceFilling>
+  <registerRecords>AccumulationRegister.ВзаиморасчетыССотрудниками</registerRecords>
+  <registerRecords>InformationRegister.ИНАГРО_СостояниеРаботниковОрганизаций</registerRecords>
+  <registerRecords>AccumulationRegister.ИНАГРО_РабочееВремяРаботниковОрганизаций</registerRecords>
+  <registerRecords>CalculationRegister.ИНАГРО_РасчетСреднегоЗаработка</registerRecords>
+  <registerRecords>CalculationRegister.ИНАГРО_Начисления</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="27c12cd8-6cc8-48c3-9dd3-d1956b60f19e">
+    <name>ВидДокументаОтпуск</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид документа</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вид документа</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ИНАГРО_ВидыДокументаОтпуск</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания вида документа отпуска</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання виду документу відпустки</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="30ad077d-9043-4681-82b3-891d1e5b6170">
+    <name>ВидУчетаВремениДляСредней</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид учета времени для средней</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вид обліку часу для середньої</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ИНАГРО_ВидыУчетаВремениДляСредней</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для заполнения вида учета времени для средней</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення виду обліку часу для середньої</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="3ad21acb-a6d3-4541-bc75-f4c726c01fb7">
+    <name>ГодоваяПремия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Годовая премия</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Річна премія</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>16</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для введения годовой премии</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення річної премії</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="34f2e4b9-1efa-46fe-b53c-6daf981a7b55">
+    <name>ГодоваяПремияБазовыйПериодНачало</name>
+    <synonym>
+      <key>ru</key>
+      <value>Годовая премия базовый период начало</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Річна премія базовий період початок</value>
+    </synonym>
+    <comment>Период в котором сумма зарегистрирована, используется системой для автоматического расчета</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания начала базового периода годовой премии</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення початку базового періоду річної премії</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="8c8eb8d2-62c4-48b8-bb24-8b2b11c6349f">
+    <name>ДнейЧасовКомпенсацииОтпуска</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дней/часов компенсации отпуска</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Днів/годин компенсації відпустки</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для введения дней или часов компенсации отпуска</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення днів або годин компенсації відпустки</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="9033fc0c-279d-4e47-a749-f1b8f709175c">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Коментар</value>
+    </synonym>
+    <comment>Любая дополнительная информация</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода комментария по документу</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення коментаря по документу</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="91d1a9bc-9dba-4720-846a-ff4c19030f0e">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания организации</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання організації</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="840ae434-5ff5-4890-a3c4-cfb0594b64b1">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відповідальний</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания ответственного за создание документа</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання відповідального за створення документу</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c9a83c19-e22b-4262-a8fe-f8545f413203">
+    <name>ПервичныйОтпуск</name>
+    <synonym>
+      <key>ru</key>
+      <value>Первичный отпуск</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Первинний документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ИНАГРО_НачислениеОтпускаРаботникамОрганизаций</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для введения первичного отпуска</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення первинної відпустки</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Организация</name>
+      <field>Document.ИНАГРО_НачислениеОтпускаРаботникамОрганизаций.Attribute.Организация</field>
+    </choiceParameterLinks>
+    <choiceParameterLinks>
+      <name>Отбор.Сотрудник</name>
+      <field>Document.ИНАГРО_НачислениеОтпускаРаботникамОрганизаций.Attribute.Сотрудник</field>
+    </choiceParameterLinks>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1f3cb5ca-decf-4c4f-8dce-1fa762f3faff">
+    <name>ПериодРасчетаСреднегоКонец</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период расчета среднего конец</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Період розрахунку середнього кінець</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания окончания периода расчета средней</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення кінця періоду розрахунку середньої</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d21e6ec6-4400-4944-8781-2b8acf951981">
+    <name>ПериодРасчетаСреднегоНачало</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период расчета среднего начало</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Період розрахунку середнього початок</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания начала периода расчета средней</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення початку періоду розрахунку середньої</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="3d8c1984-30d2-40b0-927e-ded66fa7f350">
+    <name>ПериодРегистрации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период регистрации</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Період реєстрації</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания месяца начисления</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання місяця нарахування</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c188e78f-c911-45d4-87e0-07ef040c46b8">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Співробітник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания сотрудника</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання працівника</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameterLinks>
+      <name>Отбор.ГоловнаяОрганизация</name>
+      <field>Document.ИНАГРО_НачислениеОтпускаРаботникамОрганизаций.Attribute.Организация</field>
+    </choiceParameterLinks>
+    <choiceParameters>
+      <name>Отбор.ИНАГРО_ДоговорПодряда</name>
+      <value xsi:type="core:BooleanValue"/>
+    </choiceParameters>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="684938fd-12e3-4acf-9c11-8bd57feed9c7">
+    <name>СуммаСредней</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма средней</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Сума середньої</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>16</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для заполнения суммы средней</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для заповнення суми середньої</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="6a29cb82-e1c6-4c20-a667-42b070af0795">
+    <name>ЧислоМесяцев</name>
+    <synonym>
+      <key>ru</key>
+      <value>Число месяцев</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Кількість місяців</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для введения количества месяцев для расчета средней</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для введення кількості місяців для розрахунку середньої</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="806cf167-9120-4649-af79-9666b34ca667">
+    <name>РабочийГодС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Рабочий год с</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Робочий рік з</value>
+    </synonym>
+    <comment>Начало периода за который берется отпуск</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания начала года для отпуска</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання початку року для відпустки</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="68fa1ec7-53bf-42d4-97f0-57b5bd676982">
+    <name>РабочийГодПо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Рабочий год по</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Робочий рік по</value>
+    </synonym>
+    <comment>Конец периода за который берется отпуск</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания окончания года для отпуска</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання закінчення року для відпустки</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7520abf4-1266-4626-8f40-935e31cf65a3">
+    <name>КоэффициентПовышенияОкладов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коэффициент повышения окладов (во время отпуска)</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Коефіцієнт підвищення окладів</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+        <scale>10</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания коэффициента повышения окладов</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання коефіцієнту підвищення окладів</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:NumberValue">
+      <value>1</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="fbe491e4-f538-41bd-94ea-af77d97b0540">
+    <name>ПоказатьГрафикРаботы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Показать график работы</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Показати графік роботи</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак видимости графика работы сотрудников в табличной части</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака видимості графіка роботи працівників в табличній частині</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="da7cb80a-c50f-49da-ad64-ad1b12c1cb15">
+    <name>ПоказатьДополнительныеДанные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Показать дополнительные данные</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Показати додаткові дані</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак видимости дополнительных данных по  сотрудникам в табличной части</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака видимості додаткових даних по працівникам в табличній частині</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="bf43d6b6-1eff-44bd-963b-f5f0faf221cd">
+    <name>ПоказатьЗамены</name>
+    <synonym>
+      <key>ru</key>
+      <value>Показать замены</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Показати заміни</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак видимости данных по заменам в табличной части</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака видимості даних по замінам в табличній частині</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="49933219-b62f-4431-8ab3-e2b36972050b">
+    <name>ПоказатьНормуВремени</name>
+    <synonym>
+      <key>ru</key>
+      <value>Показать норму времени</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Показати норму часу</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак видимости нормы времени сотрудников в табличной части</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака видимості норми часу працівників в табличній частині</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="942e020b-12ab-4ea4-b038-81317fb29a8c">
+    <name>ПоказатьОтработанноеВремя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Показать отработанное время</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Показати відпрацьований час</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак видимости отработанного сотрудниками времени в табличной части</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака видимості відпрацьованого працівниками часу в табличній частині</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c9930fe2-bff3-4f5f-a6c6-4d3b60baf542">
+    <name>ПоказатьПериодДействия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Показать период действия</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Показати період дії</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак видимости периода действия начисления в табличной части</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака видимості періоду дії нарахування в табличній частині</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="627b7194-8b28-4518-ab43-bb815149c31e">
+    <name>ПоказатьБазовыйПериод</name>
+    <synonym>
+      <key>ru</key>
+      <value>Показать базовый период</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Показати базовий період</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак видимости базового периода</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака видимості базового періоду</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="180be436-52fe-4855-ab4d-efaee8d669b6">
+    <name>ПоказатьВидУчетаВремениДляСредней</name>
+    <synonym>
+      <key>ru</key>
+      <value>Показать вид учета времени для средней</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Показати вид обліку часу для середньої</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак видимости вида учета времени для средней</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака видимості виду обліку часу для середньої</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="79a942ff-48c2-4d1e-812b-ea0071bab069">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма документу</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="6e08df75-bf07-4a54-bfe7-a3eac9661a6d">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма списку</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="9e72a743-72fd-4a07-9e90-1b6f0139401a">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма вибору</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="c6c9d633-883f-48d6-8dc0-7351d41ac779">
+    <producedTypes>
+      <objectType typeId="76ea4c31-e36b-480d-862c-a889cd54c4bb" valueTypeId="af0f7e1d-e4a1-49af-a004-9e012987cfe7"/>
+      <rowType typeId="26c1fa2b-0cc3-4375-8987-38c6c09e8c35" valueTypeId="1cb8dc84-1c8a-49f7-b0c8-8c5b2cfd53ea"/>
+    </producedTypes>
+    <name>Начисления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начисления</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Нарахування</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="0ad3a146-4fe3-45e5-90f8-2a0a48a8c201">
+      <name>Авторасчет</name>
+      <synonym>
+        <key>ru</key>
+        <value>Авторасчет</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Авторозрахунок</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Признак автоматического расчета по строке табличной части</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Ознака автоматичного розрахунку по рядку табличної частини</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="14cae293-565d-424a-a063-65dd3c3b88d6">
+      <name>БазовыйПериодКонец</name>
+      <synonym>
+        <key>ru</key>
+        <value>Базовый период конец</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Базовий період кінець</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для указания окончания базового периода</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для введення кінця базового періоду</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c76523a3-c5dc-45f1-8f3c-82b48b76f37e">
+      <name>БазовыйПериодНачало</name>
+      <synonym>
+        <key>ru</key>
+        <value>Базовый период начало</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Базовий період початок</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для указания начала базового периода</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для введення початку базового періоду</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="f134bebc-1f3a-49aa-9d0e-c663592eb946">
+      <name>ВидРасчета</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид расчета</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вид розрахунку</value>
+      </synonym>
+      <type>
+        <types>ChartOfCalculationTypesRef.ИНАГРО_Начисления</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для указания вида расчета</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для введення виду розрахунку</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <choiceParameters>
+        <name>Отбор.ГруппаРасчетов</name>
+        <value xsi:type="core:ReferenceValue">
+          <value>Catalog.ИНАГРО_ГруппыВидовРасчета.Отпуск</value>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a6a1db1a-ab12-42c9-acc5-0e36587765db">
+      <name>ВидУчетаВремениДляСредней</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид учета времени для средней</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вид обліку часу для середньої</value>
+      </synonym>
+      <type>
+        <types>EnumRef.ИНАГРО_ВидыУчетаВремениДляСредней</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения вида учета времени для средней</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для введення виду обліку часу для середньої</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="0ebe4942-2379-4083-9f1e-e50a420dd648">
+      <name>ГрафикРаботы</name>
+      <synonym>
+        <key>ru</key>
+        <value>График работы</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Графік роботи</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ИНАГРО_ГрафикиРаботы</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения графика работы сотрудника</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для заповнення графіку роботи працівника</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a77afe00-1942-4de2-b8c4-5d69ae1b8eaf">
+      <name>ДатаНачала</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата начала</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Дата початку</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для указания даты начала действия начисления</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для введення дати початку дії нарахування</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="e70265db-568b-4b64-b9e2-5bdf2f69a2c0">
+      <name>ДатаОкончания</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата окончания</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Дата закінчення</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для указания даты окончания действия начисления</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для введення дати закінчення дії нарахування</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="f42a0501-871a-4be2-9850-c674a0a8569f">
+      <name>ДополнительныеДанные</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дополнительные данные</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Додаткові дані</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения дополнительных данных работника</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для заповнення додаткових даних працівника
+</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="1a71c68b-0929-4fa9-b2e0-06149fafdc16">
+      <name>ЗаменаВидРасчета</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид расчета (для замены)</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вид розрахунку (для заміни)</value>
+      </synonym>
+      <comment>Если не заполнен, значит это не замена</comment>
+      <type>
+        <types>ChartOfCalculationTypesRef.ИНАГРО_Начисления</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения вида расчета по заменам</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для заповнення виду розрахунку по замінам</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="67d2c3f4-7c43-4cf8-996c-df976528ee14">
+      <name>ЗаменаКоличествоСтавок</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество ставок (замены)</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Кількість ставок (заміни)</value>
+      </synonym>
+      <comment>Если не заполнен, значит это не замена</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>7</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения количества ставок по заменам</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для заповнення кількості ставок по замінам</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="373ebb98-93eb-4943-b284-5847cdeec9d1">
+      <name>ЗаменаСотрудник</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сотрудник (замена)</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Співробітник (заміна)</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Сотрудники</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения сотрудника по заменам</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для заповнення працівника по замінам</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="cdf4d3b2-49e6-4b7d-b74b-1e9b7156e595">
+      <name>КалендарныеДни</name>
+      <synonym>
+        <key>ru</key>
+        <value>Календарные дни</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Календарні дні</value>
+      </synonym>
+      <comment>Календарные дни без учета праздничных и отпусков за свой счет</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>4</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для введения календарных дней за период</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для введення календарних днів за період</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="81edb79b-313b-4ff0-adb8-36c957e5d913">
+      <name>НормаДней</name>
+      <synonym>
+        <key>ru</key>
+        <value>Норма дней</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Норма днів</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>7</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения нормы дней</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для заповнення норми днів</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c77b906d-00e6-4488-96b5-f2164040b5ff">
+      <name>НормаДнейЗаМесяц</name>
+      <synonym>
+        <key>ru</key>
+        <value>Норма дней за месяц</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Норма днів за місяць</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>7</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения нормы дней за месяц</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для заповнення норми днів за місяць</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="43650353-4cb5-4a36-8b22-15a0f091ae8d">
+      <name>НормаЧасов</name>
+      <synonym>
+        <key>ru</key>
+        <value>Норма часов</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Норма годин</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>7</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения нормы часов</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для заповнення норми годин</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d9fbcc8b-9abd-4189-af39-7cf4d2d04482">
+      <name>НормаЧасовЗаМесяц</name>
+      <synonym>
+        <key>ru</key>
+        <value>Норма часов за месяц</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Норма годин за місяць</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>7</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения нормы часов за месяц</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для заповнення норми годин за місяць</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="6ab2695c-9191-4830-a335-5a5ae2358c5d">
+      <name>ОтработаноДней</name>
+      <synonym>
+        <key>ru</key>
+        <value>Отработано дней</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Відпрацьовано днів</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>7</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения отработанных дней за период</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для заповнення відпрацьованих днів</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="f10b5345-ee0b-49d9-bd67-9be0f6e1de5b">
+      <name>ОтработаноЧасов</name>
+      <synonym>
+        <key>ru</key>
+        <value>Отработано часов</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Відпрацьовано годин</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>7</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения отработанных часов за период</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для заповнення відпрацьованих годин</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="e096ecb5-5a7d-45b7-ba3f-b93e82a6236b">
+      <name>ПодразделениеОрганизации</name>
+      <synonym>
+        <key>ru</key>
+        <value>Подразделение организации</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Підрозділ організації</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ПодразделенияОрганизаций</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для указания подразделения организации</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для вказання підрозділу організації</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="18c3fdd0-386f-4e8f-b9a6-2fc3d0904102">
+      <name>Показатель1</name>
+      <synonym>
+        <key>ru</key>
+        <value>Показатель 1</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Показник 1</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для указания первого показателя для расчета</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для вказання першого показника для розрахунку</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="de10a55f-508a-4958-9dd8-a42b0e2bbac5">
+      <name>Показатель2</name>
+      <synonym>
+        <key>ru</key>
+        <value>Показатель 1</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Показник 1</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для указания второго показателя для расчета</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для вказання другого показника для розрахунку</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c045bda0-9b56-44a0-86c5-0cece9b5098e">
+      <name>Показатель3</name>
+      <synonym>
+        <key>ru</key>
+        <value>Показатель 1</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Показник 1</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для указания третьего показателя для расчета</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для вказання третього показника для розрахунку</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="15bd68ec-d631-4c35-829e-d855f80da4d5">
+      <name>ПроизошедшееСобытие</name>
+      <synonym>
+        <key>ru</key>
+        <value>Произошедшее событие</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Подія, що відбулася</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Признак произошедшего события</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Ознака події що відбулася</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="6c0cf6d6-ef43-4745-b7a7-e16176ff2b3f">
+      <name>Размер</name>
+      <synonym>
+        <key>ru</key>
+        <value>Размер</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Розмір</value>
+      </synonym>
+      <comment>Размер</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения размера начисления</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для заповнення розміру нарахування</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="6c108bf2-6188-4d46-8e68-9c51ee4160d1">
+      <name>Результат</name>
+      <synonym>
+        <key>ru</key>
+        <value>Результат</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Результат</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>16</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения результата по строке</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для заповнення результата по рядку</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="3888679b-945a-4fec-8e93-f16f1c83fd29">
+      <name>Состояние</name>
+      <synonym>
+        <key>ru</key>
+        <value>Состояние</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Стан</value>
+      </synonym>
+      <type>
+        <types>EnumRef.ИНАГРО_СостоянияРаботникаОрганизации</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для указания состояния работника</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для вказання стану працівника</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.Ссылка</name>
+        <value xsi:type="core:FixedArrayValue">
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ИНАГРО_СостоянияРаботникаОрганизации.EnumValue.НеИзменять</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ИНАГРО_СостоянияРаботникаОрганизации.EnumValue.ОтпускЕжегодный</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ИНАГРО_СостоянияРаботникаОрганизации.EnumValue.ОтпускПрочий</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>Enum.ИНАГРО_СостоянияРаботникаОрганизации.EnumValue.ОтпускПоУходуЗаРебенкомДо3Лет</value>
+          </values>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a79d1acf-9b69-46dc-8d60-72af4b2128b2">
+      <name>Сотрудник</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сотрудник</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Співробітник</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Сотрудники</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для указания сотрудника</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для вказання працівника</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="801a4d85-f637-412b-a131-692f23949647">
+      <name>СпособОтраженияВБухучете</name>
+      <synonym>
+        <key>ru</key>
+        <value>Способ отражения в бух. учете</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Спосіб відображення в бух. обліку</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СпособыОтраженияЗарплатыВРеглУчете</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для указания способа отражения начисления в бухгалтерском учете</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для вказання способу відображення нарахування в бухгалтерському обліку</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="ecf524fd-d44e-4d83-9a5a-8858302742f1">
+      <name>Сторно</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сторно</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Сторно</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Признак сторнирующей записи</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Ознака сторнуючого запису</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="226a5eb6-34dd-4115-8ed8-fb1c14e9d394">
+      <name>Назначение</name>
+      <synonym>
+        <key>ru</key>
+        <value>Назначение</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Призначення</value>
+      </synonym>
+      <comment>Сотрудник, Внутреннее совместительство, Сотрудник которого заменяют</comment>
+      <type>
+        <types>CatalogRef.Сотрудники</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения назначения работника</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для заповнення призначення працівника</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="adeb7fbd-a28c-4acd-966e-ede103fa1657">
+      <name>ОплаченоДнейЧасов</name>
+      <synonym>
+        <key>ru</key>
+        <value>Оплачено дней/часов</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Оплачено днів годин</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения количества оплаченных дней или часов</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для заповнення кількості оплачених днів чи годин</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="de98f2ef-2484-40eb-a2c9-481cba515dfe">
+      <name>ВидЗанятости</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид занятости</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вид зайнятості</value>
+      </synonym>
+      <type>
+        <types>EnumRef.ВидыЗанятости</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для отображения вида занятости</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для відображення виду зайнятості</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="d2bb33ee-681d-45e0-9a67-1a0406d71ae3">
+    <producedTypes>
+      <objectType typeId="877067ba-f575-4db4-b006-45212b593e8e" valueTypeId="acb053b9-2c1b-406f-b5a4-1a741af6263c"/>
+      <rowType typeId="9328e076-de84-4bbd-b22d-e6f21658b571" valueTypeId="90825dd8-7c3f-4965-8a91-b05b509e7400"/>
+    </producedTypes>
+    <name>РасчетСреднего</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расчет среднего</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Розрахунок середнього</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="ca1e6267-26e8-475f-8755-6db5ac829882">
+      <name>Авторасчет</name>
+      <synonym>
+        <key>ru</key>
+        <value>Автоматический расчет</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Авторозрахунок</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Признак автоматического расчета по строке табличной части</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Ознака автоматичного розрахунку по рядку табличної частини</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="12bb5545-369c-4b56-a7c1-79067b276203">
+      <name>БазовыйПериодКонец</name>
+      <synonym>
+        <key>ru</key>
+        <value>Базовый период конец</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Базовий період кінець</value>
+      </synonym>
+      <comment>Период в котором сумма зарегистрирована, используется системой для автоматического расчета</comment>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для указания окончания базового периода</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для введення кінця базового періоду</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5613572a-eae4-49f5-81d4-b8ef13ca615e">
+      <name>БазовыйПериодНачало</name>
+      <synonym>
+        <key>ru</key>
+        <value>Базовый период начало</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Базовий період початок</value>
+      </synonym>
+      <comment>Период в котором сумма зарегистрирована, используется системой для автоматического расчета</comment>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для указания начала базового периода</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для введення початку базового періоду</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="347a4dcd-53cb-4869-8512-301bb31c21e8">
+      <name>ВидРасчета</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид расчета</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вид розрахунку</value>
+      </synonym>
+      <type>
+        <types>ChartOfCalculationTypesRef.ИНАГРО_СреднийЗаработок</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для указания вида расчета</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для введення виду розрахунку</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <choiceParameters>
+        <name>Отбор.Ссылка</name>
+        <value xsi:type="core:FixedArrayValue">
+          <values xsi:type="core:ReferenceValue">
+            <value>ChartOfCalculationTypes.ИНАГРО_СреднийЗаработок.ПоЗаработку</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>ChartOfCalculationTypes.ИНАГРО_СреднийЗаработок.ПоПремиям</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>ChartOfCalculationTypes.ИНАГРО_СреднийЗаработок.ПоПремиямПропорционально</value>
+          </values>
+          <values xsi:type="core:ReferenceValue">
+            <value>ChartOfCalculationTypes.ИНАГРО_СреднийЗаработок.ПоГодовойПремии</value>
+          </values>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="ea1686fd-be11-4024-bd3a-e70423c98ab8">
+      <name>КалендарныеДни</name>
+      <synonym>
+        <key>ru</key>
+        <value>Календарные дни</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Календарні дні</value>
+      </synonym>
+      <comment>Календарные дни без учета праздничных и отпусков за свой счет</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>4</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для введения календарных дней за период</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для введення календарних днів за період</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="727379cd-655a-47ff-9b4c-1b1500806a22">
+      <name>КоэффициентПовышенияОкладов</name>
+      <synonym>
+        <key>ru</key>
+        <value>Коэффициент повышения окладов</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Коефіцієнт збільшення окладів</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>12</precision>
+          <scale>10</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для указания коэффициента повышения окладов</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для вказання коефіцієнту підвищення окладів</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="154f3a84-adef-425b-bcd0-431e0a37a30b">
+      <name>НормаДней</name>
+      <synonym>
+        <key>ru</key>
+        <value>Норма дней</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Норма днів</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>7</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения нормы дней</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для заповнення норми днів</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="beb6472b-4656-46e0-bb4e-b5503169b497">
+      <name>НормаЧасов</name>
+      <synonym>
+        <key>ru</key>
+        <value>Норма часов</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Норма годин</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>8</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения нормы часов</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для заповнення норми годин</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="fb5bcfd3-f370-4988-a555-e20f1b3349de">
+      <name>ОтработаноДней</name>
+      <synonym>
+        <key>ru</key>
+        <value>Отработано дней</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Відпрацьовано днів</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>7</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения отработанных дней за период</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для заповнення відпрацьованих днів</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="cf3e5239-dab2-4bf2-b35b-c0e000c08892">
+      <name>ОтработаноЧасов</name>
+      <synonym>
+        <key>ru</key>
+        <value>Отработано часов</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Відпрацьовано годин</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>8</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения отработанных часов за период</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для заповнення відпрацьованих годин</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="2d24901f-4d88-49b2-a390-a32141e2633e">
+      <name>Результат</name>
+      <synonym>
+        <key>ru</key>
+        <value>Результат</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Результат</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>16</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения результата по строке</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для заповнення результата по рядку</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d0d168cb-1421-4e19-a4a4-dfe1ed834527">
+      <name>РезультатПолный</name>
+      <synonym>
+        <key>ru</key>
+        <value>Результат (полный)</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Результат (повний)</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>16</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения полного результата по строке</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для заповнення повного результата по рядку</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="900c0371-94d3-4d39-89a3-e5f08962d1df">
+      <name>СуммаПредела</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма предела</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Сума межі</value>
+      </synonym>
+      <comment>Для расчета отпуска</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>12</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения суммы предела</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для заповнення суми межі</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="57df3828-14c9-44ef-8fee-033410456c4e">
+    <producedTypes>
+      <objectType typeId="9464af12-7f84-4a6a-92d8-7e80cd2d3de6" valueTypeId="dd80de7c-c009-46d4-881d-941e574c1c5e"/>
+      <rowType typeId="01bc59c4-e129-4447-b0aa-3e58e7f11ac0" valueTypeId="4c6289eb-3185-41b7-853b-893f5af8b565"/>
+    </producedTypes>
+    <name>Отпуска</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отпуска</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відпустки</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="c524eb95-d9b2-44a6-98ba-08f66491a360">
+      <name>ВидРасчета</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид расчета</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вид розрахунку</value>
+      </synonym>
+      <type>
+        <types>ChartOfCalculationTypesRef.ИНАГРО_Начисления</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для указания вида расчета</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для введення виду розрахунку</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.ГруппаРасчетов</name>
+        <value xsi:type="core:ReferenceValue">
+          <value>Catalog.ИНАГРО_ГруппыВидовРасчета.Отпуск</value>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5d6bb6b8-b383-4510-bbd2-27da50cc2350">
+      <name>ДатаНачала</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата начала</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Дата початку</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для указания даты начала действия начисления</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для введення дати початку дії нарахування</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="e66c36ae-e6b1-4390-9262-30cd1b0e67be">
+      <name>ДатаОкончания</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата окончания</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Дата закінчення</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для указания даты окончания действия начисления</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для введення дати закінчення дії нарахування</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="97dff7b8-2eb0-452b-a408-f4b5389458b6">
+      <name>НомерСтрокиПервичныйОтпуск</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер строки в Первичном отпуске</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Номер рядку в Первинній відпустці</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>10</length>
+        </stringQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Поле для заполнения номера строки в первично отпуске</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Поле для заповнення номеру рядку в первинній відпустці</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <templates uuid="17a6570c-c5cd-4496-9018-ddd32cfc9365">
+    <name>ПФ_MXL_П6_от_09_10_1995</name>
+    <synonym>
+      <key>ru</key>
+      <value>П ф MXL п6 от 09 10 1995</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>П6 від 09 10 1995</value>
+    </synonym>
+  </templates>
+  <templates uuid="08d979fc-d7ea-4426-9f39-a503645f1244">
+    <name>ПФ_MXL_Средняя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Средняя</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Середня</value>
+    </synonym>
+  </templates>
+  <templates uuid="b8a5e253-9590-4a48-9fa6-28dfe15986a2">
+    <name>ПФ_MXL_П3_от_05_12_2008</name>
+    <synonym>
+      <key>ru</key>
+      <value>П3 от 05.12.2008</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>П3 від 05.12.2008</value>
+    </synonym>
+  </templates>
+</mdclass:Document>

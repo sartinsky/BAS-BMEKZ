@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="eb5088f1-7f52-45eb-85b8-2bd0b0644e31">
+  <producedTypes>
+    <selectionType typeId="928ab667-5031-40d4-a8fe-0389975bf16e" valueTypeId="021218fc-2935-436b-81dd-47789ddfa45d"/>
+    <listType typeId="1cce7764-297f-424e-b62c-b37dd712c43c" valueTypeId="91705415-20e1-4897-8f2b-5f7248dc3276"/>
+    <managerType typeId="3b00e5dd-42d7-4031-9af8-ac1aa2b224d6" valueTypeId="16bef8d6-3e03-43d6-a390-dde552be3050"/>
+    <recordSetType typeId="7870f255-22da-489d-83f0-a5772711a19b" valueTypeId="944dd035-76d1-4fa6-bce6-82999f4f468e"/>
+    <recordKeyType typeId="54dc5bdc-b6b2-427d-85d3-f5338f3a1f34" valueTypeId="4475aa49-e464-4e49-b815-df43c0648a32"/>
+    <recordType typeId="e06bac6e-e300-4aa4-8666-d16e5badd3a1" valueTypeId="d634b128-15a5-490a-8b2b-4f12ad7ef29f"/>
+    <recordManagerType typeId="63e40154-e35f-4b30-a690-b808cd4ec8ab" valueTypeId="98b6e696-0023-4461-a0f3-70e95548ad62"/>
+  </producedTypes>
+  <name>ИНАГРО_СводОтчисленийВФондыНастройкиОтчета</name>
+  <synonym>
+    <key>ru</key>
+    <value>Свод отчислений в фонды - настройки отчета</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Зведена відомість відрахувань у фонди - настройки звіту</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+    <pages>
+      <lang>uk</lang>
+    </pages>
+  </help>
+  <resources uuid="ccbeefa3-e914-40e4-9c27-a8d8ad45aa3d">
+    <name>НомерКолонки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер колонки</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номер колонки</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="5a9d7ada-bfc2-4e96-ac9a-04e6c851153e">
+    <name>Точность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Точность</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Точність</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="247c7cc0-1bd6-4ac9-add4-057f81225b50">
+    <name>Налог</name>
+    <synonym>
+      <key>ru</key>
+      <value>Налог</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Податок</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Налоги</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="6bf36e29-3f30-46ae-b526-da4c08942a9e">
+    <name>ГруппаНалогов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группа налогов</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Група податків</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <templates uuid="19e21d5d-3985-4caf-97c6-29b063004700">
+    <name>НачальноеЗаполнение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начальное заполнение</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Початкове заповнення</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+</mdclass:InformationRegister>

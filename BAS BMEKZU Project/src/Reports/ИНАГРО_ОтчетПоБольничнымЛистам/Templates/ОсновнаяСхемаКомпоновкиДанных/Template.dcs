@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НормаДней</dataPath>
+			<field>НормаДней</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дней болезни</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Днів хвороби</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номер</dataPath>
+			<field>Номер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Номер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НормаДнейСоц</dataPath>
+			<field>НормаДнейСоц</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дни за счет соцстраха</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Дні за рахунок соцстраху</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодразделениеОрганизации</dataPath>
+			<field>ПодразделениеОрганизации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Підрозділ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РезультатОрг</dataPath>
+			<field>РезультатОрг</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма за счет организации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сума за рахунок організації</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РезультатСоц</dataPath>
+			<field>РезультатСоц</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма за счет соцстраха</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сума за рахунок соцстраху</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Організація</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Размер</dataPath>
+			<field>Размер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Размер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Розмір</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистратор</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Реєстратор</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Результат</dataPath>
+			<field>Результат</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сума</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Серия</dataPath>
+			<field>Серия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Серия</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Серія</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поле2</dataPath>
+			<field>Поле2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле2</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Причина</dataPath>
+			<field>Причина</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Причина</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Причина</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НормаДнейОрг</dataPath>
+			<field>НормаДнейОрг</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дни за счет организации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Дні за рахунок організації</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо</dataPath>
+			<field>ФизЛицо</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудник</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Співробітник</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УдалитьФизлицо</dataPath>
+			<field>УдалитьФизлицо</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УдалитьПриказ</dataPath>
+			<field>УдалитьПриказ</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	РаботникиОрганизацииСрезПоследних.ПодразделениеОрганизации КАК ПодразделениеОрганизации,
+	Больничный.Регистратор.ПроцентОплаты КАК Размер,
+	Больничный.Регистратор.ПричинаНетрудоспособности КАК Причина,
+	Больничный.ФизЛицо КАК ФизЛицо,
+	Больничный.Регистратор КАК Регистратор,
+	Больничный.Регистратор.СерияБольничногоЛиста КАК Серия,
+	Больничный.Регистратор.НомерБольничногоЛиста КАК Номер,
+	Больничный.НормаДней КАК НормаДней,
+	Больничный.Результат КАК Результат,
+	Больничный.НормаДнейОрг КАК НормаДнейОрг,
+	Больничный.РезультатОрг КАК РезультатОрг,
+	Больничный.НормаДнейСоц КАК НормаДнейСоц,
+	Больничный.РезультатСоц КАК РезультатСоц,
+	РаботникиОрганизацииСрезПоследних.Организация
+ИЗ
+	РегистрСведений.ИНАГРО_РаботникиОрганизаций.СрезПоследних(КонецПериода(&amp;ДатаНачала,Месяц), {(Организация = &amp;Организация) КАК Поле2}) КАК РаботникиОрганизацииСрезПоследних
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			БольничныйЗаСчетОрганизации.Показатель1 КАК Размер,
+			БольничныйЗаСчетОрганизации.Регистратор.ПричинаНетрудоспособности КАК Причина,
+			БольничныйЗаСчетОрганизации.Сотрудник КАК ФизЛицо,
+			БольничныйЗаСчетОрганизации.Организация КАК Организация,
+			БольничныйЗаСчетОрганизации.Регистратор КАК Регистратор,
+			ВЫБОР
+				КОГДА БольничныйЗаСчетОрганизации.ВидУчетаВремениДляСредней = ЗНАЧЕНИЕ(Перечисление.ИНАГРО_ВидыУчетаВремениДляСредней.ПоКалендарнымДнямСПраздниками)
+					ТОГДА БольничныйЗаСчетОрганизации.ОплаченоДнейЧасов
+				ИНАЧЕ БольничныйЗаСчетОрганизации.НормаДней
+			КОНЕЦ КАК НормаДней,
+			БольничныйЗаСчетОрганизации.Результат КАК Результат,
+			ВЫБОР
+				КОГДА БольничныйЗаСчетОрганизации.ВидУчетаВремениДляСредней = ЗНАЧЕНИЕ(Перечисление.ИНАГРО_ВидыУчетаВремениДляСредней.ПоКалендарнымДнямСПраздниками)
+					ТОГДА БольничныйЗаСчетОрганизации.ОплаченоДнейЧасов
+				ИНАЧЕ БольничныйЗаСчетОрганизации.НормаДней
+			КОНЕЦ КАК НормаДнейОрг,
+			БольничныйЗаСчетОрганизации.Результат КАК РезультатОрг,
+			0 КАК НормаДнейСоц,
+			0 КАК РезультатСоц
+		ИЗ
+			РегистрРасчета.ИНАГРО_Начисления КАК БольничныйЗаСчетОрганизации
+		ГДЕ
+			БольничныйЗаСчетОрганизации.ПериодРегистрации &gt;= НачалоПериода(&amp;ДатаНачала,Месяц)
+			И БольничныйЗаСчетОрганизации.ПериодРегистрации &lt;= КонецПериода(&amp;ДатаНачала,Месяц)
+			И БольничныйЗаСчетОрганизации.ВидРасчета = &amp;РасчетЗаСчетОрганизации
+		
+		ОБЪЕДИНИТЬ ВСЕ
+		
+		ВЫБРАТЬ
+			БольничныйЗаСчетСоцстраха.Показатель1,
+			БольничныйЗаСчетСоцстраха.Регистратор.ПричинаНетрудоспособности,
+			БольничныйЗаСчетСоцстраха.Сотрудник,
+			БольничныйЗаСчетСоцстраха.Организация,
+			БольничныйЗаСчетСоцстраха.Регистратор,
+			ВЫБОР
+				КОГДА БольничныйЗаСчетСоцстраха.ВидУчетаВремениДляСредней = ЗНАЧЕНИЕ(Перечисление.ИНАГРО_ВидыУчетаВремениДляСредней.ПоКалендарнымДнямСПраздниками)
+					ТОГДА БольничныйЗаСчетСоцстраха.ОплаченоДнейЧасов
+				ИНАЧЕ БольничныйЗаСчетСоцстраха.НормаДней
+			КОНЕЦ,
+			БольничныйЗаСчетСоцстраха.Результат,
+			0,
+			0,
+			ВЫБОР
+				КОГДА БольничныйЗаСчетСоцстраха.ВидУчетаВремениДляСредней = ЗНАЧЕНИЕ(Перечисление.ИНАГРО_ВидыУчетаВремениДляСредней.ПоКалендарнымДнямСПраздниками)
+					ТОГДА БольничныйЗаСчетСоцстраха.ОплаченоДнейЧасов
+				ИНАЧЕ БольничныйЗаСчетСоцстраха.НормаДней
+			КОНЕЦ,
+			БольничныйЗаСчетСоцстраха.Результат
+		ИЗ
+			РегистрРасчета.ИНАГРО_Начисления КАК БольничныйЗаСчетСоцстраха
+		ГДЕ
+			БольничныйЗаСчетСоцстраха.ПериодРегистрации &gt;= НачалоПериода(&amp;ДатаНачала,Месяц)
+			И БольничныйЗаСчетСоцстраха.ПериодРегистрации &lt;= КонецПериода(&amp;ДатаНачала,Месяц)
+			И БольничныйЗаСчетСоцстраха.ВидРасчета = &amp;РасчетЗаСчетСоцстраха
+		
+		ОБЪЕДИНИТЬ ВСЕ
+		
+		ВЫБРАТЬ
+			БольничныйТравмаНаПроизводстве.Показатель1,
+			БольничныйТравмаНаПроизводстве.Регистратор.ПричинаНетрудоспособности,
+			БольничныйТравмаНаПроизводстве.Сотрудник,
+			БольничныйТравмаНаПроизводстве.Организация,
+			БольничныйТравмаНаПроизводстве.Регистратор,
+			ВЫБОР
+				КОГДА БольничныйТравмаНаПроизводстве.ВидУчетаВремениДляСредней = ЗНАЧЕНИЕ(Перечисление.ИНАГРО_ВидыУчетаВремениДляСредней.ПоКалендарнымДнямСПраздниками)
+					ТОГДА БольничныйТравмаНаПроизводстве.ОплаченоДнейЧасов
+				ИНАЧЕ БольничныйТравмаНаПроизводстве.НормаДней
+			КОНЕЦ,
+			БольничныйТравмаНаПроизводстве.Результат,
+			0,
+			0,
+			ВЫБОР
+				КОГДА БольничныйТравмаНаПроизводстве.ВидУчетаВремениДляСредней = ЗНАЧЕНИЕ(Перечисление.ИНАГРО_ВидыУчетаВремениДляСредней.ПоКалендарнымДнямСПраздниками)
+					ТОГДА БольничныйТравмаНаПроизводстве.ОплаченоДнейЧасов
+				ИНАЧЕ БольничныйТравмаНаПроизводстве.НормаДней
+			КОНЕЦ,
+			БольничныйТравмаНаПроизводстве.Результат
+		ИЗ
+			РегистрРасчета.ИНАГРО_Начисления КАК БольничныйТравмаНаПроизводстве
+		ГДЕ
+			БольничныйТравмаНаПроизводстве.ПериодРегистрации &gt;= НачалоПериода(&amp;ДатаНачала,Месяц)
+			И БольничныйТравмаНаПроизводстве.ПериодРегистрации &lt;= КонецПериода(&amp;ДатаНачала,Месяц)
+			И БольничныйТравмаНаПроизводстве.ВидРасчета = &amp;РасчетБольничныйТравмаНаПроизводстве
+		
+		ОБЪЕДИНИТЬ ВСЕ
+		
+		ВЫБРАТЬ
+			БольничныйОтпускПоБиР.Показатель1,
+			БольничныйОтпускПоБиР.Регистратор.ПричинаНетрудоспособности,
+			БольничныйОтпускПоБиР.Сотрудник,
+			БольничныйОтпускПоБиР.Организация,
+			БольничныйОтпускПоБиР.Регистратор,
+			БольничныйОтпускПоБиР.ОплаченоДнейЧасов,
+			БольничныйОтпускПоБиР.Результат,
+			0,
+			0,
+			БольничныйОтпускПоБиР.ОплаченоДнейЧасов,
+			БольничныйОтпускПоБиР.Результат
+		ИЗ
+			РегистрРасчета.ИНАГРО_Начисления КАК БольничныйОтпускПоБиР
+		ГДЕ
+			БольничныйОтпускПоБиР.ПериодРегистрации &gt;= НачалоПериода(&amp;ДатаНачала,Месяц)
+			И БольничныйОтпускПоБиР.ПериодРегистрации &lt;= КонецПериода(&amp;ДатаНачала,Месяц)
+			И БольничныйОтпускПоБиР.ВидРасчета = &amp;РасчетБольничныйОтпускПоБиР) КАК Больничный
+		ПО (Больничный.ФизЛицо = РаботникиОрганизацииСрезПоследних.Сотрудник)
+			И (Больничный.Организация = РаботникиОрганизацииСрезПоследних.Организация
+				ИЛИ Больничный.Организация = РаботникиОрганизацииСрезПоследних.Организация.ГоловнаяОрганизация)</query>
+	</dataSet>
+	<totalField>
+		<dataPath>НормаДней</dataPath>
+		<expression>Сумма(НормаДней)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НормаДнейОрг</dataPath>
+		<expression>Сумма(НормаДнейОрг)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НормаДнейСоц</dataPath>
+		<expression>Сумма(НормаДнейСоц)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Размер</dataPath>
+		<expression>Сумма(Размер)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Результат</dataPath>
+		<expression>Сумма(Результат)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РезультатОрг</dataPath>
+		<expression>Сумма(РезультатОрг)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РезультатСоц</dataPath>
+		<expression>Сумма(РезультатСоц)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>РасчетБольничныйОтпускПоБиР</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расчет больничный отпуск по би Р</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfCalculationTypesRef.ИНАГРО_Начисления</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланВидовРасчета.ИНАГРО_Начисления.ОплатаПоСреднемуБЛПоБеременностиИРодам</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>РасчетБольничныйТравмаНаПроизводстве</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расчет больничный травма на производстве</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfCalculationTypesRef.ИНАГРО_Начисления</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланВидовРасчета.ИНАГРО_Начисления.ОплатаПоСреднемуБЛТравмаНаПроизводстве</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>РасчетЗаСчетОрганизации</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расчет за счет организации</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfCalculationTypesRef.ИНАГРО_Начисления</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланВидовРасчета.ИНАГРО_Начисления.ОплатаПоСреднемуБЛОрганизации</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>РасчетЗаСчетСоцстраха</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расчет за счет соцстраха</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfCalculationTypesRef.ИНАГРО_Начисления</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">ПланВидовРасчета.ИНАГРО_Начисления.ОплатаПоСреднемуБЛ</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной1</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отчет по больничным листам</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Звіт по лікарняним листам</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Организация</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПодразделениеОрганизации</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Причина</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ФизЛицо</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Регистратор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Серия</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Номер</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>SpecialColumn</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НормаДней</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Размер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Результат</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НормаДнейОрг</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РезультатОрг</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НормаДнейСоц</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РезультатСоц</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>8e0021ff-4d89-4696-8029-e8017e77e59c</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Античный</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчет по больничным листам</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Звіт по лікарняним листам</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ПодразделениеОрганизации</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Причина</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>ФизЛицо</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+							<dcsset:item xsi:type="dcsset:StructureItemGroup">
+								<dcsset:order>
+									<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+								</dcsset:order>
+								<dcsset:selection>
+									<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+								</dcsset:selection>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
