@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="17daec51-29c1-44b6-a51f-783b69fc2c0d">
+  <producedTypes>
+    <selectionType typeId="ffd25eae-83de-4b11-be2a-e916ca1317eb" valueTypeId="3cbc510b-f7cb-41c2-a363-05d11552c5b9"/>
+    <listType typeId="044ab375-60a6-4716-bc6d-6575e5ad949f" valueTypeId="0d7994a0-5c1a-49bc-8aeb-6f37bee21fa6"/>
+    <managerType typeId="92b872a6-7041-430a-b1be-4cb006097bf8" valueTypeId="19254690-0389-4f50-b311-866c5569acbd"/>
+    <recordSetType typeId="9bcf3c0b-e0d9-44c8-8ac1-630c6f189918" valueTypeId="bd64de34-5ab1-4ebd-9401-13939fb13c8f"/>
+    <recordKeyType typeId="4abffdaf-2a20-44b5-a966-efb6378c8aca" valueTypeId="d452f5fc-4bf7-4270-92bd-6935f951e66c"/>
+    <recordType typeId="fd0011c9-f0ba-4f2a-a059-5810d55f73a0" valueTypeId="e7374837-bdcb-4820-9cd2-d245199ef79e"/>
+    <recordManagerType typeId="4d1dc230-c68b-4466-8fb2-33fcfebad448" valueTypeId="f8ebb533-7546-42e8-829c-0814196a2533"/>
+  </producedTypes>
+  <name>ИНАГРО_УчетнаяПолитика</name>
+  <synonym>
+    <key>ru</key>
+    <value>Учетная политика (Ин-Агро)</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Облікова політика (Ін-Агро)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ИНАГРО_УчетнаяПолитика.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ИНАГРО_УчетнаяПолитика.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода периода</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення періоду</value>
+    </toolTip>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+    <pages>
+      <lang>uk</lang>
+    </pages>
+  </help>
+  <resources uuid="ef6d1dae-913a-4cc6-b9e9-df34c5b99347">
+    <name>ДоплачиватьВодителямЗаКлассность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доплачивать водителям за классность</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Доплачувати водіям за класність</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак о доплате водителям за классность</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака про доплату водіям за класність</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="1fa4763a-3b08-4ff1-b59f-69e414578eb3">
+    <name>ДоплачиватьЗаНочные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доплачивать за ночные</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Доплачувати за нічні та святкові</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода доплаты за ночные </value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення доплати за нічні </value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="989e905c-d396-415a-95b6-6943454199c6">
+    <name>ДоплачиватьПриВыполненииПлана</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доплачивать при выполнении плана</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Доплачувати при виконанні плану</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода доплаты при выполнении плана</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення доплати при виконанні плану</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="196903a9-0508-4f5a-8582-755ceb321ad1">
+    <name>НоменклатураВыпускаГАСельхозтехника</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура выпуска (га)</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номенклатура випуску (га)</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода номенклатуры выпуска гектаров по сельхозтехнике</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення номенклатури випуску гектарів по сільгосптехніці</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="b7bc2167-584c-462c-ae9c-1521bfe788d1">
+    <name>НоменклатураВыпускаКМАвтотранспорт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура выпуска (км)</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номенклатура випуску (км)</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода номенклатуры выпуска километров по автотранспорту</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення номенклатури випуску кілометрів по автотранспорту</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="916a771d-704c-42ae-90ab-14b517038c24">
+    <name>НоменклатураВыпускаТКМАвтотранспорт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура выпуска (т/км)</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номенклатура випуску (т/км)</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода номенклатуры выпуска тонно-километров по автотранспорту</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення номенклатури випуску тонно-кілометрів по автотранспорту</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="df9e448e-2e7e-495a-8fc6-bcb9c6b3a543">
+    <name>НоменклатураВыпускаУГАСельхозтехника</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура выпуска (усл. га)</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номенклатура випуску (умов. га)</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода номенклатуры выпуска условных гектаров по сельхозтехнике</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення номенклатури випуску умовних гектарів по сільгосптехніці</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e4b1b1d8-e94c-419e-a132-275375c7848f">
+    <name>ПодразделениеВыпускаАвтотранспорт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение выпуска автотранспорт</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Підрозділ випуску</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияОрганизаций</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода подразделения выпуска по автотранспорту</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення підрозділу випуску по автотранспорту</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>InformationRegister.ИНАГРО_УчетнаяПолитика.Dimension.Организация</field>
+    </choiceParameterLinks>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="9d6b8ebf-5735-423b-b6cd-b9638aea2f71">
+    <name>ПодразделениеВыпускаСельхозтехника</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение выпуска</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Підрозділ випуску</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияОрганизаций</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода подразделения выпуска по сельхозтехнике</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення підрозділу випуску по сільгосптехніці</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>InformationRegister.ИНАГРО_УчетнаяПолитика.Dimension.Организация</field>
+    </choiceParameterLinks>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="fca73ea0-a10f-4148-8cd8-65e0dda3f2d2">
+    <name>ПроцентДоплатыЗаГусеничность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Процент доплаты за гусеничность</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відсоток доплати за гусеничність</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>8</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода процента доплаты за гусеничность</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення відсотка доплати за гусеничність</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="2520ac6d-3a3f-40e7-b23c-326cb88e93aa">
+    <name>СтатьяЗатратРаботы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья затрат работы</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Стаття витрат роботи</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиЗатрат</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода статьи затрат работы</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення статті витрат роботи</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e0da4a3d-b466-4b0c-85ea-69f8de017b6f">
+    <name>РедактироватьАналитикуВыпускаАвтотранспорт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Редактировать аналитику выпуска (автотранспорт)</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Редагувати аналітику випуску</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак о редактировании аналитики выпуска автотранспорта</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака про редагування аналітики випуску автотранспорту</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="5dcd3c4e-df2b-4069-9358-8fc99452bc67">
+    <name>РедактироватьАналитикуВыпускаСельхозтехника</name>
+    <synonym>
+      <key>ru</key>
+      <value>Редактировать аналитику выпуска (сельхозтехника)</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Редагувати аналітику випуску</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак о редактировании аналитики выпуска сельхозтехники</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака про редагування аналітики випуску сільгосптехніки</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="c3b50d6d-32df-42ef-b076-3b110a3542ba">
+    <name>СтатьяЗатратГСМ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья затрат ГСМ</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Стаття витрат ПММ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиЗатрат</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода статьи затрат горюче смазочных материалов</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення статті витрат паливо мастильних матеріалів</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="261539b3-9054-4e33-8337-2625572f35d9">
+    <name>НалоговоеНазначение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Налоговое назначение (НДС)</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Податкове призначення (ПДВ)</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НалоговыеНазначенияАктивовИЗатрат</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода налогового назначения</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення податкового призначення</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameters>
+      <name>Отбор.ГруппаНалоговогоНазначения</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.ГруппыНалоговыхНазначений.EnumValue.НалоговыеНазначенияАктивовИВзаиморасчетовПоНДС</value>
+      </value>
+    </choiceParameters>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="cdd95e45-2375-464a-bdb5-edb91a96c8d7">
+    <name>ДоплачиватьЗаПраздничные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доплачивать за праздничные</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Доплачувати за святкові</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода доплаты за праздничные</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення доплати за святкові</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="aadd75d4-87c9-4704-a73f-b710b1151a79">
+    <name>СпособОценкиБА</name>
+    <synonym>
+      <key>ru</key>
+      <value>Способ оценки БА</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Спосіб оцінки БА</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СпособыОценки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Enum.СпособыОценки.EnumValue.ПоСредней</value>
+    </fillValue>
+  </resources>
+  <resources uuid="00547352-2d2c-4f99-ba63-74f742a87e4c">
+    <name>ВестиРаздельнуюНумерациюАвансовыхОтчетов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вести раздельную нумерацию авансовых отчетов</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вести окрему нумерацію авансових звітів</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="35c8d44f-9d48-43fa-980d-bb19fdef0be0">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания организации</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання організації</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="0edaedca-6d26-435b-892f-81fd810f0f1d">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма запису</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="cc6b3fb5-5dde-430a-9810-304237c386d5">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма списку</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

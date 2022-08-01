@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4f36c974-b611-45a8-9ecb-7297c191e1eb">
+  <name>ИНАГРО_ПолныйЗарегистрироватьИзменениеРегистровРасчета</name>
+  <synonym>
+    <key>ru</key>
+    <value>Полный зарегистрировать изменение регистров расчета (Ин-Агро)</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Повний зареєструвати зміну регістрів розрахунку (Ін-Агро)</value>
+  </synonym>
+  <source>
+    <types>CalculationRegisterRecordSet.ИНАГРО_ВзносыВФонды</types>
+    <types>CalculationRegisterRecordSet.ИНАГРО_Начисления</types>
+    <types>CalculationRegisterRecordSet.ИНАГРО_Отражение</types>
+    <types>CalculationRegisterRecordSet.ИНАГРО_РасчетСреднегоЗаработка</types>
+    <types>CalculationRegisterRecordSet.ИНАГРО_Удержания</types>
+    <types>CalculationRegisterRecordSet.Удержания</types>
+    <types>CalculationRegisterRecordSet.Начисления</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ОбменДаннымиРИБСобытия.ПолныйЗарегистрироватьИзменениеРегистровРасчетаПередЗаписью</handler>
+</mdclass:EventSubscription>

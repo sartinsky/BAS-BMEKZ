@@ -1,0 +1,5570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b7d2053d-4deb-4d1a-ad6d-a281d0026e15">
+  <producedTypes>
+    <objectType typeId="618cc864-715f-45af-92d5-b9516cb8d854" valueTypeId="b107e52c-c205-473c-82df-052131240605"/>
+    <refType typeId="7f21d60b-4d89-4143-88e9-3563ae8bf1fb" valueTypeId="66fab007-5ac5-4f23-8070-cff911c7ccd9"/>
+    <selectionType typeId="f6403a67-1679-4430-ab7d-f13495358ef6" valueTypeId="e63ed7a0-35f9-42e2-ab3b-bd1548ccabb3"/>
+    <listType typeId="e0ac8f8a-6f6b-4ac3-a07f-7d13d90253fd" valueTypeId="a605aec6-6dc9-4b21-b2de-b4fc10bbe244"/>
+    <managerType typeId="8f1dc0d7-4b04-455a-8da6-5e911bbe993f" valueTypeId="8ac85f6a-67f0-4470-83d0-77a7f9a70c94"/>
+  </producedTypes>
+  <name>ИНАГРО_АктЗачистки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Акт зачистки</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Акт зачистки</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ИНАГРО_АктЗачистки.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Posted</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+    <pages>
+      <lang>uk</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <listPresentation>
+    <key>ru</key>
+    <value>Акты зачистки</value>
+  </listPresentation>
+  <listPresentation>
+    <key>uk</key>
+    <value>Акти зачистки</value>
+  </listPresentation>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ИНАГРО_АктЗачистки.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.ИНАГРО_АктЗачистки.Form.ФормаСписка</defaultListForm>
+  <registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
+  <registerRecords>AccumulationRegister.ИНАГРО_Остатки_Сводная</registerRecords>
+  <registerRecords>AccumulationRegister.ИНАГРО_Форма36Сводная</registerRecords>
+  <registerRecords>AccumulationRegister.ИНАГРО_Форма36</registerRecords>
+  <registerRecords>AccountingRegister.Хозрасчетный</registerRecords>
+  <registerRecords>AccumulationRegister.ИНАГРО_Остатки</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="57fd48fa-1684-40c6-945b-9af8d5bd0526">
+    <name>ВидХранения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид хранения</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вид зберігання</value>
+    </synonym>
+    <comment>Виды хранения</comment>
+    <type>
+      <types>CatalogRef.ИНАГРО_ВидыХранения</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания вида хранения</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання виду зберігання</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b745036e-3d2c-4952-bb18-bb27cb769621">
+    <name>Влажность1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Влажность 1</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вологість</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Влажности 1</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання Вологості 1</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="fe420f64-f951-4796-bd61-8a080bdcaf2c">
+    <name>Влажность2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Влажность 2</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вологість 2</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Влажности 2</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання Вологості 1
+</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d32f6968-82e4-4171-ac8b-9d6a5ff616ac">
+    <name>Влажность3</name>
+    <synonym>
+      <key>ru</key>
+      <value>Влажность 3</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вологість 3</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Влажности 3</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання Вологості 3</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="dc99ae81-b529-4981-a34e-ecdb34cedf89">
+    <name>Влажность4</name>
+    <synonym>
+      <key>ru</key>
+      <value>Влажность 4</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вологість 4</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Влажности 4</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання Вологості 4</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="22e5134f-2bb2-4dda-9358-c56b42a816c9">
+    <name>Влажность5</name>
+    <synonym>
+      <key>ru</key>
+      <value>Влажность 5</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вологість 5</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Влажности 5</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання Вологості 5</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d6bdcf04-af23-4380-98b3-375c65a11cbd">
+    <name>Влажность6</name>
+    <synonym>
+      <key>ru</key>
+      <value>Влажность 6</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вологість 6</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Влажности 6</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання Вологості 6</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="03278ee5-fce9-44db-9cc7-65882e41f9f4">
+    <name>Влажность7</name>
+    <synonym>
+      <key>ru</key>
+      <value>Влажность 7</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вологість 7</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Влажности 7</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання Вологості 7</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="3937f75e-21a1-47ac-b6d2-acb872be2e28">
+    <name>Влажность8</name>
+    <synonym>
+      <key>ru</key>
+      <value>Влажность 8</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вологість 8</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Влажности 8</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання Вологості 8</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="a7e05c44-61ce-4fd5-8389-722c195af86d">
+    <name>Влажность9</name>
+    <synonym>
+      <key>ru</key>
+      <value>Влажность 9</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вологість 9</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Влажности 9</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання Вологості 9</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b5788a83-d33d-4cba-8d49-677d507913ba">
+    <name>ДатаНачала</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период с</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Період з</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания начала периода</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання початку періоду</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="90f4c67e-331c-46d8-906f-33c9575d2260">
+    <name>ДатаОкончания</name>
+    <synonym>
+      <key>ru</key>
+      <value>по</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>по</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания конца периода</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання кінця періоду</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="269e05aa-d12c-4231-aaff-3b7f05e3c16c">
+    <name>ЗерноваяПримесь1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зерновая примесь 1</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Зернова домішка 1</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания зерновой примеси 1</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання зернової домішки 1</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="8cc3966e-eba4-4716-b8ce-7059dc8abbe7">
+    <name>ЗерноваяПримесь2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зерновая примесь 2</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Зернова домішка 2</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания зерновой примеси 2</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання зернової домішки 2</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="453ccbdc-b99e-4927-8d31-bbb923609799">
+    <name>ЗерноваяПримесь3</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зерновая примесь 3</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Зернова домішка 3</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания зерновой примеси 3</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання зернової домішки 3</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7c81d7e8-b9b9-4a9b-b6a6-f36f20df3de2">
+    <name>ЗерноваяПримесь4</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зерновая примесь 4</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Зернова домішка 4</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания зерновой примеси 4</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання зернової домішки 4</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="f935a2c9-ad2c-4557-9e2e-567ac1512cbb">
+    <name>ЗерноваяПримесь5</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зерновая примесь 5</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Зернова домішка 5</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания зерновой примеси 5</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання зернової домішки 5</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e346d5e6-b44d-467a-948a-3a4d60bbdb70">
+    <name>ЗерноваяПримесь6</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зерновая примесь 6</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Зернова домішка 6</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания зерновой примеси 6</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання зернової домішки 6</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="058019e4-b3f3-4d3e-be9c-8350ead7950c">
+    <name>ЗерноваяПримесь7</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зерновая примесь 7</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Зернова домішка 7</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания зерновой примеси 7</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання зернової домішки 7</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d90b5726-a461-44cc-a609-e3cf96117fac">
+    <name>ЗерноваяПримесь8</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зерновая примесь 8</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Зернова домішка 8</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания зерновой примеси 8</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання зернової домішки 8</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="850f6dcb-f7c2-4d2d-887b-81d8dc67f70c">
+    <name>ЗерноваяПримесь9</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зерновая примесь 9</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Зернова домішка 9</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания зерновой примеси 9</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання зернової домішки 9</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="5b179ae7-b1c5-4377-a7ee-29ac5d4fdd8a">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Коментар</value>
+    </synonym>
+    <comment>(Общ) Любая дополнительная информация</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания комментария</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання коментарю</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="9dcf1b20-f0c4-48db-b15f-a790a5269cf5">
+    <name>Конец1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Конец 1</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Кінець 1</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания конца периода 1</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання кінця періоду 1</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="83e8dec2-b556-4794-b627-bb802e769f43">
+    <name>Конец2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Конец 2</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Кінець 2</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания конца периода 2</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання кінця періоду 2</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="f0508984-2644-4b67-a0fe-16992be7f73c">
+    <name>МестоХранения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Место хранения</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Місце зберігання</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИНАГРО_МестаХранения</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания места хранения</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання місця зберігання</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>Document.ИНАГРО_АктЗачистки.Attribute.Склад</field>
+    </choiceParameterLinks>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="276f65a5-62e7-4395-936d-3beb712cb882">
+    <name>Начало1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начало 1</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Початок 1</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания начала периода 1</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання початку періоду 1</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="8a7907b8-f802-4ebe-ac55-750d043eb403">
+    <name>Начало2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начало 2</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Початок 2</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания начала периода 2</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання початку періоду 2</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="36a977ac-533a-4d25-ba77-7ec8caa0d696">
+    <name>НачалоПриход</name>
+    <synonym>
+      <key>ru</key>
+      <value>Приход с</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Надходження з</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания начала периода прихода</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання початку періоду надходження</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c82113ba-4967-4f77-ae40-f8ccad843740">
+    <name>НачалоРасход</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расход с:</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відпуск з:</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания начала периода расхода</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання початку періоду видатку</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ff3d4312-223d-4945-95fc-a6d85ceb2c5c">
+    <name>НеРассчитыватьУбыльПриХранении</name>
+    <synonym>
+      <key>ru</key>
+      <value>Не рассчитывать убыль при хранении</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Не розраховувати убуток при зберіганні</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак Не рассчитывать убыль при хранении</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака Не розраховувати убуток при зберіганні</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="cd23e946-0887-4ffd-91bd-92b5bdd489b9">
+    <name>НеУчитыватьВлажностьОтходов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Не учитывать влажность отходов</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Не враховувати вологість відходів</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак учета влажности отходов</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака врахування вологості відходів</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="40a1b698-ac60-4ffb-b9aa-906af6f7b9b0">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания номенклатуры</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання номенклатури</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="8232991c-93be-4539-917c-e9ea0fbcfa57">
+    <name>НомерСклада</name>
+    <synonym>
+      <key>ru</key>
+      <value>№ складов</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>№ складів</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>30</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания номера склада</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для введення номера складу</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="8b78645f-5b69-4be2-8e3a-0f9a766f8676">
+    <name>ОкончаниеПриход</name>
+    <synonym>
+      <key>ru</key>
+      <value>по</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>по</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания конца периода прихода</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання кінця періоду надходження</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="a1ad438a-5fd7-44ec-a13a-af42b7423666">
+    <name>ОкончаниеРасход</name>
+    <synonym>
+      <key>ru</key>
+      <value>по</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>по</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания конца периода расхода</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання кінця періоду видатку</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="39fe2f52-456c-4eac-a110-fef59ef236aa">
+    <name>ОписаниеДвиженияФормы36</name>
+    <synonym>
+      <key>ru</key>
+      <value>Описание движения</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Опис руху</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для описания движения формы 36</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для опису руху форми 36</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="16f97fa2-b901-4ddf-939a-9f604ffcbaed">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания организации</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання організації</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1fd2c86d-bf7d-4d9b-8e50-5aa681467a86">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відповідальний</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания ответственного</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання відповідального</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b265ebf8-4d85-4180-ba95-8a330eedda17">
+    <name>ОтражатьВБухгалтерскомУчете</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отражать в бухгалтерском учете</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відображати в бухгалтерському обліку</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак Отражения в бухгалтерском учете</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака відображення в бухгалтерському обліку</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="4334b27d-9c45-4851-81c9-847f752ebbda">
+    <name>П15</name>
+    <synonym>
+      <key>ru</key>
+      <value>15)</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>15)</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Параметр для введения объяснений строка 15</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Параметр для введення пояснення рядок 15</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1e425bb8-701a-4910-b5d3-7f04109d4fa8">
+    <name>П16</name>
+    <synonym>
+      <key>ru</key>
+      <value>16)</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>16)</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для введения объяснений строка 16</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для введення пояснень рядок 16</value>
+    </toolTip>
+    <multiLine>true</multiLine>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b0944f2a-d3e0-4c87-9d15-dcfcaf970894">
+    <name>П17</name>
+    <synonym>
+      <key>ru</key>
+      <value>17)</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>17)</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для введения объяснений строка 17</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для введення пояснень рядок 17</value>
+    </toolTip>
+    <multiLine>true</multiLine>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="4826a362-8f13-49ee-a65c-b887a7a69c07">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания склада</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання складу</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d7a98a52-0929-44fc-aa60-1887e909d24f">
+    <name>СорнаяПримесь1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сорная примесь 1</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Смітна домішка 1</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Сорной примеси 1</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання Смітної домішки 1</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c089e54a-8a23-4e7b-b4b2-d0112229920a">
+    <name>СорнаяПримесь2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сорная примесь 2</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Смітна домішка 2</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Сорной примеси 2</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання Смітної домішки 2</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2dec7960-c129-402f-a37d-178a1bcac7c8">
+    <name>СорнаяПримесь3</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сорная примесь 3</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Смітна домішка 3</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Сорной примеси 3</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання Смітної домішки 3</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="de36f56c-8a39-4348-8965-c5fda35e2736">
+    <name>СорнаяПримесь4</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сорная примесь 4</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Смітна домішка 4</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Сорной примеси 4</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання Смітної домішки 4</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ab4d92cf-44a3-4147-868b-515eeec16655">
+    <name>СорнаяПримесь5</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сорная примесь 5</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Смітна домішка 5</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Сорной примеси 5</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання Смітної домішки 5</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e3cab95e-c185-4caf-acfe-10b098b418c9">
+    <name>СорнаяПримесь6</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сорная примесь 6</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Смітна домішка 6</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Сорной примеси 6</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання Смітної домішки 6</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1e7138a6-a38a-4a80-856d-87428a45eb7d">
+    <name>СорнаяПримесь7</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сорная примесь 7</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Смітна домішка 7</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Сорной примеси 7</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання Смітної домішки 7</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c5d2a72e-bec8-4325-9c32-c30fb1f47c5f">
+    <name>СорнаяПримесь8</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сорная примесь 8</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Смітна домішка 8</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Сорной примеси 8</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання Смітної домішки 8</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1dd9e085-9f7e-4880-bc82-5113cbaca59c">
+    <name>СорнаяПримесь9</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сорная примесь 9</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Смітна домішка 9</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Сорной примеси 9</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання Смітної домішки 9</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2e731edc-f9cc-4851-a850-78cc8e20b7cd">
+    <name>СписатьНеиспользованноеПравоПоВладельцам</name>
+    <synonym>
+      <key>ru</key>
+      <value>Списать неиспользованное право по владельцам</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Списати невикористане право по власникам</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак Списать неиспользованное право по владельцам</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака Списати невикористане право по власникам</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="4347a34d-3814-4a97-b8fc-6deb59a01259">
+    <name>СписыватьНеиспользованноеПраво</name>
+    <synonym>
+      <key>ru</key>
+      <value>Списывать неиспользованное право</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Списувати невикористане право</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак Не списывать неиспользованное право</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака Не списувати невикористане право</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c0e13252-a124-427a-9825-d014ef0fa925">
+    <name>СпособХранения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Убыль при хранении, %</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Убуток при зберіганні, %</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ИНАГРО_СпособХранения</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания способа хранения</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання способу зберігання</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>IndexWithAdditionalOrder</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ea765b9b-9b60-4493-b095-cfbde8211326">
+    <name>СрокХраненияДней</name>
+    <synonym>
+      <key>ru</key>
+      <value>дней</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>днів</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания срока хранения в днях</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання строку зберігання в днях</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2f7efff2-2960-41ef-b9cd-72ddef23eaba">
+    <name>СрокХраненияМесяцев</name>
+    <synonym>
+      <key>ru</key>
+      <value>Средний срок хранения: месяцев</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Середній термін зберігання: місяців</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания срока хранения месяцев</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання строку зберігання місяців</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d6e5a28f-03eb-401a-8d28-1837c4e4f662">
+    <name>УбыльВлажности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Убыль влажности</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Убуток по вологості</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Убыли влажности</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання убутку вологості</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ecbc52ff-0ce5-4548-8ce5-7d86071b6f6d">
+    <name>УбыльВсего</name>
+    <synonym>
+      <key>ru</key>
+      <value>Убыль всего</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Убуток разом</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания общей убыли</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання загального убутку</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e9797a45-f132-4880-8727-4e456fda6555">
+    <name>УбыльЕстественная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Убыль естественная</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Убуток природна</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>6</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Убыли естественной</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання природного убутку</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d0af3d94-a6d5-44f7-bf8f-de6b52776052">
+    <name>УбыльПоВлажности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Убыль по влажности</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Убуток по вологості</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Убыли по влажности</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання убутку по вологості</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="a7bc9699-4fdc-4551-b012-548ae8dc5b83">
+    <name>УбыльПоЕстественной</name>
+    <synonym>
+      <key>ru</key>
+      <value>Убыль по естественной</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Убуток по природному</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Убыли по нормам естественной убыли</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання убутку по нормам природного убутку</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b0c15709-a37e-4832-a260-87f203388721">
+    <name>УбыльПоПрочей</name>
+    <synonym>
+      <key>ru</key>
+      <value>Убыль по прочей</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Убуток інший</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Убыль прочей</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання іншого убутку</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e7cf2b90-794a-425f-911b-7c5fa182c1b6">
+    <name>УбыльПоСорнойПримеси</name>
+    <synonym>
+      <key>ru</key>
+      <value>Убыль по сорной примеси</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Убуток по смітній домішці</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Убыли по сорной примеси</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання убутку по сміттєвій домішці</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="0c0d0886-7dd5-4b06-8f25-c4a3b8bb9a27">
+    <name>УбыльСорнойПримеси</name>
+    <synonym>
+      <key>ru</key>
+      <value>Убыль сорной примеси</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Убуток по смітній домішці</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Убыли сорной примеси</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання убутку смітної домішки</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="95f6bae3-194b-44b3-b361-f46e4b20da02">
+    <name>Урожай</name>
+    <synonym>
+      <key>ru</key>
+      <value>Урожай</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Урожай</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИНАГРО_ВидыУрожая</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания Урожая</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання врожаю</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="5d6d43d8-51b4-4f1e-a4c4-9483b5e379a8">
+    <name>ФизическийВес1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физический вес 1</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Фізична вага 1</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания физического веса 1</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання фізичної ваги 1</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="a92a4fbd-2482-4261-beea-2a1d4a34525c">
+    <name>ФизическийВес2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физический вес 2</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Фізична вага 2</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания физического веса 2</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання фізичної ваги 2</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ff5a6fc0-3242-42d3-9537-8ff9923dae8b">
+    <name>ФизическийВес3</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физический вес 3</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Фізична вага 3</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания физического веса 3</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання фізичної ваги 3</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="da9107f6-6207-4b8c-a689-734e6b424714">
+    <name>ФизическийВес4</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физический вес 4</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Фізична вага 4</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания физического веса 4</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання фізичної ваги 4</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="97e2f479-bf43-4947-a9f3-bd89fcd68563">
+    <name>ФизическийВес5</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физический вес 5</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Фізична вага 5</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания физического веса 5</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання фізичної ваги 5</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7a498669-238f-4993-b71c-40335e1a79f8">
+    <name>ФизическийВес6</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физический вес 6</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Фізична вага 6</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания физического веса 6</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання фізичної ваги </value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="fee0c889-0c0e-40cb-aeea-144def99dab7">
+    <name>ФизическийВес7</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физический вес 7</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Фізична вага 7</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания физического веса 7</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання фізичної ваги </value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ee989e38-49c6-4352-bc73-e2a481f114d1">
+    <name>ФизическийВес8</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физический вес 8</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Фізична вага 8</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания физического веса 8</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання фізичної ваги </value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="0376855e-c67f-43df-a959-852a8774e3cb">
+    <name>ФизическийВес9</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физический вес 9</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Фізична вага 9</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания физического веса 9</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання фізичної ваги 9</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b8ffe990-ef60-4c56-9932-ee7a0145568b">
+    <name>УдалитьРодительскийДокумент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удалить родительский документ</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Удалить родительский документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания родительского документа</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для введення батьківського документу</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="a7a74605-873c-4341-a122-ae1f4e1b7815">
+    <name>УдалитьТолькоЗарегистрировать</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удалить только зарегистрировать</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Тільки зареєструвати</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для  указания Только зарегистрировать</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання Тільки зареєструвати</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="f4839be8-c7cd-479e-805a-5dde5943b056">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма документа загальна</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="4d721657-ce2f-42e5-bd16-022a1f302d54">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма списку</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="efcb78d4-8e99-4f22-a32c-ac55a9a9e8f2">
+    <producedTypes>
+      <objectType typeId="e3ec4b40-2197-4567-9ad2-c76bfa485b9a" valueTypeId="4d79c706-dab1-4f71-b074-e2207392a4e4"/>
+      <rowType typeId="85a3cf83-2a9b-4528-af54-95a395acb803" valueTypeId="1c097a20-ce9a-4206-b278-365ecc4f5a50"/>
+    </producedTypes>
+    <name>АктыСушкиИОчистки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Акты сушки и очистки</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Акты сушки и очистки</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="1c0f1363-b1c1-4776-98c0-ccd04711be97">
+      <name>Акт</name>
+      <synonym>
+        <key>ru</key>
+        <value>Акт</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Акт</value>
+      </synonym>
+      <type>
+        <types>DocumentRef</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания Акта очистки сушки</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит для вказання Акту очистки сушки</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="58bb146c-2f42-4550-a0ca-4a8325677ecc">
+      <name>тВесПоВлажности5</name>
+      <synonym>
+        <key>ru</key>
+        <value>Т вес по влажности 5</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Т вага по вологості5</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>12</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса по влажности 5</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по вологості 5</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="6abec856-f502-4cd5-818b-091c09db3254">
+      <name>тВесПоВлажности6</name>
+      <synonym>
+        <key>ru</key>
+        <value>Т вес по влажности 6</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Т вага по вологості6</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>12</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса по влажности 6</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по вологості 6</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="4a8cc10b-032d-4ddc-9805-4f73714d82c0">
+      <name>тВесПоСорнойПримеси5</name>
+      <synonym>
+        <key>ru</key>
+        <value>Т вес по сорной примеси 5</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Т вага по смітній домішці5</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>12</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса по сорной примеси 5</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по смітній домішці 5</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="cb6e5486-0aca-4e8e-89f3-fc11cb00c88b">
+      <name>тВесПоСорнойПримеси6</name>
+      <synonym>
+        <key>ru</key>
+        <value>Т вес по сорной примеси 6</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Т вага по смітній домішці6</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>12</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса по сорной примеси 6</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по смітній домішці 6</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="66d55dda-7a31-41be-bc29-2612729ec3d2">
+      <name>тУбыльОтСушки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Усушка</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Усушка</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания убыли от сушки</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання убутку від сушки</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="00db9394-4abb-4ea7-a70d-74478134659c">
+      <name>тФизическийВес</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вес</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вага</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>12</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания физического веса</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання фізичної ваги</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="1624ef52-8f6a-4fa2-90b2-ca1859ab7649">
+      <name>тФизическийВес5</name>
+      <synonym>
+        <key>ru</key>
+        <value>I и II кат. поб. прод.</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>I та II кат. поб. прод.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>12</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания физического веса 5</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання фізичної ваги 5</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="129280cf-78ae-4a21-b9cf-b6f3779ee4a3">
+      <name>тФизическийВес6</name>
+      <synonym>
+        <key>ru</key>
+        <value>III кат.</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>III кат.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>12</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания физического веса 6</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання фізичної ваги 6</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a40a0e90-b9a2-4ad6-9637-1d311f63a2f4">
+      <name>ВидОчистки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид очистки</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вид очистки</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания вида очистки</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання виду очистки</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="4addf68b-0cb3-4ac9-90f6-ea79d85abc5f">
+      <name>тУбыльОтОчистки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Очистка</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Очищення</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания убыли от очистки</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання убутку від очистки</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="fbe010ae-a3ea-4a3d-8256-4bc2f8127329">
+      <name>тОчищено</name>
+      <synonym>
+        <key>ru</key>
+        <value>Очищено</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Очищено</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>12</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для признака очищено</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для ознаки очищено</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b0b0026d-5d65-4536-be8c-886a15bfaf1a">
+      <name>тПросушено</name>
+      <synonym>
+        <key>ru</key>
+        <value>Посушено</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Посушено</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>12</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для признака просушено</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ознаки просушено</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="0f076a27-0805-45d5-9b79-e4b99cc9bdca">
+    <producedTypes>
+      <objectType typeId="a6e09c10-8fc4-43a9-b2b8-f419cd21e9a0" valueTypeId="0e074ea3-6b68-4b90-895c-0bc1dd0fc3b2"/>
+      <rowType typeId="762bc699-9b99-4b8f-91a7-7745d560f92b" valueTypeId="0bb3827b-13c4-47d8-984d-adaba2bdfadf"/>
+    </producedTypes>
+    <name>Итоги</name>
+    <synonym>
+      <key>ru</key>
+      <value>Итоги</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Підсумки</value>
+    </synonym>
+    <toolTip>
+      <key>ru</key>
+      <value>Итоги.</value>
+    </toolTip>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="b8071123-aee6-4549-be46-78a03b14c5bf">
+      <name>Владелец</name>
+      <synonym>
+        <key>ru</key>
+        <value>Владелец</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Власник</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Контрагенты</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания владельца</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання власника</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="bfcdcdae-0480-4d40-805d-f9f3c7d11f81">
+      <name>ДоговорКонтрагента</name>
+      <synonym>
+        <key>ru</key>
+        <value>Договор</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Договір</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ДоговорыКонтрагентов</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания договора контрагента</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання договору контрагента</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="10c62d07-e41f-4150-9609-b49abc45bca2">
+      <name>Регистратор</name>
+      <synonym>
+        <key>ru</key>
+        <value>Регистратор</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Реєстратор</value>
+      </synonym>
+      <type>
+        <types>DocumentRef</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания документа регистратора</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання документа реєстратора</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b7a80c48-00ff-4c56-9db0-8122c952a06c">
+      <name>ВесПриход</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вес приход, кг.</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вага надходження, кг.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса прихода </value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги надходження</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="df959370-b6b4-41d0-b1d8-d4562f165b3e">
+      <name>ВесПоВлажностиПриход</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для отражения веса по влажности приход</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для відображення ваги по вологості надходження</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="6d0dc1cc-4b7c-49f7-971c-42b766ec6dfd">
+      <name>ВесПоСорнойПримесиПриход</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для отражения веса по сорной примеси приход</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит для вказання ваги по смітній домішці надходження</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="8f2d680e-7296-4d18-b24c-42b7f3b341a4">
+      <name>ВесПоЗерновойПримесиПриход</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для отражения веса по зерновой примеси приход</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для відображення ваги по зерновій домішці надходження</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="18e32cd9-034d-44c4-b5c7-19dcfedfe815">
+      <name>ВлажностьПриход</name>
+      <synonym>
+        <key>ru</key>
+        <value>Влажность, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вологість, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит для указания влажности по приходу, %</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит для вказання вологості по надходженню, %</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="f7d23262-5bc5-4d88-8338-78375afd7aef">
+      <name>СорнаяПримесьПриход</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сорная примесь, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Смітна домішка, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит для указания сорной примеси по приходу, %</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит для вказання зернової домішки по надходженню, %</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="3b456752-9005-4fdf-835d-2b677dbeb7ac">
+      <name>ЗерноваяПримесьПриход</name>
+      <synonym>
+        <key>ru</key>
+        <value>Зерновая примесь, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Зернова домішка, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит для указания зерновой примеси по приходу, %</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит для вказання зернової домішки по надходженню, %</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="9fd6b830-c846-4c83-8d04-317a506c2a6f">
+      <name>ВесРасход</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вес расход, кг.</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вага по відпуску, кг.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса расхода</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги видатку</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5bc87b88-655a-4303-bb28-b5ecd485f4ad">
+      <name>ВесПоВлажностиРасход</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для отражения веса по влажности расход</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для відображення ваги по вологості видатку</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="750dd6c0-5592-42f7-af96-192326107671">
+      <name>ВесПоСорнойПримесиРасход</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для отражения веса по сорной примеси расход</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит для вказання ваги по смітній домішці видатку</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a2d85c07-8bb6-4a74-9549-54208ebb7e22">
+      <name>ВесПоЗерновойПримесиРасход</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для отражения веса по зерновой примеси расход</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для відображення ваги по зерновій домішці видатку</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="da0e221d-fbcc-45ec-9608-ab4517f67046">
+      <name>ВлажностьРасход</name>
+      <synonym>
+        <key>ru</key>
+        <value>Влажность, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вологість, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания влажности расхода</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання вологості видатку</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="18926984-b431-429e-9b77-f2f9ef62d5ca">
+      <name>СорнаяПримесьРасход</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сорная примесь, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Смітна домішка, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания сорной примеси расход, %</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання смітної домішки по відпуску, %</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="65992a91-dd22-4455-b68b-35d080abbfd5">
+      <name>ЗерноваяПримесьРасход</name>
+      <synonym>
+        <key>ru</key>
+        <value>Зерновая примесь, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Зернова домішка, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания зерновой примеси расход, %</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит для вказання зернової домішки по відпуску, %</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="2c3fc1e3-2c64-468b-9f12-f291cc649028">
+      <name>ВесПриходПереоформление</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вес приход переоформление, кг</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вага надходження переоформлення, кг.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса прихода переоформление, кг</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги надходження переоформлення, кг</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a1adbdbc-87e2-442e-ba41-d88fc3a2c60b">
+      <name>ВлажностьПриходПереоформление</name>
+      <synonym>
+        <key>ru</key>
+        <value>Влажности, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вологість, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания влажности прихода переоформление</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання вологості надходження переоформлення</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="e2c2a061-b8cd-4571-850e-909322a989f6">
+      <name>СорнаяПримесьПриходПереоформление</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сорная примесь, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Смітна домішка, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания сорной примеси прихода переоформление</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини  для вказання смітної  домішки надходження переоформлення</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d342bc18-0db4-428d-bcae-de6c43104a9b">
+      <name>ВесПоВлажностиПриходПереоформление</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса по влажности прихода переоформление</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по смітній домішці надходження переоформлення</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5674d2ed-8a5c-4cd0-bde4-827669a61c34">
+      <name>ВесПоСорнойПримесиПриходПереоформление</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/% </value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса по сорной примеси прихода переоформление</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по смітній домішці надходження переоформлення</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="8708c706-ffbd-40fd-8d49-7051b568e843">
+      <name>ВесПоЗерновойПримесиПриходПереоформление</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/% зерновой примеси приход переоформление</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/% зернової домішки надходження переоформлення</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса по зерновой примеси прихода переоформление</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по зерновій домішці надходження переоформлення</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="81d90e66-7ef6-469c-832f-904879e11add">
+      <name>ВесРасходПереоформление</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вес расход переоформление, кг.</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вага відпуску переоформлення, кг.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса расхода переоформление, кг</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги видатку переоформлення, кг</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="ba090470-787b-418b-9711-63a934b81989">
+      <name>ВлажностьРасходПереоформление</name>
+      <synonym>
+        <key>ru</key>
+        <value>Влажность, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вологість, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания влажности расхода переоформление</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання вологості видатку переоформлення</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b06058a6-c4d3-47f6-96f6-3fd92144e816">
+      <name>СорнаяПримесьРасходПереоформление</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сорная примесь, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Смітна домішка, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания сорной примеси расхода переоформление</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання смітної домішки видатку переоформлення</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="bcdbf64c-b531-41c9-9aa2-6e37b05b4ac9">
+      <name>ВесПоВлажностиРасходПереоформление</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса по влажности расхода переоформление</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по вологості видатку переоформлення</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5a5dd728-7eff-48bf-b92c-0a7081743c20">
+      <name>ВесПоСорнойПримесиРасходПереоформление</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса по сорной примеси расхода переоформление</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по смітній домішці видатку переоформлення</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="6d472f20-d5d4-4e3c-8553-e6f8525a3d61">
+      <name>ВесРасходРеализация</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вес расход отгрузка, кг.</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вага відпуску відвантаження, кг.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса расхода реализации, кг</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги видатку реалізації, кг</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="6afb03ee-7ac0-48cf-8801-cf3642e39924">
+      <name>ВлажностьРасходРеализация</name>
+      <synonym>
+        <key>ru</key>
+        <value>Влажность, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вологість, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания влажности расхода реализация</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги видатку реалізації</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5de17a0e-ec29-45d7-b00b-d5122403a3af">
+      <name>СорнаяПримесьРасходРеализация</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сорная примесь, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Смітна домішка, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания сорной примеси расхода реализация</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання смітної домішки видатку реалізації</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="41f268a2-a105-4c86-95a0-09a526ee4689">
+      <name>ВесПоВлажностиРасходРеализация</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса по влажности расхода реализация</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по вологості видатку реалізації</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="8c2d12d9-9a0a-444c-9372-683acf265519">
+      <name>ВесПоСорнойПримесиРасходРеализация</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса по сорной примеси расход реализация</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по смітній домішці видатку реалізації</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="3dc2630e-ce95-49da-8448-cbd636ef1e6e">
+      <name>УбыльВесаПриСушке</name>
+      <synonym>
+        <key>ru</key>
+        <value>Убыль веса при сушке, кг.</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Усушка, кг.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания убыли веса при сушке</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання убутку ваги при сушці</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="deecfb8e-a15f-42d1-989c-67d6dbaa6480">
+      <name>ВесПриходНачальныйОстаток</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вес приход начальный остаток, кг.</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вага надходження залишок на початок, кг.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса прихода начальный остаток</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит для вказання ваги надходження початковий залишок</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="8afd8775-68df-490c-a4a0-1340e405923e">
+      <name>ВесПоВлажностиНачальныйОстаток</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для отражения веса по влажности начальный остаток</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для відображення ваги по вологості початковий залишок</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="17773876-876f-43fd-ac68-6c7e4fe4c71a">
+      <name>ВесПоСорнойПримесиНачальныйОстаток</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для отражения веса по сорной примеси начальный остаток</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по смітній домішці початковий залишок</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="f72f6ef3-71d7-43d7-9b8c-0cf35830a5ab">
+      <name>ВесПоЗерновойПримесиНачальныйОстаток</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для отражения веса по зерновой примеси начальный остаток</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по зерновій домішці початковий залишок</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a37790c2-fec5-47ea-b4bb-89bffec63a07">
+      <name>ВлажностьОстаткаНаНачало</name>
+      <synonym>
+        <key>ru</key>
+        <value>Влажность, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вологість, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания влажности остатка на начало периода </value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання вологості залишку на початок періоду</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="0e267a07-b001-4b31-bc40-b45e17213fd1">
+      <name>СорнаяПримесьОстаткаНаНачало</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сорная примесь, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Смітна домішка, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания сорной примеси остатка на начало периода  </value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання смітної домішки залишку на початок періоду</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a3a1134c-15c3-4c65-9550-aad1c95ad78b">
+      <name>ЗерноваяПримесьОстаткаНаНачало</name>
+      <synonym>
+        <key>ru</key>
+        <value>Зерновая примесь, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Зернова домішка, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания зерновой примеси остатка на начало периода  </value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання зернової домішки залишку на початок періоду</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="0cdcbc43-f985-4299-a498-3db36b22ed84">
+      <name>ВесПриходВнутр</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вес приход внутренний, кг.</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вага надходження внутр., кг. </value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной частини для указания веса прихода внутреннего</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги надходження внутрішнього</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="e6b2f3a3-5ff9-4752-a931-256e7f535980">
+      <name>ВесПоВлажностиПриходВнутр</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для отражения веса по влажности прихода внутреннего</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по вологості надходження внутрішнього</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="f3293dbd-fd80-407e-9e13-1800e4688041">
+      <name>ВесПоСорнойПримесиПриходВнутр</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для отражения веса по сорной примеси прихода внутреннего</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по смітній домішці надходження внутрішнього</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="73f9bb0f-cd62-48a7-8ce2-3258633bd7e7">
+      <name>ВесПоЗерновойПримесиПриходВнутр</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/% зерновой примеси приход внутренний</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/% зернової домішки надходження внтур.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для отражения веса по зерновой примеси прихода внутреннего</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по зерновій домішці надходження внутрішнього</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="88d20025-ad94-4753-85f1-d3e40df6400b">
+      <name>ВлажностьПриходВнутр</name>
+      <synonym>
+        <key>ru</key>
+        <value>Влажность, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вологість, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания влажности по приходу внутреннему</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання вологості по надходженню внутрішньому</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="60aec0be-98b7-4cc4-adfc-dbb1be46d474">
+      <name>СорнаяПримесьПриходВнутр</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сорная примесь, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Смітна домішка, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания сорной примеси по приходу внутреннему</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання смітної домішки по надходженню внутрішньому</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a03fe60b-2380-48a1-9323-4789a4843d29">
+      <name>ВесРасходВнутр</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вес расход внутренний, кг.</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вага відпуску внутр., кг.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса по расходу внутреннему</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по видатку внутрішньому</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a0287cf9-027f-47f9-ac2d-55d498038a04">
+      <name>ВесПоВлажностиРасходВнутр</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для отражения веса по влажности расхода внутреннего</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для відображення ваги по вологості видатку внутрішнього</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5652ff00-1185-4962-ba3a-d66e69242890">
+      <name>ВесПоСорнойПримесиРасходВнутр</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для отражения веса по сорной примеси расхода внутреннего</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для відображення ваги по смітній домішці видатку внутрішнього</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="04091f1d-5814-4731-9836-e77fb01d2d7a">
+      <name>ВлажностьРасходВнутр</name>
+      <synonym>
+        <key>ru</key>
+        <value>Влажность, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вологість, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания влажности по расходу внутреннему</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання вологості по видатку внутрішньому</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="1a5b0be1-2d95-447b-83ae-851fd7026598">
+      <name>СорнаяПримесьРасходВнутр</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сорная примесь, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Смітна домішка, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания сорной примеси по расходу внутреннему</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання смітної домішки по видатку внутрішньому</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="38618f3a-d714-4984-8a2f-029b663c5a6c">
+      <name>ВесПриходБезПереоформления</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вес приход без переоформления, кг.</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вага надходження без переоформлення, кг.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса прихода без переоформления</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги надходження без переоформлення</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c879dabd-9900-4f7c-ac12-d2ff0eebf873">
+      <name>ВесПоВлажностиПриходБезПереоформления</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса по влажности прихода без переоформления</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по вологості надходження без переоформлення</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="4c90fc77-ab4e-4f12-b7bd-af3e883e9ce0">
+      <name>ВесПоСорнойПримесиПриходБезПереоформления</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса по сорной примеси прихода без переоформления</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по смітній домішці надходження без переоформлення</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c11d401a-3237-4900-a294-bb4b195370fc">
+      <name>ВесПоЗерновойПримесиПриходБезПереоформления</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/% зерновой примеси приход без переоформления</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/% зернової домішки надходження без переоформлення</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса по зерновой примеси прихода без переоформления</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по зерновій домішці надходження без переоформлення</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="612295a6-acb1-4562-9981-3f770ea9514f">
+      <name>ВлажностьПриходБезПереоформления</name>
+      <synonym>
+        <key>ru</key>
+        <value>Влажность, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вологість, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания влажности прихода без переоформления </value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання вологості надходження без переоформлення</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="eade5bc3-4887-4eef-a089-1a1584fb7cf0">
+      <name>СорнаяПримесьПриходБезПереоформления</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сорная примесь, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Смітна домішка , %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания сорной примеси прихода без переоформления </value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання смітної домішки надходження без переоформлення</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="6623d777-e235-4a7c-a12d-e65080aef7d0">
+      <name>ФизическийВесОтходы1Категории</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вес отходов І кат., кг.</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вага відходів І кат., кг.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса отходов 1 категории</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги відходів 1 категорії</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="da129f99-ab4a-41f8-b7a0-7806925f4256">
+      <name>ФизическийВесОтходы2Категории</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вес отходов ІІ кат., кг.</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вага відходів ІІ кат., кг.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса отходов 2 категории</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги відходів 2 категорії</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="2e404b0e-1a61-43b3-9a34-7808384d82ef">
+      <name>ФизическийВесОтходы3Категории</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вес отходов ІІІ кат., кг.</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вага відходів ІІІ кат. кг.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса отходов 3 категории</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги відходів 3 категорії</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="485cd4af-0b53-4c76-a4a4-ac59a3db4970">
+      <name>ФизическийВесПобочногоПродукта</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вес побочного продукта, кг.</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вага поб. продукту, кг.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса побочного продукта</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги побічного продукту</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="4a999f69-12e2-40ba-82bb-6dd53620edf9">
+      <name>ВесПоВлажности1Категории</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса веса по влажности 1 категории</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по вологості 1 категорії</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="9dc6f3c0-733b-4b42-ae35-a64baa2995cb">
+      <name>ВесПоСорнойПримеси1Категории</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса по сорной примеси 1 категории</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по сміттєвій домішці 1 категорії</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="be10ac06-c7de-47ac-a91b-b672b695f855">
+      <name>ВесПоВлажности2Категории</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/% влажности 2 кат.</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/% вологості ІІ кат.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса по влажности 2 категории</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по вологості 2 категорії</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="3ba04593-b1de-4471-8ffc-ca9e77fb77f4">
+      <name>ВесПоСорнойПримеси2Категории</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/% сорной примеси 2 кат.</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/% смітної дом. ІІ кат.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса по сорной примеси 2 категории</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по сміттєвій домішці 2 категорії</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="ee886042-6219-4f54-bd8c-999836185f89">
+      <name>ВесПоВлажности3Категории</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса по влажности 3 категории</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по вологості 3 категорії</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d9a4bcb3-14f6-43a2-a597-e614107e5d16">
+      <name>ВесПоСорнойПримеси3Категории</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса по сорной примеси 3 категории</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по сміттєвій домішці 3 категорії</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d2a196dd-52e5-4591-9c74-30b81b42c5a4">
+      <name>ВесПоВлажностиПобочногоПродукта</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса по влажности побочного продукта</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по вологості побічного продукту</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="6fac0b3b-bed7-45f2-a7a1-65c9fbb75000">
+      <name>ВесПоСорнойПримесиПобочногоПродукта</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ц/%</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ц/%</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса по сорной примеси побочного продукта</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги по сміттєвій домішці побічного продукту</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="61d940c9-f11a-48bf-bd30-6720a801089c">
+      <name>Влажность1Категории</name>
+      <synonym>
+        <key>ru</key>
+        <value>Влажность, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вологість, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания влажности  1 категории</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання вологості 1 категорії</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="3141baf9-9840-496e-8dfa-4ce2e5025d83">
+      <name>СорнаяПримесь1Категории</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сорная примесь, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Смітна домішка, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания сорной примеси  1 категории</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання сміттєвої домішки 1 категорії</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="309774bf-834b-42a2-b9f3-500a9627a4a3">
+      <name>Влажность2Категории</name>
+      <synonym>
+        <key>ru</key>
+        <value>Влажность, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вологість, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания влажности  2 категории</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання вологості 2 категорії</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5e1351c7-440c-429a-b41e-e93ae164dd40">
+      <name>СорнаяПримесь2Категории</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сорная примесь 2 кат., %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Смітна домішка ІІ кат., %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания сорной примеси  2 категории</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання сміттєвої домішки 2 категорії</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="fcb57f04-0d84-42e9-b0c7-c156446a09dd">
+      <name>Влажность3Категории</name>
+      <synonym>
+        <key>ru</key>
+        <value>Влажность, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вологість, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания влажности  3 категории</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання вологості 3 категорії</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="392e1ce7-309f-431b-9341-96c35710dc64">
+      <name>СорнаяПримесь3Категории</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сорная примесь 3 кат., %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Смітна домішка ІІІ кат., %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания сорной примеси  3 категории</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання сміттєвої домішки 3 категорії</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="47bf9b1b-5e13-4498-ae89-262a161754f6">
+      <name>ВлажностьПобочногоПродукта</name>
+      <synonym>
+        <key>ru</key>
+        <value>Влажность, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вологість, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания влажности  побочного продукта</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання вологості побічного продукту</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="cc8f3bc8-cf8f-4b51-842d-f091d6aea4de">
+      <name>СорнаяПримесьПобочногоПродукта</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сорная примесь, %</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Смітна домішка, %</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания сорной примеси  побочного продукта</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання сміттєвої домішки побічного продукту</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="42c24f5b-c619-4879-ab27-2420e11dcc1e">
+      <name>Остаток37</name>
+      <synonym>
+        <key>ru</key>
+        <value>Остаток ф 37, кг.</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Залишок ф37, кг.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания остатка по форме 37</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для залишку по формі 37</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="666237c8-3d4f-401b-a996-94e54b5314b2">
+      <name>УбыльПоВлажности</name>
+      <synonym>
+        <key>ru</key>
+        <value>Убыль по влажности, кг.</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Убуток по вологості, кг.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит для указания Убыли по влажности</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит для вказання убутку по вологості</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="294dcc9c-1833-4dd8-ab7b-3f5e87a4e162">
+      <name>УбыльПоЕстественной</name>
+      <synonym>
+        <key>ru</key>
+        <value>Убыль при хранении, кг.</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Убуток при зберіганні, кг.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит для указания Убыли по нормам естественной убыли</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит для вказання убутку по нормам природного убутку</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="696a6894-6f26-4285-8fdf-6859eb09068a">
+      <name>УбыльПоПрочей</name>
+      <synonym>
+        <key>ru</key>
+        <value>Прочая убыль, кг.</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Інший убуток, кг.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит для указания прочей убыли</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит для вказання іншого убутку</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="fad1f1fd-824f-426a-b44d-750bcf40ea55">
+      <name>УбыльПоСорнойПримеси</name>
+      <synonym>
+        <key>ru</key>
+        <value>Убыль по сорной примеси, кг.</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Убуток по смітній домішці, кг.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит для указания Убыли по сорной примеси</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит для вказання убутку по сміттєвій домішці</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="f88915d9-23d0-408f-9c80-28a3c6068625">
+      <name>ПовышениеПоВлажности</name>
+      <synonym>
+        <key>ru</key>
+        <value>Повышение по влажности, кг.</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Підвищення по вологості, кг.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит для указания повышения по влажности</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит для вказання підвищення по вологості</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="8478517d-9291-40d5-8a33-a29155529bca">
+      <name>ПовышениеПоСорнойПримеси</name>
+      <synonym>
+        <key>ru</key>
+        <value>Повышение по сорной примеси, кг.</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Підвищення по смітній домішці, кг.</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит для указания повышения по сорной примеси</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит для вказання підвищення по смітній домішці</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="456c6ec5-7621-48cf-a6dd-5b7269da17a3">
+    <producedTypes>
+      <objectType typeId="a7cbd0d3-eaa4-457f-bc5a-36678829eab2" valueTypeId="e02debdb-5cfa-4d97-9cf5-f7ab53c308d7"/>
+      <rowType typeId="ab00457a-3680-4c61-93bd-b712ceebd853" valueTypeId="ccd1c568-f74f-49fb-ad61-54e904a87cda"/>
+    </producedTypes>
+    <name>СписокМестХранения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список мест хранения</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Список місць зберігання</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="b75f41c6-55a5-4711-9b21-b08ce1bb5a93">
+      <name>МестоХранения</name>
+      <synonym>
+        <key>ru</key>
+        <value>Место хранения</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Місце зберігання</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ИНАГРО_МестаХранения</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит для указания места хранения</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит для вказання місця зберігання</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>Document.ИНАГРО_АктЗачистки.Attribute.Склад</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="03164859-88ce-4b8d-936c-89f5673b8854">
+      <name>Вес</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вес</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вага</value>
+      </synonym>
+      <comment>Вес</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="f7ea7a0d-c621-4e6a-8702-b3397175fc7d">
+      <name>УбыльВесаПриСушке</name>
+      <synonym>
+        <key>ru</key>
+        <value>Убыль веса при сушке</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Убуток від сушіння</value>
+      </synonym>
+      <comment>Убыль веса при сушке</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания убыли веса при сушке</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання убутку ваги при сушці</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="8bc7b625-0d12-4526-8f2d-6d3afc1ef721">
+      <name>ВесОстаток</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вес (остатка)</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Вага (залишку)</value>
+      </synonym>
+      <comment>Вес</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания веса остаток</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання ваги залишок</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="7782a2ec-0de9-4790-9ce5-bd32b0151922">
+      <name>УбыльВесаПриСушкеОстаток</name>
+      <synonym>
+        <key>ru</key>
+        <value>Убыль веса при сушке (остаток)</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Убуток від сушіння (залишок)</value>
+      </synonym>
+      <comment>Убыль веса при сушке</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания убыли веса при сушке остаток</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання убутку ваги при сушці</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="82b8ae0f-6ff3-442b-8066-e3844eccff43">
+      <name>ОстатокПоПеревзвешиванию</name>
+      <synonym>
+        <key>ru</key>
+        <value>Остаток по перевзвешиванию</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Залишок по переважуванню</value>
+      </synonym>
+      <comment>Вес</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Реквизит табличной части для указания  остатка по перевзвешиванию</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Реквізит табличної частини для вказання залишку по перезважуванню</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <templates uuid="723a01c5-1c43-4dda-b0fd-09c58dba492c">
+    <name>ПФ_MXL_Макет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Макет</value>
+    </synonym>
+  </templates>
+  <templates uuid="dbe2d1cc-64e3-4629-a530-9ad6e0f55341">
+    <name>ПФ_MXL_ВедомостьПроверки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ведомость проверки</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відомість перевірки</value>
+    </synonym>
+  </templates>
+  <templates uuid="91dfa552-7a4d-4a33-8f55-182f6bc2229e">
+    <name>ПФ_MXL_РасшифровкаПоВладельцам</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расшифровка по владельцам</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Розшифровка по власниках</value>
+    </synonym>
+  </templates>
+  <templates uuid="0062dec6-9016-46dd-ac2c-6962edc2d804">
+    <name>ПФ_MXL_РасчетСреднегоСтрокаХранения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расчет среднего строка хранения</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Розрахунок середнього терміну зберігання</value>
+    </synonym>
+  </templates>
+</mdclass:Document>

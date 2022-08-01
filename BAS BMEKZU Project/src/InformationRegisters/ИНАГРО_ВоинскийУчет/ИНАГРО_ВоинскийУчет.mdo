@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a13e4540-f1e6-4108-a73c-767700fd9d44">
+  <producedTypes>
+    <selectionType typeId="0dff0f39-334e-4790-9a5f-f2c085cbd5dc" valueTypeId="d064b23d-8402-4d4c-bc70-cc2063dff3a9"/>
+    <listType typeId="836c0ef8-73ec-41ca-bdd0-991c1d943d1c" valueTypeId="4e56c4ae-3977-4534-bb6c-1ac92e23021d"/>
+    <managerType typeId="0ecc96bb-7314-4664-a271-b3fb568ae3db" valueTypeId="c8da0c8f-1f5e-44f7-831c-33524e5f5e2d"/>
+    <recordSetType typeId="cb89dfd7-816a-4167-be09-c6b33ef41b50" valueTypeId="cca329c0-7baa-41cc-ac17-86081d5cf8d9"/>
+    <recordKeyType typeId="cf7f6b8e-d7a5-4d99-a08b-ecfbc6c53678" valueTypeId="78fca4d9-461b-4995-97d8-ca01a7232ff4"/>
+    <recordType typeId="2a199b9b-f8f4-4f33-8610-2fa407a4e1a4" valueTypeId="7e3dde07-7432-4731-b199-95ccbfa0dbef"/>
+    <recordManagerType typeId="6fbe392d-012d-4143-b846-b493aa897608" valueTypeId="30a15a67-2e4b-4793-ae7d-bc040717b178"/>
+  </producedTypes>
+  <name>ИНАГРО_ВоинскийУчет</name>
+  <synonym>
+    <key>ru</key>
+    <value>Воинский учет</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Військовий облік</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ИНАГРО_ВоинскийУчет.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ИНАГРО_ВоинскийУчет.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания периода</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для заповнення періоду</value>
+    </toolTip>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+    <pages>
+      <lang>uk</lang>
+    </pages>
+  </help>
+  <resources uuid="0d7eaa00-1a0f-44c7-aab7-50a12c963d38">
+    <name>ОтношениеКВоинскойОбязанности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отношение к воинской обязанности</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відношення до військового обов'язку</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ИНАГРО_ОтношениеКВоинскойОбязанности</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания отношения к воинской обязанности</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для зазначення відношення до військового обов'язку</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e973b715-0850-46ab-88ad-e597ab3a6097">
+    <name>ОтношениеКВоинскомуУчету</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отношение к воинскому учету</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відношення до військового обліку</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ИНАГРО_ОтношениеКВоинскомуУчету</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания отношения к воинскому учету</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для зазначення відношення до військового обліку</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="1e81999a-34f7-4318-bc31-c8c2733bfe76">
+    <name>Звание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Звание</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Звання</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИНАГРО_ВоинскиеЗвания</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания звания</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для зазначення звання</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="cd9db7d8-7a6c-424e-9b1c-b40341bd63f0">
+    <name>ВУС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Военно-учетная специальность</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>ВОС</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания специальности</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для зазначення спеціальності</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="e1fcd4f3-797b-4ce2-8f31-bed72c4b22e6">
+    <name>Годность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Годность</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Придатність</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ИНАГРО_ГодностьКВоеннойСлужбе</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак годности</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака придатності</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="71320b93-60ee-4924-b5dc-c91249ea7b76">
+    <name>Военкомат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Военкомат</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Військкомат</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИНАГРО_Военкоматы</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания военкомата</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для зазначення військкомату</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e82091a1-d016-4c2f-a46b-f4bbc7e428ce">
+    <name>НаличиеМобпредписания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Наличие мобилизационного предписания</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Наявність моб припису</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак наличия мобилизационного предписания</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака наявності мобілізаційного припису</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="44d71151-3791-4483-881f-d1928e8859f8">
+    <name>ЗабронированОрганизацией</name>
+    <synonym>
+      <key>ru</key>
+      <value>Забронирован организацией</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Заброньовано організацією</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания организации</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання організації</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="f3a89803-bb65-4ee9-85a5-c78e29c2c032">
+    <name>ОснованиеНегодности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основание непригодности</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Підстава непридатності</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для введения основания непригодности</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення підстави непридатності</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="d6ff3e22-621a-457b-abe6-6e12407ff6a0">
+    <name>СпецУчет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Специальный учет</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Спеціальний облік</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Строка для указания специального учета</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Рядок для зазначення спеціального обліку</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="29c8adad-e716-4940-b47a-d9ed467bdfb7">
+    <name>Группа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группа</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Група</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания группы воинского учета</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для зазначення групи військового обліку</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="4938393e-c7c4-4ac4-bb85-806505ea4c12">
+    <name>Категория</name>
+    <synonym>
+      <key>ru</key>
+      <value>Категория (разряд)</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Категорія (розряд)</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ИНАГРО_КатегорииВоинскогоУчета</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания категории</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення категорії </value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="304c087c-4af9-4a80-9544-88b2b0284b23">
+    <name>Профиль</name>
+    <synonym>
+      <key>ru</key>
+      <value>Профиль</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Профіль</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ИНАГРО_ПрофилиОфицеров</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания профиля</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання профілю</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="8d0b7824-3c1a-4e79-ac97-70484badbbfa">
+    <name>ДатаИНомерПриказаОПризыве</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата и номер приказа о призыве</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Дата і номер наказу про призов</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания даты и номера приказа</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для зазначення дати і номеру наказу</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="e09f38a3-91d2-4fa4-8d20-126cccfae8fd">
+    <name>СрокКонтракта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Срок контракта</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Термін контракту</value>
+    </synonym>
+    <comment>Для службы по контракту</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания срока контракта</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для зазначення строку контракта</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="25da6cb1-8873-40b4-9b8c-997a97542f9c">
+    <name>ГруппаДо2016</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группа (до 19.1216 г.)</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Група (до 19.1216 р.)</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ИНАГРО_ГруппыВоинскогоУчета</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания группы</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для зазначення групи</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="22b48f43-c540-44c3-8002-ce0fb792b6d1">
+    <name>ВоенкоматФМП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Военкомат по ФМП</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Військкомат по ФМП</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИНАГРО_Военкоматы</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания военкомата по фактическому месту проживания</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для зазначення військкомату за фактичним місцем проживання</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="c5ec7041-2eee-49ac-ad02-72e0ad244c42">
+    <name>РеквизитыВоенногоБилета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Реквизиты военного билета</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Реквізити військового квитка</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>60</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания реквизитов военного билета</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання реквізитів військового квитка</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="de63f2f2-24e2-4a42-b5c9-6297241259fe">
+    <name>Физлицо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физическое лицо</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Фізична особа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания физического лица</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання фізичної особи</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="65d694dc-05d9-4eb8-b225-d29e539e8d58">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма запису</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="f799e0d0-e706-424b-b6d8-247cb0f0bdee">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма списку</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

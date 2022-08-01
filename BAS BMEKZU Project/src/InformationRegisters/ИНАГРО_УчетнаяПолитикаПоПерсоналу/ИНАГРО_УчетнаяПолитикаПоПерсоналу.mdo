@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c76d532c-8d45-4367-b5ef-2cdb256dc479">
+  <producedTypes>
+    <selectionType typeId="94a22181-ea49-416f-a317-eef0166cb17a" valueTypeId="74a82a3a-141d-4d55-acdc-a33ce64208ce"/>
+    <listType typeId="5cc952ba-886a-4b99-b51e-43ff2d683d8a" valueTypeId="67d73104-fd8f-4ce6-9945-5dc8d08c2c48"/>
+    <managerType typeId="7f4cce6a-b388-41b4-af66-e26baed7e9c4" valueTypeId="a8ef3138-4066-40b6-8b02-a3ac2f1ab869"/>
+    <recordSetType typeId="e73288ea-50e9-484e-9867-b373ff510689" valueTypeId="4cf2ea05-dd57-40ab-bc14-06bf00491933"/>
+    <recordKeyType typeId="f5bacde5-9948-4f9f-a1a8-d04e91b2d3da" valueTypeId="124e26ab-a427-4519-99a3-e896484bf83d"/>
+    <recordType typeId="a75c35cb-14f1-4f8c-9043-bbd47c19a068" valueTypeId="215ad230-8dba-4aaa-a273-72f2186db526"/>
+    <recordManagerType typeId="13412709-113a-485e-a923-5ef97d6b4a77" valueTypeId="f8efa8f8-96eb-46d5-ae0c-efb490ca339c"/>
+  </producedTypes>
+  <name>ИНАГРО_УчетнаяПолитикаПоПерсоналу</name>
+  <synonym>
+    <key>ru</key>
+    <value>Учетная политика по персоналу</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Облікова політика по персоналу</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ИНАГРО_УчетнаяПолитикаПоПерсоналу.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ИНАГРО_УчетнаяПолитикаПоПерсоналу.Form.ФормаСписка</defaultListForm>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+    <pages>
+      <lang>uk</lang>
+    </pages>
+  </help>
+  <resources uuid="9b4879d7-1bdf-49ed-b734-5c51f9ea4f5c">
+    <name>ЕстьГодоваяПремия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Есть премия за год</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Є річна премія</value>
+    </synonym>
+    <comment>Если ИСТИНА, то в табличной части Средней зарплаты появятся строки для расчета премии за год</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак начисления годовой премии</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака нарахування річної премії</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="099ceefa-4afe-465f-93ab-fd6f93ea625e">
+    <name>ЕстьПремии</name>
+    <synonym>
+      <key>ru</key>
+      <value>Есть премии</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Є премії</value>
+    </synonym>
+    <comment>Если ИСТИНА, то в табличной части Средней зарплаты появятся строки для расчета премии</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак наличия премий</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака наявності премій</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="c96f0d99-3e8b-44ed-bea5-c0a464e9a7e0">
+    <name>ИспользованиеРезерваОтпусков</name>
+    <synonym>
+      <key>ru</key>
+      <value>Использование резерва отпусков</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Використання резерву відпусток</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак использования резерва отпусков</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака використання резерву відпусток</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="5a0a8700-32c1-4637-9ac4-ada0b79adc0e">
+    <name>ИспользуетсяТрудШахтеров</name>
+    <synonym>
+      <key>ru</key>
+      <value>Используется труд шахтеров</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Використовується праця шахтарів</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак использования труда шахтеров</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака використання праці шахтарів</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="9326139e-0961-47c8-86d8-4eb50726d8df">
+    <name>КоэффициентВечерних</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коэффициент вечерних</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Коефіцієнт вечірніх</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания коэффициента доплаты за работу в вечерние часы</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання коефіцієнту доплати за роботу в вечірні години</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="bed0c293-7c1a-4cad-8506-f295ccccbd06">
+    <name>КоэффициентНочных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коэффициент ночных</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Коефіцієнт нічних</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания коэффициента доплаты за работу в ночные часы</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання коефіцієнту доплати за роботу в нічні години</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="a057430b-de1d-4ec2-8aa1-056b0da75180">
+    <name>НеВестиУчетПоСубконтоСотрудникиНа661Счете</name>
+    <synonym>
+      <key>ru</key>
+      <value>Не вести учет по субконто Сотрудники на 661 счете</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Не вести облік по субконто Співробітники на 661 рахунку</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак учета в разрезе субконто Работники на 661 счете</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака обліку в розрізі субконто Співробітники на 661 рахунку</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e98f15cd-95fe-499d-b4bd-b0fcbeafa0ed">
+    <name>ОкруглятьДо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Округлять до</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Округляти до</value>
+    </synonym>
+    <comment>Если 1, то отбрасывать копейки</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Выбор метода округления суммы заработной платы к выплате </value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Вибір метода заокруглення суми до виплати заробітної плати</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="5c16d583-aa64-4c2c-a8bb-8345a0973bcd">
+    <name>ПрименятьКоэффициентЕСВДляАвансов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Применять коэффициент ЕСВ для авансов</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Застосовувати коефіцієнт ЄСВ для авансів</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак применения коэффициента единого социального взноса для авансов</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака застосування коефіцієнта єдиного соціального внеску для авансів</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="9117d9d5-27fa-433c-8d9e-396cc81c1cd8">
+    <name>УдалитьОтбрасыватьКопейки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удалить отбрасывать копейки</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відкидати копійки</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="7384f70a-06e7-4771-aeae-de9eaa93f2f1">
+    <name>УдалитьНеПрименятьЛьготуНДФЛДляБудущихПериодов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Не применять льготу по НДФЛ для начислений будущих периодов (не используется)</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Не застосовувати пільгу ПДФО для нарахувань майбутніх періодів (не використовується)</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак применения льготы по налогу на доходы физических лиц для будущих периодов</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака застосування пільги по податку на доходи фізичних осіб для майбутніх періодів</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="c84190b1-d829-4fcb-8ea7-e907738b657a">
+    <name>УдалитьНеПрименятьЛьготуНДФЛДляАвансов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Не применять льготу по НДФЛ для авансов (не используется)</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Не застосовувати пільгу ПДФО для авансів (не використовується)</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак применения льготы по налогу на доходы физических лиц для авансов</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака застосування пільги по податку на доходи фізичних осіб</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="145f2003-a7c9-4b6a-9697-26dd53b8da94">
+    <name>УдалитьПрименятьЛьготуНДФЛБазовуюИДетскуюПоПорогуДетской</name>
+    <synonym>
+      <key>ru</key>
+      <value>Применять базовую льготу по НДФЛ одновременно с применением льгот на детей (не используется)</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Застосовувати базову пільгу по ПДФО одночасно із застосуванням пільг на дітей (не використовується)</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак выбора схемы для одновременного применения базовой и льготы на детей по налогу на доходы с физических лиц</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака вибору схеми одночасного застосування базової та пльги на дітей по податку на доходи фізичних осіб</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="49315eb9-00be-4a90-866d-a41a047ad7e0">
+    <name>УдалитьУпрощеннаяСхемаУчетаВзносовИНДФЛ</name>
+    <synonym>
+      <key>ru</key>
+      <value>(не используется) Упрощенная схема учета взносов и НДФЛ</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Спрощена схема обліку внесків і ПДФО</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="0c929d32-3a5e-43db-af38-6e27372c6e0a">
+    <name>УдалитьПоддержкаВнутреннегоСовместительства</name>
+    <synonym>
+      <key>ru</key>
+      <value>Поддержка внутреннего совместительства (не используется)</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Підтримка внутрішнього сумісництва (не використовується)</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак возможности поддержки внутреннего совместительства</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака можливості підтримки внутрішнього сумісництва</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="875fde3b-ba86-4f98-aa16-811748ad2abe">
+    <name>УдалитьИспользованиеРезерваОтпусков</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удалить использование резерва отпусков</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Використання резерву відпусток</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="073de866-1258-4bc2-949d-01c41e7f5618">
+    <name>УдалитьНеВестиУчетПоСубконтоСотрудникиНа661Счете</name>
+    <synonym>
+      <key>ru</key>
+      <value>Не вести учет по субконто сотрудники на 661 счете</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="fb4b6acd-a51a-4b8e-8a48-1d43144653c1">
+    <name>УдалитьПрименятьКоэффициентЕСВДляАвансов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Применять коэффициент ЕСВ для авансов</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="24e4e8ab-03dc-476e-875b-bc047bf30fca">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания организации</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання організації</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="00d1ccbf-926f-420d-9fa7-eff414e969c4">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма запису</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="99b1838c-38aa-4956-a5b3-ac45c75a80ad">
+    <name>ФормаДополнительныхДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма дополнительных данных</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма додаткових даних</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="388a1033-2a1e-405d-97c3-48d5ddbf2c6f">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма списку</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

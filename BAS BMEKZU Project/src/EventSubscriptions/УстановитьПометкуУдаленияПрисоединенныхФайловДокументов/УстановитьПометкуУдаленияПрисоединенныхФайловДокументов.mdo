@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="fc897add-8840-47a3-b60a-f84cebf307f9">
+  <name>УстановитьПометкуУдаленияПрисоединенныхФайловДокументов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Установить пометку удаления присоединенных файлов документов</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Встановити позначку вилучення приєднаних файлів документів</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.СписаниеСРасчетногоСчета</types>
+    <types>DocumentObject.ПриходныйКассовыйОрдер</types>
+    <types>DocumentObject.НалоговаяНакладная</types>
+    <types>DocumentObject.Приложение2КНалоговойНакладной</types>
+    <types>DocumentObject.СчетНаОплатуПокупателю</types>
+    <types>DocumentObject.ВозвратТоваровПоставщику</types>
+    <types>DocumentObject.НачислениеЗарплаты</types>
+    <types>DocumentObject.ОтражениеЗарплатыВБухучете</types>
+    <types>DocumentObject.РеализацияТоваровУслуг</types>
+    <types>DocumentObject.ПередачаТоваров</types>
+    <types>DocumentObject.ГТДИмпорт</types>
+    <types>DocumentObject.АвансовыйОтчет</types>
+    <types>DocumentObject.ПоступлениеТоваровУслуг</types>
+    <types>DocumentObject.АктОбОказанииПроизводственныхУслуг</types>
+    <types>DocumentObject.ВозвратТоваровОтПокупателя</types>
+    <types>DocumentObject.КадровыйПеревод</types>
+    <types>DocumentObject.РегистрацияВходящегоНалоговогоДокумента</types>
+    <types>DocumentObject.РасходныйКассовыйОрдер</types>
+    <types>DocumentObject.ВедомостьНаВыплатуЗарплатыВБанк</types>
+    <types>DocumentObject.ПлатежноеПоручение</types>
+    <types>DocumentObject.КорректировкаДолга</types>
+    <types>DocumentObject.ОтчетКомиссионераОПродажах</types>
+    <types>DocumentObject.ПриемНаРаботу</types>
+    <types>DocumentObject.РеализацияУслугПоПереработке</types>
+    <types>DocumentObject.ДепонированиеЗарплаты</types>
+    <types>DocumentObject.АктСверкиВзаиморасчетов</types>
+    <types>DocumentObject.ИнвентаризацияТоваровНаСкладе</types>
+    <types>DocumentObject.СчетНаОплатуПоставщика</types>
+    <types>DocumentObject.ОтчетКомитентуОПродажах</types>
+    <types>DocumentObject.ПоступлениеНаРасчетныйСчет</types>
+    <types>DocumentObject.РегистрУчета</types>
+    <types>DocumentObject.ОперацияБух</types>
+    <types>DocumentObject.ВедомостьНаВыплатуЗарплатыВКассу</types>
+    <types>DocumentObject.ПоступлениеДопРасходов</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.РаботаСФайлами.УстановитьПометкуУдаленияПрисоединенныхФайловДокументов</handler>
+</mdclass:EventSubscription>

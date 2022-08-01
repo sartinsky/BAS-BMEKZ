@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c07cc648-ca1a-4e47-9dac-24b322309332">
+  <producedTypes>
+    <selectionType typeId="0f207045-acaa-47ca-8dca-ca7a2d4d97d4" valueTypeId="38bb9a05-0a73-4c76-b324-acf7c8261a51"/>
+    <listType typeId="6614803e-8ccd-45a7-a2ad-f555f9c41115" valueTypeId="e727259f-d950-4c26-b2b9-a17247cd0d8f"/>
+    <managerType typeId="08fd5b71-fd42-41fb-ab87-ef0cccd8ffeb" valueTypeId="068387ec-4931-467a-83d9-e779b1836169"/>
+    <recordSetType typeId="591e71c0-5f81-424a-9b8a-f6f515265cb6" valueTypeId="57b5a734-3b5f-4493-9bd2-ecfa71846140"/>
+    <recordKeyType typeId="9d787500-9242-4c89-9524-d7742b436c9d" valueTypeId="6e3ff58a-8c8b-4c23-b5b6-fb25b6cc4e33"/>
+    <recordType typeId="83f4423a-d405-49ae-823c-d3e3ece71d74" valueTypeId="2ce75fe6-764f-48b7-b9f7-8728306ffd08"/>
+    <recordManagerType typeId="fec79580-de5b-4c2c-9ebd-0d8e1f008c52" valueTypeId="d0fba718-e78b-49dc-b465-ab171a69eb33"/>
+  </producedTypes>
+  <name>ИНАГРО_ВзносыВФондыПоГруппам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Взносы в фонды по группам</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Внески до фондів по групам</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для заполнения периода</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для заповнення періоду</value>
+    </toolTip>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Month</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+    <pages>
+      <lang>uk</lang>
+    </pages>
+  </help>
+  <resources uuid="a346860b-efdf-4b2e-85a0-b0d39265ee6a">
+    <name>Действует</name>
+    <synonym>
+      <key>ru</key>
+      <value>Действует</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Діє</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак действия</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака дії</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="8f5301ae-53ec-45cd-91b5-0de80e3cff86">
+    <name>ГруппаВзносов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группа взносов</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Група внесків</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИНАГРО_ГруппыВзносовВФонды</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания группы взносов</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для зазначення групи внесків</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="1db5f5c4-c905-4740-aff0-3ec8c9cd466b">
+    <name>Налог</name>
+    <synonym>
+      <key>ru</key>
+      <value>Налог</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Податок</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Налоги</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания налога</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для введення податку</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <templates uuid="9c1a419c-05ee-465f-bde8-87f3d84677dc">
+    <name>НачальноеЗаполнение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начальное заполнение</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Початкове заповнення</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+</mdclass:InformationRegister>
