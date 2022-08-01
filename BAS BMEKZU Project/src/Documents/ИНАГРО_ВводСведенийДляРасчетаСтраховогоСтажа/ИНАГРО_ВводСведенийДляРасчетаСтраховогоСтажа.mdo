@@ -1,0 +1,982 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8d05215b-9c9d-4559-bd11-1e65354071ff">
+  <producedTypes>
+    <objectType typeId="6738484a-5232-4378-880f-8faf207b2884" valueTypeId="63256905-23a6-4d92-812b-17f974228bea"/>
+    <refType typeId="92471783-b914-44df-9249-bfa71d41c7db" valueTypeId="c36ad6fd-2304-405e-81b7-8a3c361eaac8"/>
+    <selectionType typeId="9f99fd06-5993-406d-ae95-00484b642b74" valueTypeId="2ab953d7-6888-4e4e-b6ce-6cc4e1a4cf48"/>
+    <listType typeId="b74091ab-d773-495b-937c-5b312a894eb1" valueTypeId="2e55c798-d7e5-4cbf-bd2c-367b02219ba7"/>
+    <managerType typeId="47ecea9f-ab55-439a-889d-593cdeee807f" valueTypeId="cf3215c5-dde8-46ca-85ec-26c845f89ce8"/>
+  </producedTypes>
+  <name>ИНАГРО_ВводСведенийДляРасчетаСтраховогоСтажа</name>
+  <synonym>
+    <key>ru</key>
+    <value>Ввод сведений для расчета страхового стажа</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Введення відомостей для розрахунку страхового стажу </value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ИНАГРО_ВводСведенийДляРасчетаСтраховогоСтажа.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Posted</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+    <pages>
+      <lang>uk</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ИНАГРО_ВводСведенийДляРасчетаСтраховогоСтажа.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.ИНАГРО_ВводСведенийДляРасчетаСтраховогоСтажа.Form.ФормаСписка</defaultListForm>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
+  <registerRecords>InformationRegister.ИНАГРО_СтраховойСтажПоДаннымПФУ</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="e6cb475b-430d-40d5-9055-26e65d37b73b">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="fa8b4675-a49f-48aa-b776-a742b97da02e">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відповідальний</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1f914fd7-1f63-4f30-8b72-38397131a0f9">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Коментар</value>
+    </synonym>
+    <comment>Любая дополнительная информация</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c4624043-ccb3-410e-8b79-9959e8219cf7">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Співробітник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameterLinks>
+      <name>Отбор.ГоловнаяОрганизация</name>
+      <field>Document.ИНАГРО_ВводСведенийДляРасчетаСтраховогоСтажа.Attribute.Организация</field>
+    </choiceParameterLinks>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ffa99eac-6507-4784-91bd-538d28dc560a">
+    <name>Физлицо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физическое лицо</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Фізична особа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="dafc47be-bda7-4133-bf2e-7e5e50407748">
+    <name>ПериодС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период с</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Період з</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="5373e886-d423-4e65-a37b-df7506786bb2">
+    <name>ПериодПо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период по</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Період по</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="1a6b28f0-50d4-44f9-a6ae-0301ab172f7b">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="94715b28-e409-4460-a7c2-e6942bae631f">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма списку</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="6a37bc76-dd91-472c-9fdd-56b368e2f47e">
+    <producedTypes>
+      <objectType typeId="12ab9958-a388-4837-b736-e4f4cd38b5ca" valueTypeId="b7791a09-f771-446f-abdb-c864bd66e3d5"/>
+      <rowType typeId="9595ce46-e1e9-454f-9a30-27e4020a0673" valueTypeId="ed8c3533-d00f-44fc-851a-f4d38a94086c"/>
+    </producedTypes>
+    <name>СтраховойСтаж</name>
+    <synonym>
+      <key>ru</key>
+      <value>Страховой стаж</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Страховий стаж</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="e2e388c8-98c8-418f-a3be-ee3b9d3fecbf">
+      <name>Год</name>
+      <synonym>
+        <key>ru</key>
+        <value>Год</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Рік</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>4</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="27441fa6-c17a-40ac-932a-b89b01b2cb0c">
+      <name>Месяц1</name>
+      <synonym>
+        <key>ru</key>
+        <value>Месяц 1</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Місяць 1</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+        </numberQualifiers>
+      </type>
+      <format>
+        <key>ru</key>
+        <value>ДФ=dd.MM.yy</value>
+      </format>
+      <editFormat>
+        <key>ru</key>
+        <value>ДФ=dd.MM.yy</value>
+      </editFormat>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d1324be8-5c09-4644-bc87-ebc7b7b76cba">
+      <name>Месяц2</name>
+      <synonym>
+        <key>ru</key>
+        <value>Месяц 2</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Місяць 2</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+        </numberQualifiers>
+      </type>
+      <format>
+        <key>ru</key>
+        <value>ДФ=dd.MM.yy</value>
+      </format>
+      <editFormat>
+        <key>ru</key>
+        <value>ДФ=dd.MM.yy</value>
+      </editFormat>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c66eafcb-74f2-4df9-8e27-8c3e6e63a962">
+      <name>Месяц3</name>
+      <synonym>
+        <key>ru</key>
+        <value>Месяц 3</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Місяць 3</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+        </numberQualifiers>
+      </type>
+      <format>
+        <key>ru</key>
+        <value>ДФ=dd.MM.yy</value>
+      </format>
+      <editFormat>
+        <key>ru</key>
+        <value>ДФ=dd.MM.yy</value>
+      </editFormat>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d3b237a8-94e7-45d6-b1e6-5fca330cda99">
+      <name>Месяц4</name>
+      <synonym>
+        <key>ru</key>
+        <value>Месяц 4</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Місяць 4</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+        </numberQualifiers>
+      </type>
+      <format>
+        <key>ru</key>
+        <value>ДФ=dd.MM.yy</value>
+      </format>
+      <editFormat>
+        <key>ru</key>
+        <value>ДФ=dd.MM.yy</value>
+      </editFormat>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="74303209-73f0-445d-8b76-c74e427886c7">
+      <name>Месяц5</name>
+      <synonym>
+        <key>ru</key>
+        <value>Месяц 5</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Місяць 5</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+        </numberQualifiers>
+      </type>
+      <format>
+        <key>ru</key>
+        <value>ДФ=dd.MM.yy</value>
+      </format>
+      <editFormat>
+        <key>ru</key>
+        <value>ДФ=dd.MM.yy</value>
+      </editFormat>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="75dc5150-d6d9-4cad-a44d-a4124912b4a0">
+      <name>Месяц6</name>
+      <synonym>
+        <key>ru</key>
+        <value>Месяц 6</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Місяць 6</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+        </numberQualifiers>
+      </type>
+      <format>
+        <key>ru</key>
+        <value>ДФ=dd.MM.yy</value>
+      </format>
+      <editFormat>
+        <key>ru</key>
+        <value>ДФ=dd.MM.yy</value>
+      </editFormat>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="761a9fbf-f8e3-49b6-9b11-25c8e47dbed6">
+      <name>Месяц7</name>
+      <synonym>
+        <key>ru</key>
+        <value>Месяц 7</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Місяць 7</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+        </numberQualifiers>
+      </type>
+      <format>
+        <key>ru</key>
+        <value>ДФ=dd.MM.yy</value>
+      </format>
+      <editFormat>
+        <key>ru</key>
+        <value>ДФ=dd.MM.yy</value>
+      </editFormat>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="617bc0e6-ed65-45d1-95fa-b0b7c5a71e45">
+      <name>Месяц8</name>
+      <synonym>
+        <key>ru</key>
+        <value>Месяц 8</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Місяць 8</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+        </numberQualifiers>
+      </type>
+      <format>
+        <key>ru</key>
+        <value>ДФ=dd.MM.yy</value>
+      </format>
+      <editFormat>
+        <key>ru</key>
+        <value>ДФ=dd.MM.yy</value>
+      </editFormat>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c6523096-fd6e-4d49-9239-063156b2eeba">
+      <name>Месяц9</name>
+      <synonym>
+        <key>ru</key>
+        <value>Месяц 9</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Місяць 9</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+        </numberQualifiers>
+      </type>
+      <format>
+        <key>ru</key>
+        <value>ДФ=dd.MM.yy</value>
+      </format>
+      <editFormat>
+        <key>ru</key>
+        <value>ДФ=dd.MM.yy</value>
+      </editFormat>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="92bce727-a7a6-4a35-9a19-1dd84ff931a4">
+      <name>Месяц10</name>
+      <synonym>
+        <key>ru</key>
+        <value>Месяц 10</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Місяць 10</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+        </numberQualifiers>
+      </type>
+      <format>
+        <key>ru</key>
+        <value>ДФ=dd.MM.yy</value>
+      </format>
+      <editFormat>
+        <key>ru</key>
+        <value>ДФ=dd.MM.yy</value>
+      </editFormat>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5317816d-8bef-4fd2-a9dd-008c6b458712">
+      <name>Месяц11</name>
+      <synonym>
+        <key>ru</key>
+        <value>Месяц 11</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Місяць 11</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+        </numberQualifiers>
+      </type>
+      <format>
+        <key>ru</key>
+        <value>ДФ=dd.MM.yy</value>
+      </format>
+      <editFormat>
+        <key>ru</key>
+        <value>ДФ=dd.MM.yy</value>
+      </editFormat>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="4631c763-da12-48b3-90b6-43d5f22f81bb">
+      <name>Месяц12</name>
+      <synonym>
+        <key>ru</key>
+        <value>Месяц 12</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Місяць 12</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+        </numberQualifiers>
+      </type>
+      <format>
+        <key>ru</key>
+        <value>ДФ=dd.MM.yy</value>
+      </format>
+      <editFormat>
+        <key>ru</key>
+        <value>ДФ=dd.MM.yy</value>
+      </editFormat>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d136d171-baa3-4da0-98a5-19ebf5be4ec5">
+      <name>ВсегоМесяцев</name>
+      <synonym>
+        <key>ru</key>
+        <value>Всего месяцев</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Всього місяців</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>3</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="65996233-7963-4a02-a0aa-698cdb30e110">
+      <name>ВсегоДней</name>
+      <synonym>
+        <key>ru</key>
+        <value>Всего дней</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Всього днів</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="2fda7007-7793-4f98-8b00-2db68bbfb089">
+      <name>ПолныйМесяц1</name>
+      <synonym>
+        <key>ru</key>
+        <value>Полный месяц1</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Повний місяць 1</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>1</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="e9e7b280-e426-4222-b3ac-dd24e53a2bc4">
+      <name>ПолныйМесяц2</name>
+      <synonym>
+        <key>ru</key>
+        <value>Полный месяц2</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Повний місяць 2</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>1</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="dea1172f-3c90-4289-8ee3-84d49b1f34ba">
+      <name>ПолныйМесяц3</name>
+      <synonym>
+        <key>ru</key>
+        <value>Полный месяц3</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Повний місяць 3</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>1</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a521a75c-1a7d-459f-8ff2-8f08b5700bc8">
+      <name>ПолныйМесяц4</name>
+      <synonym>
+        <key>ru</key>
+        <value>Полный месяц4</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Повний місяць 4</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>1</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="e23e1f83-4853-4134-baf1-721ce3f4da0f">
+      <name>ПолныйМесяц5</name>
+      <synonym>
+        <key>ru</key>
+        <value>Полный месяц5</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Повний місяць 5</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>1</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d0fe8818-7460-4d85-9a3b-8983a700453e">
+      <name>ПолныйМесяц6</name>
+      <synonym>
+        <key>ru</key>
+        <value>Полный месяц6</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Повний місяць 6</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>1</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="1cd250cd-7164-460f-bcc5-25b5a43b7ac6">
+      <name>ПолныйМесяц7</name>
+      <synonym>
+        <key>ru</key>
+        <value>Полный месяц7</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Повний місяць 7</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>1</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="938ff441-08c5-4086-9ff3-b9319c8b4478">
+      <name>ПолныйМесяц8</name>
+      <synonym>
+        <key>ru</key>
+        <value>Полный месяц8</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Повний місяць 8</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>1</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="9ee6e055-ee15-4ce9-92ea-2ae9eb5569ec">
+      <name>ПолныйМесяц9</name>
+      <synonym>
+        <key>ru</key>
+        <value>Полный месяц9</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Повний місяць 9</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>1</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c6d871cb-e4ed-40ca-a0fc-462fbb4ec577">
+      <name>ПолныйМесяц10</name>
+      <synonym>
+        <key>ru</key>
+        <value>Полный месяц10</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Повний місяць 10</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>1</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="12888df1-ef82-432c-aef0-a24e1722d292">
+      <name>ПолныйМесяц11</name>
+      <synonym>
+        <key>ru</key>
+        <value>Полный месяц11</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Повний місяць 11</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>1</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b6c27d48-b471-45e0-b948-23babe01e524">
+      <name>ПолныйМесяц12</name>
+      <synonym>
+        <key>ru</key>
+        <value>Полный месяц12</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Повний місяць 12</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>1</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="ab28a2bd-a558-4ac4-9495-760637565411">
+      <name>ВсегоДнейНеполногоМесяца</name>
+      <synonym>
+        <key>ru</key>
+        <value>Всего дней неполного месяца</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Всього днів неповного місяця</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

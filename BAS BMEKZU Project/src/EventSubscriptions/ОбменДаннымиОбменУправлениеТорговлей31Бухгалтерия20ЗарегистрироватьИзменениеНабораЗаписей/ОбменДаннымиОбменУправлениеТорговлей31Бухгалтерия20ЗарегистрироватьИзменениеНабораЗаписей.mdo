@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7544ddc5-1350-4e3f-827e-c9a529a01a44">
+  <name>ОбменДаннымиОбменУправлениеТорговлей31Бухгалтерия20ЗарегистрироватьИзменениеНабораЗаписей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен &quot;BAS Управление торговлей 3.2&quot; -  &quot;Бухгалтерия 2.1&quot;. Перед записью регистра.</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Обмін &quot;BAS Управління торгівлею 3.2&quot; - &quot;Бухгалтерія 2.1&quot;. Перед записом регістра.</value>
+  </synonym>
+  <source>
+    <types>InformationRegisterRecordSet.ОтветственныеЛицаОрганизаций</types>
+    <types>InformationRegisterRecordSet.ОтветственныеЛица</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ОбменДаннымиСобытияУТБП.ОбменДаннымиОбменУправлениеТорговлей31Бухгалтерия20ПередЗаписьюРегистра</handler>
+</mdclass:EventSubscription>

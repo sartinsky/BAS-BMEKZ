@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="286c5b47-30aa-486e-8e3f-42e3bc550e7a">
+  <name>ИНАГРО_ЭлеваторПроверкаБлокировкиДокументовДляЗаписи</name>
+  <synonym>
+    <key>ru</key>
+    <value>ИНАГРО элеватор проверка блокировки документов для записи</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>ІНАГРО елеватор перевірка блокування документів для запису</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.НалоговаяНакладная</types>
+    <types>DocumentObject.РеализацияТоваровУслуг</types>
+    <types>DocumentObject.ПоступлениеТоваровУслуг</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ИНАГРО_Элеватор.ПроверкаБлокировкиДокументовДляЗаписи</handler>
+</mdclass:EventSubscription>

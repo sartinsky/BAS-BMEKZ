@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="303b520c-a5fa-447f-b274-e1f81a9b4b71">
+  <producedTypes>
+    <selectionType typeId="800aab77-3487-43ce-8542-6f757e6f5135" valueTypeId="7e35cda2-73f0-4514-a396-2cdc10d5c3ff"/>
+    <listType typeId="33df9bad-50d5-44dd-95b5-b20c256e0e7d" valueTypeId="dfbac845-7a63-4871-90fe-5815019226ca"/>
+    <managerType typeId="89cb5168-9317-40e7-a292-0780657da0e7" valueTypeId="3a2d2d30-c901-4ca9-bbe9-de9716579cc9"/>
+    <recordSetType typeId="5507eaea-3b89-47f0-ada5-8dc42658a69e" valueTypeId="b42f65dd-bd71-4f2a-95c0-3bc707fb5977"/>
+    <recordKeyType typeId="395a3f08-a751-4dd0-b10c-6d55df0b715e" valueTypeId="b4f2f72c-d531-4056-9db6-0ec848dcb303"/>
+    <recordType typeId="d55d2512-498d-4a25-9631-2f7607edd1b8" valueTypeId="1d05c61b-8020-4c85-aeca-62a01f8f3679"/>
+    <recordManagerType typeId="b8515616-b4ec-4dff-a0b4-c352dc35a844" valueTypeId="ece019f0-d81a-4f17-b58c-88a002de588b"/>
+  </producedTypes>
+  <name>ИНАГРО_СформированныеДокументы</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сформированные документы (элеватор)</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Сформовані документи (елеватор)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultRecordForm>InformationRegister.ИНАГРО_СформированныеДокументы.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ИНАГРО_СформированныеДокументы.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <toolTip>
+      <key>ru</key>
+      <value>Реквизит для указания периода</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Реквізит для вказання періоду</value>
+    </toolTip>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+    <pages>
+      <lang>uk</lang>
+    </pages>
+  </help>
+  <resources uuid="1e600656-5ffb-4d5f-a85f-ff0b7c7751cb">
+    <name>ЗапретРедактирования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Запрет редактирования</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Заборона редагування</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак о запрете редактирования</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака про заборону редагування</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="47b4a333-62ef-4e7a-b577-ce086955b573">
+    <name>УдалитьТиповыйДокумент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Типовий документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ОтчетПроизводстваЗаСмену</types>
+      <types>DocumentRef.СписаниеОС</types>
+      <types>DocumentRef.ПлатежныйОрдерСписаниеДенежныхСредств</types>
+      <types>DocumentRef.ПередачаОС</types>
+      <types>DocumentRef.СправкаОДоходах</types>
+      <types>DocumentRef.СписаниеТоваров</types>
+      <types>DocumentRef.АвансовыйОтчет</types>
+      <types>DocumentRef.УдалитьРемонтОС</types>
+      <types>DocumentRef.ГТДИмпорт</types>
+      <types>DocumentRef.ОприходованиеТоваров</types>
+      <types>DocumentRef.ЗаявлениеНаПрименениеЛьготы</types>
+      <types>DocumentRef.ПеремещениеНМА</types>
+      <types>DocumentRef.СписаниеСРасчетногоСчета</types>
+      <types>DocumentRef.УдалитьПриемНаРаботуВОрганизацию</types>
+      <types>DocumentRef.МодернизацияНМА</types>
+      <types>DocumentRef.ДокументРасчетовСКонтрагентом</types>
+      <types>DocumentRef.Доверенность</types>
+      <types>DocumentRef.УдалитьКадровоеПеремещениеОрганизаций</types>
+      <types>DocumentRef.ПлатежныйОрдерПоступлениеДенежныхСредств</types>
+      <types>DocumentRef.РасходныйКассовыйОрдер</types>
+      <types>DocumentRef.АктСверкиВзаиморасчетов</types>
+      <types>DocumentRef.ОперацияБух</types>
+      <types>DocumentRef.УстановкаЦенНоменклатуры</types>
+      <types>DocumentRef.НачислениеЗарплаты</types>
+      <types>DocumentRef.УдалитьВводНачальныхОстатковОС</types>
+      <types>DocumentRef.ВыгрузкаРегламентированныхОтчетов</types>
+      <types>DocumentRef.ПокупкаПродажаВалюты</types>
+      <types>DocumentRef.НалоговаяНакладная</types>
+      <types>DocumentRef.АктОбОказанииПроизводственныхУслуг</types>
+      <types>DocumentRef.УстановкаПорядкаЗакрытияПодразделений</types>
+      <types>DocumentRef.ОпределениеФинансовыхРезультатов</types>
+      <types>DocumentRef.ОтражениеВзаиморасчетовСКонтрагентамиВ1ДФ</types>
+      <types>DocumentRef.ПоступлениеНМА</types>
+      <types>DocumentRef.УстановкаГарантийныхСроковНалоговыйУчет</types>
+      <types>DocumentRef.КорректировкаДолга</types>
+      <types>DocumentRef.ПоступлениеТоваровУслуг</types>
+      <types>DocumentRef.УдалитьВводСведенийОПлановыхНачисленияхРаботниковОрганизаций</types>
+      <types>DocumentRef.КомандировкиОрганизаций</types>
+      <types>DocumentRef.МодернизацияОС</types>
+      <types>DocumentRef.ПереоценкаТоваровВРознице</types>
+      <types>DocumentRef.Приложение1КНалоговойНакладной</types>
+      <types>DocumentRef.ВозвратТоваровОтПокупателя</types>
+      <types>DocumentRef.СчетНаОплатуПокупателю</types>
+      <types>DocumentRef.ПередачаТоваров</types>
+      <types>DocumentRef.ПоступлениеНаРасчетныйСчет</types>
+      <types>DocumentRef.ИзменениеСпособовОтраженияРасходовПоАмортизацииНМА</types>
+      <types>DocumentRef.ТребованиеНакладная</types>
+      <types>DocumentRef.ЗаявкаНаПокупкуПродажуВалюты</types>
+      <types>DocumentRef.ВедомостьНаВыплатуЗарплаты</types>
+      <types>DocumentRef.ВводСведенийОбИндексированномДоходе</types>
+      <types>DocumentRef.РегистрацияАвансовВНалоговомУчете</types>
+      <types>DocumentRef.ОтчетКомиссионераОПродажах</types>
+      <types>DocumentRef.ОтчетКомитентуОПродажах</types>
+      <types>DocumentRef.ПодготовкаКПередачеОС</types>
+      <types>DocumentRef.КорректировкаОжидаемогоИПодтвержденногоНДС</types>
+      <types>DocumentRef.ВыработкаОС</types>
+      <types>DocumentRef.УдалитьУвольнениеИзОрганизаций</types>
+      <types>DocumentRef.ПередачаОборудованияВМонтаж</types>
+      <types>DocumentRef.ПередачаНМА</types>
+      <types>DocumentRef.ОтчетОРозничныхПродажах</types>
+      <types>DocumentRef.КорректировкаЗаписейРегистров</types>
+      <types>DocumentRef.ИНАГРО_ВводСведенийОБанковскихКарточкахРаботников</types>
+      <types>DocumentRef.КомплектацияНоменклатуры</types>
+      <types>DocumentRef.ПриходныйКассовыйОрдер</types>
+      <types>DocumentRef.ВыработкаНМА</types>
+      <types>DocumentRef.СписаниеДепонентовВДоходыОрганизаций</types>
+      <types>DocumentRef.ИзменениеСостоянияОС</types>
+      <types>DocumentRef.ИзменениеГрафиковАмортизацииОС</types>
+      <types>DocumentRef.РегламентированныйОтчет</types>
+      <types>DocumentRef.РеализацияУслугПоПереработке</types>
+      <types>DocumentRef.РеализацияТоваровУслуг</types>
+      <types>DocumentRef.ВозвратТоваровПоставщику</types>
+      <types>DocumentRef.ИнвентаризацияНЗП</types>
+      <types>DocumentRef.ИнвентаризацияОС</types>
+      <types>DocumentRef.ИнвентаризацияТоваровНаСкладе</types>
+      <types>DocumentRef.УдалитьНачислениеКоммунальногоНалога</types>
+      <types>DocumentRef.СчетНаОплатуПоставщика</types>
+      <types>DocumentRef.РасчетыПоНалогуНаПрибыль</types>
+      <types>DocumentRef.ИнвентаризацияНМА</types>
+      <types>DocumentRef.ИзменениеСпособовОтраженияРасходовПоАмортизацииОС</types>
+      <types>DocumentRef.Приложение2КНалоговойНакладной</types>
+      <types>DocumentRef.ПеремещениеОС</types>
+      <types>DocumentRef.ИзменениеПараметровНачисленияАмортизацииОС</types>
+      <types>DocumentRef.ПоступлениеДопРасходов</types>
+      <types>DocumentRef.ПринятиеКУчетуНМА</types>
+      <types>DocumentRef.СписаниеНМА</types>
+      <types>DocumentRef.ПеремещениеТоваров</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Ввод типового документа</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Введення типового документа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="bdb631a4-b83b-4128-b34b-6a9b78f7f319">
+    <name>ДокументИсточник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ источник</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Документ джерело</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ИНАГРО_РасчетУслуг</types>
+      <types>DocumentRef.РеализацияТоваровУслуг</types>
+      <types>DocumentRef.ИНАГРО_ОтражениеВвозаВывозаСобственногоЗернаВРегламентированномУчете</types>
+      <types>DocumentRef.ИНАГРО_Переоформление</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания документа источника</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання документа джерела</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="4d1765ff-9c48-463b-a511-85dcd9a58228">
+    <name>ИмяТиповогоДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя типового документа</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Ім'я типового документа</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания имени типового документа</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання імені типового документа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="1c6c7ce1-a3c1-4396-8789-6b29fca33d63">
+    <name>ПорядковыйНомерТиповогоДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Порядковый номер типового документа</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Порядковий номер типового документа</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания порядкового номера типового документа</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання порядкового номера типового документа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d6fce6d8-ea83-4fe4-978f-d66e92ccd9b0">
+    <name>ТиповыйДокумент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Типовый документ</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Типовий документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.НалоговаяНакладная</types>
+      <types>DocumentRef.ПоступлениеТоваровУслуг</types>
+      <types>DocumentRef.РеализацияТоваровУслуг</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="91f9f716-94c0-4ca3-a3a7-2eaeb119a488">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма запису</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="12948b01-724a-452d-ba12-16d6548362be">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма списку</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

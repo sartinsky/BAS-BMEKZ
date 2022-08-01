@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МинСтавка</dataPath>
+			<field>МинСтавка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мин ставка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Мин ставка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Должность</dataPath>
+			<field>Должность</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должность</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Должность</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоСтавок</dataPath>
+			<field>КоличествоСтавок</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество ставок</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Количество ставок</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидТарифнойСтавки</dataPath>
+			<field>ВидТарифнойСтавки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид тарифной ставки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вид тарифной ставки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МаксСтавка</dataPath>
+			<field>МаксСтавка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Макс ставка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Макс ставка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидНадбавки</dataPath>
+			<field>ВидНадбавки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид надбавки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вид надбавки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СпособРасчета</dataPath>
+			<field>СпособРасчета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ расчета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Способ расчета</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодразделениеОрганизации</dataPath>
+			<field>ПодразделениеОрганизации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение организации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Підрозділ організації</v8:content>
+				</v8:item>
+			</title>
+			<inputParameters>
+				<dcscor:item>
+					<dcscor:parameter>СвязиПараметровВыбора</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:ChoiceParameterLinks">
+						<dcscor:item>
+							<dcscor:choiceParameter>Отбор.Владелец</dcscor:choiceParameter>
+							<dcscor:value>Организация</dcscor:value>
+							<dcscor:mode xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d8p1:LinkedValueChangeMode">Clear</dcscor:mode>
+						</dcscor:item>
+					</dcscor:value>
+				</dcscor:item>
+			</inputParameters>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Організація</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазмерНадбавки</dataPath>
+			<field>РазмерНадбавки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Размер надбавки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НормаДнейЗаПериод</dataPath>
+			<field>НормаДнейЗаПериод</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Норма дней за период</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МаксОсновнойТариф</dataPath>
+			<field>МаксОсновнойТариф</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Макс основной тариф</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МинОсновнойТариф</dataPath>
+			<field>МинОсновнойТариф</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мин основной тариф</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НормаЧасовЗаПериод</dataPath>
+			<field>НормаЧасовЗаПериод</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Норма часов за период</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидНадбавкиПредставл</dataPath>
+			<field>ВидНадбавкиПредставл</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид надбавки представл</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Документ</dataPath>
+			<field>Документ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДолжностьКод</dataPath>
+			<field>ДолжностьКод</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должность код</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДолжностьПредставл</dataPath>
+			<field>ДолжностьПредставл</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должность представл</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодразделениеОрганизацииПредставл</dataPath>
+			<field>ПодразделениеОрганизацииПредставл</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение организации представл</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодразделениеОрганизацииКод</dataPath>
+			<field>ПодразделениеОрганизацииКод</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МинСуммаНадбавки</dataPath>
+			<field>МинСуммаНадбавки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мин сумма надбавки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МаксСуммаНадбавки</dataPath>
+			<field>МаксСуммаНадбавки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Макс сумма надбавки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидНадбавкиНаименование</dataPath>
+			<field>ВидНадбавкиНаименование</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид надбавки наименование</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДолжностьКодКП</dataPath>
+			<field>ДолжностьКодКП</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДолжностьНаименование</dataPath>
+			<field>ДолжностьНаименование</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодразделениеОрганизацииНаименование</dataPath>
+			<field>ПодразделениеОрганизацииНаименование</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ИНАГРО_ГрафикиРаботыПоВидамВремени.ГрафикРаботы КАК ГрафикРаботы,
+	СУММА(ИНАГРО_ГрафикиРаботыПоВидамВремени.ОсновноеЗначение) КАК НормаДнейЗаПериод,
+	СУММА(ИНАГРО_ГрафикиРаботыПоВидамВремени.ДополнительноеЗначение) КАК НормаЧасовЗаПериод
+ПОМЕСТИТЬ Календарь
+ИЗ
+	РегистрСведений.ИНАГРО_ГрафикиРаботыПоВидамВремени КАК ИНАГРО_ГрафикиРаботыПоВидамВремени
+ГДЕ
+	ИНАГРО_ГрафикиРаботыПоВидамВремени.Дата &lt; &amp;ОкончаниеМесяца0
+	И ИНАГРО_ГрафикиРаботыПоВидамВремени.Дата &gt;= &amp;НачалоМесяца0
+	И ИНАГРО_ГрафикиРаботыПоВидамВремени.ВидУчетаВремени = ЗНАЧЕНИЕ(Перечисление.ИНАГРО_ВидыУчетаВремени.ПоДням)
+
+СГРУППИРОВАТЬ ПО
+	ИНАГРО_ГрафикиРаботыПоВидамВремени.ГрафикРаботы
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	НадбавкиПоШтатномуРасписанию.ВидНадбавки КАК ВидНадбавки,
+	ВЫБОР
+		КОГДА НадбавкиПоШтатномуРасписанию.ВидНадбавки.СпособРасчета = ЗНАЧЕНИЕ(Перечисление.СпособыРасчетаНачислений.ДоплатаЗаВечерниеЧасы)
+				ИЛИ НадбавкиПоШтатномуРасписанию.ВидНадбавки.СпособРасчета = ЗНАЧЕНИЕ(Перечисление.СпособыРасчетаНачислений.ДоплатаЗаНочныеЧасы)
+			ТОГДА НадбавкиПоШтатномуРасписанию.Показатель2
+		ИНАЧЕ НадбавкиПоШтатномуРасписанию.Показатель1
+	КОНЕЦ КАК РазмерНадбавки,
+	НадбавкиПоШтатномуРасписанию.ВидНадбавки.СпособРасчета КАК СпособРасчета,
+	НадбавкиПоШтатномуРасписанию.ПодразделениеОрганизации.Владелец КАК Организация,
+	НадбавкиПоШтатномуРасписанию.ПодразделениеОрганизации КАК ПодразделениеОрганизации,
+	НадбавкиПоШтатномуРасписанию.Должность КАК Должность
+ПОМЕСТИТЬ Надбавки
+ИЗ
+	РегистрСведений.ИНАГРО_НадбавкиПоШтатномуРасписаниюОрганизаций.СрезПоследних(&amp;Период {(&amp;Период)}, ) КАК НадбавкиПоШтатномуРасписанию
+ГДЕ
+	НадбавкиПоШтатномуРасписанию.Регистратор.Проведен
+
+СГРУППИРОВАТЬ ПО
+	НадбавкиПоШтатномуРасписанию.ВидНадбавки,
+	НадбавкиПоШтатномуРасписанию.Организация,
+	НадбавкиПоШтатномуРасписанию.Должность,
+	НадбавкиПоШтатномуРасписанию.ПодразделениеОрганизации,
+	НадбавкиПоШтатномуРасписанию.ВидНадбавки.СпособРасчета,
+	ВЫБОР
+		КОГДА НадбавкиПоШтатномуРасписанию.ВидНадбавки.СпособРасчета = ЗНАЧЕНИЕ(Перечисление.СпособыРасчетаНачислений.ДоплатаЗаВечерниеЧасы)
+				ИЛИ НадбавкиПоШтатномуРасписанию.ВидНадбавки.СпособРасчета = ЗНАЧЕНИЕ(Перечисление.СпособыРасчетаНачислений.ДоплатаЗаНочныеЧасы)
+			ТОГДА НадбавкиПоШтатномуРасписанию.Показатель2
+		ИНАЧЕ НадбавкиПоШтатномуРасписанию.Показатель1
+	КОНЕЦ,
+	НадбавкиПоШтатномуРасписанию.ПодразделениеОрганизации.Владелец
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Расписание.ПодразделениеОрганизации КАК ПодразделениеОрганизации,
+	Расписание.Должность КАК Должность,
+	Расписание.КоличествоСтавок КАК КоличествоСтавок,
+	Расписание.ВидТарифнойСтавки КАК ВидТарифнойСтавки,
+	ВЫРАЗИТЬ(Расписание.МинимальнаяТарифнаяСтавка КАК ЧИСЛО(15, 2)) КАК МинСтавка,
+	ВЫРАЗИТЬ(Расписание.МаксимальнаяТарифнаяСтавка КАК ЧИСЛО(15, 2)) КАК МаксСтавка,
+	ЕСТЬNULL(Надбавки.ВидНадбавки, ЗНАЧЕНИЕ(ПланВидовРасчета.ИНАГРО_Начисления.ПустаяСсылка)) КАК ВидНадбавки,
+	ЕСТЬNULL(Надбавки.СпособРасчета, ЗНАЧЕНИЕ(Перечисление.СпособыРасчетаНачислений.пустаяссылка)) КАК СпособРасчета,
+	Расписание.ПодразделениеОрганизации.Владелец КАК Организация,
+	ВЫРАЗИТЬ(ВЫБОР
+			КОГДА Расписание.ВидТарифнойСтавки = ЗНАЧЕНИЕ(Перечисление.ИНАГРО_ВидыТарифныхСтавок.МесячнаяТарифнаяСтавка)
+				ТОГДА 1
+			КОГДА Расписание.ВидТарифнойСтавки = ЗНАЧЕНИЕ(Перечисление.ИНАГРО_ВидыТарифныхСтавок.ДневнаяТарифнаяСтавка)
+				ТОГДА ЕСТЬNULL(Календарь.НормаДнейЗаПериод, 0)
+			ИНАЧЕ ЕСТЬNULL(Календарь.НормаЧасовЗаПериод, 0)
+		КОНЕЦ * Расписание.КоличествоСтавок * Расписание.МинимальнаяТарифнаяСтавка КАК ЧИСЛО(15, 2)) КАК МинОсновнойТариф,
+	ВЫРАЗИТЬ(ВЫБОР
+			КОГДА Расписание.ВидТарифнойСтавки = ЗНАЧЕНИЕ(Перечисление.ИНАГРО_ВидыТарифныхСтавок.МесячнаяТарифнаяСтавка)
+				ТОГДА 1
+			КОГДА Расписание.ВидТарифнойСтавки = ЗНАЧЕНИЕ(Перечисление.ИНАГРО_ВидыТарифныхСтавок.ДневнаяТарифнаяСтавка)
+				ТОГДА ЕСТЬNULL(Календарь.НормаДнейЗаПериод, 0)
+			ИНАЧЕ ЕСТЬNULL(Календарь.НормаЧасовЗаПериод, 0)
+		КОНЕЦ * Расписание.КоличествоСтавок * Расписание.МаксимальнаяТарифнаяСтавка КАК ЧИСЛО(15, 2)) КАК МаксОсновнойТариф,
+	ЕСТЬNULL(Надбавки.РазмерНадбавки, 0) КАК РазмерНадбавки,
+	ЕСТЬNULL(Календарь.НормаДнейЗаПериод, 0) КАК НормаДнейЗаПериод,
+	ЕСТЬNULL(Календарь.НормаЧасовЗаПериод, 0) КАК НормаЧасовЗаПериод,
+	Расписание.Регистратор КАК Документ
+ПОМЕСТИТЬ Итоговая
+ИЗ
+	РегистрСведений.ИНАГРО_ШтатноеРасписаниеОрганизаций.СрезПоследних(&amp;Период {(&amp;Период)}, Активность) КАК Расписание
+		ЛЕВОЕ СОЕДИНЕНИЕ Надбавки КАК Надбавки
+		ПО Расписание.ПодразделениеОрганизации = Надбавки.ПодразделениеОрганизации
+			И Расписание.Должность = Надбавки.Должность
+		ЛЕВОЕ СОЕДИНЕНИЕ Календарь КАК Календарь
+		ПО Расписание.ГрафикРаботы = Календарь.ГрафикРаботы
+ГДЕ
+	Расписание.КоличествоСтавок &gt; 0
+	И Расписание.Регистратор.Проведен
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Итоговая.ПодразделениеОрганизации КАК ПодразделениеОрганизации,
+	Итоговая.Должность КАК Должность,
+	Итоговая.КоличествоСтавок КАК КоличествоСтавок,
+	Итоговая.ВидТарифнойСтавки КАК ВидТарифнойСтавки,
+	Итоговая.МинСтавка КАК МинСтавка,
+	Итоговая.МаксСтавка КАК МаксСтавка,
+	Итоговая.ВидНадбавки КАК ВидНадбавки,
+	Итоговая.СпособРасчета КАК СпособРасчета,
+	Итоговая.Организация КАК Организация,
+	Итоговая.МинОсновнойТариф КАК МинОсновнойТариф,
+	Итоговая.МаксОсновнойТариф КАК МаксОсновнойТариф,
+	Итоговая.РазмерНадбавки КАК РазмерНадбавки,
+	Итоговая.НормаДнейЗаПериод КАК НормаДнейЗаПериод,
+	Итоговая.НормаЧасовЗаПериод КАК НормаЧасовЗаПериод,
+	Итоговая.ВидНадбавки.Наименование КАК ВидНадбавкиПредставл,
+	Итоговая.Должность.КодКП КАК ДолжностьКод,
+	Итоговая.Должность.Наименование КАК ДолжностьПредставл,
+	Итоговая.ПодразделениеОрганизации.Наименование КАК ПодразделениеОрганизацииПредставл,
+	Итоговая.ПодразделениеОрганизации.Код КАК ПодразделениеОрганизацииКод,
+	ВЫРАЗИТЬ(ВЫБОР
+			КОГДА Итоговая.СпособРасчета = ЗНАЧЕНИЕ(Перечисление.СпособыРасчетаНачислений.Процентом)
+				ТОГДА Итоговая.МинОсновнойТариф * Итоговая.РазмерНадбавки / 100
+			КОГДА Итоговая.СпособРасчета = ЗНАЧЕНИЕ(Перечисление.СпособыРасчетаНачислений.ДоплатаЗаВечерниеЧасы)
+					ИЛИ Итоговая.СпособРасчета = ЗНАЧЕНИЕ(Перечисление.СпособыРасчетаНачислений.ДоплатаЗаНочныеЧасы)
+				ТОГДА 0
+			ИНАЧЕ Итоговая.КоличествоСтавок * Итоговая.РазмерНадбавки
+		КОНЕЦ КАК ЧИСЛО(15, 2)) КАК МинСуммаНадбавки,
+	ВЫРАЗИТЬ(ВЫБОР
+			КОГДА Итоговая.СпособРасчета = ЗНАЧЕНИЕ(Перечисление.СпособыРасчетаНачислений.Процентом)
+				ТОГДА Итоговая.МаксОсновнойТариф * Итоговая.РазмерНадбавки / 100
+			КОГДА Итоговая.СпособРасчета = ЗНАЧЕНИЕ(Перечисление.СпособыРасчетаНачислений.ДоплатаЗаВечерниеЧасы)
+					ИЛИ Итоговая.СпособРасчета = ЗНАЧЕНИЕ(Перечисление.СпособыРасчетаНачислений.ДоплатаЗаНочныеЧасы)
+				ТОГДА 0
+			ИНАЧЕ Итоговая.КоличествоСтавок * Итоговая.РазмерНадбавки
+		КОНЕЦ КАК ЧИСЛО(15, 2)) КАК МаксСуммаНадбавки,
+	Итоговая.Документ КАК Документ
+{ВЫБРАТЬ
+	ПодразделениеОрганизации.*,
+	Должность.*,
+	КоличествоСтавок,
+	ВидТарифнойСтавки.*,
+	МинСтавка,
+	МаксСтавка,
+	ВидНадбавки.*,
+	СпособРасчета.*,
+	Организация.*,
+	МинОсновнойТариф,
+	МаксОсновнойТариф,
+	РазмерНадбавки,
+	НормаДнейЗаПериод,
+	НормаЧасовЗаПериод,
+	ВидНадбавкиПредставл,
+	ДолжностьКод,
+	ДолжностьПредставл,
+	ПодразделениеОрганизацииПредставл,
+	ПодразделениеОрганизацииКод,
+	МинСуммаНадбавки,
+	МаксСуммаНадбавки,
+	Документ.*}
+ИЗ
+	Итоговая КАК Итоговая
+{ГДЕ
+	Итоговая.ПодразделениеОрганизации.*,
+	Итоговая.Должность.*,
+	Итоговая.КоличествоСтавок,
+	Итоговая.ВидТарифнойСтавки.*,
+	Итоговая.МинСтавка,
+	Итоговая.МаксСтавка,
+	Итоговая.ВидНадбавки.*,
+	Итоговая.СпособРасчета.*,
+	Итоговая.Организация.*,
+	Итоговая.МинОсновнойТариф,
+	Итоговая.МаксОсновнойТариф,
+	Итоговая.РазмерНадбавки,
+	Итоговая.НормаДнейЗаПериод,
+	Итоговая.НормаЧасовЗаПериод,
+	Итоговая.ВидНадбавки.Наименование,
+	Итоговая.Должность.КодКП,
+	Итоговая.Должность.Наименование,
+	Итоговая.ПодразделениеОрганизации.Наименование,
+	Итоговая.ПодразделениеОрганизации.Код,
+	Итоговая.Документ.*}</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<calculatedField>
+		<dataPath>ОсновнаяОрганизация</dataPath>
+		<expression>БухгалтерскийУчетПереопределяемый.ПолучитьЗначениеПоУмолчанию("ОсновнаяОрганизация")</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основная организация</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<field>true</field>
+		</useRestriction>
+	</calculatedField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Дата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<expression>КонецПериода(&amp;Период,"День")</expression>
+	</parameter>
+	<parameter>
+		<name>НачалоМесяца0</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало месяца0</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>НачалоПериода(&amp;Период,"Месяц")</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ОкончаниеМесяца0</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Окончание месяца0</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>ДобавитьКДате(КонецПериода(&amp;Период,"Месяц"),"Секунда",1)</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Утвержденное штатное расписание организаций</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Затверджений штатний розклад організацій</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидНадбавки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидНадбавкиПредставл</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Документ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Должность</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДолжностьКод</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДолжностьПредставл</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоСтавок</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МаксОсновнойТариф</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МаксСтавка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МаксСуммаНадбавки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МинОсновнойТариф</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МинСтавка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МинСуммаНадбавки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПодразделениеОрганизации</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПодразделениеОрганизацииКод</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РазмерНадбавки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СпособРасчета</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПодразделениеОрганизацииПредставл</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Организация</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>5c52ab7d-fcd8-491f-a595-d64846e4fd46</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ПодразделениеОрганизации</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>3775934a-1957-46de-9ef0-73209f0708e5</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>6f8821fc-a2e2-4d0a-8e69-e7cac9a573ef</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

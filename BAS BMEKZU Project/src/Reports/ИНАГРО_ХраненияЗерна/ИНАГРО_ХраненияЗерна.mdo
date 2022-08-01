@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1b4428e0-f9cf-48cb-b868-a3c6b3bef1e6">
+  <producedTypes>
+    <objectType typeId="c875c359-c21d-4d76-a622-85ed6da0814c" valueTypeId="999cb038-ce7d-47f8-8753-69185900e753"/>
+    <managerType typeId="3ad8bfc6-b517-4483-94c6-068d9a900ac8" valueTypeId="f3f7309c-ecc3-4098-b381-efca1a8871b3"/>
+  </producedTypes>
+  <name>ИНАГРО_ХраненияЗерна</name>
+  <synonym>
+    <key>ru</key>
+    <value>Хранение зерна</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Зберігання зерна</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.ИНАГРО_ХраненияЗерна.Form.ФормаОтчета</defaultForm>
+  <variantsStorage>SettingsStorage.ХранилищеВариантовОтчетов</variantsStorage>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+    <pages>
+      <lang>uk</lang>
+    </pages>
+  </help>
+  <attributes uuid="4725be50-c095-488b-8dba-87c60369a268">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="ac406f34-20ed-4cdd-9c79-00ff315a255c">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceFoldersAndItems>FoldersAndItems</choiceFoldersAndItems>
+  </attributes>
+  <attributes uuid="b6e1cc0f-3b5d-4124-9233-7d569eecf4fe">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceFoldersAndItems>FoldersAndItems</choiceFoldersAndItems>
+  </attributes>
+  <attributes uuid="c922ec04-5526-4689-80fb-c470ac373054">
+    <name>ВидХранения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид хранения</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вид зберігання</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИНАГРО_ВидыХранения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="ae2e02b6-c667-48a3-a960-9ce56513c82a">
+    <name>Урожай</name>
+    <synonym>
+      <key>ru</key>
+      <value>Урожай</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Урожай</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИНАГРО_ВидыУрожая</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="ceff7e08-6122-4353-8d55-7fcbaedceaea">
+    <name>ПоВладельцам</name>
+    <synonym>
+      <key>ru</key>
+      <value>По владельцам</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>По власниках</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="0ed86214-0604-482c-9565-9ed6092dae97">
+    <name>Владелец</name>
+    <synonym>
+      <key>ru</key>
+      <value>Владелец</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Власник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceFoldersAndItems>FoldersAndItems</choiceFoldersAndItems>
+  </attributes>
+  <forms uuid="39c6db2c-6cff-49b7-b9d4-33c52f5e4ad8">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="77a14879-7bfc-4231-a863-1935ff169de3">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Основна схема компонування даних</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="8c166efd-58d4-4a17-ad04-398fc042478b">
+    <name>РасчетСреднегоСтрокаХранения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расчет среднего строка хранения</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Розрахунок середньго терміну зберігання</value>
+    </synonym>
+  </templates>
+</mdclass:Report>

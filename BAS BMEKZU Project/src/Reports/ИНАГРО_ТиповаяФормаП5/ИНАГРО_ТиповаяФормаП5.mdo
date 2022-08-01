@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="245db664-d1f9-4e36-824b-58fa60f12cdf">
+  <producedTypes>
+    <objectType typeId="199d2fc2-9e92-4d0c-904a-d87eb13c4269" valueTypeId="f4a33633-e7d8-495c-8f51-57804b9ef522"/>
+    <managerType typeId="d431a5f1-d990-40a2-a738-faceaf64f955" valueTypeId="e0408144-f459-4c4c-b8bb-24ec9ecb80f8"/>
+  </producedTypes>
+  <name>ИНАГРО_ТиповаяФормаП5</name>
+  <synonym>
+    <key>ru</key>
+    <value>Типовая форма П-5</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Типова форма П-5</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.ИНАГРО_ТиповаяФормаП5.Form.ФормаОтчета</defaultForm>
+  <variantsStorage>SettingsStorage.ХранилищеВариантовОтчетов</variantsStorage>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+    <pages>
+      <lang>uk</lang>
+    </pages>
+  </help>
+  <attributes uuid="a54e34e8-dd63-4647-bf76-23c4f4f271c4">
+    <name>ДатаНач</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата начала</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Дата початку</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания даты начала</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання дати початку</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="5d3fa9d3-2aaf-45e7-90d8-e45de2e0dd53">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для выбора организации</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="d20480fb-df21-40db-a5fa-c113b80ec585">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Підрозділ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияОрганизаций</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для выбора подразделения</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вибору підрозділу</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>Report.ИНАГРО_ТиповаяФормаП5.Attribute.Организация</field>
+    </choiceParameterLinks>
+  </attributes>
+  <attributes uuid="b956f868-f225-46aa-85a3-c163dbfcef05">
+    <name>Работник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Работник</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Працівник</value>
+    </synonym>
+    <type>
+      <types>ValueList</types>
+      <types>CatalogRef.Сотрудники</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для выбора работника</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вибору працівника</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.ГоловнаяОрганизация</name>
+      <field>Report.ИНАГРО_ТиповаяФормаП5.Attribute.Организация</field>
+    </choiceParameterLinks>
+  </attributes>
+  <attributes uuid="cdd71cce-dac4-4a89-be01-fc3067cf1eb5">
+    <name>ОтборОрганизации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отбор организации</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відбір організації</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак отбора по организации</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака відбору по організації</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="30e4d0ad-f780-484d-bd57-02e2ea20ace6">
+    <name>ОтборПодразделения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отбор подразделения</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відбір підрозділу</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак отбора по подразделению</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака відбору по підрозділу</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="3d82066c-4974-42ca-914b-14de87279d93">
+    <name>ОтборРаботника</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отбор работника</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відбір працівника</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак отбора по работнику</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака відбору по працівнику</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="b8f4d843-d96e-4207-97c5-ec0fbd33db29">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відповідальний</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для ввода ответственного</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для введення відповідального</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="0a02c5dd-40ce-4759-89aa-f2999f45eaa1">
+    <name>ГруппироватьПодразделения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группировать подразделения</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Групувати підрозділи</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак группировки подразделений</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака групування підрозділів</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="b5e8b175-c36f-4b51-9c74-be5b73d64461">
+    <name>ВыводитьУсловныеОбозначения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выводить условные обозначения</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Виводити умовні позначення</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак вывода условных обозначений</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака виведення умовних позначень</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="788357e0-5fcc-40db-abf4-659d09cb3cbb">
+    <name>ВыводитьПримечание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выводить примечание</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Виводити примітки</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак вывода примечания</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Ознака виведення примітки</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="c6b6ddf8-e5f4-4eef-a031-1b4353c38c6f">
+    <name>ВидСравненияОрганизации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид сравнения организации</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вид порівняння організації</value>
+    </synonym>
+    <type/>
+    <toolTip>
+      <key>ru</key>
+      <value>Вид Сравнения Организации.</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Вид Сравнения Организации.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="57e5ea12-a0af-4a17-8d52-7e428c50828c">
+    <name>ВидСравненияПодразделения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид сравнения подразделения</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вид порівняння підрозділу</value>
+    </synonym>
+    <type/>
+    <toolTip>
+      <key>ru</key>
+      <value>Вид Сравнения Подразделения.</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Вид Сравнения Подразделения.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="3f087308-8691-473f-bcc8-fad2e0b620eb">
+    <name>ВидСравненияРаботника</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид сравнения работника</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вид порівняння робітника</value>
+    </synonym>
+    <type/>
+    <toolTip>
+      <key>ru</key>
+      <value>Вид Сравнения Работника.</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Вид Сравнения Работника.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="e5ec9296-306f-4883-8eeb-da381d64108b">
+    <name>КонецПериода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Конец периода</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Кінець періоду</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания конца периода</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання кінця періоду</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="74021f1f-a295-4bf3-8366-5fb8c726bbbc">
+    <name>НачалоПериода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начало периода</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Початок періоду</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Поле для указания начала периода</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Поле для вказання початку періоду</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="01d87442-0700-42d3-b582-afe63fd52692">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма звіту</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="54e551a4-bdf9-4909-bb4b-8bb9ce915dc0">
+    <name>П5</name>
+    <synonym>
+      <key>ru</key>
+      <value>П5</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>П5</value>
+    </synonym>
+  </templates>
+</mdclass:Report>
