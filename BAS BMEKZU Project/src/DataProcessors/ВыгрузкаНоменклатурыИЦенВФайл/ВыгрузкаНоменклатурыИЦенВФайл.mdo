@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a37f2bad-c9f4-4b05-a7df-12924831a1d0">
+  <producedTypes>
+    <objectType typeId="70217b22-868b-478a-880c-ab372d801465" valueTypeId="8222bd93-5643-4477-a16f-54ab1ff56ffb"/>
+    <managerType typeId="6c32c6c5-f435-4452-b431-4c51dc054ffc" valueTypeId="21c8bd65-3606-4385-9a85-67b25403e1d6"/>
+  </producedTypes>
+  <name>ВыгрузкаНоменклатурыИЦенВФайл</name>
+  <synonym>
+    <key>ru</key>
+    <value>Выгрузка номенклатуры и цен в файл</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Вивантаження номенклатури і цін у файл</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ВыгрузкаНоменклатурыИЦенВФайл.Form.Форма</defaultForm>
+  <tabularSections uuid="e9b700b5-5b6d-45e7-90fc-c37087be79c6">
+    <producedTypes>
+      <objectType typeId="01266787-4402-4c51-9013-4c8a463708cc" valueTypeId="88d6eaff-61b2-4158-a790-d8b85315f90e"/>
+      <rowType typeId="3a318c24-0493-4fd1-9a33-78a05bca5698" valueTypeId="654110f3-75b9-4eb3-911f-fa0fb440dd93"/>
+    </producedTypes>
+    <name>ДополнительныеПоля</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дополнительные поля</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Додаткові поля</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="b10f7cc0-664c-4dc3-9426-fc2722120097">
+      <name>Поле</name>
+      <synonym>
+        <key>uk</key>
+        <value>Поле</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="250a3c75-eb72-48e4-8f41-25c8b5780c75">
+      <name>Представление</name>
+      <synonym>
+        <key>ru</key>
+        <value>Представление</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Представление</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+  </tabularSections>
+  <forms uuid="9264fa86-f711-42d9-92bb-b02bec349e1d">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="72a9775d-d156-40f3-84ea-0024dfb37e03">
+    <name>ФормаКолонки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Колонки</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Колонки</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="3e2c8cdb-1c3d-45ad-a7b9-6a3e188352aa">
+    <name>ФормаОтбор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отбор</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відбір</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="076b5bde-0854-4aa7-b2a4-7059fdd0e1ac">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Основна схема компонування даних</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <commands uuid="0efec58b-60b8-430c-89fb-2daa713dac13">
+    <name>ВыгрузитьВФайл</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выгрузить</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вивантажити</value>
+    </synonym>
+    <group>FormCommandBarImportant</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:DataProcessor>

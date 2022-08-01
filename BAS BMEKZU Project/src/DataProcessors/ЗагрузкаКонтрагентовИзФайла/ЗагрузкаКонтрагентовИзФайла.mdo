@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="27616022-5269-42ee-9e20-d1d43fd8e124">
+  <producedTypes>
+    <objectType typeId="3b670f98-9528-4a4f-bb62-a2179849383a" valueTypeId="59edc360-9981-4f4b-b10f-e754bdb7a276"/>
+    <managerType typeId="94c4d8fc-2422-4186-b603-ee5576062195" valueTypeId="0a708482-3eba-483a-b622-efd2b2f698df"/>
+  </producedTypes>
+  <name>ЗагрузкаКонтрагентовИзФайла</name>
+  <synonym>
+    <key>ru</key>
+    <value>Загрузка контрагентов из файла</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Завантаження контрагентів з файлу</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ЗагрузкаКонтрагентовИзФайла.Form.Форма</defaultForm>
+  <tabularSections uuid="5a0664d5-b2ae-4265-9817-5df01757d13d">
+    <producedTypes>
+      <objectType typeId="7332dfee-0433-4043-86c7-511ddf053a8c" valueTypeId="d57faf48-2814-4cb1-b3dc-aed2444e5b3c"/>
+      <rowType typeId="eb7aae26-0c34-4dcf-8a67-8181b61841bf" valueTypeId="505924f9-f122-42ad-8a63-0b7174451100"/>
+    </producedTypes>
+    <name>ЗагружаемыеДанные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Загружаемые данные</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Завантажені дані</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="a30c292a-f8cf-4258-ad41-b64af587ac28">
+      <name>Представление</name>
+      <synonym>
+        <key>ru</key>
+        <value>Представление</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Представлення</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="9b3e34ea-da19-4724-ade5-73e155ee4032">
+      <name>Наименование</name>
+      <synonym>
+        <key>ru</key>
+        <value>Наименование</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Найменування</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="a81a6e33-8592-4610-837a-e6b23f03887a">
+      <name>Контрагент</name>
+      <synonym>
+        <key>ru</key>
+        <value>Контрагент</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Контрагент</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Контрагенты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="efa5a5b8-bc30-45df-9728-1d38418db4f8">
+      <name>ИНН</name>
+      <synonym>
+        <key>ru</key>
+        <value>ИНН</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>ІПН</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>12</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="d9c9c603-e82a-4679-94b2-ab3e1d1838d3">
+      <name>КодПоЕДРПОУ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Код по ЕДРПОУ</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Код за ЄДРПОУ</value>
+      </synonym>
+      <comment>(Регл) Код по ЕДРПОУ</comment>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>12</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue">
+        <value></value>
+      </fillValue>
+    </attributes>
+    <attributes uuid="9eb0fe80-780f-4838-bd62-358f8c3a6741">
+      <name>Статус</name>
+      <synonym>
+        <key>ru</key>
+        <value>Статус</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Статус</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>1</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="c5842091-61f4-49c3-9db7-f4dcdaee6abd">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="a4958d23-e429-44e5-b73f-d928ac2176a5">
+    <name>МакетЗаголовка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет заголовка</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Макет заголовка</value>
+    </synonym>
+  </templates>
+  <commands uuid="03c8b129-fb00-4cb1-bfae-b8e6872736a6">
+    <name>ЗагрузитьИзФайла</name>
+    <synonym>
+      <key>ru</key>
+      <value>Загрузить </value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Завантажити </value>
+    </synonym>
+    <group>FormCommandBarImportant</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:DataProcessor>

@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="22fd8eed-0156-46e0-9481-75afe3ec2d2e">
+  <producedTypes>
+    <objectType typeId="9fff99cf-5feb-41ab-9ba8-29cb75023d38" valueTypeId="6d6d00b4-c9bd-48a6-8f9d-7be3ce372649"/>
+    <managerType typeId="b44d3679-8255-4175-9ffe-9556303cd772" valueTypeId="754bfa11-8a92-40c6-a967-59fc3860891d"/>
+  </producedTypes>
+  <name>РегламентированныйОтчетРасчетДоходовИЕСВФизЛиц</name>
+  <synonym>
+    <key>ru</key>
+    <value>Расчет доходов и единого взноса физлиц</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Розрахунок доходів та єдиного внеску фізосіб</value>
+  </synonym>
+  <comment>Расчет доходов и единого взноса физлиц</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.РегламентированныйОтчетРасчетДоходовИЕСВФизЛиц.Form.ОсновнаяФорма</defaultForm>
+  <attributes uuid="f45431cd-a8c1-4a5c-af21-ed5ef923316c">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="872d84b0-6138-49fe-81e9-ee9ff68f403e">
+    <name>ДатаПодписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата подписи</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Дата підпису</value>
+    </synonym>
+    <comment>Дата подписи</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="4981ec82-d474-4bae-9fa3-328a4fb06457">
+    <name>ЕдиницаИзмерения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Единица измерения</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Одиниця виміру</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ПорядкиОкругленияОтчетности</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="782942ae-7b17-439a-a7d4-5a52cbb82ee7">
+    <name>ТочностьЕдиницыИзмерения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Точность единицы измерения</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Точність одиниці виміру</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="05a219ce-8d75-4668-b685-58167eecf3d0">
+    <name>Периодичность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Периодичность</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Періодичність</value>
+    </synonym>
+    <comment>Периодичность представления отчета</comment>
+    <type>
+      <types>EnumRef.Периодичность</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="2e51d248-44e5-4409-b575-dddb1ac5a94c">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Коментар</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="69b4d7f0-fe04-4f5b-a3ef-97d43f103597">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Підрозділ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="3840246b-ea76-4c25-ae1f-37aa299a4961">
+    <name>ОбособленноеПодразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Обособленное подразделение</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відокремлений підрозділ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ОбособленныеПодразделенияОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="1997eb96-1c30-4255-91f4-0a15be6031da">
+    <name>ВыплатыЗПНеРегулярны</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выплата заработной платы происходит нерегулярно</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Виплата заробітної плати відбувається нерегулярно</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="8e63d41a-cc59-4a89-b7da-40dfdc4c09cf">
+    <name>ДатаВыплатыНач</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выплата ЗП за предыдущий месяц произошла до </value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Виплата ЗП за попередній місяць сталася до </value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="9f47c1cd-38df-4e4e-804b-97df4049a1e0">
+    <name>ДатаВыплатыКон</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выплата ЗП за последний месяц произошла до </value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Виплата ЗП за останній місяць сталася до </value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="4250b86c-557b-434a-a02a-204c44eef5ed">
+    <name>НеВключатьЧПников</name>
+    <synonym>
+      <key>ru</key>
+      <value>Включать в отчет только сотрудников организации</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Включати у звіт тільки співробітників організації</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="9c71c9d9-ace5-416d-ac5e-341b040bba4b">
+    <name>СортироватьПоИНН</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сортировать по ИНН</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Сортувати по ІПН</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="ba58a1eb-e6c8-488a-9c88-e2f3fd6d62b5">
+    <name>ЧислоВыплатыЗП</name>
+    <synonym>
+      <key>uk</key>
+      <value>Число выплаты ЗП</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="d4bdf4be-9fd9-46f2-bb8a-e0a1768d99b1">
+    <name>ОсновнаяФорма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расчет доходов и единого взноса физлиц</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Розрахунок доходів та єдиного внеску фізосіб</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+      <pages>
+        <lang>uk</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="0e488f7d-172e-4575-a664-f11a627b96eb">
+    <name>ФормаОтчета2021УФ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расчет доходов и единого взноса физлиц</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Розрахунок доходів та єдиного внеску фізосіб</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+      <pages>
+        <lang>uk</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="5042cdb0-75c7-4cc5-acba-4d591fd7e2d3">
+    <name>ПараметрыОтчета2021УФ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Параметры отчета2021 УФ</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Параметри отчета2015 УФ</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+      <pages>
+        <lang>uk</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="355eff6e-585b-4248-b717-1a87d791accc">
+    <name>ПоказателиЗвит1С</name>
+    <synonym>
+      <key>ru</key>
+      <value>Показатели &quot;FREDO Звіт&quot;</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Показатели &quot;FREDO Звіт&quot;</value>
+    </synonym>
+  </templates>
+  <templates uuid="42c2f7da-020b-4acf-bba9-21b13b545565">
+    <name>СоставПоказателей2021УФ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состав показателей2021 УФ</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Состав показателей2021 УФ</value>
+    </synonym>
+  </templates>
+  <templates uuid="8929e7d8-13a3-43a9-ade1-237d9b9d8c6b">
+    <name>ФормаОтчета2021УФ_Декларация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета2021 у ф декларация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма отчета2021 у ф декларация</value>
+    </synonym>
+  </templates>
+  <templates uuid="ae7f5146-8848-4694-8ef8-c6699983fed5">
+    <name>ФормаОтчета2021УФ_Таблица11</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета2021 у ф таблица11</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма отчета2021 у ф таблица11</value>
+    </synonym>
+  </templates>
+  <templates uuid="5ec41838-64fe-4eaf-a834-ac4dd36277c5">
+    <name>ФормаОтчета2021УФ_Таблица12</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета2021 у ф таблица12</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма отчета2021 у ф таблица12</value>
+    </synonym>
+  </templates>
+  <templates uuid="41ad75d7-e123-4680-807c-e7e468385a18">
+    <name>ФормаОтчета2021УФ_Таблица13</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета2021 у ф таблица13</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма отчета2021 у ф таблица13</value>
+    </synonym>
+  </templates>
+  <templates uuid="58352b00-b0c7-4621-8c42-7781ffc35aee">
+    <name>ФормаОтчета2021УФ_Таблица41</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета2021 у ф таблица41</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма отчета2021 у ф таблица41</value>
+    </synonym>
+  </templates>
+  <templates uuid="084c55b5-7027-4f1a-a6f3-fc8094e7c9bc">
+    <name>ФормаОтчета2021УФ_Таблица42</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета2021 у ф таблица42</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма отчета2021 у ф таблица42</value>
+    </synonym>
+  </templates>
+  <templates uuid="023e0369-570d-4f75-b1a4-cb3311c70c24">
+    <name>ФормаОтчета2021УФ_Таблица43</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета2021 у ф таблица43</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма отчета2021 у ф таблица43</value>
+    </synonym>
+  </templates>
+  <templates uuid="42a70f0f-970d-43f0-8b5d-31318b2de707">
+    <name>ФормаОтчета2021УФ_Таблица5</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета2021 у ф таблица5</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма отчета2021 у ф таблица5</value>
+    </synonym>
+  </templates>
+  <templates uuid="e831502f-4a77-406c-8a16-2e0c2550a429">
+    <name>ФормаОтчета2021УФ_Таблица61</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета2021 у ф таблица61</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма отчета2021 у ф таблица61</value>
+    </synonym>
+  </templates>
+  <templates uuid="652fafe9-db56-4e1b-b5e5-27f5dd3af155">
+    <name>ФормаОтчета2021УФ_Таблица62</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета2021 у ф таблица62</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма отчета2021 у ф таблица62</value>
+    </synonym>
+  </templates>
+  <templates uuid="8716f6bd-df7f-47a5-9771-f459b598aed4">
+    <name>ФормаОтчета2021УФ_Таблица63</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета2021 у ф таблица63</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма отчета2021 у ф таблица63</value>
+    </synonym>
+  </templates>
+</mdclass:Report>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ec55f828-a725-452e-830d-619e1609a48c">
+  <producedTypes>
+    <selectionType typeId="35826e12-ae09-4837-a87b-c0dd158fea65" valueTypeId="8d2a10d5-7292-4ddd-ab86-4e7982d33cc2"/>
+    <listType typeId="aacd5a20-efbd-43d6-ac52-39afc170c5e2" valueTypeId="48063f98-9ed0-4c91-a1a8-dc9fdb37c677"/>
+    <managerType typeId="d85acfef-77f2-4ea4-be34-4d76033146cf" valueTypeId="a3e356c8-ecf7-40bd-8fd5-d5f1c2c9c6bf"/>
+    <recordSetType typeId="19ccfa94-c6af-488a-91ed-6b1070e92fa3" valueTypeId="57198d3e-097a-4149-a31e-7ae51fe4ee0d"/>
+    <recordKeyType typeId="7748d2c7-84ec-4416-a331-123f523c881b" valueTypeId="db3f5cac-0599-4d77-b6db-379163da64f8"/>
+    <recordType typeId="4f3bee1c-f0ad-4328-bfcd-968858228d57" valueTypeId="a444a731-7e55-495d-bdae-f4aec61a53b6"/>
+    <recordManagerType typeId="091b5a81-60b3-4054-b8d4-4bd2ae7cf39d" valueTypeId="9b70f3f6-dbe1-4a66-968e-20ad9a2ad5d6"/>
+  </producedTypes>
+  <name>ИНАГРО_НумерацияЖурналовЭлеватора</name>
+  <synonym>
+    <key>ru</key>
+    <value>Нумерация журналов (элеватор)</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Нумерація журналів (елеватор)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+    <pages>
+      <lang>uk</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="3beab33a-fcf7-43d4-98b0-3399667bd160">
+    <name>ТекущийНомерЖурнала</name>
+    <synonym>
+      <key>uk</key>
+      <value>Текущий номер журнала</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Текущий номер журнала</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>11</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="155cb7a3-f7df-441b-b560-909ccc43acf0">
+    <name>ТипЖурнала</name>
+    <synonym>
+      <key>uk</key>
+      <value>Тип журнала</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИНАГРО_ТипыЖурналов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="02674b4a-75c0-42ab-b710-9b812c7e5d25">
+    <name>ВидЖурнала</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид журнала</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вид журналу</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ИНАГРО_ВидыЖурналов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

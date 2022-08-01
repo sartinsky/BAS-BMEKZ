@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c36005c9-60ec-47e9-8cf5-3f9a88f6ed21">
+  <name>ОбменУправлениеНебольшойФирмойБухгалтерияBASЗарегистрироватьИзменениеДокумента</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен &quot;Управление небольшой фирмой&quot; -  &quot;BAS Бухгалтерия&quot;. Перед записью документа.</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Обмін &quot;Управління невеликою фірмою для України&quot; - &quot;BAS Бухгалтерія&quot;. Перед записом документа.</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.СписаниеСРасчетногоСчета</types>
+    <types>DocumentObject.ПриходныйКассовыйОрдер</types>
+    <types>DocumentObject.РасходныйКассовыйОрдер</types>
+    <types>DocumentObject.ПлатежноеПоручение</types>
+    <types>DocumentObject.ПоступлениеНаРасчетныйСчет</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ОбменДаннымиСобытияБП.ОбменУправлениеНебольшойФирмойБухгалтерияBASПередЗаписьюДокумента</handler>
+</mdclass:EventSubscription>
