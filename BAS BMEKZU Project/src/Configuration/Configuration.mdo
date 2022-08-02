@@ -24,7 +24,7 @@
   <defaultRoles>Role.АдминистраторСистемы</defaultRoles>
   <defaultRoles>Role.ИнтерактивноеОткрытиеВнешнихОтчетовИОбработок</defaultRoles>
   <vendor>NetHelp</vendor>
-  <version>2.1.14.4</version>
+  <version>2.1.15.2</version>
   <updateCatalogAddress>http://downloads.bas-soft.eu/tmplts/</updateCatalogAddress>
   <useManagedFormInOrdinaryApplication>true</useManagedFormInOrdinaryApplication>
   <useOrdinaryFormInManagedApplication>true</useOrdinaryFormInManagedApplication>
@@ -1082,6 +1082,7 @@
   <roles>Role.ЧтениеНалоговИВзносов</roles>
   <roles>Role.ЧтениеНачисленнойЗарплаты</roles>
   <roles>Role.ЧтениеОбщейБухгалтерскойНСИ</roles>
+  <roles>Role.ЧтениеРассылокОтчетов</roles>
   <roles>Role.ИНАГРО_БазовыеПрава</roles>
   <roles>Role.ИНАГРО_Бухгалтер</roles>
   <roles>Role.ИНАГРО_БухгалтерЛаборант</roles>
@@ -1125,7 +1126,6 @@
   <roles>Role.ИНАГРО_ЧтениеПросмотрРабочиеМеста</roles>
   <roles>Role.ИНАГРО_ЧтениеТипыЖурналов</roles>
   <roles>Role.ИНАГРО_ЧтениеТранспорт</roles>
-  <roles>Role.ЧтениеРассылокОтчетов</roles>
   <commonTemplates>CommonTemplate.ИнструкцияКакВыполнитьУстановкуОбновленияВручную</commonTemplates>
   <commonTemplates>CommonTemplate.ИнформационныеСсылки_Общие</commonTemplates>
   <commonTemplates>CommonTemplate.ИнформационныеСсылки_Общие_uk</commonTemplates>
@@ -3327,7 +3327,6 @@
   <documents>Document.УдалитьВводНачальныхОстатковМалоценныхАктивовВЭксплуатации</documents>
   <documents>Document.УдалитьВводНачальныхОстатковОС</documents>
   <documents>Document.УдалитьВводНачальныхОстатковПоЗарплате</documents>
-  <documents>Document.ИНАГРО_ВводСведенийОБанковскихКарточкахРаботников</documents>
   <documents>Document.УдалитьВводСведенийОПлановыхНачисленияхРаботниковОрганизаций</documents>
   <documents>Document.УдалитьКадровоеПеремещениеОрганизаций</documents>
   <documents>Document.УдалитьНачислениеКоммунальногоНалога</documents>
@@ -3339,6 +3338,7 @@
   <documents>Document.УстановкаГарантийныхСроковНалоговыйУчет</documents>
   <documents>Document.УстановкаКоэффициентаПропорциональногоОтнесенияНДСНаКредит</documents>
   <documents>Document.УстановкаПорядкаЗакрытияПодразделений</documents>
+  <documents>Document.УстановкаЦенНоменклатуры</documents>
   <documents>Document.ИНАГРО_АктЗачистки</documents>
   <documents>Document.ИНАГРО_АктРаспределения</documents>
   <documents>Document.ИНАГРО_АктРасчет310</documents>
@@ -3349,7 +3349,7 @@
   <documents>Document.ИНАГРО_БригадныйНаряд</documents>
   <documents>Document.ИНАГРО_ВводНачальныхОстатковТоплива</documents>
   <documents>Document.ИНАГРО_ВводСведенийДляРасчетаСтраховогоСтажа</documents>
-  <documents>Document.УстановкаЦенНоменклатуры</documents>
+  <documents>Document.ИНАГРО_ВводСведенийОБанковскихКарточкахРаботников</documents>
   <documents>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях</documents>
   <documents>Document.ИНАГРО_ВедомостьОтвесов</documents>
   <documents>Document.ИНАГРО_ВедомостьРеализация</documents>
@@ -4266,6 +4266,8 @@
   <informationRegisters>InformationRegister.ОбщиеНастройкиУзловИнформационныхБаз</informationRegisters>
   <informationRegisters>InformationRegister.ОбъектыКОтправке</informationRegisters>
   <informationRegisters>InformationRegister.ОбъектыСтроительстваОрганизаций</informationRegisters>
+  <informationRegisters>InformationRegister.ОпендатаботКэш</informationRegisters>
+  <informationRegisters>InformationRegister.ОпендатаботНастройки</informationRegisters>
   <informationRegisters>InformationRegister.ОперацииСтатистики</informationRegisters>
   <informationRegisters>InformationRegister.ОплатаВедомостейНаВыплатуЗарплаты</informationRegisters>
   <informationRegisters>InformationRegister.ОтветственныеЛица</informationRegisters>
@@ -4394,7 +4396,6 @@
   <informationRegisters>InformationRegister.УдалитьОбъектыИнформационныхБаз</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьОчередьЗаданий</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьОчередьИзвлеченияТекста</informationRegisters>
-  <informationRegisters>InformationRegister.ИНАГРО_ПараметрыВыплатыЗПРаботников</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьПараметрыИнтернетПоддержкиПользователей</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьПараметрыРасчетаИндексации</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьПаспортныеДанныеФизЛиц</informationRegisters>
@@ -4403,19 +4404,20 @@
   <informationRegisters>InformationRegister.УдалитьПраваДоступаПользователей</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьПраваПоЗначениямДоступа</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьПрисоединенныеФайлы</informationRegisters>
-  <informationRegisters>InformationRegister.ИНАГРО_РаботникиОрганизаций</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьРейтингАктивностиОбластейДанных</informationRegisters>
-  <informationRegisters>InformationRegister.ИНАГРО_СведенияОВыплатахРаботникамОрганизацийПоПлатежнымВедомостям</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьСоответствиеОбъектовДляОбмена</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьСоответствияОбъектовИнформационныхБаз</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьСохраненныеНастройки</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьСтраныМира</informationRegisters>
-  <informationRegisters>InformationRegister.ИНАГРО_УчетнаяПолитикаПоПерсоналу</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьХранимыеФайлыВерсий</informationRegisters>
   <informationRegisters>InformationRegister.УчетнаяПолитикаОрганизаций</informationRegisters>
   <informationRegisters>InformationRegister.ФайлыВРабочемКаталоге</informationRegisters>
   <informationRegisters>InformationRegister.ФайлыОбластейДанных</informationRegisters>
   <informationRegisters>InformationRegister.ФИОФизическихЛиц</informationRegisters>
+  <informationRegisters>InformationRegister.ХранилищеСертификатов</informationRegisters>
+  <informationRegisters>InformationRegister.ЦеныНоменклатуры</informationRegisters>
+  <informationRegisters>InformationRegister.ШкалаСтавокНалогов</informationRegisters>
+  <informationRegisters>InformationRegister.ЭлектронныеПодписи</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ВариантыАлгоритмовРасчетаЗарплаты</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ВзносыВФондыПоГруппам</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ВзносыВФондыРаботниковОрганизаций</informationRegisters>
@@ -4449,7 +4451,7 @@
   <informationRegisters>InformationRegister.ИНАГРО_НачальныеСведенияОСтажеРаботниковОрганизации</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_НачисленияДляПредварительногоРасчета</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_НумерацияЖурналовЭлеватора</informationRegisters>
-  <informationRegisters>InformationRegister.ХранилищеСертификатов</informationRegisters>
+  <informationRegisters>InformationRegister.ИНАГРО_ПараметрыВыплатыЗПРаботников</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ПараметрыУчетаЭлеватора</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ПараметрыФиксированнойИндексации</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ПлановыеНачисленияРаботниковОрганизаций</informationRegisters>
@@ -4459,12 +4461,12 @@
   <informationRegisters>InformationRegister.ИНАГРО_ПоказанияСпидометраИБака</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ПраваПользователейЭлеватор</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ПредопределеннаяНоменклатура</informationRegisters>
-  <informationRegisters>InformationRegister.ЦеныНоменклатуры</informationRegisters>
+  <informationRegisters>InformationRegister.ИНАГРО_РаботникиОрганизаций</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_РазмерыЗаконодательноУстановленныхВыплат</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_РегламентированныйПроизводственныйКалендарь</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_РезультатыНаблюденияСостоянияЗерна</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_СведенияОВодителе</informationRegisters>
-  <informationRegisters>InformationRegister.ШкалаСтавокНалогов</informationRegisters>
+  <informationRegisters>InformationRegister.ИНАГРО_СведенияОВыплатахРаботникамОрганизацийПоПлатежнымВедомостям</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_СводОтчисленийВФондыНастройкиОтчета</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_Сельхозтехника</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_СемейноеПоложениеФизЛиц</informationRegisters>
@@ -4478,7 +4480,7 @@
   <informationRegisters>InformationRegister.ИНАГРО_СформированныеДокументы</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ТранспортныеСредства</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_УчетнаяПолитика</informationRegisters>
-  <informationRegisters>InformationRegister.ЭлектронныеПодписи</informationRegisters>
+  <informationRegisters>InformationRegister.ИНАГРО_УчетнаяПолитикаПоПерсоналу</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_Форма49</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ЦветНоменклатурнойГруппы</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ЦеныНаУслуги</informationRegisters>
@@ -4503,8 +4505,6 @@
   <informationRegisters>InformationRegister.УдалитьИНАГРО_ФормированиеДокументовТабличнаяЧасть</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьИНАГРО_ФормированиеДокументовШапкаДокумента</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьИНАГРО_ЦепочкаЗадачБизнесОпераций</informationRegisters>
-  <informationRegisters>InformationRegister.ОпендатаботКэш</informationRegisters>
-  <informationRegisters>InformationRegister.ОпендатаботНастройки</informationRegisters>
   <accumulationRegisters>AccumulationRegister.ВзаиморасчетыПоВзносамВФонды</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ВзаиморасчетыПоНДФЛ</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ВзаиморасчетыПоУдержаниям</accumulationRegisters>

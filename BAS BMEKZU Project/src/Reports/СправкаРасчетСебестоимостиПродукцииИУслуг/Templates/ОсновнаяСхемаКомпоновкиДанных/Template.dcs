@@ -1042,7 +1042,7 @@
 	<calculatedField>
 		<dataPath>Группировки.ПродукцияГруппировка</dataPath>
 		<expression>Выбор Когда Ресурсы.Коэффициент = 1 Тогда Номенклатура 
-Иначе НСтр("ru = 'Итого:'; uk = 'Разом:'") Конец</expression>
+Иначе НСтр("ru='Итого:';uk= 'Разом:'") Конец</expression>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
@@ -1394,7 +1394,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>Шрифт</dcscor:parameter>
-							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Font" ref="style:ЗаголовокПодраздела" kind="StyleItem"/>
+							<dcscor:value xsi:type="v8ui:Font" kind="AutoFont"/>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>МинимальнаяВысота</dcscor:parameter>
@@ -3223,15 +3223,15 @@
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 			<dcsat:name>ТекстРасходов</dcsat:name>
 			<dcsat:expression>Выбор Когда &amp;НалоговыйУчет Тогда
-НСтр("ru = 'Прямые расходы'; uk = 'Прямі витрати'") Иначе
-НСтр("ru = 'Производственные расходы'; uk = 'Виробничі витрати'")
+НСтр("ru='Прямые расходы';uk= 'Прямі витрати'") Иначе
+НСтр("ru='Производственные расходы';uk= 'Виробничі витрати'")
  Конец</dcsat:expression>
 		</parameter>
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 			<dcsat:name>текстСебестоимость</dcsat:name>
 			<dcsat:expression> Выбор Когда &amp;НалоговыйУчет Тогда
- НСтр("ru = 'Сумма прямых расходов, приходящаяся на выпуск'; uk = 'Сума прямих витрат, що припадає на випуск'") Иначе
- НСтр("ru = 'Фактическая себестоимость'; uk = 'Фактична собівартість'") Конец +  "(гр.6 * гр.9)" </dcsat:expression>
+ НСтр("ru='Сумма прямых расходов, приходящаяся на выпуск';uk= 'Сума прямих витрат, що припадає на випуск'") Иначе
+ НСтр("ru='Фактическая себестоимость';uk= 'Фактична собівартість'") Конец +  "(гр.6 * гр.9)" </dcsat:expression>
 		</parameter>
 	</template>
 	<template>
@@ -3269,7 +3269,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>Шрифт</dcscor:parameter>
-							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Font" ref="style:ЗаголовокПодраздела" kind="StyleItem"/>
+							<dcscor:value xsi:type="v8ui:Font" kind="AutoFont"/>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>МинимальнаяВысота</dcscor:parameter>
@@ -4169,8 +4169,8 @@
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 			<dcsat:name>ТекстРасходов</dcsat:name>
 			<dcsat:expression>Выбор Когда &amp;НалоговыйУчет Тогда
-НСтр("ru = 'Прямые расходы'; uk = 'Прямі витрати'") Иначе
-НСтр("ru = 'Производственные расходы'; uk = 'Виробничі витрати'")
+НСтр("ru='Прямые расходы';uk= 'Прямі витрати'") Иначе
+НСтр("ru='Производственные расходы';uk= 'Виробничі витрати'")
  Конец</dcsat:expression>
 		</parameter>
 	</template>
