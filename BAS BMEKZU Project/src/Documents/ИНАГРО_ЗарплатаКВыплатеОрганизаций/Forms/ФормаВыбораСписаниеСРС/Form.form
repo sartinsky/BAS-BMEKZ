@@ -241,6 +241,52 @@
       </extInfo>
     </items>
     <items xsi:type="form:FormField">
+      <name>СпособВыплаты</name>
+      <id>49</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Список.СпособВыплаты</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>СпособВыплатыРасширеннаяПодсказка</name>
+        <id>51</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>СпособВыплатыКонтекстноеМеню</name>
+        <id>50</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
       <name>Банк</name>
       <id>34</id>
       <visible>true</visible>
@@ -810,7 +856,8 @@
 	ИНАГРО_ЗарплатаКВыплатеОрганизацийРаботникиОрганизации.Банк КАК Банк,
 	МАКСИМУМ(ИНАГРО_ЗарплатаКВыплатеОрганизацийЗарплата.СчетУчета) КАК СчетУчета,
 	ИНАГРО_ЗарплатаКВыплатеОрганизаций.ПериодРегистрации КАК ПериодРегистрации,
-	ВЫРАЗИТЬ(ИНАГРО_ЗарплатаКВыплатеОрганизаций.Комментарий КАК СТРОКА(100)) КАК Комментарий
+	ВЫРАЗИТЬ(ИНАГРО_ЗарплатаКВыплатеОрганизаций.Комментарий КАК СТРОКА(100)) КАК Комментарий,
+	ИНАГРО_ЗарплатаКВыплатеОрганизацийРаботникиОрганизации.СпособВыплаты КАК СпособВыплаты
 ИЗ
 	Документ.ИНАГРО_ЗарплатаКВыплатеОрганизаций КАК ИНАГРО_ЗарплатаКВыплатеОрганизаций
 		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ИНАГРО_ЗарплатаКВыплатеОрганизаций.Зарплата КАК ИНАГРО_ЗарплатаКВыплатеОрганизацийЗарплата
@@ -832,8 +879,9 @@
 	ИНАГРО_ЗарплатаКВыплатеОрганизаций.Ответственный,
 	ИНАГРО_ЗарплатаКВыплатеОрганизацийРаботникиОрганизации.Банк,
 	ВЫРАЗИТЬ(ИНАГРО_ЗарплатаКВыплатеОрганизаций.Комментарий КАК СТРОКА(100)),
-	ВЫРАЗИТЬ(ИНАГРО_ЗарплатаКВыплатеОрганизаций.Комментарий КАК СТРОКА(100)),
-	ИНАГРО_ЗарплатаКВыплатеОрганизаций.ВидВыплаты</queryText>
+	ИНАГРО_ЗарплатаКВыплатеОрганизаций.ВидВыплаты,
+	ИНАГРО_ЗарплатаКВыплатеОрганизаций.ПериодРегистрации,
+	ИНАГРО_ЗарплатаКВыплатеОрганизацийРаботникиОрганизации.СпособВыплаты</queryText>
       <mainTable>Document.ИНАГРО_ЗарплатаКВыплатеОрганизаций</mainTable>
       <dynamicDataRead>true</dynamicDataRead>
       <autoFillAvailableFields>true</autoFillAvailableFields>

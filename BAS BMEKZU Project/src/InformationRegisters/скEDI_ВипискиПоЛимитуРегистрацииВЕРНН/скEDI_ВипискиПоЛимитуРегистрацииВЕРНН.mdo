@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7f142813-d535-43b4-93d8-c467b57f1d67">
+  <producedTypes>
+    <selectionType typeId="050c5087-3013-4bb6-8bcb-66af34e2ecda" valueTypeId="17104ca4-4909-4e6f-be04-fea9038909d5"/>
+    <listType typeId="90118b19-8f6e-4145-824c-c96b54d3c0cb" valueTypeId="ae7d372b-dd72-4341-ae93-35ca922227a0"/>
+    <managerType typeId="17a23f56-44e0-42c6-9f23-2a7ffa1ca6c3" valueTypeId="1d5b627b-89d2-494d-9992-52d2fb76d0cb"/>
+    <recordSetType typeId="babe2bd7-4c08-48ec-b290-82a25367c100" valueTypeId="6c54f9fe-6af6-4a59-9c98-49f0179ca251"/>
+    <recordKeyType typeId="9a46ca68-09c1-40ab-b1b0-0a06a22114e6" valueTypeId="f6f9f230-8794-4c54-86ad-ac688ae0915f"/>
+    <recordType typeId="22da5db5-13dd-444e-8606-43898268b851" valueTypeId="e73867e9-5a70-4bf8-9fce-69ea54e861f1"/>
+    <recordManagerType typeId="02411039-6d7f-4aa6-8136-89f686d3d135" valueTypeId="e0e6af16-c9d8-480e-acf6-8331101e58bc"/>
+  </producedTypes>
+  <name>скEDI_ВипискиПоЛимитуРегистрацииВЕРНН</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виписки по Лимиту регистрации в ЕРНН</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Витяги по Ліміту реєстрації в ЄРПН</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="cffe73fe-6ae5-4c4d-bb44-c84c12241a22">
+    <name>Строка2Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма налога, на которую есть право регистрировать НН и РК</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Сума податку, на яку є право реєструвати ПН та РК</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="f8444477-b7aa-41a5-b5ff-7bb581b05e58">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация EDI</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація EDI</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.скEDI_Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

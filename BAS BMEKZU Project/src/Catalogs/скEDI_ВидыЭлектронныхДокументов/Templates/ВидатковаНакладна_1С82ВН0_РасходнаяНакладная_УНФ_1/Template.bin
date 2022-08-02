@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_A6</dataPath>
+			<field>Сумма</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_NOMENKLATURA_NUMHBUMEASURE</dataPath>
+			<field>ЕдИзмКод</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>TAB1 NOMENKLATURA NUMHBUMEASURE</v8:content>
+				</v8:item>
+			</title>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_NOMENKLATURA_CHARCODEUMEASURE</dataPath>
+			<field>ЕдИзмНаименование</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>TAB1 NOMENKLATURA CHARCODEUMEASURE</v8:content>
+				</v8:item>
+			</title>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_A5</dataPath>
+			<field>Цена</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_A3</dataPath>
+			<field>Количество</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_NOMENKLATURA_NAME</dataPath>
+			<field>НоменклатураНаименование</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_T</dataPath>
+			<field>ТипНоменклатуры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>TAB1 T</v8:content>
+				</v8:item>
+			</title>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_NOMENKLATURA_NUM</dataPath>
+			<field>Артикул</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>TAB1 NOMENKLATURA NUM</v8:content>
+				</v8:item>
+			</title>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_A4</dataPath>
+			<field>Скидка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>TAB1 a4</v8:content>
+				</v8:item>
+			</title>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ВЫРАЗИТЬ(РасходнаяНакладнаяЗапасы.Номенклатура.НаименованиеПолное КАК СТРОКА(1000)) КАК НоменклатураНаименование,
+	РасходнаяНакладнаяЗапасы.Количество КАК Количество,
+	РасходнаяНакладнаяЗапасы.Цена КАК Цена,
+	РасходнаяНакладнаяЗапасы.Сумма КАК Сумма,
+	РасходнаяНакладнаяЗапасы.ЕдиницаИзмерения.Наименование КАК ЕдИзмНаименование,
+	РасходнаяНакладнаяЗапасы.ЕдиницаИзмерения.Код КАК ЕдИзмКод,
+	РасходнаяНакладнаяЗапасы.Ссылка.Организация КАК Организация,
+	РасходнаяНакладнаяЗапасы.Ссылка.Дата КАК Дата,
+	"Т" КАК ТипНоменклатуры,
+	РасходнаяНакладнаяЗапасы.Номенклатура.Артикул КАК Артикул,
+	ВЫБОР
+		КОГДА РасходнаяНакладнаяЗапасы.СуммаАвтоматическойСкидки = 0
+				И РасходнаяНакладнаяЗапасы.СуммаСкидкиНаценки &lt;&gt; 0
+			ТОГДА РасходнаяНакладнаяЗапасы.СуммаСкидкиНаценки
+		КОГДА РасходнаяНакладнаяЗапасы.СуммаАвтоматическойСкидки &lt;&gt; 0
+				И РасходнаяНакладнаяЗапасы.СуммаСкидкиНаценки = 0
+			ТОГДА РасходнаяНакладнаяЗапасы.СуммаАвтоматическойСкидки
+		КОГДА РасходнаяНакладнаяЗапасы.СуммаАвтоматическойСкидки &lt;&gt; 0
+				И РасходнаяНакладнаяЗапасы.СуммаСкидкиНаценки &lt;&gt; 0
+			ТОГДА РасходнаяНакладнаяЗапасы.СуммаАвтоматическойСкидки + РасходнаяНакладнаяЗапасы.СуммаСкидкиНаценки
+		ИНАЧЕ 0
+	КОНЕЦ КАК Скидка
+ИЗ
+	Документ.РасходнаяНакладная.Запасы КАК РасходнаяНакладнаяЗапасы
+ГДЕ
+	РасходнаяНакладнаяЗапасы.Ссылка = &amp;Ссылка</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>УчитыватьНДС</dataPath>
+		<expression>УправлениеНебольшойФирмойСервер.НалогообложениеНДС(Организация, Дата)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Учитывать НДС</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>TAB1_A1</dataPath>
+		<expression>"@@НомерСтроки@@"</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>TAB1 A</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<parameter>
+		<name>Ссылка</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Ссылка</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ссылка</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.РасходнаяНакладная</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Документ.РасходнаяНакладная.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основний</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_A1</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_A3</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_A4</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_A5</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_A6</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_NOMENKLATURA_NUM</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_NOMENKLATURA_CHARCODEUMEASURE</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_NOMENKLATURA_NAME</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_NOMENKLATURA_NUMHBUMEASURE</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_T</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Ссылка</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">00000000-0000-0000-0000-000000000000</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

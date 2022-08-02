@@ -154,7 +154,7 @@
         <common>true</common>
       </userVisible>
       <dataPath xsi:type="form:DataPath">
-        <segments>Список.Description</segments>
+        <segments>Список.Наименование</segments>
       </dataPath>
       <defaultItem>true</defaultItem>
       <extendedTooltip>
@@ -201,7 +201,7 @@
         <common>true</common>
       </userVisible>
       <dataPath xsi:type="form:DataPath">
-        <segments>Список.Code</segments>
+        <segments>Список.Код</segments>
       </dataPath>
       <extendedTooltip>
         <name>КодExtendedTooltip</name>
@@ -313,6 +313,52 @@
       <contextMenu>
         <name>ТипЦенРозничнойТорговлиКонтекстноеМеню</name>
         <id>17</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>КодКАТОТТГ</name>
+      <id>61</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Список.КодКАТОТТГ</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>КодКАТОТТГРасширеннаяПодсказка</name>
+        <id>63</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>КодКАТОТТГКонтекстноеМеню</name>
+        <id>62</id>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -729,29 +775,30 @@
       <common>true</common>
     </edit>
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
-      <segments>Список.IsFolder</segments>
+      <segments>Список.Ссылка</segments>
     </notDefaultUseAlwaysAttributes>
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
-      <segments>Список.Ref</segments>
+      <segments>Список.ЭтоГруппа</segments>
     </notDefaultUseAlwaysAttributes>
     <main>true</main>
     <extInfo xsi:type="form:DynamicListExtInfo">
       <queryText>ВЫБРАТЬ
-	СправочникСклады.Наименование,
-	СправочникСклады.Код,
-	СправочникСклады.ТипСклада,
-	СправочникСклады.ТипЦенРозничнойТорговли,
-	СправочникСклады.Комментарий,
-	СправочникСклады.ЭтоГруппа,
-	СправочникСклады.Ссылка,
-	&amp;ОсновнойСклад,
+	СправочникСклады.Наименование КАК Наименование,
+	СправочникСклады.Код КАК Код,
+	СправочникСклады.ТипСклада КАК ТипСклада,
+	СправочникСклады.ТипЦенРозничнойТорговли КАК ТипЦенРозничнойТорговли,
+	СправочникСклады.Комментарий КАК Комментарий,
+	СправочникСклады.ЭтоГруппа КАК ЭтоГруппа,
+	СправочникСклады.Ссылка КАК Ссылка,
+	&amp;ОсновнойСклад КАК ОсновнойСклад,
 	ВЫБОР
 		КОГДА СправочникСклады.Ссылка = &amp;ОсновнойСклад
 			ТОГДА ИСТИНА
 		ИНАЧЕ ЛОЖЬ
 	КОНЕЦ КАК Основной,
-	СправочникСклады.ТерриторияПоКОАТУУ,
-	СправочникСклады.Местонахождение
+	СправочникСклады.ТерриторияПоКОАТУУ КАК ТерриторияПоКОАТУУ,
+	СправочникСклады.Местонахождение КАК Местонахождение,
+	СправочникСклады.КодКАТОТТГ КАК КодКАТОТТГ
 ИЗ
 	Справочник.Склады КАК СправочникСклады</queryText>
       <mainTable>Catalog.Склады</mainTable>

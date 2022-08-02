@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Rights xmlns="http://v8.1c.ru/8.2/roles" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Rights">
+<Rights xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://v8.1c.ru/8.2/roles" xsi:type="Rights">
 	<setForNewObjects>false</setForNewObjects>
 	<setForAttributesByDefault>true</setForAttributesByDefault>
 	<independentRightsOfChildObjects>true</independentRightsOfChildObjects>
@@ -1694,37 +1694,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.Сотрудники</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-			<restrictionByCondition>
-				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
-#ДляОбъекта("")
-#Иначе
-#ПоНаборамЗначений("Справочник.Сотрудники","Чтение","",
-"")
-#КонецЕсли</condition>
-			</restrictionByCondition>
-			<restrictionByCondition>
-				<field>Code</field>
-				<field>DataVersion</field>
-				<field>DeletionMark</field>
-				<field>Predefined</field>
-				<field>Ref</field>
-				<condition/>
-			</restrictionByCondition>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.Сотрудники.StandardAttribute.Predefined</name>
 		<right>
 			<name>Edit</name>
@@ -2507,6 +2476,15 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+#ПоЗначениям( "Справочник.ФизическиеЛица","Чтение","",
+"ГруппыФизическихЛиц","Ссылка",
+"","","","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+#КонецЕсли</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -2659,6 +2637,20 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_РаботникиОрганизаций", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 	</object>
 	<object>
@@ -3302,6 +3294,33 @@
 		</right>
 	</object>
 	<object>
+		<name>Configuration.BASБухгалтерияЭлеватораМельницыИКомбикормовогоЗавода</name>
+		<right>
+			<name>MainWindowModeNormal</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeEmbeddedWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeFullscreenWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeKiosk</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>AnalyticsSystemClient</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>CalculationRegister.ИНАГРО_Начисления.Dimension.Сотрудник</name>
 		<right>
 			<name>View</name>
@@ -3746,14 +3765,10 @@
 )
 #КонецЕсли</condition>
 			</restrictionByCondition>
-			<restrictionByCondition>
-				<field>Code</field>
-				<field>DataVersion</field>
-				<field>DeletionMark</field>
-				<field>Predefined</field>
-				<field>Ref</field>
-				<condition/>
-			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>

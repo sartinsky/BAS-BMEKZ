@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b26429e3-da4b-455e-8255-14b8d399347a">
+  <producedTypes>
+    <selectionType typeId="b0405129-c024-4c50-b03c-225a9038ef77" valueTypeId="bfc92f7d-7534-45f7-90c2-90517e44559f"/>
+    <listType typeId="de379370-f0a0-4b3e-9bd6-725dc36e8401" valueTypeId="7bec33ef-7cc7-4c15-9bb2-52df10079962"/>
+    <managerType typeId="1637a463-a208-4af3-a835-47c674d97f9b" valueTypeId="2fd6f571-3764-43a3-b8a7-68b7b58ae45c"/>
+    <recordSetType typeId="17467fe1-8322-4d32-93fc-f76064ad8432" valueTypeId="bad94e7d-e2f4-40eb-be9d-d6f94995e469"/>
+    <recordKeyType typeId="5d54df5e-647f-4978-8ff9-8bd8a7060fec" valueTypeId="2f2a2531-ebdc-4054-a024-266327efe7aa"/>
+    <recordType typeId="2aad82e8-27bd-4969-957a-30e1bdc0ca9d" valueTypeId="ab8d567b-1c79-4534-b139-cac7a2e73ee1"/>
+    <recordManagerType typeId="f12a0745-e939-4e19-941d-4ac955fe4201" valueTypeId="593b2dbe-d9b9-42c4-84f2-a58db46800b2"/>
+  </producedTypes>
+  <name>скEDI_Счетчики</name>
+  <synonym>
+    <key>ru</key>
+    <value>Счетчики</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Лічильники</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.скEDI_Счетчики.Form.ФормаЗаписи</defaultRecordForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Month</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="447ec642-1aba-461c-8e7b-96d3f1d31220">
+    <name>ЗначениеСчетчика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение счетчика</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Значення лічильника</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="c90ae1a2-ac4e-4e7f-b9c6-0d9706120cf4">
+    <name>ВидЭлектронногоДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид электронного документа</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вид електронного документу</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.скEDI_ВидыЭлектронныхДокументов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="01c505d6-075c-4a46-8914-83a3f9f2e6b7">
+    <name>ТипПериода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип периода</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Тип періоду</value>
+    </synonym>
+    <type>
+      <types>EnumRef.скEDI_ТипПериодаСчетчика</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="7032c39b-f2a6-4422-8f7b-41629705cd00">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

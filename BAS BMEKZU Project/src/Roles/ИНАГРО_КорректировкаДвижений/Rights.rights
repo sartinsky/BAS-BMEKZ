@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Rights xmlns="http://v8.1c.ru/8.2/roles" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Rights">
+<Rights xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://v8.1c.ru/8.2/roles" xsi:type="Rights">
 	<setForNewObjects>false</setForNewObjects>
 	<setForAttributesByDefault>true</setForAttributesByDefault>
 	<independentRightsOfChildObjects>true</independentRightsOfChildObjects>
@@ -67,6 +67,54 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.Ответственный</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.ИНАГРО_РасчетыПоУслугам</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляРегистра("ИдентификаторыОбъектовМетаданных.РегистрНакопленияИНАГРО_РасчетыПоУслугам", "Организация", "", "", "", "")
+#Иначе
+#ПоЗначениям( "РегистрНакопления.ИНАГРО_РасчетыПоУслугам","Чтение","",
+"Организации","Организация",
+"","","","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+#КонецЕсли</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляРегистра("ИдентификаторыОбъектовМетаданных.РегистрНакопленияИНАГРО_РасчетыПоУслугам", "Организация", "", "", "", "")
+#Иначе
+#ПоЗначениям( "РегистрНакопления.ИНАГРО_РасчетыПоУслугам","Изменение","",
+"Организации","Организация",
+"","","","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+#КонецЕсли</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.Attribute.Комментарий</name>
 		<right>
 			<name>Edit</name>
@@ -85,65 +133,49 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ВозвратТоваровПоставщику</name>
+		<name>InformationRegister.ИНАГРО_Форма49</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
-		</right>
-		<right>
-			<name>Insert</name>
-			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_Форма49", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
-		</right>
-		<right>
-			<name>Posting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UndoPosting</name>
-			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_Форма49", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
 			<value>true</value>
 		</right>
 		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
-		</right>
-		<right>
 			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePostingRegular</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveUndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveChangeOfPosted</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -169,6 +201,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РасшифровкаПлатежа.Attribute.КурсВзаиморасчетов</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ПеремещениеОС</name>
 		<right>
 			<name>Read</name>
@@ -180,66 +223,14 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ПередачаОС</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Insert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Posting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UndoPosting</name>
-			<value>true</value>
-		</right>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РасшифровкаПлатежа.Attribute.СуммаВДВРПоАвансуДо01042011</name>
 		<right>
 			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
+			<value>false</value>
 		</right>
 		<right>
 			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePostingRegular</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveUndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveChangeOfPosted</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -247,10 +238,38 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ЗатратыНаВыпуск", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ЗатратыНаВыпуск", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -339,6 +358,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.ДатаВыписки</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИНАГРО_РаспределениеЗатрат</name>
 		<right>
 			<name>Read</name>
@@ -416,7 +446,76 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.ДоговорЗайма</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.ИНАГРО_ЗатратыНаПроизводство</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ЗатратыНаПроизводство", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ЗатратыНаПроизводство", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.TabularSection.НачисленияДо.Attribute.Авторасчет</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РасшифровкаПлатежа.Attribute.ДоговорКонтрагента</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -448,10 +547,46 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_УстановкаПоказателейВТС", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
 			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.СчетУчетаРасчетовСКонтрагентом</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.СуммаДокумента</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -665,66 +800,72 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ТребованиеНакладная</name>
+		<name>AccumulationRegister.ИНАГРО_ЗатратыОрганизацийНУ</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
-		</right>
-		<right>
-			<name>Insert</name>
-			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ЗатратыОрганизацийНУ", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
-		</right>
-		<right>
-			<name>Posting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UndoPosting</name>
-			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ЗатратыОрганизацийНУ", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
 			<value>true</value>
 		</right>
 		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
-		</right>
-		<right>
 			<name>Edit</name>
 			<value>true</value>
 		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.ПеречислениеНалогов.Attribute.СубконтоДт1</name>
 		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
+			<name>View</name>
+			<value>false</value>
 		</right>
 		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РасшифровкаПлатежа.Attribute.КратностьВзаиморасчетов</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
 		</right>
 		<right>
-			<name>InteractivePosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePostingRegular</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveUndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveChangeOfPosted</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
+			<name>Edit</name>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -747,6 +888,17 @@
 		<right>
 			<name>View</name>
 			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РасшифровкаПлатежа.Attribute.СчетУчетаРасчетовПоАвансам</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -813,6 +965,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.ДоговорКонтрагента</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИНАГРО_РеализацияКоммунальныхУслуг</name>
 		<right>
 			<name>Read</name>
@@ -876,7 +1039,40 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.УдалитьИНАГРО_ДоговораКонтрагентов.Resource.Статус</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.ВалютаДокумента</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.TabularSection.Удержания.Attribute.ДатаДействияКонец</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.ПеречислениеНалогов.Attribute.СубконтоДт2</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -887,14 +1083,68 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.СписаниеСРасчетногоСчета", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)
+#КонецЕсли</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Insert</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+// ОсновноеУсловиеЗапись
+// Можно добавлять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.СписаниеСРасчетногоСчета", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)
+#КонецЕсли</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.СписаниеСРасчетногоСчета", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)
+#КонецЕсли</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Posting</name>
@@ -950,14 +1200,56 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_ЗаявлениеРасчетВФСС", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Insert</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно добавлять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_ЗаявлениеРасчетВФСС", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_ЗаявлениеРасчетВФСС", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Posting</name>
@@ -1009,14 +1301,136 @@
 		</right>
 	</object>
 	<object>
-		<name>AccumulationRegister.ИНАГРО_ВыполненныеТехнологическиеОперации</name>
+		<name>AccumulationRegister.ИНАГРО_ВыпускПродукции</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ВыпускПродукции", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ВыпускПродукции", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.ИНАГРО_ВыполненныеТехнологическиеОперации</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ВыполненныеТехнологическиеОперации", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ВыполненныеТехнологическиеОперации", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ИНАГРО_ЦеныНаУслуги</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_ЦеныНаУслуги", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_ЦеныНаУслуги", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -1035,6 +1449,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РасшифровкаПлатежа.Attribute.СуммаНДС</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>ChartOfCalculationTypes.ИНАГРО_ВзносыВФонды</name>
 		<right>
 			<name>Read</name>
@@ -1042,132 +1467,6 @@
 		</right>
 		<right>
 			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВводВЭксплуатациюОС</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Insert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Posting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePostingRegular</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveUndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveChangeOfPosted</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ПеремещениеТоваров</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Insert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Posting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePostingRegular</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveUndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveChangeOfPosted</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1208,10 +1507,38 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_СостояниеРаботниковОрганизаций", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_СостояниеРаботниковОрганизаций", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -1230,6 +1557,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.СубконтоДт1</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.TabularSection.Удержания.Attribute.Показатель3</name>
 		<right>
 			<name>Edit</name>
@@ -1238,6 +1576,17 @@
 	</object>
 	<object>
 		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.Attribute.КраткийСоставДокумента</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.Контрагент</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -1273,6 +1622,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РасшифровкаПлатежа.Attribute.СуммаПлатежа</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.Организации.TabularSection.КонтактнаяИнформация.Attribute.АдресЭП</name>
 		<right>
 			<name>Edit</name>
@@ -1291,6 +1651,28 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.Организация</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РасшифровкаПлатежа.Attribute.СчетУчетаНДСПодтвержденный</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИНАГРО_ИзменениеПараметровРасчетаИндексацииПоДолжностям</name>
 		<right>
 			<name>Read</name>
@@ -1302,66 +1684,14 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.МодернизацияОС</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Insert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Posting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UndoPosting</name>
-			<value>true</value>
-		</right>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.Комментарий</name>
 		<right>
 			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
+			<value>false</value>
 		</right>
 		<right>
 			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePostingRegular</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveUndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveChangeOfPosted</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -1428,6 +1758,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РасшифровкаПлатежа.Attribute.СтатьяПоВозвратуАвансаДо2011НУ</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.TabularSection.НачисленияПосле.Attribute.Показатель1</name>
 		<right>
 			<name>Edit</name>
@@ -1453,6 +1794,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РеквизитыКонтрагента.Attribute.Реквизит</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИНАГРО_ВозвратНаРаботуОрганизаций</name>
 		<right>
 			<name>Read</name>
@@ -1468,14 +1820,68 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ОперацияБух", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)
+#КонецЕсли</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Insert</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+// ОсновноеУсловиеЗапись
+// Можно добавлять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ОперацияБух", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)
+#КонецЕсли</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ОперацияБух", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)
+#КонецЕсли</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Posting</name>
@@ -1527,14 +1933,69 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.StandardAttribute.Posted</name>
 		<right>
 			<name>View</name>
-			<value>true</value>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.StandardAttribute.Number</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.ВыплатаЗаработнойПлаты.Attribute.СчетУчета</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -1545,14 +2006,42 @@
 		</right>
 	</object>
 	<object>
-		<name>AccumulationRegister.ИНАГРО_ТопливоВТС</name>
+		<name>AccumulationRegister.ИНАГРО_КонтрольОтраженияВвозаВывозаСобственногоЗернаВРегламентированномУчете</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_КонтрольОтраженияВвозаВывозаСобственногоЗернаВРегламентированномУчете", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_КонтрольОтраженияВвозаВывозаСобственногоЗернаВРегламентированномУчете", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -1561,6 +2050,86 @@
 		<right>
 			<name>Edit</name>
 			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.ВыплатаЗаработнойПлаты.Attribute.Сотрудник</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.ИНАГРО_ТопливоВТС</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ТопливоВТС", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ТопливоВТС", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.ПеречислениеНалогов.Attribute.СубконтоДт3</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.ФизЛицо</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -1582,6 +2151,20 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_ДоговорНаВыполнениеРаботСФизЛицом", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -1593,69 +2176,6 @@
 		<right>
 			<name>Edit</name>
 			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ПоступлениеТоваровУслуг</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Insert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Posting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePostingRegular</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveUndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveChangeOfPosted</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -1674,69 +2194,6 @@
 		</right>
 		<right>
 			<name>Edit</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ПодготовкаКПередачеОС</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Insert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Posting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePostingRegular</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveUndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveChangeOfPosted</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1815,10 +2272,184 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РасшифровкаПлатежа.Attribute.Сделка</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.ДокументОснование</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.ИНАГРО_Остатки_Сводная</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_Остатки_Сводная", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_Остатки_Сводная", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.НазначениеПлатежа</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.TabularSection.Начисления.Attribute.Сотрудник</name>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.ИНАГРО_КонтрольВвозаСобственногоЗерна</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_КонтрольВвозаСобственногоЗерна", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_КонтрольВвозаСобственногоЗерна", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ИНАГРО_РезультатыНаблюденияСостоянияЗерна</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_РезультатыНаблюденияСостоянияЗерна", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_РезультатыНаблюденияСостоянияЗерна", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -1892,6 +2523,53 @@
 		</right>
 	</object>
 	<object>
+		<name>AccumulationRegister.ИНАГРО_ОперативныеОстатки</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ОперативныеОстатки", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ОперативныеОстатки", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.TabularSection.НачисленияПосле.Attribute.ОплаченоДнейЧасов</name>
 		<right>
 			<name>Edit</name>
@@ -1913,73 +2591,57 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.TabularSection.Удержания.Attribute.Сотрудник</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ПоступлениеИзПереработки</name>
+		<name>InformationRegister.ИНАГРО_ИспользуемыеНомераПроб</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
-		</right>
-		<right>
-			<name>Insert</name>
-			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_ИспользуемыеНомераПроб", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
-		</right>
-		<right>
-			<name>Posting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UndoPosting</name>
-			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_ИспользуемыеНомераПроб", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
 			<value>true</value>
 		</right>
 		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
-		</right>
-		<right>
 			<name>Edit</name>
 			<value>true</value>
 		</right>
+	</object>
+	<object>
+		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.TabularSection.Удержания.Attribute.Сотрудник</name>
 		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePostingRegular</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveUndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveChangeOfPosted</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
+			<name>Edit</name>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -2071,10 +2733,38 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ВыпускПродукцииОрганизации", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ВыпускПродукцииОрганизации", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -2182,81 +2872,45 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ПередачаОборудованияВМонтаж</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Insert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Posting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePostingRegular</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveUndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveChangeOfPosted</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.ИНАГРО_КорректировкаЗатрат</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+
+#Иначе
+#ПоЗначениям( "Документ.ИНАГРО_КорректировкаЗатрат","Чтение","","Организации","Организация","","","","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+
+#КонецЕсли</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Insert</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+
+#Иначе
+#ПоЗначениям( "Документ.ИНАГРО_КорректировкаЗатрат","Добавление","","Организации","Организация","","","","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+
+#КонецЕсли</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+
+#Иначе
+#ПоЗначениям( "Документ.ИНАГРО_КорректировкаЗатрат","Добавление","","Организации","Организация","","","","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+
+#КонецЕсли</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Posting</name>
@@ -2319,7 +2973,29 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РасшифровкаПлатежа.Attribute.ЗаТару</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.Организации.Attribute.ПрефиксБ12</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.ВыплатаЗаработнойПлаты.Attribute.УдалитьФизлицо</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -2330,6 +3006,64 @@
 		<right>
 			<name>Edit</name>
 			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.ПеречислениеНалогов.Attribute.Ответственный</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ИНАГРО_ДанныеПоКачествуПартийЗерна</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_ДанныеПоКачествуПартийЗерна", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_ДанныеПоКачествуПартийЗерна", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -2354,69 +3088,6 @@
 		</right>
 		<right>
 			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ВозвратТоваровОтПокупателя</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Insert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Posting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePostingRegular</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveUndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveChangeOfPosted</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -2513,14 +3184,68 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_УчетАрендованныхОС", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)
+#КонецЕсли</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Insert</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+// ОсновноеУсловиеЗапись
+// Можно добавлять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_УчетАрендованныхОС", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)
+#КонецЕсли</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_УчетАрендованныхОС", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)
+#КонецЕсли</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Posting</name>
@@ -2572,66 +3297,14 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ЗакрытиеМесяца</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Insert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Posting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UndoPosting</name>
-			<value>true</value>
-		</right>
+		<name>InformationRegister.УдалитьИНАГРО_ДоговораКонтрагентов.Resource.ДатаОкончания</name>
 		<right>
 			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
+			<value>false</value>
 		</right>
 		<right>
 			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePostingRegular</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveUndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveChangeOfPosted</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -2842,10 +3515,104 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_ВзносыВФондыРаботниковОрганизаций", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_ВзносыВФондыРаботниковОрганизаций", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ИНАГРО_ЖурналЛабораторныхАнализов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.ИНАГРО_Форма36Сводная</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_Форма36Сводная", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_Форма36Сводная", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -2875,65 +3642,49 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ПоступлениеДопРасходов</name>
+		<name>AccumulationRegister.ИНАГРО_РасчетныйВыпускПродукции</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
-		</right>
-		<right>
-			<name>Insert</name>
-			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_РасчетныйВыпускПродукции", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
-		</right>
-		<right>
-			<name>Posting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UndoPosting</name>
-			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_РасчетныйВыпускПродукции", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
 			<value>true</value>
 		</right>
 		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
-		</right>
-		<right>
 			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePostingRegular</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveUndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveChangeOfPosted</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -2942,6 +3693,53 @@
 		<right>
 			<name>Edit</name>
 			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.ИНАГРО_КонтрольВывозаСобственногоЗерна</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_КонтрольВывозаСобственногоЗерна", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_КонтрольВывозаСобственногоЗерна", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -2963,14 +3761,56 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_ПутевойЛистГрузовогоАвтомобиля", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Insert</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно добавлять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_ПутевойЛистГрузовогоАвтомобиля", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_ПутевойЛистГрузовогоАвтомобиля", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Posting</name>
@@ -3029,10 +3869,82 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РасшифровкаПлатежа.Attribute.СчетУчетаНДС</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.УдалитьИНАГРО_РасчетыПоПроизводственнымУслугам</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.УдалитьИНАГРО_РасчетыПоПроизводственнымУслугам", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.УдалитьИНАГРО_РасчетыПоПроизводственнымУслугам", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИНАГРО_ПланПосева</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_ПланПосева", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -3132,10 +4044,68 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РасшифровкаПлатежа</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.TabularSection.НачисленияДо.Attribute.НормаЧасов</name>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.ИНАГРО_Форма36</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_Форма36", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_Форма36", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -3150,66 +4120,14 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.АктОбОказанииПроизводственныхУслуг</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Insert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Posting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UndoPosting</name>
-			<value>true</value>
-		</right>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.ВыплатаЗаработнойПлаты.Attribute.СтатьяДвиженияДенежныхСредств</name>
 		<right>
 			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
+			<value>false</value>
 		</right>
 		<right>
 			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePostingRegular</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveUndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveChangeOfPosted</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -3276,6 +4194,17 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.УдалитьИНАГРО_ДоговораКонтрагентов.Dimension.Организация</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.TabularSection.Взносы.Attribute.Действие</name>
 		<right>
 			<name>Edit</name>
@@ -3294,14 +4223,56 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_СливТоплива", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Insert</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно добавлять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_СливТоплива", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_СливТоплива", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Posting</name>
@@ -3371,6 +4342,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.СтатьяДекларацииПоЕдиномуНалогу</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.Организации.TabularSection.КонтактнаяИнформация.Attribute.Вид</name>
 		<right>
 			<name>Edit</name>
@@ -3378,65 +4360,60 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ОтчетПроизводстваЗаСмену</name>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.ВыплатаЗаработнойПлаты.Attribute.Ведомость</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ИНАГРО_СтраховойСтажПоДаннымПФУ</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
-		</right>
-		<right>
-			<name>Insert</name>
-			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_СтраховойСтажПоДаннымПФУ", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
-		</right>
-		<right>
-			<name>Posting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UndoPosting</name>
-			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_СтраховойСтажПоДаннымПФУ", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
 			<value>true</value>
 		</right>
 		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
-		</right>
-		<right>
 			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePostingRegular</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveUndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveChangeOfPosted</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -3452,7 +4429,76 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.ИНАГРО_ЗначенияБазисов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_ЗначенияБазисов", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_ЗначенияБазисов", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РеквизитыКонтрагента</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.TabularSection.НачисленияДо.Attribute.Сотрудник</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.РучнаяКорректировка</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -3466,14 +4512,64 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РасшифровкаПлатежа.Attribute.СчетУчетаРасчетовСКонтрагентом</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.СчетКонтрагента</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>AccumulationRegister.ИНАГРО_ВзаиморасчетыПоНачислениямЗаСчетФСС</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ВзаиморасчетыПоНачислениямЗаСчетФСС", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ВзаиморасчетыПоНачислениямЗаСчетФСС", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -3548,6 +4644,50 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.УдалитьИНАГРО_ДоговораКонтрагентов.StandardAttribute.Active</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.УдалитьИНАГРО_ДоговораКонтрагентов.StandardAttribute.LineNumber</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.УдалитьИНАГРО_ДоговораКонтрагентов.StandardAttribute.Recorder</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.УдалитьИНАГРО_ДоговораКонтрагентов.StandardAttribute.Period</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.ИНАГРО_ПоказателиСхемМотивации</name>
 		<right>
 			<name>Read</name>
@@ -3566,6 +4706,28 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.Оплачено</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.УдалитьИНАГРО_ДоговораКонтрагентов.Dimension.Контрагент</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.TabularSection.НачисленияДо.Attribute.ВидРасчета</name>
 		<right>
 			<name>Edit</name>
@@ -3577,10 +4739,38 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ПлановыеЗатратыНаВыпуск", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ПлановыеЗатратыНаВыпуск", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -3592,14 +4782,53 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.ВыплатаЗаработнойПлаты</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.ИНАГРО_ПлановыеУдержанияРаботниковОрганизаций</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_ПлановыеУдержанияРаботниковОрганизаций", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_ПлановыеУдержанияРаботниковОрганизаций", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -3618,14 +4847,53 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РеквизитыКонтрагента.Attribute.Представление</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>AccumulationRegister.ИНАГРО_РабочееВремяРаботниковОрганизаций</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_РабочееВремяРаботниковОрганизаций", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_РабочееВремяРаботниковОрганизаций", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -3700,7 +4968,29 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.СубконтоДт3</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.TabularSection.НачисленияПосле.Attribute.ДатаНачала</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.НалоговоеНазначениеПриПрочемСписании</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -3714,7 +5004,40 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РасшифровкаПлатежа.Attribute.ВозвратАвансаДо01042011НУ</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.TabularSection.Взносы.Attribute.ДатаДействия</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.УдалитьИНАГРО_ДоговораКонтрагентов.Resource.ВидКультуры</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.ПеречислениеНалогов.Attribute.Сумма</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -3746,69 +5069,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.СписаниеТоваров</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Insert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Posting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePostingRegular</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveUndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveChangeOfPosted</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.TabularSection.Удержания.Attribute.Действие</name>
 		<right>
 			<name>Edit</name>
@@ -3837,18 +5097,71 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.ПеречислениеНалогов.Attribute.СтатьяДекларацииПоЕдиномуНалогу</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИНАГРО_НачислениеОтпускаРаботникамОрганизаций</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_НачислениеОтпускаРаботникамОрганизаций", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Insert</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно добавлять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_НачислениеОтпускаРаботникамОрганизаций", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_НачислениеОтпускаРаботникамОрганизаций", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Posting</name>
@@ -3958,6 +5271,86 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РасшифровкаПлатежа.Attribute.СтатьяДекларацииПоЕдиномуНалогу</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.ИНАГРО_Остатки</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_Остатки", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_Остатки", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РеквизитыКонтрагента.Attribute.ТипКонтрагента</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РасшифровкаПлатежа.Attribute.СуммаНДСПропорциональноКредит</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.TabularSection.Начисления.Attribute.Показатель3</name>
 		<right>
 			<name>Edit</name>
@@ -3966,6 +5359,17 @@
 	</object>
 	<object>
 		<name>Catalog.Организации.Attribute.КодПоЕДРПОУ</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РасшифровкаПлатежа.Attribute.СтатьяДвиженияДенежныхСредств</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -4122,18 +5526,60 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ОприходованиеТоваров</name>
+		<name>Document.ИНАГРО_РегистрацияПростояРаботниковОрганизаций</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_РегистрацияПростояРаботниковОрганизаций", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Insert</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно добавлять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_РегистрацияПростояРаботниковОрганизаций", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_РегистрацияПростояРаботниковОрганизаций", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Posting</name>
@@ -4221,10 +5667,38 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ТоварыНаСкладах", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ТоварыНаСкладах", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -4233,6 +5707,17 @@
 		<right>
 			<name>Edit</name>
 			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.ПеречислениеНалогов</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -4247,10 +5732,38 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_ШтатноеРасписаниеОрганизаций", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_ШтатноеРасписаниеОрганизаций", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -4298,10 +5811,38 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_ПараметрыФиксированнойИндексации", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_ПараметрыФиксированнойИндексации", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -4328,10 +5869,38 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_РаботникиОрганизаций", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_РаботникиОрганизаций", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -4364,21 +5933,21 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.TabularSection.НачисленияПосле.Attribute.Авторасчет</name>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РеквизитыКонтрагента.Attribute.Значение</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
-		<name>Catalog.ДоговорыКонтрагентов</name>
+		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.TabularSection.НачисленияПосле.Attribute.Авторасчет</name>
 		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
+			<name>Edit</name>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -4410,17 +5979,74 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ПередачаНМА</name>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.ВыплатаЗаработнойПлаты.Attribute.УдалитьВидВзаиморасчетов</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ИНАГРО_ВедомостьРеализация</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_ВедомостьРеализация", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Insert</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно добавлять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_ВедомостьРеализация", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно добавлять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_ВедомостьРеализация", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Delete</name>
 			<value>true</value>
 		</right>
 		<right>
@@ -4477,14 +6103,56 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_ВводНачальныхОстатковТоплива", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Insert</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно добавлять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_ВводНачальныхОстатковТоплива", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_ВводНачальныхОстатковТоплива", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Posting</name>
@@ -4565,10 +6233,28 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляРегистра("ИдентификаторыОбъектовМетаданных.РегистрНакопленияМатериалыСписанныеНаТранспорт", "Организация", "", "", "", "")
+#Иначе
+#ПоЗначениям( "РегистрНакопления.ИНАГРО_МатериалыСписанныеНаТранспорт","Чтение","",
+"Организации","Организация",
+"","","","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+#КонецЕсли</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляРегистра("ИдентификаторыОбъектовМетаданных.РегистрНакопленияМатериалыСписанныеНаТранспорт", "Организация", "", "", "", "")
+#Иначе
+#ПоЗначениям( "РегистрНакопления.ИНАГРО_МатериалыСписанныеНаТранспорт","Изменение","",
+"Организации","Организация",
+"","","","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+#КонецЕсли</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -4584,10 +6270,38 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_НадбавкиПоШтатномуРасписаниюОрганизаций", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_НадбавкиПоШтатномуРасписаниюОрганизаций", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -4649,14 +6363,56 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_РасчетКорректировкиЦены", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Insert</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно добавлять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_РасчетКорректировкиЦены", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_РасчетКорректировкиЦены", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Posting</name>
@@ -4715,6 +6471,53 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.ИНАГРО_КонтрольВеса</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_КонтрольВеса", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_КонтрольВеса", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.TabularSection.Начисления.Attribute.Показатель5</name>
 		<right>
 			<name>Edit</name>
@@ -4726,14 +6529,68 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.РасходныйКассовыйОрдер", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)
+#КонецЕсли</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Insert</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+// ОсновноеУсловиеЗапись
+// Можно добавлять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.РасходныйКассовыйОрдер", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)
+#КонецЕсли</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.РасходныйКассовыйОрдер", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)
+#КонецЕсли</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Posting</name>
@@ -4803,10 +6660,38 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_ПланПосева", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_ПланПосева", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -4828,6 +6713,53 @@
 		<name>Subsystem.ИНАГРО_Зарплата.Subsystem.ПрочиеДокументыПоЗарплате</name>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.ИНАГРО_ДвиженияПоПереработке</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ДвиженияПоПереработке", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ДвиженияПоПереработке", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -4927,10 +6859,38 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ЗатратыОрганизаций", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ЗатратыОрганизаций", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -5005,6 +6965,28 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.СубконтоДт2</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.ВалютаВзаиморасчетовРаботника</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.ИНАГРО_ТехнологическиеОперации</name>
 		<right>
 			<name>Read</name>
@@ -5024,6 +7006,17 @@
 	</object>
 	<object>
 		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.TabularSection.НачисленияПосле.Attribute.Сотрудник</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РасшифровкаПлатежа.Attribute.Амортизируется</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -5175,6 +7168,17 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.УдалитьИНАГРО_ДоговораКонтрагентов.Dimension.ДоговорКонтрагента</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.TabularSection.РаботникиОрганизации.Attribute.Повышение</name>
 		<right>
 			<name>Edit</name>
@@ -5197,6 +7201,33 @@
 		<right>
 			<name>Edit</name>
 			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Configuration.BASБухгалтерияЭлеватораМельницыИКомбикормовогоЗавода</name>
+		<right>
+			<name>MainWindowModeNormal</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeEmbeddedWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeFullscreenWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeKiosk</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>AnalyticsSystemClient</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -5292,10 +7323,20 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоЗначениям( "РегистрРасчета.ИНАГРО_Начисления","Чтение","",
+"Организации","Организация",
+"","","","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#ПоЗначениям( "РегистрРасчета.ИНАГРО_Начисления","","",
+"Организации","Организация",
+"","","","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -5370,14 +7411,64 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.СтатьяДвиженияДенежныхСредств</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РасшифровкаПлатежа.Attribute.НалоговоеНазначение</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>AccumulationRegister.ИНАГРО_ЗакупкиОрганизаций</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ЗакупкиОрганизаций", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ЗакупкиОрганизаций", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -5389,14 +7480,53 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.ВидОперации</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>AccumulationRegister.ИНАГРО_ВедомостьДвижений</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ВедомостьДвижений", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ВедомостьДвижений", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -5419,10 +7549,38 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_ПараметрыВыплатыЗПРаботников", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_ПараметрыВыплатыЗПРаботников", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -5438,10 +7596,38 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_КоэффициентПовышенияОкладов", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_КоэффициентПовышенияОкладов", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -5558,6 +7744,28 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РасшифровкаПлатежа.Attribute.СтавкаНДС</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.ВыплатаЗаработнойПлаты.Attribute.СуммаКВыплате</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.TabularSection.НачисленияДо.Attribute.ОплаченоДнейЧасов</name>
 		<right>
 			<name>Edit</name>
@@ -5620,129 +7828,25 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ПередачаМалоценныхАктивовВЭксплуатацию</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Insert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Posting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UndoPosting</name>
-			<value>true</value>
-		</right>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.ПеречислениеНалогов.Attribute.СтатьяДвиженияДенежныхСредств</name>
 		<right>
 			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
+			<value>false</value>
 		</right>
 		<right>
 			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePostingRegular</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveUndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveChangeOfPosted</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
-		<name>Document.СписаниеОС</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Insert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Posting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>UndoPosting</name>
-			<value>true</value>
-		</right>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.СчетБанк</name>
 		<right>
 			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
+			<value>false</value>
 		</right>
 		<right>
 			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractivePostingRegular</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveUndoPosting</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveChangeOfPosted</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -5757,14 +7861,56 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_ПутевойЛистТрактористаМашиниста", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Insert</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно добавлять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_ПутевойЛистТрактористаМашиниста", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("Документ.ИНАГРО_ПутевойЛистТрактористаМашиниста", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Posting</name>
@@ -5823,6 +7969,64 @@
 		</right>
 	</object>
 	<object>
+		<name>AccumulationRegister.ИНАГРО_КонтрольПриказовНаВывоз</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_КонтрольПриказовНаВывоз", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_КонтрольПриказовНаВывоз", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.ПеречислениеНалогов.Attribute.Ведомость</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Subsystem.ИНАГРО_Зарплата.Subsystem.ДокументыПоНачислению</name>
 		<right>
 			<name>View</name>
@@ -5859,10 +8063,38 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_РазницаКоличества", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_РазницаКоличества", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -5878,10 +8110,38 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_ПлановыеНачисленияРаботниковОрганизаций", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_ПлановыеНачисленияРаботниковОрганизаций", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -5904,10 +8164,75 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляРегистра("ИдентификаторыОбъектовМетаданных.РегистрНакопленияРеализацияОрганизаций", "Организация", "", "", "", "")
+#Иначе
+#ПоЗначениям( "РегистрНакопления.ИНАГРО_РеализацияОрганизаций","Чтение","",
+"Организации","Организация",
+"","","","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+#КонецЕсли</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляРегистра("ИдентификаторыОбъектовМетаданных.РегистрНакопленияРеализацияОрганизаций", "Организация", "", "", "", "")
+#Иначе
+#ПоЗначениям( "РегистрНакопления.ИНАГРО_РеализацияОрганизаций","Изменение","",
+"Организации","Организация",
+"","","","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+#КонецЕсли</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ИНАГРО_ДанныеПоКачествуЗерна</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_ДанныеПоКачествуЗерна", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЗапись
+// Можно изменять если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_ДанныеПоКачествуЗерна", "", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -5979,6 +8304,17 @@
 		<right>
 			<name>InputByString</name>
 			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.УдалитьИНАГРО_ДоговораКонтрагентов.Dimension.Урожай</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -6123,6 +8459,17 @@
 	</object>
 	<object>
 		<name>Document.ИНАГРО_ВводСведенийОПлановыхНачисленияхУдержаниях.TabularSection.НачисленияДо.Attribute.НормаДнейЗаМесяц</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.Attribute.СчетОрганизации</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -6300,6 +8647,329 @@
 			<value>false</value>
 		</right>
 	</object>
+	<object>
+		<name>Document.ПлатежныйОрдерСписаниеДенежныхСредств.TabularSection.РасшифровкаПлатежа.Attribute.СуммаВзаиморасчетов</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<restrictionTemplate>
+		<name>ДляОбъекта(ПолеОбъекта)</name>
+		<condition>// ДляОбъекта(ПолеОбъекта = "")
+// Шаблон используется для ограничения элементов справочников, документов и
+// других списков объектов по полю Ссылка, а также элементов зависимых списков
+// объектов и записей регистров через поле объекта-владельца.
+//
+// Параметры:
+//  ПолеОбъекта - имя поля, содержащего ссылку на объект, от которого зависит элемент списка.
+//                Значение "" (по умолчанию) то же, что имя поля "Ссылка".
+//
+
+#Если &amp;СпискиСОтключеннымОграничениемЧтения = "Неопределено" #Тогда
+  // Информационная база заблокирована для обновления.
+    ГДЕ ЛОЖЬ
+
+#ИначеЕсли Не СтрСодержит(&amp;ВерсииШаблоновОграниченияДоступа, ",ДляОбъекта3,")
+         И Не СтрСодержит(&amp;ВерсииШаблоновОграниченияДоступа, ",ДляОбъекта3ТребуетсяПерезапуститьСеанс,") #Тогда
+    Ошибка: Требуется обновить шаблон на актуальную версию, поставляемую в роли ИзменениеУчастниковГруппДоступа по причине: Используется устаревшая версия 1 шаблона ограничения доступа ДляОбъекта. Объект: #ИмяТекущейТаблицы, Право: #ИмяТекущегоПраваДоступа.
+
+#ИначеЕсли &amp;СпискиСОтключеннымОграничениемЧтения = "Все" #Тогда
+  // У пользователя отключены все виды доступа или
+  // ограничение на уровне записей не используется.
+    ГДЕ ИСТИНА
+
+#ИначеЕсли СтрСодержит(&amp;СпискиСОтключеннымОграничениемЧтения, #ИмяТекущейТаблицы) #Тогда
+  // У пользователя отключено ограничение для текущей таблицы.
+    ГДЕ ИСТИНА
+
+#ИначеЕсли СтрСодержит(&amp;ВерсииШаблоновОграниченияДоступа, ",ДляОбъекта3ТребуетсяПерезапуститьСеанс,") #Тогда
+    Ошибка: Версия программы обновлена, требуется перезапустить сеанс. Объект: #ИмяТекущейТаблицы, Право: #ИмяТекущегоПраваДоступа.
+
+#ИначеЕсли #ИмяТекущегоПраваДоступа &lt;&gt; "Чтение" #Тогда
+  // Проверка прав Добавление, Изменение, Удаление выполняется ПередЗаписью / ПриЗаписи.
+    ГДЕ ИСТИНА
+
+#ИначеЕсли СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаПользователей, #ИмяТекущейТаблицы + ":#ПолеОбъекта;") #Тогда
+
+    ТекущаяТаблица ГДЕ ИСТИНА В
+ (
+  ВЫБРАТЬ ПЕРВЫЕ 1 ИСТИНА
+  ИЗ РегистрСведений.КлючиДоступаКОбъектам КАК КлючиДоступаКОбъектам
+#Если &amp;ТекущийВнешнийПользователь = Значение(Справочник.ВнешниеПользователи.ПустаяСсылка) #Тогда
+  ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.КлючиДоступаПользователей КАК РазрешенныеКлючиДоступа
+#Иначе
+  ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.КлючиДоступаВнешнихПользователей КАК РазрешенныеКлючиДоступа
+#КонецЕсли
+  ПО
+  #Если "#ПолеОбъекта" = "" #Тогда
+      КлючиДоступаКОбъектам.Объект = ТекущаяТаблица.Ссылка
+  #Иначе
+      КлючиДоступаКОбъектам.Объект = ТекущаяТаблица.#ПолеОбъекта
+  #КонецЕсли
+  #Если &amp;ТекущийВнешнийПользователь = Значение(Справочник.ВнешниеПользователи.ПустаяСсылка) #Тогда
+    И РазрешенныеКлючиДоступа.КлючДоступа = КлючиДоступаКОбъектам.КлючДоступаПользователей
+    И РазрешенныеКлючиДоступа.Пользователь В (&amp;РазрешенныйПользователь, &amp;РазрешенныйНаборГруппДоступа
+  #Иначе
+    И РазрешенныеКлючиДоступа.КлючДоступа = КлючиДоступаКОбъектам.КлючДоступаВнешнихПользователей
+    И РазрешенныеКлючиДоступа.ВнешнийПользователь В (&amp;РазрешенныйПользователь, &amp;РазрешенныйНаборГруппДоступа
+  #КонецЕсли
+      #Если СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаПользователей, #ИмяТекущейТаблицы + ":#ПолеОбъекта;*+")
+        Или СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаПользователей, #ИмяТекущейТаблицы + ":#ПолеОбъекта;+") #Тогда
+        , &amp;РазрешенныйНаборГруппПользователей
+      #КонецЕсли
+      #Если СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаПользователей, #ИмяТекущейТаблицы + ":#ПолеОбъекта;*+")
+        Или СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаПользователей, #ИмяТекущейТаблицы + ":#ПолеОбъекта;*") #Тогда
+        , &amp;РазрешенныйПустойНаборГруппДоступа
+      #КонецЕсли
+      )
+ )
+#ИначеЕсли СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаГруппДоступа, #ИмяТекущейТаблицы + ":#ПолеОбъекта;") #Тогда
+
+    ТекущаяТаблица ГДЕ ИСТИНА В
+ (
+  ВЫБРАТЬ ПЕРВЫЕ 1 ИСТИНА
+  ИЗ РегистрСведений.КлючиДоступаКОбъектам КАК КлючиДоступаКОбъектам
+  ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.КлючиДоступаНаборовГруппДоступа КАК РазрешенныеКлючиДоступа
+  ПО
+  #Если "#ПолеОбъекта"  = "" #Тогда
+      КлючиДоступаКОбъектам.Объект = ТекущаяТаблица.Ссылка
+  #Иначе
+      КлючиДоступаКОбъектам.Объект = ТекущаяТаблица.#ПолеОбъекта
+  #КонецЕсли
+  #Если &amp;ТекущийВнешнийПользователь = Значение(Справочник.ВнешниеПользователи.ПустаяСсылка) #Тогда
+    И РазрешенныеКлючиДоступа.КлючДоступа = КлючиДоступаКОбъектам.КлючДоступаПользователей
+  #Иначе
+    И РазрешенныеКлючиДоступа.КлючДоступа = КлючиДоступаКОбъектам.КлючДоступаВнешнихПользователей
+  #КонецЕсли
+    И РазрешенныеКлючиДоступа.НаборГруппДоступа В (&amp;РазрешенныйНаборГруппДоступа
+      #Если СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаГруппДоступа, #ИмяТекущейТаблицы + ":#ПолеОбъекта;*+")
+        Или СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаГруппДоступа, #ИмяТекущейТаблицы + ":#ПолеОбъекта;*") #Тогда
+        , &amp;РазрешенныйПустойНаборГруппДоступа
+      #КонецЕсли
+      )
+ )
+#ИначеЕсли СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаПользователейИГруппДоступа, #ИмяТекущейТаблицы + ":#ПолеОбъекта;") #Тогда
+
+    ТекущаяТаблица ГДЕ ИСТИНА В
+ (
+  ВЫБРАТЬ ПЕРВЫЕ 1 ИСТИНА
+  ИЗ РегистрСведений.КлючиДоступаКОбъектам КАК КлючиДоступаКОбъектам
+  ГДЕ
+  #Если "#ПолеОбъекта"  = "" #Тогда
+      КлючиДоступаКОбъектам.Объект = ТекущаяТаблица.Ссылка
+  #Иначе
+      КлючиДоступаКОбъектам.Объект = ТекущаяТаблица.#ПолеОбъекта
+  #КонецЕсли
+    И (
+       ИСТИНА В
+            (
+            ВЫБРАТЬ ПЕРВЫЕ 1 ИСТИНА
+          #Если &amp;ТекущийВнешнийПользователь = Значение(Справочник.ВнешниеПользователи.ПустаяСсылка) #Тогда
+            ИЗ РегистрСведений.КлючиДоступаПользователей КАК РазрешенныеКлючиДоступа
+          #Иначе
+            ИЗ РегистрСведений.КлючиДоступаВнешнихПользователей КАК РазрешенныеКлючиДоступа
+          #КонецЕсли
+            ГДЕ
+             #Если &amp;ТекущийВнешнийПользователь = Значение(Справочник.ВнешниеПользователи.ПустаяСсылка) #Тогда
+                  РазрешенныеКлючиДоступа.КлючДоступа = КлючиДоступаКОбъектам.КлючДоступаПользователей
+                И РазрешенныеКлючиДоступа.Пользователь В (&amp;РазрешенныйПользователь, &amp;РазрешенныйНаборГруппДоступа
+             #Иначе
+                  РазрешенныеКлючиДоступа.КлючДоступа = КлючиДоступаКОбъектам.КлючДоступаВнешнихПользователей
+                И РазрешенныеКлючиДоступа.ВнешнийПользователь В (&amp;РазрешенныйПользователь, &amp;РазрешенныйНаборГруппДоступа
+             #КонецЕсли
+                  #Если СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаПользователейИГруппДоступа, #ИмяТекущейТаблицы + ":#ПолеОбъекта;*+")
+                    Или СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаПользователейИГруппДоступа, #ИмяТекущейТаблицы + ":#ПолеОбъекта;+") #Тогда
+                    , &amp;РазрешенныйНаборГруппПользователей
+                  #КонецЕсли
+                  #Если СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаПользователейИГруппДоступа, #ИмяТекущейТаблицы + ":#ПолеОбъекта;*+")
+                    Или СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаПользователейИГруппДоступа, #ИмяТекущейТаблицы + ":#ПолеОбъекта;*") #Тогда
+                    , &amp;РазрешенныйПустойНаборГруппДоступа
+                  #КонецЕсли
+                  )
+            )
+        ИЛИ ИСТИНА В
+           (
+            ВЫБРАТЬ ПЕРВЫЕ 1 ИСТИНА
+            ИЗ РегистрСведений.КлючиДоступаНаборовГруппДоступа КАК РазрешенныеКлючиДоступа
+            ГДЕ
+              #Если &amp;ТекущийВнешнийПользователь = Значение(Справочник.ВнешниеПользователи.ПустаяСсылка) #Тогда
+                  РазрешенныеКлючиДоступа.КлючДоступа = КлючиДоступаКОбъектам.КлючДоступаПользователей
+              #Иначе
+                  РазрешенныеКлючиДоступа.КлючДоступа = КлючиДоступаКОбъектам.КлючДоступаВнешнихПользователей
+              #КонецЕсли
+                И РазрешенныеКлючиДоступа.НаборГруппДоступа В (&amp;РазрешенныйНаборГруппДоступа
+                  #Если СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаПользователейИГруппДоступа, #ИмяТекущейТаблицы + ":#ПолеОбъекта;*+")
+                    Или СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаПользователейИГруппДоступа, #ИмяТекущейТаблицы + ":#ПолеОбъекта;*") #Тогда
+                    , &amp;РазрешенныйПустойНаборГруппДоступа
+                  #КонецЕсли
+                  )
+           )
+      )
+ )
+
+#Иначе
+  Ошибка: Требуется актуализировать ограничение доступа по причине: Не удалось определить вариант ограничения доступа в параметрах сеанса для шаблона ДляОбъекта со значением параметра "#ПолеОбъекта". Объект: #ИмяТекущейТаблицы, Право: #ИмяТекущегоПраваДоступа.
+#КонецЕсли</condition>
+	</restrictionTemplate>
+	<restrictionTemplate>
+		<name>ДляРегистра(Регистр, Поле1, Поле2, Поле3, Поле4, Поле5)</name>
+		<condition>// ДляРегистра(Регистр, Поле1, Поле2 = "", Поле3 = "", Поле4 = "", Поле5 = "")
+// Шаблон используется для ограничения групп записей регистров.
+//
+// Параметры:
+//  Регистр - имя предопределенного элемента справочника Идентификаторы объектов метаданных или справочника
+//            Идентификаторы объектов расширений в формате: имя справочника с точкой и полное имя таблицы
+//            без точки, например, ИдентификаторыОбъектовМетаданных.РегистрНакопленияОстаткиНаСкладах;
+//          - имя отдельного регистра ключей в формате КлючиДоступаКРегистру&lt;ОстатокИмени&gt;,
+//            например, КлючиДоступаКРегиструОстаткиНаСкладах.
+//  Поле1   - имя первого поля (измерения, ресурса, реквизита), которое будет соединяться с полем Поле1
+//            регистра сведений КлючиДоступаКРегистр*
+//  Поле2   - аналогично предыдущему параметру, если используется в ограничении доступа к регистру.
+//  ...
+//  Поле5   - аналогично предыдущему параметру, если используется в ограничении доступа к регистру.
+
+#Если &amp;СпискиСОтключеннымОграничениемЧтения = "Неопределено" #Тогда
+  // Информационная база заблокирована для обновления.
+  ГДЕ ЛОЖЬ
+
+#ИначеЕсли Не СтрСодержит(&amp;ВерсииШаблоновОграниченияДоступа, ",ДляРегистра3,") #Тогда
+         И Не СтрСодержит(&amp;ВерсииШаблоновОграниченияДоступа, ",ДляРегистра3ТребуетсяПерезапуститьСеанс,") #Тогда
+    Ошибка: Требуется обновить шаблон на актуальную версию, поставляемую в роли ИзменениеУчастниковГруппДоступа по причине: Используется устаревшая версия 1 шаблона ограничения доступа ДляРегистра. Объект: #ИмяТекущейТаблицы, Право: #ИмяТекущегоПраваДоступа.
+
+#ИначеЕсли &amp;СпискиСОтключеннымОграничениемЧтения = "Все" #Тогда
+  // У пользователя отключены все виды доступа или
+  // ограничение на уровне записей не используется.
+  ГДЕ ИСТИНА
+
+#ИначеЕсли СтрСодержит(&amp;СпискиСОтключеннымОграничениемЧтения, #ИмяТекущейТаблицы) #Тогда
+  // У пользователя отключено ограничение для текущей таблицы.
+  ГДЕ ИСТИНА
+
+#ИначеЕсли СтрСодержит(&amp;ВерсииШаблоновОграниченияДоступа, ",ДляРегистра3ТребуетсяПерезапуститьСеанс,") #Тогда
+    Ошибка: Версия программы обновлена, требуется перезапустить сеанс. Объект: #ИмяТекущейТаблицы, Право: #ИмяТекущегоПраваДоступа.
+
+#ИначеЕсли #ИмяТекущегоПраваДоступа &lt;&gt; "Чтение" #Тогда
+  // Проверка прав Добавление, Изменение, Удаление выполняется ПередЗаписью / ПриЗаписи.
+  ГДЕ ИСТИНА
+
+#ИначеЕсли Не СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаПользователей, #ИмяТекущейТаблицы + ":[#Регистр]:#Поле1:#Поле2:#Поле3:#Поле4:#Поле5;")
+         И Не СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаГруппДоступа,  #ИмяТекущейТаблицы + ":[#Регистр]:#Поле1:#Поле2:#Поле3:#Поле4:#Поле5;") #Тогда
+
+  Ошибка: Требуется актуализировать ограничение доступа по причине: Не удалось определить вариант ограничения доступа в параметрах сеанса для шаблона ДляРегистра со значениями параметров "#Регистр", "#Поле1", "#Поле2", "#Поле3", "#Поле4", "#Поле5". Объект: #ИмяТекущейТаблицы, Право: #ИмяТекущегоПраваДоступа.
+#Иначе
+
+ТекущаяТаблица ГДЕ ИСТИНА В
+ (
+  ВЫБРАТЬ ПЕРВЫЕ 1 ИСТИНА
+#Если Не СтрСодержит("#Регистр", "КлючиДоступаКРегистру") #Тогда
+  ИЗ РегистрСведений.КлючиДоступаКРегистрам КАК КлючиДоступаКРегистрам
+#Иначе
+  ИЗ РегистрСведений.#Регистр КАК КлючиДоступаКРегистрам
+#КонецЕсли
+#Если Не СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаПользователей, #ИмяТекущейТаблицы + ":[#Регистр]:#Поле1:#Поле2:#Поле3:#Поле4:#Поле5;") #Тогда
+  ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.КлючиДоступаНаборовГруппДоступа КАК РазрешенныеКлючиДоступа
+  
+#ИначеЕсли &amp;ТекущийВнешнийПользователь = Значение(Справочник.ВнешниеПользователи.ПустаяСсылка) #Тогда
+  ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.КлючиДоступаПользователей КАК РазрешенныеКлючиДоступа
+#Иначе
+  ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.КлючиДоступаВнешнихПользователей КАК РазрешенныеКлючиДоступа
+#КонецЕсли
+  ПО
+  #Если Не СтрСодержит("#Регистр", "КлючиДоступаКРегистру") #Тогда
+      КлючиДоступаКРегистрам.Регистр = Значение(Справочник.#Регистр)
+  #Иначе
+      ИСТИНА
+  #КонецЕсли
+  
+  #Если &amp;ТекущийВнешнийПользователь = Значение(Справочник.ВнешниеПользователи.ПустаяСсылка) #Тогда
+    И КлючиДоступаКРегистрам.ДляВнешнихПользователей = ЛОЖЬ
+  #Иначе
+    И КлючиДоступаКРегистрам.ДляВнешнихПользователей = ИСТИНА
+  #КонецЕсли
+  
+  #Если СтрСодержит(&amp;СпискиСОграничениемПоПолям, #ИмяТекущейТаблицы + ":Поле1=Поле1;") #Тогда
+    И КлючиДоступаКРегистрам.Поле1 = ТекущаяТаблица.#Поле1
+  #ИначеЕсли СтрСодержит(&amp;СпискиСОграничениемПоПолям, #ИмяТекущейТаблицы + ":Поле1=Поле2;") #Тогда
+    И КлючиДоступаКРегистрам.Поле1 = ТекущаяТаблица.#Поле2
+  #ИначеЕсли СтрСодержит(&amp;СпискиСОграничениемПоПолям, #ИмяТекущейТаблицы + ":Поле1=Поле3;") #Тогда
+    И КлючиДоступаКРегистрам.Поле1 = ТекущаяТаблица.#Поле3
+  #ИначеЕсли СтрСодержит(&amp;СпискиСОграничениемПоПолям, #ИмяТекущейТаблицы + ":Поле1=Поле4;") #Тогда
+    И КлючиДоступаКРегистрам.Поле1 = ТекущаяТаблица.#Поле4
+  #ИначеЕсли СтрСодержит(&amp;СпискиСОграничениемПоПолям, #ИмяТекущейТаблицы + ":Поле1=Поле5;") #Тогда
+    И КлючиДоступаКРегистрам.Поле1 = ТекущаяТаблица.#Поле5
+  #КонецЕсли
+  
+  #Если СтрСодержит(&amp;СпискиСОграничениемПоПолям, #ИмяТекущейТаблицы + ":Поле2=Поле2;") #Тогда
+    И КлючиДоступаКРегистрам.Поле2 = ТекущаяТаблица.#Поле2
+  #ИначеЕсли СтрСодержит(&amp;СпискиСОграничениемПоПолям, #ИмяТекущейТаблицы + ":Поле2=Поле3;") #Тогда
+    И КлючиДоступаКРегистрам.Поле2 = ТекущаяТаблица.#Поле3
+  #ИначеЕсли СтрСодержит(&amp;СпискиСОграничениемПоПолям, #ИмяТекущейТаблицы + ":Поле2=Поле4;") #Тогда
+    И КлючиДоступаКРегистрам.Поле2 = ТекущаяТаблица.#Поле4
+  #ИначеЕсли СтрСодержит(&amp;СпискиСОграничениемПоПолям, #ИмяТекущейТаблицы + ":Поле2=Поле5;") #Тогда
+    И КлючиДоступаКРегистрам.Поле2 = ТекущаяТаблица.#Поле5
+  #ИначеЕсли СтрСодержит(&amp;СпискиСОграничениемПоПолям, #ИмяТекущейТаблицы + ":Поле2=Null;") #Тогда
+    И КлючиДоступаКРегистрам.Поле2 = Значение(Перечисление.ДополнительныеЗначенияДоступа.Null)
+  #КонецЕсли
+  
+  #Если СтрСодержит(&amp;СпискиСОграничениемПоПолям, #ИмяТекущейТаблицы + ":Поле3=Поле3;") #Тогда
+    И КлючиДоступаКРегистрам.Поле3 = ТекущаяТаблица.#Поле3
+  #ИначеЕсли СтрСодержит(&amp;СпискиСОграничениемПоПолям, #ИмяТекущейТаблицы + ":Поле3=Поле4;") #Тогда
+    И КлючиДоступаКРегистрам.Поле3 = ТекущаяТаблица.#Поле4
+  #ИначеЕсли СтрСодержит(&amp;СпискиСОграничениемПоПолям, #ИмяТекущейТаблицы + ":Поле3=Поле5;") #Тогда
+    И КлючиДоступаКРегистрам.Поле3 = ТекущаяТаблица.#Поле5
+  #ИначеЕсли СтрСодержит(&amp;СпискиСОграничениемПоПолям, #ИмяТекущейТаблицы + ":Поле3=Null;") #Тогда
+    И КлючиДоступаКРегистрам.Поле3 = Значение(Перечисление.ДополнительныеЗначенияДоступа.Null)
+  #КонецЕсли
+  
+  #Если СтрСодержит(&amp;СпискиСОграничениемПоПолям, #ИмяТекущейТаблицы + ":Поле4=Поле4;") #Тогда
+    И КлючиДоступаКРегистрам.Поле4 = ТекущаяТаблица.#Поле4
+  #ИначеЕсли СтрСодержит(&amp;СпискиСОграничениемПоПолям, #ИмяТекущейТаблицы + ":Поле4=Поле5;") #Тогда
+    И КлючиДоступаКРегистрам.Поле4 = ТекущаяТаблица.#Поле5
+  #ИначеЕсли СтрСодержит(&amp;СпискиСОграничениемПоПолям, #ИмяТекущейТаблицы + ":Поле4=Null;") #Тогда
+    И КлючиДоступаКРегистрам.Поле4 = Значение(Перечисление.ДополнительныеЗначенияДоступа.Null)
+  #КонецЕсли
+  
+  #Если СтрСодержит(&amp;СпискиСОграничениемПоПолям, #ИмяТекущейТаблицы + ":Поле5=Поле5;") #Тогда
+    И КлючиДоступаКРегистрам.Поле5 = ТекущаяТаблица.#Поле5
+  #ИначеЕсли СтрСодержит(&amp;СпискиСОграничениемПоПолям, #ИмяТекущейТаблицы + ":Поле5=Null;") #Тогда
+    И КлючиДоступаКРегистрам.Поле5 = Значение(Перечисление.ДополнительныеЗначенияДоступа.Null)
+  #КонецЕсли
+  
+  #Если Не СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаПользователей, #ИмяТекущейТаблицы + ":[#Регистр]:#Поле1:#Поле2:#Поле3:#Поле4:#Поле5;") #Тогда
+    И РазрешенныеКлючиДоступа.КлючДоступа = КлючиДоступаКРегистрам.КлючДоступа
+    И РазрешенныеКлючиДоступа.НаборГруппДоступа В (&amp;РазрешенныйНаборГруппДоступа
+      #Если СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаГруппДоступа,  #ИмяТекущейТаблицы + ":[#Регистр]:#Поле1:#Поле2:#Поле3:#Поле4:#Поле5;*+")
+        Или СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаГруппДоступа,  #ИмяТекущейТаблицы + ":[#Регистр]:#Поле1:#Поле2:#Поле3:#Поле4:#Поле5;*") #Тогда
+        , &amp;РазрешенныйПустойНаборГруппДоступа
+      #КонецЕсли
+      )
+  #ИначеЕсли &amp;ТекущийВнешнийПользователь = Значение(Справочник.ВнешниеПользователи.ПустаяСсылка) #Тогда
+    И РазрешенныеКлючиДоступа.КлючДоступа = КлючиДоступаКРегистрам.КлючДоступа
+    И РазрешенныеКлючиДоступа.Пользователь В (&amp;РазрешенныйПользователь, &amp;РазрешенныйНаборГруппДоступа
+  #Иначе
+    И РазрешенныеКлючиДоступа.КлючДоступа = КлючиДоступаКРегистрам.КлючДоступа
+    И РазрешенныеКлючиДоступа.ВнешнийПользователь В (&amp;РазрешенныйПользователь, &amp;РазрешенныйНаборГруппДоступа
+  #КонецЕсли
+  #Если СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаПользователей, #ИмяТекущейТаблицы + ":[#Регистр]:#Поле1:#Поле2:#Поле3:#Поле4:#Поле5;") #Тогда
+      #Если СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаПользователей, #ИмяТекущейТаблицы + ":[#Регистр]:#Поле1:#Поле2:#Поле3:#Поле4:#Поле5;*+")
+        Или СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаПользователей, #ИмяТекущейТаблицы + ":[#Регистр]:#Поле1:#Поле2:#Поле3:#Поле4:#Поле5;+") #Тогда
+        , &amp;РазрешенныйНаборГруппПользователей
+      #КонецЕсли
+      #Если СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаПользователей, #ИмяТекущейТаблицы + ":[#Регистр]:#Поле1:#Поле2:#Поле3:#Поле4:#Поле5;*+")
+        Или СтрСодержит(&amp;СпискиСОграничениемЧерезКлючиДоступаПользователей, #ИмяТекущейТаблицы + ":[#Регистр]:#Поле1:#Поле2:#Поле3:#Поле4:#Поле5;*") #Тогда
+        , &amp;РазрешенныйПустойНаборГруппДоступа
+      #КонецЕсли
+      )
+  #КонецЕсли
+ )
+
+#КонецЕсли</condition>
+	</restrictionTemplate>
 	<restrictionTemplate>
 		<name>ПоЗначениям</name>
 		<condition>// ПоЗначениям(Таблица, -, Модификатор, В1,П1, В2,П2, ...,  В(n), П(n)).

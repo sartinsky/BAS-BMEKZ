@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f04d6933-d68c-41bf-b2bd-c51cbe252e73">
+  <producedTypes>
+    <selectionType typeId="385aae68-e308-4357-ad19-82ee47051a47" valueTypeId="f4fddbbe-ac4a-4d90-b37d-a5b6bf0bf76f"/>
+    <listType typeId="3f58a273-d1ca-43c4-82d2-90d4b12804b1" valueTypeId="9eb643d6-5fc2-4bbc-a6ec-01cd869c9cbe"/>
+    <managerType typeId="97dd45d8-f700-4ed9-b3c8-3801978bd07a" valueTypeId="bebe3116-14a5-469c-a86a-66d010ac5d0d"/>
+    <recordSetType typeId="59b6d6d5-123b-439a-af4c-c0fd59e9628d" valueTypeId="a64812c7-3127-4be3-82aa-9c7b3bf32a14"/>
+    <recordKeyType typeId="9722a317-102f-4a72-97ab-9e5ee619278a" valueTypeId="06d44a5e-517b-4457-bb2d-932a807047e0"/>
+    <recordType typeId="d16a8952-b014-476c-8496-60e4eb77dc65" valueTypeId="70d28b31-39ed-4ec9-a187-fa0b70b01820"/>
+    <recordManagerType typeId="7502d020-bb38-4ef2-bed6-56a71bc9e0e9" valueTypeId="b48c6e0e-014c-4782-968b-813d87524fc6"/>
+  </producedTypes>
+  <name>скEDI_ЭлектронныеДокументы</name>
+  <synonym>
+    <key>ru</key>
+    <value>Электронные документы</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Електронні документи</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="78536488-4ba7-40f6-a8b4-9b0b49633d3e">
+    <name>ВхИсх</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вх/Исх</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вх/Вих</value>
+    </synonym>
+    <type>
+      <types>EnumRef.скEDI_ВхИсхЭлектронныйДокумент</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="1f5f12f3-5ebb-4493-b56f-d57fc19040b9">
+    <name>Порядок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Порядок</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="ba31a8f1-d324-48bc-bc11-a3fad5b0a9b2">
+    <name>Документ1СДата</name>
+    <synonym>
+      <key>ru</key>
+      <value>УчетныйДокумент Дата</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>ОбліковийДокумент Дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="179f2299-f7ea-49da-9c71-f26f5d2cc256">
+    <name>Документ1СНомер</name>
+    <synonym>
+      <key>ru</key>
+      <value>УчетныйДокумент Номер</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>ОбліковийДокумент Номер</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>30</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="54f9eb75-5fe1-4672-8ca2-ef2dec2929e6">
+    <name>Документ1СКонтрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>УчетныйДокумент Контрагент</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>ОбліковийДокумент Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="c0364e3f-6d1e-46ea-98a5-3c10b2f450cf">
+    <name>Документ1СОрганизация</name>
+    <synonym>
+      <key>ru</key>
+      <value>УчетныйДокумент Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>ОбліковийДокумент Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="80e563d0-3a90-4e27-9685-72c4ec59228f">
+    <name>Документ1СДоговорКонтрагента</name>
+    <synonym>
+      <key>ru</key>
+      <value>УчетныйДокумент ДоговорКонтрагента</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>ОбліковийДокумент ДоговірКонтрагента</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="7d91c131-ebf6-4226-81e9-0d549a5cc20f">
+    <name>Документ1ССуммаБезНДСДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>УчетныйДокумент СуммаБезНДС Документа</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>ОбліковийДокумент СуммаБезПДВ Документа</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="b31a2f33-5ddc-49e9-8f1f-e82dfbde6ad7">
+    <name>Документ1ССуммаНДСДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>УчетныйДокумент Сумма НДС Документа</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>ОбліковийДокумент Сумма ПДВ Документа</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="c63be624-2cfc-4a54-96d6-7e04a661c176">
+    <name>Документ1ССуммаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>УчетныйДокумент СуммаДокумента</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>ОбліковийДокумент СуммаДокумента</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="61ddf69f-83b8-46eb-a131-279cee941f90">
+    <name>Документ1СПометкаУдаления</name>
+    <synonym>
+      <key>ru</key>
+      <value>УчетныйДокумент ПометкаУдаления</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>ОбліковийДокумент ПоміткаНаВидалення</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="b8a7764a-e136-4fa5-b2b8-ab41b03d5088">
+    <name>Документ1СПроведен</name>
+    <synonym>
+      <key>ru</key>
+      <value>УчетныйДокумент Проведен</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>ОбліковийДокумент Проведений</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="c46d102f-3a94-46bc-99bc-e5a50e8132aa">
+    <name>Документ1СМожетБытьПроведен</name>
+    <synonym>
+      <key>ru</key>
+      <value>УчетныйДокумент Может быть проведен</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>ОбліковийДокумент Може бути проведений</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="eea23e72-a5ab-4752-b241-cf10f4668ec6">
+    <name>Документ1СКомментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>УчетныйДокумент Комментарий</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>ОбліковийДокумент Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="bb2c202c-cb51-43e7-b3bd-755a09da4c13">
+    <name>ВидДокумента1С</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид Учетного документа</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вид Облікового документа</value>
+    </synonym>
+    <type>
+      <types>EnumRef.скEDI_ВидыДокументов1С</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="4b6a86ec-095e-439a-ba17-457e84ba57fc">
+    <name>РегистрируетсяВЕРННПокупателем</name>
+    <synonym>
+      <key>ru</key>
+      <value>Регистрируется в ЕРНН покупателем</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Реєструється в ЄРПН покупцем</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="dd6ea416-1291-40f6-a9be-58e3723be27b">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.скEDI_Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="72e63d07-dc2e-4e14-9aff-bef0eb7009fa">
+    <name>ЭлектронныйДокумент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Электронный документ</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Електронний документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.скEDI_ЭлектронныйДокумент</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="65d7b48d-872b-4d27-86ff-3906b46c099f">
+    <name>Документ1С</name>
+    <synonym>
+      <key>ru</key>
+      <value>Учетный документ</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Обліковий документ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+      <types>DocumentRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="52b11da1-e662-47bb-b6b8-5ea3d1b05b01">
+    <name>ВидЭлектронногоДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид электронного документа</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Вид електронного документу</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.скEDI_ВидыЭлектронныхДокументов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

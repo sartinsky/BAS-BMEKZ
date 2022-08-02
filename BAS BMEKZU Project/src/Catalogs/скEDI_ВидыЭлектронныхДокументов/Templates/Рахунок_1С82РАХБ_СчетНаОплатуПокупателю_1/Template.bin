@@ -1,0 +1,226 @@
+﻿<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_A4</dataPath>
+			<field>СуммаСкидки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_A6</dataPath>
+			<field>Сумма</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_NOMENKLATURA_NAME</dataPath>
+			<field>НоменклатураНаименование</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_NOMENKLATURA_CHARCODEUMEASURE</dataPath>
+			<field>ЕдИзмНаименование</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>TAB1 NOMENKLATURA CHARCODEUMEASURE</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_NOMENKLATURA_NUMHBUMEASURE</dataPath>
+			<field>ЕдИзмКод</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>TAB1 NOMENKLATURA NUMHBUMEASURE</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_A3</dataPath>
+			<field>Количество</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Артикул</dataPath>
+			<field>Артикул</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Артикул</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_A5</dataPath>
+			<field>Цена</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_T</dataPath>
+			<field>ТипНоменклатуры</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	СУММА(СчетНаОплатуПокупателюТовары.Количество) КАК Количество,
+	СУММА(СчетНаОплатуПокупателюТовары.СуммаСкидки) КАК СуммаСкидки,
+	ВЫБОР
+		КОГДА СчетНаОплатуПокупателюТовары.Ссылка.СуммаВключаетНДС
+			ТОГДА ВЫБОР
+					КОГДА СчетНаОплатуПокупателюТовары.Количество = 0
+						ТОГДА 0
+					ИНАЧЕ (СчетНаОплатуПокупателюТовары.Сумма - СчетНаОплатуПокупателюТовары.СуммаНДС) / СчетНаОплатуПокупателюТовары.Количество
+				КОНЕЦ
+		ИНАЧЕ СчетНаОплатуПокупателюТовары.Цена
+	КОНЕЦ КАК Цена,
+	СУММА(СчетНаОплатуПокупателюТовары.Сумма) КАК Сумма,
+	СчетНаОплатуПокупателюТовары.ЕдиницаИзмерения.Наименование КАК ЕдИзмНаименование,
+	СчетНаОплатуПокупателюТовары.ЕдиницаИзмерения.Код КАК ЕдИзмКод,
+	ВЫРАЗИТЬ(СчетНаОплатуПокупателюТовары.Номенклатура.НаименованиеПолное КАК СТРОКА(1000)) КАК НоменклатураНаименование,
+	СчетНаОплатуПокупателюТовары.Номенклатура.Артикул КАК Артикул,
+	"Т" КАК ТипНоменклатуры
+ИЗ
+	Документ.СчетНаОплатуПокупателю.Товары КАК СчетНаОплатуПокупателюТовары
+ГДЕ
+	СчетНаОплатуПокупателюТовары.Ссылка = &amp;Ссылка
+
+СГРУППИРОВАТЬ ПО
+	СчетНаОплатуПокупателюТовары.ЕдиницаИзмерения.Наименование,
+	СчетНаОплатуПокупателюТовары.ЕдиницаИзмерения.Код,
+	СчетНаОплатуПокупателюТовары.Номенклатура.Артикул,
+	ВЫБОР
+		КОГДА СчетНаОплатуПокупателюТовары.Ссылка.СуммаВключаетНДС
+			ТОГДА ВЫБОР
+					КОГДА СчетНаОплатуПокупателюТовары.Количество = 0
+						ТОГДА 0
+					ИНАЧЕ (СчетНаОплатуПокупателюТовары.Сумма - СчетНаОплатуПокупателюТовары.СуммаНДС) / СчетНаОплатуПокупателюТовары.Количество
+				КОНЕЦ
+		ИНАЧЕ СчетНаОплатуПокупателюТовары.Цена
+	КОНЕЦ,
+	ВЫРАЗИТЬ(СчетНаОплатуПокупателюТовары.Номенклатура.НаименованиеПолное КАК СТРОКА(1000))
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	СУММА(СчетНаОплатуПокупателюУслуги.Количество),
+	СУММА(СчетНаОплатуПокупателюУслуги.СуммаСкидки),
+	ВЫБОР
+		КОГДА СчетНаОплатуПокупателюУслуги.Ссылка.СуммаВключаетНДС
+			ТОГДА ВЫБОР
+					КОГДА СчетНаОплатуПокупателюУслуги.Количество = 0
+						ТОГДА 0
+					ИНАЧЕ (СчетНаОплатуПокупателюУслуги.Сумма - СчетНаОплатуПокупателюУслуги.СуммаНДС) / СчетНаОплатуПокупателюУслуги.Количество
+				КОНЕЦ
+		ИНАЧЕ СчетНаОплатуПокупателюУслуги.Цена
+	КОНЕЦ,
+	СУММА(СчетНаОплатуПокупателюУслуги.Сумма),
+	СчетНаОплатуПокупателюУслуги.Номенклатура.БазоваяЕдиницаИзмерения.Наименование,
+	СчетНаОплатуПокупателюУслуги.Номенклатура.БазоваяЕдиницаИзмерения.Код,
+	ВЫБОР
+		КОГДА НЕ СчетНаОплатуПокупателюУслуги.Содержание ПОДОБНО ""
+			ТОГДА ВЫРАЗИТЬ(СчетНаОплатуПокупателюУслуги.Содержание КАК СТРОКА(1000))
+		КОГДА НЕ СчетНаОплатуПокупателюУслуги.Номенклатура.НаименованиеПолное ПОДОБНО ""
+			ТОГДА ВЫРАЗИТЬ(СчетНаОплатуПокупателюУслуги.Номенклатура.НаименованиеПолное КАК СТРОКА(1000))
+		ИНАЧЕ СчетНаОплатуПокупателюУслуги.Номенклатура.Наименование
+	КОНЕЦ,
+	СчетНаОплатуПокупателюУслуги.Номенклатура.Артикул,
+	"П"
+ИЗ
+	Документ.СчетНаОплатуПокупателю.Услуги КАК СчетНаОплатуПокупателюУслуги
+ГДЕ
+	СчетНаОплатуПокупателюУслуги.Ссылка = &amp;Ссылка
+
+СГРУППИРОВАТЬ ПО
+	СчетНаОплатуПокупателюУслуги.Номенклатура.Артикул,
+	ВЫБОР
+		КОГДА СчетНаОплатуПокупателюУслуги.Ссылка.СуммаВключаетНДС
+			ТОГДА ВЫБОР
+					КОГДА СчетНаОплатуПокупателюУслуги.Количество = 0
+						ТОГДА 0
+					ИНАЧЕ (СчетНаОплатуПокупателюУслуги.Сумма - СчетНаОплатуПокупателюУслуги.СуммаНДС) / СчетНаОплатуПокупателюУслуги.Количество
+				КОНЕЦ
+		ИНАЧЕ СчетНаОплатуПокупателюУслуги.Цена
+	КОНЕЦ,
+	СчетНаОплатуПокупателюУслуги.Номенклатура.БазоваяЕдиницаИзмерения.Код,
+	СчетНаОплатуПокупателюУслуги.Номенклатура.БазоваяЕдиницаИзмерения.Наименование,
+	ВЫБОР
+		КОГДА НЕ СчетНаОплатуПокупателюУслуги.Содержание ПОДОБНО ""
+			ТОГДА ВЫРАЗИТЬ(СчетНаОплатуПокупателюУслуги.Содержание КАК СТРОКА(1000))
+		КОГДА НЕ СчетНаОплатуПокупателюУслуги.Номенклатура.НаименованиеПолное ПОДОБНО ""
+			ТОГДА ВЫРАЗИТЬ(СчетНаОплатуПокупателюУслуги.Номенклатура.НаименованиеПолное КАК СТРОКА(1000))
+		ИНАЧЕ СчетНаОплатуПокупателюУслуги.Номенклатура.Наименование
+	КОНЕЦ</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>TAB1_A1</dataPath>
+		<expression>"@@НомерСтроки@@"</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>TAB1 a1</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<parameter>
+		<name>Ссылка</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Ссылка</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.СчетНаОплатуПокупателю</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Документ.СчетНаОплатуПокупателю.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основний</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_A1</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_A3</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_A4</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_A5</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_A6</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_NOMENKLATURA_CHARCODEUMEASURE</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_NOMENKLATURA_NAME</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_NOMENKLATURA_NUMHBUMEASURE</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_T</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Ссылка</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Документ.СчетНаОплатуПокупателю.ПустаяСсылка</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

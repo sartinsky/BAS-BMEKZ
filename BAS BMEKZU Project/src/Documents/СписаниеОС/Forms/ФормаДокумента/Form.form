@@ -2689,6 +2689,37 @@
       <items xsi:type="form:FormGroup">
         <name>ГруппаДанныеОперативногоУчета</name>
         <id>196</id>
+        <items xsi:type="form:Button">
+          <name>Обновить</name>
+          <id>217</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ОбновитьРасширеннаяПодсказка</name>
+            <id>218</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualButton</type>
+          <commandName>Form.Command.ОбновитьПоДокументуБА</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
         <items xsi:type="form:FormGroup">
           <name>ГруппаБАСклад</name>
           <id>210</id>
@@ -2696,7 +2727,6 @@
             <name>ИНАГРО_БиологическийАктив</name>
             <id>201</id>
             <visible>true</visible>
-            <enabled>true</enabled>
             <userVisible>
               <common>true</common>
             </userVisible>
@@ -2737,16 +2767,14 @@
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <wrap>true</wrap>
-              <chooseType>true</chooseType>
+              <dropListButton>false</dropListButton>
               <typeDomainEnabled>true</typeDomainEnabled>
-              <textEdit>true</textEdit>
             </extInfo>
           </items>
           <items xsi:type="form:FormField">
             <name>ИНАГРО_Склад</name>
             <id>204</id>
             <visible>true</visible>
-            <enabled>true</enabled>
             <userVisible>
               <common>true</common>
             </userVisible>
@@ -2876,9 +2904,10 @@
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <wrap>true</wrap>
-              <chooseType>true</chooseType>
+              <dropListButton>false</dropListButton>
+              <choiceButton>false</choiceButton>
+              <clearButton>false</clearButton>
               <typeDomainEnabled>true</typeDomainEnabled>
-              <textEdit>true</textEdit>
             </extInfo>
           </items>
           <items xsi:type="form:FormField">
@@ -2974,6 +3003,10 @@
         <title>
           <key>ru</key>
           <value>Данные оперативного учета</value>
+        </title>
+        <title>
+          <key>uk</key>
+          <value>Дані оперативного обліку</value>
         </title>
         <toolTip>
           <key>ru</key>
@@ -4118,6 +4151,31 @@
       </handler>
     </action>
     <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ОбновитьПоДокументуБА</name>
+    <title>
+      <key>ru</key>
+      <value>Обновить</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Оновити</value>
+    </title>
+    <id>6</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Обновить по документу БА</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ОбновитьПоДокументуБА</name>
+      </handler>
+    </action>
+    <currentRowUse>Auto</currentRowUse>
   </formCommands>
   <commandInterface>
     <navigationPanel/>
