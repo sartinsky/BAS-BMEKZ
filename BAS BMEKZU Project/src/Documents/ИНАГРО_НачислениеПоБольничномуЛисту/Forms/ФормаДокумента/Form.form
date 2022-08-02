@@ -595,7 +595,7 @@
       </items>
       <items xsi:type="form:FormGroup">
         <name>ГруппаПараметрыРасчета</name>
-        <id>314</id>
+        <id>702</id>
         <items xsi:type="form:FormGroup">
           <name>ГруппаПериодБЛ</name>
           <id>434</id>
@@ -989,6 +989,60 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
+          <name>НомерСлучаяНетрудоспособности</name>
+          <id>699</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Объект.НомерСлучаяНетрудоспособности</segments>
+          </dataPath>
+          <handlers>
+            <event>OnChange</event>
+            <name>НомерСлучаяНетрудоспособностиПриИзменении</name>
+          </handlers>
+          <extendedTooltip>
+            <name>НомерСлучаяНетрудоспособностиРасширеннаяПодсказка</name>
+            <id>701</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>НомерСлучаяНетрудоспособностиКонтекстноеМеню</name>
+            <id>700</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
           <name>ОплачивалВзносыМеньше6Месяцев</name>
           <id>431</id>
           <title>
@@ -1050,20 +1104,16 @@
           <common>true</common>
         </userVisible>
         <title>
-          <key>ru</key>
-          <value>Параметры расчета</value>
-        </title>
-        <title>
           <key>uk</key>
-          <value>Параметри розрахунку</value>
+          <value>Группа параметры расчета</value>
         </title>
         <toolTip>
-          <key>ru</key>
+          <key>uk</key>
           <value>Группа параметры расчета</value>
         </toolTip>
         <extendedTooltip>
           <name>ГруппаПараметрыРасчетаРасширеннаяПодсказка</name>
-          <id>315</id>
+          <id>703</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -1081,7 +1131,6 @@
           <group>HorizontalIfPossible</group>
           <showLeftMargin>true</showLeftMargin>
           <united>true</united>
-          <showTitle>true</showTitle>
           <throughAlign>Auto</throughAlign>
           <currentRowUse>Auto</currentRowUse>
         </extInfo>

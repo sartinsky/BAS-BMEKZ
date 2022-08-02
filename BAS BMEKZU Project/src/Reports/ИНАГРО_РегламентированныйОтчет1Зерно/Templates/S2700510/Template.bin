@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>1-зерно (місячна) Звіт про надходження культур зернових і зернобобових та олійних на перероблення та зберігання</xs:documentation>
+  </xs:annotation>
+
+<xs:include schemaLocation="common_types.xsd" />
+
+  <xs:element name="DECLAR" type="DeclarContent"/>
+  <xs:complexType name="DeclarContent">
+    <xs:sequence>
+      <xs:element name="DECLARHEAD" type="DHead"/>
+      <xs:element name="DECLARBODY" type="DBody"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DHead">
+    <xs:sequence>
+      <xs:element name="TIN" type="DGLong" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="C_DOC" type="xs:string" minOccurs="1" maxOccurs="1" fixed="S27"/>
+      <xs:element name="C_DOC_SUB" type="xs:string" minOccurs="1" maxOccurs="1" fixed="005"/>
+      <xs:element name="C_DOC_VER" type="xs:string" minOccurs="1" maxOccurs="1" fixed="10"/>
+      <xs:element name="C_DOC_TYPE" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="C_DOC_CNT" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="C_REG" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="C_RAJ" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="PERIOD_MONTH" type="DGMonth" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="PERIOD_TYPE" type="DGPType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="PERIOD_YEAR" type="DGYear" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="D_FILL" type="DGDate" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SOFTWARE" type="xs:string"  nillable="true" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DBody">
+    <xs:sequence>
+      <!-- Main -->
+      <xs:element name="FIRM_EDRPOU" type="xs:string"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="FIRM_SPATO" type="xs:string"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="REP_PERNM" type="xs:string"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="FIRM_NAME" type="xs:string"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="FIRM_ADR" type="xs:string"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="FIRM_ADR_FIZ" type="xs:string"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="OBL" type="xs:string"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="RAY" type="xs:string"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="VD1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NOMER" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A011_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A011_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A011_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A011_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A011_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A011_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A011_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A012_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A012_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A012_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A012_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A012_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A012_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A012_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A003_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A003_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A003_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A003_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A003_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A003_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A003_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A004_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A004_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A004_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A004_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A004_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A004_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A004_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A015_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A015_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A015_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A015_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A015_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A015_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A015_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A021_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A021_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A021_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A021_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A021_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A021_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A021_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A022_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A022_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A022_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A022_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A022_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A022_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A022_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A024_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A024_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A024_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A024_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A024_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A024_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A024_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A025_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A025_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A025_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A025_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A025_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A025_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A025_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A027_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A027_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A027_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A027_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A027_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A027_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A027_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A032_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A032_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A032_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A032_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A032_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A032_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A032_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A041_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A041_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A041_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A041_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A048_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A048_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A048_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A048_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A052_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A052_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A052_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A052_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A800_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A800_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A800_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A800_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A800_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A800_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A800_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A806_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A806_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A806_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A806_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A806_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A806_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A806_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A807_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A807_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A807_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A807_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A807_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A807_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A807_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A808_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A808_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A808_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A808_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A808_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A808_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A808_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A809_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A809_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A809_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A809_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A809_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A809_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A809_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A810_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A810_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A810_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A810_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A810_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A810_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A810_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A813_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A813_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A813_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A813_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A813_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A813_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A813_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A814_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A814_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A814_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A814_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A814_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A814_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A814_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A815_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A815_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A815_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A815_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A815_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A815_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A815_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A816_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A816_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A816_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A816_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A816_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A816_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A816_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A817_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A817_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A817_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A817_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A817_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A817_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A817_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A818_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A818_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A818_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A818_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A818_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A818_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A818_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A819_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A819_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A819_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A819_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A819_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A819_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A819_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A820_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A820_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A820_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A820_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A820_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A820_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A820_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A821_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A821_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A821_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A821_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A821_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A821_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A821_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A822_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A822_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A822_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A822_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A822_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A822_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A822_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A823_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A823_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A823_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A823_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A823_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A823_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A823_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A824_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A824_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A824_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A824_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A824_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A824_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A824_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A825_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A825_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A825_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A825_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A825_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A825_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A825_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A826_1" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A826_2" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A826_3" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A826_4" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A826_5" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A826_6" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A826_7" type="xs:decimal"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="A998" type="xs:integer"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="TER_GROM1" type="xs:string"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="TER_GROM2" type="xs:string"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="KATOTTG_FACT" type="xs:string"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SPATO" type="xs:string"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ZERO_ZVIT" type="xs:integer"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="REASON" type="xs:string"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="KATOTTG" type="xs:string"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="REASON_KOD" type="xs:integer"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="RUK" type="xs:string"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="VIK_TEL" type="xs:string"  nillable="true" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="VIK_EMAIL" type="xs:string"  nillable="true" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

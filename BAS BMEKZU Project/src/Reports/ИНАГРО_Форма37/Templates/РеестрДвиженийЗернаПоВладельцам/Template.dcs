@@ -91,42 +91,6 @@
 			</appearance>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>УбыльВесаПоЗачисткеКонечныйОстаток</dataPath>
-			<field>УбыльВесаПоЗачисткеКонечныйОстаток</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Списание по актам расчета</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Списання по актам розрахунку</v8:content>
-				</v8:item>
-			</title>
-			<role>
-				<dcscom:required>true</dcscom:required>
-			</role>
-			<appearance>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>Формат</dcscor:parameter>
-					<dcscor:value xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ЧДЦ=0</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>uk</v8:lang>
-							<v8:content>ЧДЦ=0</v8:content>
-						</v8:item>
-					</dcscor:value>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
-					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
-				</dcscor:item>
-			</appearance>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>Расход</dataPath>
 			<field>Расход</field>
 			<title xsi:type="v8:LocalStringType">
@@ -341,63 +305,51 @@
 			<dataPath>ВидХранения</dataPath>
 			<field>ВидХранения</field>
 		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>УбыльВесаПриСушкеОстатокНаКонец</dataPath>
-			<field>УбыльВесаПриСушкеОстатокНаКонец</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Убыль веса при сушке остаток на конец</v8:content>
-				</v8:item>
-			</title>
-		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	ОстаткиХППОбороты.Владелец КАК Владелец,
-	ОстаткиХППОбороты.Склад КАК Склад,
-	ОстаткиХППОбороты.Урожай КАК Урожай,
-	ОстаткиХППОбороты.Номенклатура КАК Номенклатура,
+	Обороты.Владелец КАК Владелец,
+	Обороты.Склад КАК Склад,
+	Обороты.Урожай КАК Урожай,
+	Обороты.Номенклатура КАК Номенклатура,
 	0 КАК НачальныйОстаток,
 	ВЫБОР
-		КОГДА НЕ ОстаткиХППОбороты.Регистратор ССЫЛКА Документ.ИНАГРО_Переоформление
-			ТОГДА ОстаткиХППОбороты.ВесПриход
+		КОГДА НЕ Обороты.Регистратор ССЫЛКА Документ.ИНАГРО_Переоформление
+			ТОГДА Обороты.ВесПриход
 		ИНАЧЕ 0
 	КОНЕЦ КАК Приход,
 	ВЫБОР
-		КОГДА ОстаткиХППОбороты.Регистратор ССЫЛКА Документ.ИНАГРО_Переоформление
-			ТОГДА ОстаткиХППОбороты.ВесПриход
+		КОГДА Обороты.Регистратор ССЫЛКА Документ.ИНАГРО_Переоформление
+			ТОГДА Обороты.ВесПриход
 		ИНАЧЕ 0
 	КОНЕЦ КАК ВесПриходПереоформление,
 	ВЫБОР
-		КОГДА НЕ ОстаткиХППОбороты.Регистратор ССЫЛКА Документ.ИНАГРО_Переоформление
-			ТОГДА ОстаткиХППОбороты.ВесРасход
+		КОГДА НЕ Обороты.Регистратор ССЫЛКА Документ.ИНАГРО_Переоформление
+			ТОГДА Обороты.ВесРасход
 		ИНАЧЕ 0
 	КОНЕЦ КАК Расход,
 	ВЫБОР
-		КОГДА ОстаткиХППОбороты.Регистратор ССЫЛКА Документ.ИНАГРО_Переоформление
-			ТОГДА ОстаткиХППОбороты.ВесРасход
+		КОГДА Обороты.Регистратор ССЫЛКА Документ.ИНАГРО_Переоформление
+			ТОГДА Обороты.ВесРасход
 		ИНАЧЕ 0
 	КОНЕЦ КАК ВесРасходПереоформление,
 	0 КАК КонечныйОстаток,
-	ОстаткиХППОбороты.Регистратор КАК Регистратор,
+	Обороты.Регистратор КАК Регистратор,
 	ИНАГРО_ДополнительныеРеквизитыНоменклатуры.ВидКультуры КАК ВидКультуры,
 	0 КАК ПериодСекунда,
-	ОстаткиХППОбороты.УбыльВесаПриСушкеКонечныйОстаток КАК УбыльВесаПриСушкеКонечныйОстаток,
-	0 КАК УбыльВесаПоЗачисткеКонечныйОстаток,
-	0 КАК УбыльВесаПриСушкеОстатокНаКонец
+	0 КАК УбыльВесаПриСушкеКонечныйОстаток
 ИЗ
-	РегистрНакопления.ИНАГРО_Остатки.ОстаткиИОбороты(&amp;НачалоПериода, &amp;КонецПериода, Регистратор, , ) КАК ОстаткиХППОбороты
-		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ИНАГРО_ДополнительныеРеквизитыНоменклатуры КАК ИНАГРО_ДополнительныеРеквизитыНоменклатуры
-		ПО ОстаткиХППОбороты.Номенклатура = ИНАГРО_ДополнительныеРеквизитыНоменклатуры.Номенклатура
+	РегистрНакопления.ИНАГРО_Остатки.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Регистратор, ) КАК Обороты
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ИНАГРО_ДополнительныеРеквизитыНоменклатуры КАК ИНАГРО_ДополнительныеРеквизитыНоменклатуры
+		ПО Обороты.Номенклатура = ИНАГРО_ДополнительныеРеквизитыНоменклатуры.Номенклатура
 
 ОБЪЕДИНИТЬ ВСЕ
 
 ВЫБРАТЬ
-	ИНАГРО_ОстаткиОстаткиНачало.Владелец,
-	ИНАГРО_ОстаткиОстаткиНачало.Склад,
-	ИНАГРО_ОстаткиОстаткиНачало.Урожай,
-	ИНАГРО_ОстаткиОстаткиНачало.Номенклатура,
-	ИНАГРО_ОстаткиОстаткиНачало.ВесОстаток,
+	ОстаткиНачало.Владелец,
+	ОстаткиНачало.Склад,
+	ОстаткиНачало.Урожай,
+	ОстаткиНачало.Номенклатура,
+	ОстаткиНачало.ВесОстаток,
 	0,
 	0,
 	0,
@@ -405,43 +357,35 @@
 	0,
 	NULL,
 	ИНАГРО_ДополнительныеРеквизитыНоменклатуры.ВидКультуры,
-	0,
-	0,
 	0,
 	0
 ИЗ
-	РегистрНакопления.ИНАГРО_Остатки.Остатки(&amp;НачалоПериода, ) КАК ИНАГРО_ОстаткиОстаткиНачало
+	РегистрНакопления.ИНАГРО_Остатки.Остатки(&amp;НачалоПериода, ) КАК ОстаткиНачало
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ИНАГРО_ДополнительныеРеквизитыНоменклатуры КАК ИНАГРО_ДополнительныеРеквизитыНоменклатуры
-		ПО ИНАГРО_ОстаткиОстаткиНачало.Номенклатура = ИНАГРО_ДополнительныеРеквизитыНоменклатуры.Номенклатура
+		ПО ОстаткиНачало.Номенклатура = ИНАГРО_ДополнительныеРеквизитыНоменклатуры.Номенклатура
 
 ОБЪЕДИНИТЬ ВСЕ
 
 ВЫБРАТЬ
-	ИНАГРО_ОстаткиОстаткиКонец.Владелец,
-	ИНАГРО_ОстаткиОстаткиКонец.Склад,
-	ИНАГРО_ОстаткиОстаткиКонец.Урожай,
-	ИНАГРО_ОстаткиОстаткиКонец.Номенклатура,
+	ОстаткиКонец.Владелец,
+	ОстаткиКонец.Склад,
+	ОстаткиКонец.Урожай,
+	ОстаткиКонец.Номенклатура,
 	0,
 	0,
 	0,
 	0,
 	0,
-	ИНАГРО_ОстаткиОстаткиКонец.ВесОстаток,
+	ОстаткиКонец.ВесОстаток,
 	NULL,
 	ИНАГРО_ДополнительныеРеквизитыНоменклатуры.ВидКультуры,
-	NULL,
-	ИНАГРО_ОстаткиОстаткиКонец.УбыльВесаПриСушкеОстаток,
-	ИНАГРО_ОстаткиОстаткиКонец.УбыльВесаПоЗачисткеОстаток,
-	ИНАГРО_ОстаткиОстаткиКонец.УбыльВесаПриСушкеОстаток
+	0,
+	ОстаткиКонец.УбыльВесаПриСушкеОстаток
 ИЗ
-	РегистрНакопления.ИНАГРО_Остатки.Остатки(&amp;КонецПериода, ) КАК ИНАГРО_ОстаткиОстаткиКонец
+	РегистрНакопления.ИНАГРО_Остатки.Остатки(&amp;КонецПериода, ) КАК ОстаткиКонец
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ИНАГРО_ДополнительныеРеквизитыНоменклатуры КАК ИНАГРО_ДополнительныеРеквизитыНоменклатуры
-		ПО ИНАГРО_ОстаткиОстаткиКонец.Номенклатура = ИНАГРО_ДополнительныеРеквизитыНоменклатуры.Номенклатура</query>
+		ПО ОстаткиКонец.Номенклатура = ИНАГРО_ДополнительныеРеквизитыНоменклатуры.Номенклатура</query>
 	</dataSet>
-	<totalField>
-		<dataPath>УбыльВесаПоЗачисткеКонечныйОстаток</dataPath>
-		<expression>Сумма(УбыльВесаПоЗачисткеКонечныйОстаток)</expression>
-	</totalField>
 	<totalField>
 		<dataPath>ВесПриходПереоформление</dataPath>
 		<expression>Сумма(ВесПриходПереоформление)</expression>
@@ -468,14 +412,7 @@
 	</totalField>
 	<totalField>
 		<dataPath>УбыльВесаПриСушкеКонечныйОстаток</dataPath>
-		<expression>Максимум(УбыльВесаПриСушкеКонечныйОстаток)</expression>
-		<group>Регистратор</group>
-	</totalField>
-	<totalField>
-		<dataPath>УбыльВесаПриСушкеКонечныйОстаток</dataPath>
-		<expression>Сумма(УбыльВесаПриСушкеОстатокНаКонец)</expression>
-		<group>Владелец</group>
-		<group>Номенклатура</group>
+		<expression>Сумма(УбыльВесаПриСушкеКонечныйОстаток)</expression>
 	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -660,22 +597,6 @@
 					</dcsat:appearance>
 				</dcsat:tableCell>
 				<dcsat:tableCell>
-					<dcsat:appearance>
-						<dcscor:item>
-							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
-						</dcscor:item>
-					</dcsat:appearance>
-				</dcsat:tableCell>
-				<dcsat:tableCell>
-					<dcsat:appearance>
-						<dcscor:item>
-							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
-						</dcscor:item>
-					</dcsat:appearance>
-				</dcsat:tableCell>
-				<dcsat:tableCell>
 					<dcsat:item xsi:type="dcsat:Field">
 						<dcsat:value xsi:type="v8:LocalStringType">
 							<v8:item>
@@ -746,8 +667,20 @@
 				<dcsat:tableCell>
 					<dcsat:appearance>
 						<dcscor:item>
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#000000</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
 							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
 						</dcscor:item>
 					</dcsat:appearance>
 				</dcsat:tableCell>
@@ -757,13 +690,9 @@
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
 							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
 						</dcscor:item>
-					</dcsat:appearance>
-				</dcsat:tableCell>
-				<dcsat:tableCell>
-					<dcsat:appearance>
 						<dcscor:item>
-							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Left</dcscor:value>
 						</dcscor:item>
 					</dcsat:appearance>
 				</dcsat:tableCell>
@@ -793,22 +722,6 @@
 				</dcsat:tableCell>
 			</dcsat:item>
 			<dcsat:item xsi:type="dcsat:TableRow">
-				<dcsat:tableCell>
-					<dcsat:appearance>
-						<dcscor:item>
-							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
-						</dcscor:item>
-					</dcsat:appearance>
-				</dcsat:tableCell>
-				<dcsat:tableCell>
-					<dcsat:appearance>
-						<dcscor:item>
-							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
-						</dcscor:item>
-					</dcsat:appearance>
-				</dcsat:tableCell>
 				<dcsat:tableCell>
 					<dcsat:appearance>
 						<dcscor:item>
@@ -912,8 +825,20 @@
 				<dcsat:tableCell>
 					<dcsat:appearance>
 						<dcscor:item>
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#000000</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
 							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
 						</dcscor:item>
 					</dcsat:appearance>
 				</dcsat:tableCell>
@@ -923,13 +848,9 @@
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
 							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
 						</dcscor:item>
-					</dcsat:appearance>
-				</dcsat:tableCell>
-				<dcsat:tableCell>
-					<dcsat:appearance>
 						<dcscor:item>
-							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Left</dcscor:value>
 						</dcscor:item>
 					</dcsat:appearance>
 				</dcsat:tableCell>
@@ -972,46 +893,6 @@
 						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
 							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
-						</dcscor:item>
-					</dcsat:appearance>
-				</dcsat:tableCell>
-				<dcsat:tableCell>
-					<dcsat:appearance>
-						<dcscor:item>
-							<dcscor:parameter>ЦветТекста</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#000000</dcscor:value>
-						</dcscor:item>
-						<dcscor:item>
-							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
-						</dcscor:item>
-						<dcscor:item>
-							<dcscor:parameter>Шрифт</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
-						</dcscor:item>
-						<dcscor:item>
-							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
-						</dcscor:item>
-					</dcsat:appearance>
-				</dcsat:tableCell>
-				<dcsat:tableCell>
-					<dcsat:appearance>
-						<dcscor:item>
-							<dcscor:parameter>ЦветТекста</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#000000</dcscor:value>
-						</dcscor:item>
-						<dcscor:item>
-							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
-						</dcscor:item>
-						<dcscor:item>
-							<dcscor:parameter>Шрифт</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
-						</dcscor:item>
-						<dcscor:item>
-							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
 						</dcscor:item>
 					</dcsat:appearance>
 				</dcsat:tableCell>
@@ -1207,44 +1088,8 @@
 						</dcscor:item>
 					</dcsat:appearance>
 				</dcsat:tableCell>
-				<dcsat:tableCell>
-					<dcsat:appearance>
-						<dcscor:item>
-							<dcscor:parameter>ЦветТекста</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#000000</dcscor:value>
-						</dcscor:item>
-						<dcscor:item>
-							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
-						</dcscor:item>
-						<dcscor:item>
-							<dcscor:parameter>Шрифт</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
-						</dcscor:item>
-						<dcscor:item>
-							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
-						</dcscor:item>
-					</dcsat:appearance>
-				</dcsat:tableCell>
 			</dcsat:item>
 			<dcsat:item xsi:type="dcsat:TableRow">
-				<dcsat:tableCell>
-					<dcsat:appearance>
-						<dcscor:item>
-							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
-						</dcscor:item>
-					</dcsat:appearance>
-				</dcsat:tableCell>
-				<dcsat:tableCell>
-					<dcsat:appearance>
-						<dcscor:item>
-							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
-						</dcscor:item>
-					</dcsat:appearance>
-				</dcsat:tableCell>
 				<dcsat:tableCell>
 					<dcsat:appearance>
 						<dcscor:item>
@@ -1326,30 +1171,6 @@
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
 							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
 						</dcscor:item>
-						<dcscor:item>
-							<dcscor:parameter>Шрифт</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
-						</dcscor:item>
-						<dcscor:item>
-							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
-						</dcscor:item>
-					</dcsat:appearance>
-				</dcsat:tableCell>
-				<dcsat:tableCell>
-					<dcsat:appearance>
-						<dcscor:item>
-							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
-						</dcscor:item>
-						<dcscor:item>
-							<dcscor:parameter>Шрифт</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
-						</dcscor:item>
-						<dcscor:item>
-							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
-						</dcscor:item>
 					</dcsat:appearance>
 				</dcsat:tableCell>
 				<dcsat:tableCell>
@@ -1434,9 +1255,6 @@
 				</dcsat:tableCell>
 			</dcsat:item>
 			<dcsat:item xsi:type="dcsat:TableRow">
-				<dcsat:tableCell/>
-				<dcsat:tableCell/>
-				<dcsat:tableCell/>
 				<dcsat:tableCell/>
 				<dcsat:tableCell/>
 				<dcsat:tableCell/>
@@ -1775,9 +1593,6 @@
 					</dcsset:item>
 					<dcsset:placement>Auto</dcsset:placement>
 				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>УбыльВесаПоЗачисткеКонечныйОстаток</dcsset:field>
-				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:filter>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -1851,64 +1666,6 @@
 					<dcsset:userSettingID>4f2a91ca-1113-42fd-b485-30bcd57802f9</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
-			<dcsset:conditionalAppearance>
-				<dcsset:item>
-					<dcsset:selection>
-						<dcsset:item>
-							<dcsset:field>ВесПриходПереоформление</dcsset:field>
-						</dcsset:item>
-						<dcsset:item>
-							<dcsset:field>ВесРасходПереоформление</dcsset:field>
-						</dcsset:item>
-						<dcsset:item>
-							<dcsset:field>КонечныйОстаток</dcsset:field>
-						</dcsset:item>
-						<dcsset:item>
-							<dcsset:field>Приход</dcsset:field>
-						</dcsset:item>
-						<dcsset:item>
-							<dcsset:field>НачальныйОстаток</dcsset:field>
-						</dcsset:item>
-						<dcsset:item>
-							<dcsset:field>Расход</dcsset:field>
-						</dcsset:item>
-						<dcsset:item>
-							<dcsset:field>УбыльВесаПоЗачисткеКонечныйОстаток</dcsset:field>
-						</dcsset:item>
-						<dcsset:item>
-							<dcsset:field>УбыльВесаПоЗачисткеНачальныйОстаток</dcsset:field>
-						</dcsset:item>
-						<dcsset:item>
-							<dcsset:field>УбыльВесаПриСушкеКонечныйОстаток</dcsset:field>
-						</dcsset:item>
-						<dcsset:item>
-							<dcsset:field>УбыльВесаПриСушкеНачальныйОстаток</dcsset:field>
-						</dcsset:item>
-					</dcsset:selection>
-					<dcsset:filter>
-						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="xs:boolean">false</dcsset:left>
-							<dcsset:comparisonType>Equal</dcsset:comparisonType>
-							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
-						</dcsset:item>
-					</dcsset:filter>
-					<dcsset:appearance>
-						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
-						</dcscor:item>
-						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:VerticalAlign">Center</dcscor:value>
-						</dcscor:item>
-					</dcsset:appearance>
-					<dcsset:useInGroup>DontUse</dcsset:useInGroup>
-					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
-					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
-					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
-					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
-				</dcsset:item>
-			</dcsset:conditionalAppearance>
 			<dcsset:outputParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>МакетОформления</dcscor:parameter>

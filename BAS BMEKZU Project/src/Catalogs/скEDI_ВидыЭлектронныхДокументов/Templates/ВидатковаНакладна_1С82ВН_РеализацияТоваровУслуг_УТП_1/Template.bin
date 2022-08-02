@@ -1,0 +1,149 @@
+﻿<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_NOMENKLATURA_NUM</dataPath>
+			<field>Артикул</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_NOMENKLATURA_NUMHBUMEASURE</dataPath>
+			<field>ЕдИзмКод</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_NOMENKLATURA_CHARCODEUMEASURE</dataPath>
+			<field>ЕдИзмНаименование</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_A3</dataPath>
+			<field>Количество</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_NOMENKLATURA_NAME</dataPath>
+			<field>НоменклатураНаименование</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_A6</dataPath>
+			<field>Сумма</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_A5</dataPath>
+			<field>Цена</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_A4</dataPath>
+			<field>Скидка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_T</dataPath>
+			<field>ТипНоменклатуры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>TAB1 T</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	СУММА(РеализацияТоваровУслугТовары.Количество) КАК Количество,
+	РеализацияТоваровУслугТовары.Цена КАК Цена,
+	СУММА(РеализацияТоваровУслугТовары.Сумма) КАК Сумма,
+	РеализацияТоваровУслугТовары.ЕдиницаИзмерения.ЕдиницаПоКлассификатору.Наименование КАК ЕдИзмНаименование,
+	РеализацияТоваровУслугТовары.ЕдиницаИзмерения.ЕдиницаПоКлассификатору.Код КАК ЕдИзмКод,
+	ВЫРАЗИТЬ(РеализацияТоваровУслугТовары.Номенклатура.НаименованиеПолное КАК СТРОКА(1000)) КАК НоменклатураНаименование,
+	РеализацияТоваровУслугТовары.Номенклатура.Артикул КАК Артикул,
+	СУММА(РеализацияТоваровУслугТовары.Цена * РеализацияТоваровУслугТовары.Количество - РеализацияТоваровУслугТовары.Сумма) КАК Скидка,
+	"Т" КАК ТипНоменклатуры
+ИЗ
+	Документ.РеализацияТоваровУслуг.Товары КАК РеализацияТоваровУслугТовары
+ГДЕ
+	РеализацияТоваровУслугТовары.Ссылка = &amp;Ссылка
+
+СГРУППИРОВАТЬ ПО
+	РеализацияТоваровУслугТовары.Цена,
+	РеализацияТоваровУслугТовары.Номенклатура.Артикул,
+	РеализацияТоваровУслугТовары.ЕдиницаИзмерения.ЕдиницаПоКлассификатору.Наименование,
+	РеализацияТоваровУслугТовары.ЕдиницаИзмерения.ЕдиницаПоКлассификатору.Код,
+	ВЫРАЗИТЬ(РеализацияТоваровУслугТовары.Номенклатура.НаименованиеПолное КАК СТРОКА(1000))</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>TAB1_A1</dataPath>
+		<expression>"@@НомерСтроки@@" </expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>TAB1 a1</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<parameter>
+		<name>Ссылка</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ссылка</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.РеализацияТоваровУслуг</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Документ.РеализацияТоваровУслуг.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_A3</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_A5</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_A6</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_NOMENKLATURA_CHARCODEUMEASURE</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_NOMENKLATURA_NAME</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_NOMENKLATURA_NUM</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_NOMENKLATURA_NUMHBUMEASURE</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_A4</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_A1</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_T</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Ссылка</dcscor:parameter>
+					<dcscor:value xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d6p1:DocumentRef.РеализацияТоваровУслуг">00000000-0000-0000-0000-000000000000</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -11,6 +11,10 @@
     <dataPath xsi:type="form:DataPath">
       <segments>Запись.Period</segments>
     </dataPath>
+    <handlers>
+      <event>OnChange</event>
+      <name>ПериодПриИзменении</name>
+    </handlers>
     <extendedTooltip>
       <name>ПериодРасширеннаяПодсказка</name>
       <id>7</id>
@@ -61,6 +65,10 @@
     <dataPath xsi:type="form:DataPath">
       <segments>Запись.Контрагент</segments>
     </dataPath>
+    <handlers>
+      <event>OnChange</event>
+      <name>КонтрагентПриИзменении</name>
+    </handlers>
     <extendedTooltip>
       <name>КонтрагентРасширеннаяПодсказка</name>
       <id>8</id>
@@ -111,6 +119,10 @@
     <dataPath xsi:type="form:DataPath">
       <segments>Запись.СхемаНалогообложения</segments>
     </dataPath>
+    <handlers>
+      <event>OnChange</event>
+      <name>СхемаНалогообложенияПриИзменении</name>
+    </handlers>
     <extendedTooltip>
       <name>СхемаНалогообложенияРасширеннаяПодсказка</name>
       <id>9</id>
@@ -150,8 +162,59 @@
       <textEdit>true</textEdit>
     </extInfo>
   </items>
+  <items xsi:type="form:FormField">
+    <name>ГруппаПлательщикаЕдиногоНалога</name>
+    <id>10</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Запись.ГруппаПлательщикаЕдиногоНалога</segments>
+    </dataPath>
+    <extendedTooltip>
+      <name>ГруппаПлательщикаЕдиногоНалогаРасширеннаяПодсказка</name>
+      <id>12</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>ГруппаПлательщикаЕдиногоНалогаКонтекстноеМеню</name>
+      <id>11</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>InputField</type>
+    <editMode>Enter</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:InputFieldExtInfo">
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <wrap>true</wrap>
+      <listChoiceMode>true</listChoiceMode>
+      <chooseType>true</chooseType>
+      <typeDomainEnabled>true</typeDomainEnabled>
+      <textEdit>true</textEdit>
+    </extInfo>
+  </items>
   <autoCommandBar>
-    <name></name>
+    <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
     <visible>true</visible>
     <enabled>true</enabled>
@@ -161,6 +224,10 @@
     <horizontalAlign>Left</horizontalAlign>
     <autoFill>true</autoFill>
   </autoCommandBar>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>ПриСозданииНаСервере</name>
+  </handlers>
   <windowOpeningMode>LockOwnerWindow</windowOpeningMode>
   <autoTitle>true</autoTitle>
   <autoUrl>true</autoUrl>
@@ -186,9 +253,35 @@
     <main>true</main>
     <savedData>true</savedData>
   </attributes>
+  <attributes>
+    <name>ЭтоЮрЛицо</name>
+    <title>
+      <key>ru</key>
+      <value>Это юр лицо</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Це юр особа</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
   <commandInterface>
     <navigationPanel/>
     <commandBar/>
   </commandInterface>
-  <extInfo xsi:type="form:InformationRegisterManagerFormExtInfo"/>
+  <extInfo xsi:type="form:InformationRegisterManagerFormExtInfo">
+    <handlers>
+      <event>OnReadAtServer</event>
+      <name>ПриЧтенииНаСервере</name>
+    </handlers>
+  </extInfo>
 </form:Form>

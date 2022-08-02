@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="db1118a0-34b1-446f-a003-b52b2812045d">
+  <producedTypes>
+    <objectType typeId="d5399c51-69df-49f5-895b-23f7e3c3fb36" valueTypeId="c8546302-aa17-402b-bc62-f0879305a3e7"/>
+    <managerType typeId="9c3958fb-9c06-476a-9f75-c2df3988b867" valueTypeId="df6be6e9-3f5a-44fe-9d72-65f1ad23f3ea"/>
+  </producedTypes>
+  <name>скEDI</name>
+  <synonym>
+    <key>ru</key>
+    <value>Рабочий стол FlyDoc</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Робочий стіл FlyDoc</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.скEDI.Form.ФормаРабочегоСтола</defaultForm>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <attributes uuid="3c5ffe35-c14d-4d2d-a774-571c5a649615">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.скEDI_Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="2f5d947f-375f-4b22-a495-fac029563279">
+    <name>ФормаРабочегоСтола</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма рабочего стола</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма робочого стола</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="eebce9e0-38c9-4d91-82c7-f86bd070a8a1">
+    <name>ОткрытьФормуНастроек</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройки</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Налаштування</value>
+    </synonym>
+    <group>FormCommandBarImportant</group>
+    <commandParameterType>
+      <types>CatalogRef.скEDI_Организации</types>
+    </commandParameterType>
+    <modifiesData>true</modifiesData>
+    <representation>Auto</representation>
+    <toolTip>
+      <key>ru</key>
+      <value>Открыть форму настроек</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Відкрити форму налаштувань</value>
+    </toolTip>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.SettingsStorage</picture>
+    </picture>
+  </commands>
+</mdclass:DataProcessor>

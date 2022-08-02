@@ -1398,19 +1398,19 @@
         <name>ГруппаСхемаНалогообложения</name>
         <id>171</id>
         <items xsi:type="form:FormField">
-          <name>СхемаНалогообложения</name>
-          <id>172</id>
+          <name>ОписаниеСхемыНалогообложения</name>
+          <id>385</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
             <common>true</common>
           </userVisible>
           <dataPath xsi:type="form:DataPath">
-            <segments>СхемаНалогообложения</segments>
+            <segments>ОписаниеСхемыНалогообложения</segments>
           </dataPath>
           <extendedTooltip>
-            <name>СхемаНалогообложенияРасширеннаяПодсказка</name>
-            <id>217</id>
+            <name>ОписаниеСхемыНалогообложенияРасширеннаяПодсказка</name>
+            <id>387</id>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -1424,8 +1424,8 @@
             </extInfo>
           </extendedTooltip>
           <contextMenu>
-            <name>СхемаНалогообложенияКонтекстноеМеню</name>
-            <id>173</id>
+            <name>ОписаниеСхемыНалогообложенияКонтекстноеМеню</name>
+            <id>386</id>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -1433,58 +1433,20 @@
             </userVisible>
             <autoFill>true</autoFill>
           </contextMenu>
-          <type>InputField</type>
+          <type>LabelField</type>
           <editMode>Enter</editMode>
           <showInHeader>true</showInHeader>
           <headerHorizontalAlign>Left</headerHorizontalAlign>
           <showInFooter>true</showInFooter>
-          <extInfo xsi:type="form:InputFieldExtInfo">
+          <extInfo xsi:type="form:LabelFieldExtInfo">
+            <handlers>
+              <event>Click</event>
+              <name>ОписаниеСхемыНалогообложенияНажатие</name>
+            </handlers>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
-            <wrap>true</wrap>
-            <chooseType>true</chooseType>
-            <typeDomainEnabled>true</typeDomainEnabled>
-            <textEdit>true</textEdit>
+            <hyperlink>true</hyperlink>
           </extInfo>
-        </items>
-        <items xsi:type="form:Button">
-          <name>ИсторияСхемНалогообложения</name>
-          <id>174</id>
-          <title>
-            <key>ru</key>
-            <value>История</value>
-          </title>
-          <title>
-            <key>uk</key>
-            <value>Історія</value>
-          </title>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <extendedTooltip>
-            <name>ИсторияСхемНалогообложенияРасширеннаяПодсказка</name>
-            <id>218</id>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <type>UsualButton</type>
-          <commandName>Form.Command.ИсторияСхемНалогообложения</commandName>
-          <representation>Auto</representation>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <placementArea>UserCmds</placementArea>
-          <representationInContextMenu>Auto</representationInContextMenu>
         </items>
         <visible>true</visible>
         <enabled>true</enabled>
@@ -4420,7 +4382,7 @@
         <autoMaxHeight>true</autoMaxHeight>
         <extInfo xsi:type="form:PictureDecorationExtInfo">
           <picture xsi:type="core:PictureRef">
-            <picture>CommonPicture.Информация</picture>
+            <picture>CommonPicture.Информация01</picture>
           </picture>
         </extInfo>
       </items>
@@ -5558,28 +5520,6 @@
     </edit>
   </attributes>
   <attributes>
-    <name>СхемаНалогообложения</name>
-    <title>
-      <key>ru</key>
-      <value>Схема налогообложения</value>
-    </title>
-    <title>
-      <key>uk</key>
-      <value>Схема оподаткування</value>
-    </title>
-    <id>16</id>
-    <valueType>
-      <types>CatalogRef.СхемыНалогообложения</types>
-    </valueType>
-    <view>
-      <common>true</common>
-    </view>
-    <edit>
-      <common>true</common>
-    </edit>
-    <savedData>true</savedData>
-  </attributes>
-  <attributes>
     <name>ГлавныйБухгалтер</name>
     <title>
       <key>ru</key>
@@ -6032,6 +5972,50 @@
       <common>true</common>
     </edit>
   </attributes>
+  <attributes>
+    <name>ОпендатаботАдресХранилища</name>
+    <title>
+      <key>ru</key>
+      <value>Опендатабот адрес хранилища</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Опендатабот адреса сховища</value>
+    </title>
+    <id>34</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ОписаниеСхемыНалогообложения</name>
+    <title>
+      <key>ru</key>
+      <value>Система налогообложения</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Система оподаткування</value>
+    </title>
+    <id>35</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
   <formCommands>
     <name>ВсеБанковскиеСчета</name>
     <title>
@@ -6202,35 +6186,6 @@
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>СоздатьКонтактноеЛицо</name>
-      </handler>
-    </action>
-    <currentRowUse>DontUse</currentRowUse>
-  </formCommands>
-  <formCommands>
-    <name>ИсторияСхемНалогообложения</name>
-    <title>
-      <key>ru</key>
-      <value>История схем налогообложения</value>
-    </title>
-    <title>
-      <key>uk</key>
-      <value>Історія схем оподаткування</value>
-    </title>
-    <id>7</id>
-    <toolTip>
-      <key>ru</key>
-      <value>История схем налогообложения</value>
-    </toolTip>
-    <toolTip>
-      <key>uk</key>
-      <value>Історія схем оподаткування</value>
-    </toolTip>
-    <use>
-      <common>true</common>
-    </use>
-    <action xsi:type="form:FormCommandHandlerContainer">
-      <handler>
-        <name>ИсторияСхемНалогообложения</name>
       </handler>
     </action>
     <currentRowUse>DontUse</currentRowUse>
@@ -6410,10 +6365,6 @@
     <handlers>
       <event>BeforeWriteAtServer</event>
       <name>ПередЗаписьюНаСервере</name>
-    </handlers>
-    <handlers>
-      <event>OnWriteAtServer</event>
-      <name>ПриЗаписиНаСервере</name>
     </handlers>
   </extInfo>
 </form:Form>

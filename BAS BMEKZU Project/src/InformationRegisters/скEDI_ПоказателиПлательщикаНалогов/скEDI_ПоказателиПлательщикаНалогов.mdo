@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0ec87c2a-6a3a-40ea-a0eb-4adf24736c88">
+  <producedTypes>
+    <selectionType typeId="1dab5399-604a-4454-849b-dcded49a17ec" valueTypeId="935cae0e-00af-495f-bb96-4bf5f675ec74"/>
+    <listType typeId="344988f3-f6ac-43c5-a715-0226861ed1db" valueTypeId="9d33d8f1-d925-43fd-9b8a-8239e10a1f3d"/>
+    <managerType typeId="69ab9ad2-9295-4d29-b1fd-38102d0abb56" valueTypeId="214f3de3-b6f8-4d18-a1d1-c276f15b7016"/>
+    <recordSetType typeId="b60dd73f-e28d-4ad9-9898-cf47a325a901" valueTypeId="763bed2f-57c8-48a4-b1ad-114287572dcd"/>
+    <recordKeyType typeId="40bcb138-f22f-40bb-8fbd-3f837c2841d2" valueTypeId="232bf794-8e01-4f53-a52f-71afc6366a2f"/>
+    <recordType typeId="0215364e-103d-4d00-bbea-97388e31ace7" valueTypeId="7925b88b-a6e0-443d-b3d6-a74e9984432f"/>
+    <recordManagerType typeId="1c503052-06e8-45f0-88ba-40484ba6b904" valueTypeId="9cd74d49-dc17-4d4f-9500-f4fa16ba67ac"/>
+  </producedTypes>
+  <name>скEDI_ПоказателиПлательщикаНалогов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Показатели плательщика налогов</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Показники платника податків</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="683c30ea-88b6-4c50-ba70-8b11444d2725">
+    <name>ДатаУстановки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата актуальности</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Дата актуальності</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="44113ab3-1cef-4589-adec-c4be566c2b2e">
+    <name>YEAROPER</name>
+    <synonym>
+      <key>ru</key>
+      <value>Операционный год</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Операційний рік</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>4</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="216eec2f-3e3c-419d-8135-5ffa96565f13">
+    <name>ROW_NUM</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер строки данных</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номер рядка даних</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>4</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="c6558d41-dd33-4d19-a214-8edc4d913ca3">
+    <name>HEAD_TIN</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код ЕДРПОУ / номер РНОКПН плательщика налогов</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Код ЄДРПОУ / номер РНОКПП платника податків</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>12</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="d524f15a-c3a7-4312-b926-7abbca02637a">
+    <name>NAME_PLATEJ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Название налога</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Назва податку</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="02b640b1-568e-4634-8dde-f504b3e8bf35">
+    <name>C_RAJ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код административного района, по которому учитывается платеж</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Код адміністративного району, за яким обліковується платіж</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="8ac04078-adde-4b0a-b6e8-f66ee279ecb3">
+    <name>C_REG</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код области</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Код області</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="c976eb4e-7163-4b75-a186-2354a2f80d14">
+    <name>STI_NAME</name>
+    <synonym>
+      <key>ru</key>
+      <value>Название органа ГНС по месту учета плательщика налогов</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Назва органу ДПС за місцем обліку платника податків</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="da924edc-d8da-4eb9-9489-b018cfea9767">
+    <name>KOD_RECIPIENT</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код ЕДРПОУ финансового учреждения, получателя платежей в бюджет</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Код ЄДРПОУ фінансової установи, отримувача платежів до бюджету</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>12</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="8c311da3-01fd-4604-8446-9e364b038750">
+    <name>NAME_RECIPIENT</name>
+    <synonym>
+      <key>ru</key>
+      <value>Название финансового учреждения, получателя платежей в бюджет</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Назва фінансової установи, отримувача платежів до бюджету</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>500</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="c232cc03-5f47-4f5c-b5ed-5a0b97d817d7">
+    <name>VB</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код вида бюджета</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Код виду бюджету</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="3acee786-c4a3-49ee-b8ac-057899398f9b">
+    <name>SHOT</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код бюджетной классификации платежа в бюджет</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Код бюджетної класифікації платежу до бюджету</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="00448154-4c9b-42b1-bfff-2c46cec94282">
+    <name>MFO</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код МФО финансового учреждения, получателя платежей в бюджет</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Код МФО фінансової установи, отримувача платежів до бюджету</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>6</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="8ebc0e15-9b28-4d28-92bd-50bf03ca865a">
+    <name>BUD_ACCOUNT</name>
+    <synonym>
+      <key>ru</key>
+      <value>Бюджетный счет по учету платежей</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Бюджетний рахунок по обліку платежів</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="7429ac0d-155e-4d51-bac7-51c5c62df9c5">
+    <name>ST</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья интегрированой карточки плательщика</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Стаття інтегрованої картки платника</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="4e718753-96aa-43d3-94b5-8744ef26b98d">
+    <name>NARAH_0</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начисленная сумма налога</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Нарахована сума податку</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>17</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="270c840b-e1b4-4f1d-8d26-5cd51195973f">
+    <name>SPLBD_0</name>
+    <synonym>
+      <key>ru</key>
+      <value>Оплаченая в бюджет сумма налогов</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Сплачена до бюджету сума податків</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>17</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="97803a6f-a84c-4ce6-b252-dc2d01b12e91">
+    <name>POVBD_0</name>
+    <synonym>
+      <key>ru</key>
+      <value>Возвращенная из бюджета сумма налогов</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Повернута з бюджету сума податків</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>17</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="ae82539a-be88-43af-aa3c-c1287423f307">
+    <name>PEREPL_0</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма переплаты</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Сума переплати</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>17</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="9eedc226-def4-4e94-8a87-dd90a53fe38e">
+    <name>NEDOIM_0</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма налогового долга</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Сума податкового боргу</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>17</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="2909bb5d-30fe-40e1-a0c3-745a08ea93e9">
+    <name>PENIA_0</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начисленная сумма пени</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Нарахована сума пені</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>17</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="7eda7ad3-f203-4ce5-9e36-925192208f66">
+    <name>TSTMP</name>
+    <synonym>
+      <key>ru</key>
+      <value>Время расчета показателей</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Час розрахунку показників</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="62a65ed5-62bc-4220-a9f3-090ea074a90e">
+    <name>IDPMNT</name>
+    <synonym>
+      <key>ru</key>
+      <value>IDPMNT</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>IDPMNT</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="a787c49f-01e0-4cd5-b683-d164f2005558">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация EDI</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація EDI</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.скEDI_Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d8ee2947-5354-4f4e-b6b9-e39f1fd2bfd0">
+    <name>Год</name>
+    <synonym>
+      <key>ru</key>
+      <value>Год</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Рік</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>4</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="9576dbdf-29a2-4ccf-8e57-a229c65ed875">
+    <name>НомерПоказателя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер показателя</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номер показника</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>4</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>
