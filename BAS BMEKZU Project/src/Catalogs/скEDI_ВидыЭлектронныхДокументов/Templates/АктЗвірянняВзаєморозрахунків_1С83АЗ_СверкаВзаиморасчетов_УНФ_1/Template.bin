@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаК</dataPath>
+			<field>ДатаК</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_DOC_ORG</dataPath>
+			<field>Документ</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_DOC_SIDE</dataPath>
+			<field>ДокументК</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_DT_ORG</dataPath>
+			<field>СуммаДолгКонтрагента</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_KT_ORG</dataPath>
+			<field>СуммаДолгОрганизации</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_DT_SIDE</dataPath>
+			<field>СуммаДолгКонтрагентаК</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_KT_SIDE</dataPath>
+			<field>СуммаДолгОрганизацииК</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	СверкаВзаиморасчетовДанныеКонтрагента.ВхДатаДокумента КАК ДатаК,
+	СверкаВзаиморасчетовДанныеОрганизации.ДатаДокумента КАК Дата,
+	СверкаВзаиморасчетовДанныеКонтрагента.ОписаниеДокумента КАК ДокументК,
+	СверкаВзаиморасчетовДанныеОрганизации.ОписаниеДокумента КАК Документ,
+	СверкаВзаиморасчетовДанныеКонтрагента.СуммаДолгКонтрагента КАК СуммаДолгКонтрагентаК,
+	СверкаВзаиморасчетовДанныеОрганизации.СуммаДолгОрганизации КАК СуммаДолгОрганизации,
+	СверкаВзаиморасчетовДанныеКонтрагента.СуммаДолгОрганизации КАК СуммаДолгОрганизацииК,
+	СверкаВзаиморасчетовДанныеОрганизации.СуммаДолгКонтрагента КАК СуммаДолгКонтрагента
+ИЗ
+	Документ.СверкаВзаиморасчетов.ДанныеОрганизации КАК СверкаВзаиморасчетовДанныеОрганизации
+		ПОЛНОЕ СОЕДИНЕНИЕ Документ.СверкаВзаиморасчетов.ДанныеКонтрагента КАК СверкаВзаиморасчетовДанныеКонтрагента
+		ПО СверкаВзаиморасчетовДанныеОрганизации.Ссылка = СверкаВзаиморасчетовДанныеКонтрагента.Ссылка
+			И СверкаВзаиморасчетовДанныеОрганизации.РасчетныйДокумент = СверкаВзаиморасчетовДанныеКонтрагента.РасчетныйДокумент
+ГДЕ
+	(СверкаВзаиморасчетовДанныеОрганизации.Ссылка = &amp;Ссылка
+			ИЛИ СверкаВзаиморасчетовДанныеКонтрагента.Ссылка = &amp;Ссылка)
+
+УПОРЯДОЧИТЬ ПО
+	Дата</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>TAB1_DATA_SIDE</dataPath>
+		<expression>Выбор Когда ДатаК = ДАТАВРЕМЯ(1, 1, 1) Тогда "" Иначе Строка(ДатаК) Конец</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>TAB1_DATA_SIDE</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>TAB1_DATA_ORG</dataPath>
+		<expression>Выбор Когда Дата = ДАТАВРЕМЯ(1, 1, 1) Тогда "" Иначе Строка(Дата) Конец</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>TAB1_DATA_ORG</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<parameter>
+		<name>Ссылка</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ссылка</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:type="dcscor:DesignTimeValue">Документ.АктСверкиВзаиморасчетов.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_DATA_ORG</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_DATA_SIDE</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_DOC_ORG</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_DOC_SIDE</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_DT_ORG</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_DT_SIDE</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_KT_ORG</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_KT_SIDE</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Ссылка</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

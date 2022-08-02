@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="682461e6-2f46-4e34-9c72-1345a2bf5ff6">
+  <producedTypes>
+    <selectionType typeId="3fa84728-ace2-44e1-b315-74f3bd0295dc" valueTypeId="7611252c-5baf-474b-bf28-05936feef55c"/>
+    <listType typeId="32c4b3d8-f034-4d29-90c1-6be98cfe4c05" valueTypeId="b117b1ec-e8af-40fb-b6c4-b383e47b1f80"/>
+    <managerType typeId="b5f00267-e4e5-4abb-8d97-8230afc51702" valueTypeId="1dd674e3-9650-4ffd-b189-4f53b49b0a6e"/>
+    <recordSetType typeId="ef2234ca-8144-424a-acff-d366ffb04322" valueTypeId="97ee477e-dda9-4b7c-b48f-6f83b08aa9f2"/>
+    <recordKeyType typeId="fe713885-2c0a-4f89-b82a-24a154640f16" valueTypeId="3e0cb026-07fb-4c7c-b8ca-1cea30b3cd23"/>
+    <recordType typeId="84e058d7-6247-4cc0-b5d4-3543b4dabef3" valueTypeId="ae676d19-20bd-4b49-961b-bc4c00ad5def"/>
+    <recordManagerType typeId="129cd9d0-46a1-4292-bd8a-444ead950089" valueTypeId="8cda2a17-bf59-412d-9d30-103ab7568cee"/>
+  </producedTypes>
+  <name>скEDI_КонтактныеДанныеКонтрагентов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Контактные данные Контрагентов</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Контактні дані Контрагентів</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.скEDI_КонтактныеДанныеКонтрагентов.Form.ФормаЗаписи</defaultRecordForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="2550b4c5-326e-4beb-8cb3-70f83b366809">
+    <name>ОтправлятьСсылкуНаДокументАвтоматически</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отправлять ссылку на документ автоматически</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відправляти посилання на документ автоматично</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="1f863525-dfc0-476b-937b-1bdfa5045d30">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="07fea4cf-bbe8-49b9-9c62-270d39d04a9a">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Коментар</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="2bef55f6-3759-4eeb-ae3d-eb5f9e1c6e93">
+    <name>ЕДРПОУКонтрагента</name>
+    <synonym>
+      <key>ru</key>
+      <value>ЕДРПОУ Контрагента</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>ЄДРПОУ Контрагента</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="b3b5f0a5-551c-4d42-abe7-f1fa7da9d8d6">
+    <name>ЭлектроннаяПочта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Электронная почта</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Електронна пошта</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="dc8f9575-971b-4e0b-afd2-75487d686a5d">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>uk</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

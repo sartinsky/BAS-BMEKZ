@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6de8853f-c739-4cde-9e1e-ff0bafb6fa30">
+  <producedTypes>
+    <selectionType typeId="b6f18561-b935-4574-a62a-68cb2d371be6" valueTypeId="9569b486-8b64-4152-8853-8c0027543c20"/>
+    <listType typeId="0a98ca66-3c44-4d1a-9643-336d59a930f6" valueTypeId="0ca7a5b4-988d-4c95-9856-b3d83839d0cc"/>
+    <managerType typeId="ab491da2-8470-4f03-8499-6ece05758bd7" valueTypeId="46326297-62b2-4211-a921-bc7ffe846146"/>
+    <recordSetType typeId="1f3312bb-8fb9-485c-bba9-5f71f0941520" valueTypeId="56406190-8584-4eb0-a07b-6ca5451bdaa2"/>
+    <recordKeyType typeId="77d81341-c5ef-4203-be04-e13075355be2" valueTypeId="63d510a7-d7b8-4fa4-8e65-a8b11c57168f"/>
+    <recordType typeId="7b3463cb-467a-41bc-8551-86f7f31a7bb9" valueTypeId="506b48f4-23d3-4e88-8997-6e02652a7974"/>
+    <recordManagerType typeId="f0b54e2b-d30d-40e0-9405-e17a198cd86a" valueTypeId="4a3d232c-bdc9-4217-b695-71781431608f"/>
+  </producedTypes>
+  <name>скEDI_НастройкиРегламентныхЗаданий</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройки регламентных заданий</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Настройки регламентных заданий</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="04f1b167-8bb8-4aa6-a9ab-cf5ffdf93b53">
+    <name>Подпись</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подпись</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.скEDI_Подписи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="f0d43442-5e7f-4766-b724-86265f06e25b">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.скEDI_Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="6d390204-19bc-4568-b4dc-7008d5fdee19">
+    <name>ВидОперацииРегламентногоЗадания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид операции регламентного задания</value>
+    </synonym>
+    <type>
+      <types>EnumRef.скEDI_ВидыОперацийРегламентныхЗаданий</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="e745f040-a07e-4d5a-b3d5-bd4c779f271d">
+    <name>ИдентификаторРегЗадания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор рег задания</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

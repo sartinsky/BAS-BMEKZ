@@ -60,7 +60,7 @@
         <common>true</common>
       </userVisible>
       <dataPath xsi:type="form:DataPath">
-        <segments>Список.Date</segments>
+        <segments>Список.Дата</segments>
       </dataPath>
       <defaultItem>true</defaultItem>
       <extendedTooltip>
@@ -107,7 +107,7 @@
         <common>true</common>
       </userVisible>
       <dataPath xsi:type="form:DataPath">
-        <segments>Список.Number</segments>
+        <segments>Список.Номер</segments>
       </dataPath>
       <extendedTooltip>
         <name>НомерРасширеннаяПодсказка</name>
@@ -173,6 +173,52 @@
       <contextMenu>
         <name>ОрганизацияКонтекстноеМеню</name>
         <id>23</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>СпособВыплаты</name>
+      <id>43</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Список.СпособВыплаты</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>СпособВыплатыРасширеннаяПодсказка</name>
+        <id>45</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>СпособВыплатыКонтекстноеМеню</name>
+        <id>44</id>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -431,7 +477,7 @@
       <enabled>true</enabled>
       <userVisible/>
       <dataPath xsi:type="form:DataPath">
-        <segments>Список.Ref</segments>
+        <segments>Список.Ссылка</segments>
       </dataPath>
       <extendedTooltip>
         <name>СсылкаРасширеннаяПодсказка</name>
@@ -694,16 +740,17 @@
     <main>true</main>
     <extInfo xsi:type="form:DynamicListExtInfo">
       <queryText>ВЫБРАТЬ
-	ИНАГРО_ЗарплатаКВыплатеОрганизаций.Ссылка,
-	ИНАГРО_ЗарплатаКВыплатеОрганизаций.ПометкаУдаления,
-	ИНАГРО_ЗарплатаКВыплатеОрганизаций.Номер,
-	ИНАГРО_ЗарплатаКВыплатеОрганизаций.Дата,
-	ИНАГРО_ЗарплатаКВыплатеОрганизаций.Проведен,
-	ИНАГРО_ЗарплатаКВыплатеОрганизаций.Организация,
-	ИНАГРО_ЗарплатаКВыплатеОрганизаций.ВидВыплаты,
-	ИНАГРО_ЗарплатаКВыплатеОрганизаций.Ответственный,
+	ИНАГРО_ЗарплатаКВыплатеОрганизаций.Ссылка КАК Ссылка,
+	ИНАГРО_ЗарплатаКВыплатеОрганизаций.ПометкаУдаления КАК ПометкаУдаления,
+	ИНАГРО_ЗарплатаКВыплатеОрганизаций.Номер КАК Номер,
+	ИНАГРО_ЗарплатаКВыплатеОрганизаций.Дата КАК Дата,
+	ИНАГРО_ЗарплатаКВыплатеОрганизаций.Проведен КАК Проведен,
+	ИНАГРО_ЗарплатаКВыплатеОрганизаций.Организация КАК Организация,
+	ИНАГРО_ЗарплатаКВыплатеОрганизаций.ВидВыплаты КАК ВидВыплаты,
+	ИНАГРО_ЗарплатаКВыплатеОрганизаций.Ответственный КАК Ответственный,
 	СУММА(ИНАГРО_ЗарплатаКВыплатеОрганизацийЗарплата.Выплата) КАК Выплата,
-	МАКСИМУМ(ИНАГРО_ЗарплатаКВыплатеОрганизацийЗарплата.СчетУчета) КАК СчетУчета
+	МАКСИМУМ(ИНАГРО_ЗарплатаКВыплатеОрганизацийЗарплата.СчетУчета) КАК СчетУчета,
+	ИНАГРО_ЗарплатаКВыплатеОрганизацийРаботникиОрганизации.СпособВыплаты КАК СпособВыплаты
 ИЗ
 	Документ.ИНАГРО_ЗарплатаКВыплатеОрганизаций КАК ИНАГРО_ЗарплатаКВыплатеОрганизаций
 		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ИНАГРО_ЗарплатаКВыплатеОрганизаций.Зарплата КАК ИНАГРО_ЗарплатаКВыплатеОрганизацийЗарплата
@@ -722,7 +769,8 @@
 	ИНАГРО_ЗарплатаКВыплатеОрганизаций.Проведен,
 	ИНАГРО_ЗарплатаКВыплатеОрганизаций.Организация,
 	ИНАГРО_ЗарплатаКВыплатеОрганизаций.Ответственный,
-	ИНАГРО_ЗарплатаКВыплатеОрганизаций.ВидВыплаты</queryText>
+	ИНАГРО_ЗарплатаКВыплатеОрганизаций.ВидВыплаты,
+	ИНАГРО_ЗарплатаКВыплатеОрганизацийРаботникиОрганизации.СпособВыплаты</queryText>
       <mainTable>Document.ИНАГРО_ЗарплатаКВыплатеОрганизаций</mainTable>
       <dynamicDataRead>true</dynamicDataRead>
       <autoFillAvailableFields>true</autoFillAvailableFields>

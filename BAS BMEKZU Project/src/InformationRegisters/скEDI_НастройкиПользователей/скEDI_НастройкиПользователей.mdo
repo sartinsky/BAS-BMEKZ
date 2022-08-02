@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cc0db588-7812-4bab-bf22-32f345d203eb">
+  <producedTypes>
+    <selectionType typeId="e828262d-f2d7-4f16-acbe-292e37fa1555" valueTypeId="8815b85a-6df9-402d-8de4-32c1126c6924"/>
+    <listType typeId="85680963-0c76-45be-b4e2-39e02ccd6db3" valueTypeId="f4a4d464-dab0-4dd9-b403-3966e79bb6f8"/>
+    <managerType typeId="60bfc1d6-7f79-4b56-9284-0cb7eeb33136" valueTypeId="0076afed-91bc-45dc-8430-c2f35a606aee"/>
+    <recordSetType typeId="e44747b2-7be5-4958-aab7-eb73a1e27ecb" valueTypeId="b9cd0443-e1a7-4ae0-9aba-fbd333470547"/>
+    <recordKeyType typeId="8442194d-bbeb-4c57-875b-cc25678f3966" valueTypeId="b77b4f75-9b05-451f-8fb7-df0b173b0bd0"/>
+    <recordType typeId="723265fc-6c1a-4dc6-8f35-209e15b4dd7a" valueTypeId="b9a3c362-9c33-4501-b33d-e26d0e63fcc2"/>
+    <recordManagerType typeId="7288b36a-85f2-41a7-8916-45ecb4b75bad" valueTypeId="efb7d476-46c4-4cac-b10a-e6c2288d99c3"/>
+  </producedTypes>
+  <name>скEDI_НастройкиПользователей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройки пользователей</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Налаштування користувачів</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="0f4de893-75d4-4014-9b9f-cd2374605d7c">
+    <name>ЗначениеНастройки</name>
+    <synonym>
+      <key>uk</key>
+      <value>Значение настройки</value>
+    </synonym>
+    <type>
+      <types>Characteristic.скEDI_НастройкиПользователей</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <linkByType>
+      <field>InformationRegister.скEDI_НастройкиПользователей.Dimension.Настройка</field>
+    </linkByType>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="c86675d1-c6ff-4058-8ae1-a008801fb180">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Користувач</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="bb9dfc52-6815-425f-a66b-49e449c3eb4e">
+    <name>Настройка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройка</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Налаштування</value>
+    </synonym>
+    <type>
+      <types>ChartOfCharacteristicTypesRef.скEDI_НастройкиПользователей</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

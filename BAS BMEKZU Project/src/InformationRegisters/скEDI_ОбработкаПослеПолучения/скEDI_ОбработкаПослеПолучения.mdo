@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f988d3e9-c8d6-4e00-8e76-86e40068168c">
+  <producedTypes>
+    <selectionType typeId="80e833f0-d663-4b81-91de-8b5bcecd5235" valueTypeId="7e7a1b66-4b90-46b8-9337-f629025e4b7e"/>
+    <listType typeId="894ce1fb-2d8f-4d90-b934-66e187bfa6f9" valueTypeId="6fdbf493-ab5f-4745-8555-840ab36814bd"/>
+    <managerType typeId="11d5ff0b-853b-418f-b9a1-17bbfad7ce7e" valueTypeId="2b80a44b-91c8-48e9-aba7-d2a2ddbc6799"/>
+    <recordSetType typeId="fa07c16e-ebc2-4149-a0b8-782d8f240811" valueTypeId="0c8c984c-a938-4d7f-a3e1-cf2e2d71b2c3"/>
+    <recordKeyType typeId="d2ab0700-e6cd-48c8-b18f-b35149324aea" valueTypeId="866a31b0-d809-47f7-8299-0a4cec0ef96f"/>
+    <recordType typeId="7c99660d-2c27-442f-b738-1067ddeeef54" valueTypeId="c2690bd0-0a2d-4457-bcda-5debba6344f9"/>
+    <recordManagerType typeId="2bc6350a-e1fe-422d-b7d5-a32d8c388fd2" valueTypeId="a7b53e00-7ee4-40fe-9984-6704482df256"/>
+  </producedTypes>
+  <name>скEDI_ОбработкаПослеПолучения</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обработка после получения входящих сообщений</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Обробка після отримання вхідних повідомлень</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="1fb3f949-1b64-45b1-90ce-d34590cfe46e">
+    <name>Действие</name>
+    <synonym>
+      <key>ru</key>
+      <value>Действие</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Дія</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="787727ee-8e8e-4b50-a40d-6fd9717a94cc">
+    <name>ТелоДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тело документа</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Тіло документа</value>
+    </synonym>
+    <comment>Base64-строка</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="33a30ca4-29af-4253-8469-4c95905b032b">
+    <name>ДатаСобытия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата события</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Дата події</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="ada9c513-9584-4274-8276-79610254fe1a">
+    <name>Квитанция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Квитанция</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Квитанція</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.скEDI_Квитанция</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="30801031-a43d-48df-b5b3-e753363d6006">
+    <name>Событие</name>
+    <synonym>
+      <key>ru</key>
+      <value>Событие</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Подія</value>
+    </synonym>
+    <type>
+      <types>EnumRef.скEDI_СобытияЭлектронныхДокументов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="275d1385-6b8c-4928-8eb2-1c7ba9165ca3">
+    <name>ИнформацияОДокументе</name>
+    <synonym>
+      <key>ru</key>
+      <value>Информация о документе</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Інформація про документ</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="45abc7a8-82b5-4147-876a-fabd95803962">
+    <name>ЭлектронныйДокумент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Электронный документ</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Електронний документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.скEDI_ЭлектронныйДокумент</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="ee6f52d0-40a1-49bd-9b96-14012c6f53f5">
+    <name>ЕДРПОУ</name>
+    <synonym>
+      <key>ru</key>
+      <value>ЕДРПОУ</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>ЄДРПОУ</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="8ababf28-5d11-4d4e-b045-20c605c99eaf">
+    <name>Дата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

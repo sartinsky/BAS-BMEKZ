@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="72fcaee2-72a7-4273-b7c1-4d428287aa09">
+  <producedTypes>
+    <selectionType typeId="54e081fa-ea6b-42bc-8cdc-9e8377c4f0c8" valueTypeId="b896f7d6-0b6e-4385-a46a-fcfc8ad1a01a"/>
+    <listType typeId="63546468-98c9-4ef9-a504-ff10f2036bfc" valueTypeId="2a05458a-9d11-4500-806f-bb10fcaf742f"/>
+    <managerType typeId="b42b9a14-2f0f-4713-a872-be559248374a" valueTypeId="1c82eb4f-6eb9-46ad-973a-c585839e0616"/>
+    <recordSetType typeId="4e5a6a93-71c3-4654-a701-25f08c27bad5" valueTypeId="6b8d4310-1357-4a52-94a0-edf108a7f706"/>
+    <recordKeyType typeId="a5be4826-09e9-4447-b56e-7d1bcafc8ae2" valueTypeId="5155bbf1-74e5-41d3-9c60-8c86d57d6aed"/>
+    <recordType typeId="469301b0-afb7-4b84-bf8b-167b3200a3fa" valueTypeId="5bde4e03-5890-401a-b336-010497cbc6b2"/>
+    <recordManagerType typeId="284b8792-7a34-4e19-be8c-96793c131bbf" valueTypeId="7ebcf97a-0e05-41b7-b2aa-449d53ade0df"/>
+  </producedTypes>
+  <name>скEDI_СчетчикиДополнительныхЭлектронныхДокументовДФС</name>
+  <synonym>
+    <key>ru</key>
+    <value>Счетчики дополнительных электронных документов ГНС</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Лічільники додаткових електронних документів ДПС</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.скEDI_СчетчикиДополнительныхЭлектронныхДокументовДФС.Form.ФормаЗаписи</defaultRecordForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Month</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="9eb6c78e-035e-429b-94b4-6e063e0aaf6d">
+    <name>ЗначениеСчетчика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение счетчика</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="a09d6c20-357e-431d-8db2-aa55b9194998">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.скEDI_Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="b799ae6f-7f84-4383-a345-926c4976cae1">
+    <name>ТипДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип документа</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Тип документу</value>
+    </synonym>
+    <type>
+      <types>EnumRef.скEDI_ТипыДополнительныхЭлектронныхДокументовДФС</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="2f0178af-c995-46b1-b58e-ae5bcace4662">
+    <name>ТипПериода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип периода</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Тип періоду</value>
+    </synonym>
+    <type>
+      <types>EnumRef.скEDI_ТипПериодаСчетчика</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="7959d5cd-df18-49d8-9ded-aeb52b4af997">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

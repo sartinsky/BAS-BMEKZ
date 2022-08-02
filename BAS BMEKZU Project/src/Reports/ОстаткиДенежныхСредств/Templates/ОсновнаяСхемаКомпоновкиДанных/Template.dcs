@@ -574,9 +574,9 @@
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 			<dcsat:name>ТекстШапки</dcsat:name>
 			<dcsat:expression>ВЫБОР 
-	КОГДА ПараметрыДанных.ВедетсяУчетПоВалютам 
-		ТОГДА "Итого, грн" 
-	ИНАЧЕ "Итого" 
+    КОГДА ПараметрыДанных.ВедетсяУчетПоВалютам 
+        ТОГДА НСтр("ru='Итого, грн';uk='Всього, грн'") 
+    ИНАЧЕ НСтр("ru='Итого';uk='Разом'") 
 КОНЕЦ</dcsat:expression>
 		</parameter>
 	</template>

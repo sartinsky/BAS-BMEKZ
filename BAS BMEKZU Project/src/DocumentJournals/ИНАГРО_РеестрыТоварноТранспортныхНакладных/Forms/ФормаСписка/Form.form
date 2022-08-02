@@ -75,7 +75,7 @@
         </extInfo>
       </extendedTooltip>
       <commandName>Form.Command.Создать</commandName>
-      <representation>PictureAndText</representation>
+      <representation>Picture</representation>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <placementArea>UserCmds</placementArea>
@@ -223,6 +223,36 @@
         <name>ФормаГруппаСформироватьРеестрыТТН</name>
         <id>723</id>
         <items xsi:type="form:Button">
+          <name>СоздатьНаОсновании</name>
+          <id>735</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>СоздатьНаОснованииРасширеннаяПодсказка</name>
+            <id>736</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.СоздатьНаОсновании</commandName>
+          <representation>Picture</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
           <name>ФормаСформироватьРеестрыТТН</name>
           <id>82</id>
           <visible>true</visible>
@@ -246,7 +276,6 @@
             </extInfo>
           </extendedTooltip>
           <commandName>Form.Command.СформироватьРеестрыТТН</commandName>
-          <representation>PictureAndText</representation>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
           <placementArea>UserCmds</placementArea>
@@ -2981,6 +3010,10 @@
     <autoFill>true</autoFill>
   </autoCommandBar>
   <handlers>
+    <event>ChoiceProcessing</event>
+    <name>ОбработкаВыбора</name>
+  </handlers>
+  <handlers>
     <event>NotificationProcessing</event>
     <name>ОбработкаОповещения</name>
   </handlers>
@@ -3180,6 +3213,27 @@
       <numberQualifiers>
         <precision>12</precision>
       </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ОтборДокумент</name>
+    <title>
+      <key>ru</key>
+      <value>Отбор документ</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Відбір документ</value>
+    </title>
+    <id>9</id>
+    <valueType>
+      <types>DocumentRef</types>
     </valueType>
     <view>
       <common>true</common>
@@ -3407,6 +3461,35 @@
       </handler>
     </action>
     <currentRowUse>Auto</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>СоздатьНаОсновании</name>
+    <title>
+      <key>ru</key>
+      <value>Создать на основании</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Створити на підставі</value>
+    </title>
+    <id>9</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Создать на основании</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Створити на підставі</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>СоздатьНаОсновании</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
   </formCommands>
   <commandInterface>
     <navigationPanel/>

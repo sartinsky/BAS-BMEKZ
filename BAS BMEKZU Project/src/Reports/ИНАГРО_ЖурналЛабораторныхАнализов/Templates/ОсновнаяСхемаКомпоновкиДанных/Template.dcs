@@ -895,7 +895,7 @@
 			ИНАЧЕ 0
 		КОНЕЦ) КАК Минеральная,
 	МАКСИМУМ(ВЫБОР
-			КОГДА ИНАГРО_ЛабораторныйАнализРезультаты.Характеристика = ЗНАЧЕНИЕ(ПланВидовХарактеристик.ИНАГРО_ХарактеристикиВидовКультур.ПоврежденныхЗерен)
+			КОГДА ИНАГРО_ЛабораторныйАнализРезультаты.Характеристика = ЗНАЧЕНИЕ(ПланВидовХарактеристик.ИНАГРО_ХарактеристикиВидовКультур.Испорченные)
 				ТОГДА ИНАГРО_ЛабораторныйАнализРезультаты.Значение
 			ИНАЧЕ 0
 		КОНЕЦ) КАК Испорченые,
@@ -1001,17 +1001,17 @@
 			ИНАЧЕ 0
 		КОНЕЦ) КАК Зараженность,
 	ИНАГРО_ЛабораторныйАнализ.Ссылка КАК ЛАСсылка,
-	ИНАГРО_ЛабораторныйАнализ.НомерТранспорта,
+	ИНАГРО_ЛабораторныйАнализ.НомерТранспорта КАК НомерТранспорта,
 	ИНАГРО_ЛабораторныйАнализ.НомерУдостоверения КАК НомерСертификата,
 	МАКСИМУМ(ВЫБОР
 			КОГДА ИНАГРО_ЛабораторныйАнализРезультаты.Характеристика = ЗНАЧЕНИЕ(ПланВидовХарактеристик.ИНАГРО_ХарактеристикиВидовКультур.ПроходСита)
 				ТОГДА ИНАГРО_ЛабораторныйАнализРезультаты.Значение
 			ИНАЧЕ 0
 		КОНЕЦ) КАК ПроходСита,
-	ИНАГРО_ЛабораторныйАнализ.Склад,
-	ИНАГРО_ДополнительныеРеквизитыНоменклатуры.ВидКультуры,
-	ИНАГРО_ЛабораторныйАнализ.Урожай,
-	ИНАГРО_ЛабораторныйАнализ.Организация,
+	ИНАГРО_ЛабораторныйАнализ.Склад КАК Склад,
+	ИНАГРО_ДополнительныеРеквизитыНоменклатуры.ВидКультуры КАК ВидКультуры,
+	ИНАГРО_ЛабораторныйАнализ.Урожай КАК Урожай,
+	ИНАГРО_ЛабораторныйАнализ.Организация КАК Организация,
 	ИНАГРО_ЛабораторныйАнализ.ТипЖурнала КАК Журнал,
 	ИНАГРО_ЛабораторныйАнализ.Номер КАК НомерДокумента
 ИЗ
@@ -29498,7 +29498,7 @@
 							<dcsat:appearance>
 								<dcscor:item>
 									<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-									<dcscor:value xmlns:d10p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d10p1:FieldBackColor</dcscor:value>
+									<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FieldBackColor</dcscor:value>
 								</dcscor:item>
 								<dcscor:item>
 									<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
@@ -29514,7 +29514,7 @@
 							<dcsat:appearance>
 								<dcscor:item>
 									<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-									<dcscor:value xmlns:d10p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d10p1:FieldBackColor</dcscor:value>
+									<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FieldBackColor</dcscor:value>
 								</dcscor:item>
 							</dcsat:appearance>
 						</dcsat:tableCell>
@@ -29522,7 +29522,7 @@
 							<dcsat:appearance>
 								<dcscor:item>
 									<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-									<dcscor:value xmlns:d10p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d10p1:FieldBackColor</dcscor:value>
+									<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FieldBackColor</dcscor:value>
 								</dcscor:item>
 							</dcsat:appearance>
 						</dcsat:tableCell>
@@ -29530,7 +29530,7 @@
 							<dcsat:appearance>
 								<dcscor:item>
 									<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-									<dcscor:value xmlns:d10p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d10p1:FieldBackColor</dcscor:value>
+									<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FieldBackColor</dcscor:value>
 								</dcscor:item>
 							</dcsat:appearance>
 						</dcsat:tableCell>
@@ -29538,7 +29538,7 @@
 							<dcsat:appearance>
 								<dcscor:item>
 									<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-									<dcscor:value xmlns:d10p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d10p1:FieldBackColor</dcscor:value>
+									<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FieldBackColor</dcscor:value>
 								</dcscor:item>
 							</dcsat:appearance>
 						</dcsat:tableCell>
@@ -29546,7 +29546,7 @@
 							<dcsat:appearance>
 								<dcscor:item>
 									<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-									<dcscor:value xmlns:d10p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d10p1:FieldBackColor</dcscor:value>
+									<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FieldBackColor</dcscor:value>
 								</dcscor:item>
 							</dcsat:appearance>
 						</dcsat:tableCell>
@@ -29554,7 +29554,7 @@
 							<dcsat:appearance>
 								<dcscor:item>
 									<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-									<dcscor:value xmlns:d10p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d10p1:FieldBackColor</dcscor:value>
+									<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FieldBackColor</dcscor:value>
 								</dcscor:item>
 							</dcsat:appearance>
 						</dcsat:tableCell>
@@ -29562,7 +29562,7 @@
 							<dcsat:appearance>
 								<dcscor:item>
 									<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-									<dcscor:value xmlns:d10p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d10p1:FieldBackColor</dcscor:value>
+									<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FieldBackColor</dcscor:value>
 								</dcscor:item>
 							</dcsat:appearance>
 						</dcsat:tableCell>
@@ -29570,7 +29570,7 @@
 							<dcsat:appearance>
 								<dcscor:item>
 									<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-									<dcscor:value xmlns:d10p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d10p1:FieldBackColor</dcscor:value>
+									<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FieldBackColor</dcscor:value>
 								</dcscor:item>
 							</dcsat:appearance>
 						</dcsat:tableCell>
@@ -29578,7 +29578,7 @@
 							<dcsat:appearance>
 								<dcscor:item>
 									<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-									<dcscor:value xmlns:d10p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d10p1:FieldBackColor</dcscor:value>
+									<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FieldBackColor</dcscor:value>
 								</dcscor:item>
 							</dcsat:appearance>
 						</dcsat:tableCell>
@@ -29586,7 +29586,7 @@
 							<dcsat:appearance>
 								<dcscor:item>
 									<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-									<dcscor:value xmlns:d10p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d10p1:FieldBackColor</dcscor:value>
+									<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FieldBackColor</dcscor:value>
 								</dcscor:item>
 							</dcsat:appearance>
 						</dcsat:tableCell>
@@ -29596,7 +29596,7 @@
 							<dcsat:appearance>
 								<dcscor:item>
 									<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-									<dcscor:value xmlns:d10p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d10p1:FieldBackColor</dcscor:value>
+									<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FieldBackColor</dcscor:value>
 								</dcscor:item>
 								<dcscor:item>
 									<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
@@ -29628,7 +29628,7 @@
 							<dcsat:appearance>
 								<dcscor:item>
 									<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-									<dcscor:value xmlns:d10p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d10p1:FieldBackColor</dcscor:value>
+									<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FieldBackColor</dcscor:value>
 								</dcscor:item>
 								<dcscor:item>
 									<dcscor:parameter>Шрифт</dcscor:parameter>
@@ -29718,7 +29718,7 @@
 							<dcsat:appearance>
 								<dcscor:item>
 									<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-									<dcscor:value xmlns:d10p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d10p1:FieldBackColor</dcscor:value>
+									<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FieldBackColor</dcscor:value>
 								</dcscor:item>
 								<dcscor:item>
 									<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
@@ -29745,7 +29745,7 @@
 							<dcsat:appearance>
 								<dcscor:item>
 									<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-									<dcscor:value xmlns:d10p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d10p1:FieldBackColor</dcscor:value>
+									<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FieldBackColor</dcscor:value>
 								</dcscor:item>
 								<dcscor:item>
 									<dcscor:parameter>Шрифт</dcscor:parameter>

@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2b6a0956-6567-4d43-b473-b6cccfba471a">
+  <producedTypes>
+    <objectType typeId="4a4d59b5-7f70-4f2f-8571-cd29eef8986f" valueTypeId="e65f32c2-8cdc-414d-8272-1f11910be717"/>
+    <refType typeId="350b527a-fec1-4280-a070-851f748341ab" valueTypeId="e058f2e3-d5d3-4d0b-9fe8-d2911dca33b4"/>
+    <selectionType typeId="b2fe3dae-a216-4010-a6ec-50f176af55f5" valueTypeId="78551d3d-0bd1-400c-a453-f090798af94d"/>
+    <listType typeId="1b61cd59-c305-4c95-9186-f37ff249a50a" valueTypeId="9e056148-efe3-4c5f-9caf-8196aa87ab90"/>
+    <managerType typeId="92e0b029-2e17-4551-bdd5-00c1017bc133" valueTypeId="57ff89da-5203-4dfc-b124-eaab85272a90"/>
+  </producedTypes>
+  <name>скEDI_ЗапросНаПолучениеРеквизитовЭлектронногоСчета</name>
+  <synonym>
+    <key>ru</key>
+    <value>Запрос на получение реквизитов электронного счета ...</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Запит щодо отримання реквізитів електронного рахунку ...</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.скEDI_ЗапросНаПолучениеРеквизитовЭлектронногоСчета.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Posted</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <numberPeriodicity>Month</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.скEDI_ЗапросНаПолучениеРеквизитовЭлектронногоСчета.Form.ФормаДокумента</defaultObjectForm>
+  <realTimePosting>Deny</realTimePosting>
+  <attributes uuid="57a7b964-4e7d-4d4f-9d27-4352ef26f387">
+    <name>ОрганизацияEDI</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация EDI</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація EDI</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.скEDI_Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="68dba311-1ea2-49e3-9f02-353db857412e">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="44d675e6-ba72-4519-a5da-512d232c495c">
+    <name>Состояние</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Стан</value>
+    </synonym>
+    <type>
+      <types>EnumRef.скEDI_СостоянияДополнительныхЭлектронныхДокументовДФС</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="a61c9391-78c7-4a7d-8b32-dc7dbc8b2d70">
+    <name>ИмяФайлаДФС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя файла</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Ім'я файлу</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b3087926-fb3b-4988-b491-23407109110c">
+    <name>НомерСчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер счета</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номер рахунку</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2523225d-ecde-4f9e-bb22-a7ab277cf228">
+    <name>ПоВсемОткрытымСчетам</name>
+    <synonym>
+      <key>ru</key>
+      <value>По всем открытым счетам</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>По усіх відкритих рахунках</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="68546983-87f5-47fd-9128-b639b544c25e">
+    <name>КтоОформилЗапрос</name>
+    <synonym>
+      <key>ru</key>
+      <value>Кто оформил запрос</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Хто оформив запит</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="f59103c4-35f0-4524-a879-6e16b183cc96">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Відповідальний</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="63708a54-6421-44cd-9b0a-b669b7cd13c8">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Коментар</value>
+    </synonym>
+    <comment>(Общ) Любая дополнительная информация</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="755dee00-fcab-4bde-8468-73ef417dc837">
+    <name>ДатаОтправки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата отправки</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Дата відправки</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e5c3f2ed-ba17-46fa-bfc2-0a5501a154da">
+    <name>ДатаФормированияОтвета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата формирования выписки</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Дата формування витягу</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="74c6b46d-79c1-4b0b-bef1-592c7e12e4b4">
+    <name>ДатаПолученияОтвета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата получения выписки</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Дата отримання витягу</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="84a99113-8132-4997-9fc4-590d2b272532">
+    <name>ПричинаОтклоненияДФС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Причина отклонения ГНС</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Причина відхилення ДПС</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b2cc36c7-32d2-493a-a764-eff1d248ba35">
+    <name>ПоследняяОперация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Последняя операция</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Остання операція</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="1b1d501e-9a9a-41f6-9a7c-8cd11d208ca2">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="870e91e7-0d9c-4590-86eb-afb812432ed6">
+    <producedTypes>
+      <objectType typeId="1322d4a8-5ab0-4989-b921-8487048f8f47" valueTypeId="2626d7ae-9685-4f4b-9ac3-4725e32634b3"/>
+      <rowType typeId="e5aac181-ecbd-4115-9163-14b7a5c5f8f3" valueTypeId="650e4d9e-43c7-4707-9703-904733d39967"/>
+    </producedTypes>
+    <name>Подписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подписи</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Підписи</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="19204cdd-3794-4ad9-973c-e5340e64c6ff">
+      <name>Подпись</name>
+      <synonym>
+        <key>ru</key>
+        <value>Подпись</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Підпис</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.скEDI_Подписи</types>
+        <types>CatalogRef.скEDI_ГруппыПодписей</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="4e6ee838-7adc-4b8c-83fd-bb7bd485e757">
+      <name>Подписано</name>
+      <synonym>
+        <key>ru</key>
+        <value>Подписано</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Підписано</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5029347e-37b0-4188-8cf0-b5bd164cb49a">
+      <name>ДатаПодписания</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата подписания</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Дата підпису</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="422b3aa5-281e-4204-b96b-43b6e25a483b">
+    <producedTypes>
+      <objectType typeId="24693118-883e-4366-a53f-51d67bea494b" valueTypeId="f78ab64f-b371-4519-8bea-696680ee8efe"/>
+      <rowType typeId="c6236024-fe4f-4bcb-a395-56c77085f8a1" valueTypeId="b507228a-a978-4cc6-9e03-99b839d26832"/>
+    </producedTypes>
+    <name>ПодписиКонтрагента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подписи контрагента</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Підписи контрагента</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="4e732a2c-660a-43ec-8e26-1db888ab07b2">
+      <name>ТелоСертификата</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тело сертификата</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Тіло сертифіката</value>
+      </synonym>
+      <comment>Base64-строка, построенная на основании двоичных данных файла сертификата</comment>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="0c0133a4-f317-4685-bb4e-e2ead4aebd74">
+      <name>ИмяПодписанта</name>
+      <synonym>
+        <key>ru</key>
+        <value>Имя подписанта</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Ім'я підписанта</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>511</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b575662d-1813-49c7-8c1d-a432c7a87e4a">
+      <name>ДолжностьПодписанта</name>
+      <synonym>
+        <key>ru</key>
+        <value>Должность подписанта</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Посада підписанта</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>255</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="2a4b8471-3701-4930-9833-f96bbf02f60c">
+      <name>Подписано</name>
+      <synonym>
+        <key>ru</key>
+        <value>Подписано</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Підписано</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="fb54dd5a-824e-450a-b024-0d2fbe1b8178">
+      <name>ДатаПодписания</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата подписания</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Дата підпису</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="25e3ad95-4718-4024-9955-b8d230191889">
+      <name>ПодписьВерна</name>
+      <synonym>
+        <key>ru</key>
+        <value>Подпись верна</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Підпис вірний</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="88c71c36-8d0e-442c-9ca0-00cad0fb1d45">
+      <name>Роль</name>
+      <synonym>
+        <key>ru</key>
+        <value>Роль</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Роль</value>
+      </synonym>
+      <type>
+        <types>EnumRef.скEDI_РолиПодписей</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="16eaf940-4540-41d9-b568-fba4f9c9f247">
+      <name>ДРФОПодписанта</name>
+      <synonym>
+        <key>ru</key>
+        <value>ДРФО подписанта</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>ДРФО підписанта</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>12</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c54ac234-b308-43a1-b857-0161cc65db04">
+      <name>ТелоФаксимиле</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тело факсимиле</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Тіло факсиміле</value>
+      </synonym>
+      <comment>Не используется</comment>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a514f4bc-a9d6-4b22-976c-43544b39f792">
+      <name>TSPСтатус</name>
+      <synonym>
+        <key>ru</key>
+        <value>TSP Статус</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>TSP Статус</value>
+      </synonym>
+      <type>
+        <types>EnumRef.скEDI_TSPСтатус</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="aa787ec0-5868-4311-9fa8-b574a9befb9f">
+      <name>OCSPСтатус</name>
+      <synonym>
+        <key>ru</key>
+        <value>OCSP Статус</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>OCSP Статус</value>
+      </synonym>
+      <type>
+        <types>EnumRef.скEDI_OCSPСтатус</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="e4c2586e-ed21-4c0d-ac58-153fbd9e2191">
+    <producedTypes>
+      <objectType typeId="354f03a2-f8e5-4b05-a8a7-195c6fc17e0d" valueTypeId="1b4548fd-8fb2-4830-9da8-bbae5086cd14"/>
+      <rowType typeId="12f9a153-2d60-4ad5-a350-137b27711842" valueTypeId="651d5c63-3a4d-4872-a827-cb6200474cd0"/>
+    </producedTypes>
+    <name>ВыпискаДанныеИзСистемыЭлектронногоАдминистрированияНДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Данные из системы электронного администрирования НДС</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Дані з системи електронного адміністрування ПДВ</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="596ef625-971e-47d2-8791-78a60cf7b63b">
+      <name>НомерСчета</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер счета</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Номер рахунку</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="9855f9a8-7031-4eea-bc3a-996d12351d4f">
+      <name>ДатаОткрытияСчета</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата открытия счета</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Дата відкриття рахунку</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5159248a-ff60-4ea2-8f67-3a2429835136">
+      <name>ДатаРегистрацииПлательщикомНДС</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата регистрации плательщиком НДС</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Дата реєстрації платником ПДВ</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="62794f32-85ab-43c2-950d-f26742749998">
+      <name>Сумма</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Сума</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>
