@@ -1694,29 +1694,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.Сотрудники</name>
-		<right>
-			<name>Read</name>
-			<value>false</value>
-			<restrictionByCondition>
-				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
-#ДляОбъекта("")
-#Иначе
-#ПоНаборамЗначений("Справочник.Сотрудники","Чтение","",
-"")
-#КонецЕсли</condition>
-			</restrictionByCondition>
-			<restrictionByCondition>
-				<field>Code</field>
-				<field>DataVersion</field>
-				<field>DeletionMark</field>
-				<field>Predefined</field>
-				<field>Ref</field>
-				<condition></condition>
-			</restrictionByCondition>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.Сотрудники.StandardAttribute.Predefined</name>
 		<right>
 			<name>Edit</name>
@@ -2499,6 +2476,15 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+#ПоЗначениям( "Справочник.ФизическиеЛица","Чтение","",
+"ГруппыФизическихЛиц","Ссылка",
+"","","","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+#КонецЕсли</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -2651,6 +2637,20 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрСведений.ИНАГРО_РаботникиОрганизаций", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)</condition>
+			</restrictionByCondition>
 		</right>
 	</object>
 	<object>
@@ -3765,14 +3765,10 @@
 )
 #КонецЕсли</condition>
 			</restrictionByCondition>
-			<restrictionByCondition>
-				<field>Code</field>
-				<field>DataVersion</field>
-				<field>DeletionMark</field>
-				<field>Predefined</field>
-				<field>Ref</field>
-				<condition></condition>
-			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>

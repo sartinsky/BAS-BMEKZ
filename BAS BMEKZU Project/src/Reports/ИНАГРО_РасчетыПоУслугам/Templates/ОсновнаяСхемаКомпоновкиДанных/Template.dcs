@@ -403,7 +403,7 @@
 	0 КАК СтоимостьРасход,
 	NULL КАК Регистратор
 ИЗ
-	РегистрНакопления.ИНАГРО_РасчетыПоУслугам.Остатки(&amp;НачалоПериода, ) КАК ИНАГРО_РасчетыПоУслугамОстатки
+	РегистрНакопления.ИНАГРО_РасчетыПоУслугам.Остатки(&amp;НачалоПериода {(&amp;НачалоПериода)}, ) КАК ИНАГРО_РасчетыПоУслугамОстатки
 
 ОБЪЕДИНИТЬ ВСЕ
 
@@ -436,7 +436,7 @@
 	0,
 	NULL
 ИЗ
-	РегистрНакопления.ИНАГРО_РасчетыПоУслугам.Остатки(&amp;КонецПериода, ) КАК ИНАГРО_РасчетыПоУслугамОстатки
+	РегистрНакопления.ИНАГРО_РасчетыПоУслугам.Остатки(&amp;КонецПериода {(&amp;КонецПериода)}, ) КАК ИНАГРО_РасчетыПоУслугамОстатки
 
 ОБЪЕДИНИТЬ ВСЕ
 
@@ -461,7 +461,7 @@
 	ИНАГРО_РасчетыПоУслугамОбороты.СтоимостьРасход,
 	ИНАГРО_РасчетыПоУслугамОбороты.Регистратор
 ИЗ
-	РегистрНакопления.ИНАГРО_РасчетыПоУслугам.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Регистратор, ) КАК ИНАГРО_РасчетыПоУслугамОбороты</query>
+	РегистрНакопления.ИНАГРО_РасчетыПоУслугам.Обороты(&amp;НачалоПериода {(&amp;НачалоПериода)}, &amp;КонецПериода {(&amp;КонецПериода)}, Регистратор, ) КАК ИНАГРО_РасчетыПоУслугамОбороты</query>
 	</dataSet>
 	<totalField>
 		<dataPath>СтоимостьНач</dataPath>
@@ -496,23 +496,6 @@
 		<expression>Сумма(СтоимостьРасход)</expression>
 	</totalField>
 	<parameter>
-		<name>Период</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Период</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type>xs:dateTime</v8:Type>
-			<v8:DateQualifiers>
-				<v8:DateFractions>DateTime</v8:DateFractions>
-			</v8:DateQualifiers>
-		</valueType>
-		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
-		<useRestriction>true</useRestriction>
-	</parameter>
-	<parameter>
 		<name>ЕдиницаИзмерения</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
@@ -540,9 +523,10 @@
 				<v8:DateFractions>DateTime</v8:DateFractions>
 			</v8:DateQualifiers>
 		</valueType>
-		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:01</value>
 		<useRestriction>true</useRestriction>
 		<expression>&amp;ПериодОтчета.ДатаНачала</expression>
+		<use>Always</use>
 	</parameter>
 	<parameter>
 		<name>КонецПериода</name>
@@ -561,6 +545,7 @@
 		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
 		<useRestriction>true</useRestriction>
 		<expression>&amp;ПериодОтчета.ДатаОкончания</expression>
+		<use>Always</use>
 	</parameter>
 	<parameter>
 		<name>ПериодОтчета</name>
@@ -583,6 +568,7 @@
 			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
 		</value>
 		<useRestriction>false</useRestriction>
+		<use>Always</use>
 	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
@@ -705,12 +691,9 @@
 			</dcsset:filter>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>ПериодОтчета</dcscor:parameter>
 					<dcscor:value xsi:type="v8:StandardPeriod">
-						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
-						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
-						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
 					</dcscor:value>
 					<dcsset:userSettingID>25c99e6a-e483-489f-bd9f-57c11092ea12</dcsset:userSettingID>
 					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">

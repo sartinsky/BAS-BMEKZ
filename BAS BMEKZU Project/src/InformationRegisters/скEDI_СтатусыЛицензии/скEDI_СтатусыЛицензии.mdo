@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="618f4065-7e07-4019-935e-8d0b4c2fcefa">
+  <producedTypes>
+    <selectionType typeId="7c7f3970-16b8-43ea-a370-ae4d9c00166c" valueTypeId="3b663377-2418-4b88-920a-7dba9ab37ddf"/>
+    <listType typeId="e466d8e3-0d9a-4ca1-b082-cbcf344e770e" valueTypeId="7f47833f-c44c-4b93-af98-36e2d479f186"/>
+    <managerType typeId="66d58a0b-81d1-4699-9143-e603d6db5517" valueTypeId="530b974f-a18e-4075-8f64-f06ec95f910a"/>
+    <recordSetType typeId="49bf0ea3-6dbc-44fe-ab5e-41246f965798" valueTypeId="189be3fd-4f05-4cf4-9f36-dcfe88519598"/>
+    <recordKeyType typeId="34595890-0b1b-42db-b5e5-bb41cac58a40" valueTypeId="a89260a7-4337-4ed8-b001-67c14db226c1"/>
+    <recordType typeId="4896d2d8-d509-4fe7-85e7-99f56d2d633b" valueTypeId="b6f2c192-c5f4-49ba-aa0a-ea944709a15b"/>
+    <recordManagerType typeId="81eb747e-cdcf-4c72-ae9c-524f9eb10303" valueTypeId="981a32ef-8be7-4655-9ead-0e71efd0acff"/>
+  </producedTypes>
+  <name>скEDI_СтатусыЛицензии</name>
+  <synonym>
+    <key>ru</key>
+    <value>Статусы лицензии</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Статуси ліцензії</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Month</informationRegisterPeriodicity>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="2e6d7044-2353-45bf-9af1-e112756e41ab">
+    <name>СтатусЛицензииБезОплаты</name>
+    <synonym>
+      <key>uk</key>
+      <value>Статус лицензии без оплаты</value>
+    </synonym>
+    <type>
+      <types>EnumRef.скEDI_СтатусыЛицензииБезОплаты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="cd7e9e89-1a4b-4ae0-b935-49baf4828b9a">
+    <name>ЕДРПОУ</name>
+    <synonym>
+      <key>ru</key>
+      <value>ЕДРПОУ</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>ЄДРПОУ</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="1353621b-24bd-4f2c-83f3-ee9e90f156a4">
+    <name>Филиал</name>
+    <synonym>
+      <key>ru</key>
+      <value>Филиал</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Філія</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

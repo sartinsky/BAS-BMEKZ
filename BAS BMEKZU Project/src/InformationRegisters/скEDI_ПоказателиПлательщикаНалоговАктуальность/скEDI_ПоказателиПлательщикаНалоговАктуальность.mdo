@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9eecb6eb-4c69-498e-92b9-b5f3d95b4659">
+  <producedTypes>
+    <selectionType typeId="b5a585ab-18d4-484a-9ddf-c346445ff5e8" valueTypeId="50a1bedc-4dda-4840-8109-74e37ea0eb61"/>
+    <listType typeId="5279a196-fb45-4b09-a55d-21780e35f0a4" valueTypeId="86840c70-1d18-4cb4-94da-cee98a610442"/>
+    <managerType typeId="e3a5e1e9-2cf1-49c9-bd73-446da84b846e" valueTypeId="5c6f4bf8-6836-4fb5-8056-98618c95811b"/>
+    <recordSetType typeId="5b8dc231-2e3d-471b-8046-4059416ee36a" valueTypeId="69bc7261-672d-4b22-b954-9415f83a3d7d"/>
+    <recordKeyType typeId="a7f820ea-98eb-41ae-b1a6-d63cfe14fbfa" valueTypeId="5d545e90-5b7e-4a44-8535-487d4b25a83d"/>
+    <recordType typeId="fc5e488c-72bf-41e0-88e2-f5698891c57c" valueTypeId="9b299768-156a-4f90-8730-113b3bf8afd4"/>
+    <recordManagerType typeId="f3ad8871-28b7-4c2d-9c19-bf3287b54a49" valueTypeId="bf741d2a-35a4-40d6-b29b-69346aa46a50"/>
+  </producedTypes>
+  <name>скEDI_ПоказателиПлательщикаНалоговАктуальность</name>
+  <synonym>
+    <key>ru</key>
+    <value>Показатели плательщика налогов (актуальность)</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Показники платника податків (актуальнысть)</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="e42f2937-1f96-4539-8bae-14e25fd059e3">
+    <name>ДатаУстановки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата актуальности</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Дата актуальності</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="c4a36392-0314-4596-b83c-15f74814cd25">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация EDI</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація EDI</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.скEDI_Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="ba865154-1a54-4ff1-b6f1-4d491c839f7f">
+    <name>Год</name>
+    <synonym>
+      <key>ru</key>
+      <value>Год</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Рік</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>4</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

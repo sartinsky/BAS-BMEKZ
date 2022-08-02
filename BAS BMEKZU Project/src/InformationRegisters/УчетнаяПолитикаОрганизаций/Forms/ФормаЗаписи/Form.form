@@ -1173,6 +1173,10 @@
           <dataPath xsi:type="form:DataPath">
             <segments>Запись.ГруппаПлательщикаЕдиногоНалога</segments>
           </dataPath>
+          <handlers>
+            <event>OnChange</event>
+            <name>ГруппаПлательщикаЕдиногоНалогаПриИзменении</name>
+          </handlers>
           <extendedTooltip>
             <name>ГруппаПлательщикаЕдиногоНалогаExtendedTooltip</name>
             <id>1657</id>
@@ -1213,6 +1217,161 @@
             <typeDomainEnabled>true</typeDomainEnabled>
             <textEdit>true</textEdit>
             <choiceHistoryOnInput>DontUse</choiceHistoryOnInput>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>ГруппаИзменениеСхемыНалогообложенияВСерединеМесяца</name>
+          <id>1888</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>ru</key>
+            <value>Группа изменение схемы налогообложения в середине месяца</value>
+          </title>
+          <title>
+            <key>uk</key>
+            <value>Група зміна схеми оподаткування у середині місяця</value>
+          </title>
+          <toolTip>
+            <key>ru</key>
+            <value>Группа изменение схемы налогообложения в середине месяца</value>
+          </toolTip>
+          <toolTip>
+            <key>uk</key>
+            <value>Група зміна схеми оподаткування у середині місяця</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>ГруппаИзменениеСхемыНалогообложенияВСерединеМесяцаРасширеннаяПодсказка</name>
+            <id>1889</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <type>UsualGroup</type>
+          <extInfo xsi:type="form:UsualGroupExtInfo">
+            <group>HorizontalIfPossible</group>
+            <showLeftMargin>true</showLeftMargin>
+            <united>true</united>
+            <throughAlign>Auto</throughAlign>
+            <currentRowUse>Auto</currentRowUse>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ИзменениеСхемыНалогообложенияПроизошлоВСерединеМесяца</name>
+          <id>1885</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ИзменениеСхемыНалогообложенияПроизошлоВСерединеМесяца</segments>
+          </dataPath>
+          <titleLocation>Right</titleLocation>
+          <handlers>
+            <event>OnChange</event>
+            <name>ИзменениеСхемыНалогообложенияПроизошлоВСерединеМесяцаПриИзменении</name>
+          </handlers>
+          <extendedTooltip>
+            <name>ИзменениеСхемыНалогообложенияПроизошлоВСерединеМесяцаРасширеннаяПодсказка</name>
+            <id>1887</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ИзменениеСхемыНалогообложенияПроизошлоВСерединеМесяцаКонтекстноеМеню</name>
+            <id>1886</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>CheckBoxField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ДатаИзмененияСхемыНалогообложенияВСерединеМесяца</name>
+          <id>1882</id>
+          <title>
+            <key>ru</key>
+            <value>Дата перехода</value>
+          </title>
+          <title>
+            <key>uk</key>
+            <value>Дата переходу</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Запись.ДатаИзмененияСхемыНалогообложенияВСерединеМесяца</segments>
+          </dataPath>
+          <toolTipRepresentation>ShowRight</toolTipRepresentation>
+          <extendedTooltip>
+            <name>ДатаИзмененияСхемыНалогообложенияВСерединеМесяцаРасширеннаяПодсказка</name>
+            <id>1884</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ДатаИзмененияСхемыНалогообложенияВСерединеМесяцаКонтекстноеМеню</name>
+            <id>1883</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
           </extInfo>
         </items>
         <visible>true</visible>
@@ -5906,6 +6065,10 @@
     <event>OnCreateAtServer</event>
     <name>ПриСозданииНаСервере</name>
   </handlers>
+  <handlers>
+    <event>FillCheckProcessingAtServer</event>
+    <name>ОбработкаПроверкиЗаполненияНаСервере</name>
+  </handlers>
   <autoTitle>true</autoTitle>
   <autoUrl>true</autoUrl>
   <group>Vertical</group>
@@ -6224,6 +6387,96 @@
       <dateQualifiers>
         <dateFractions>Date</dateFractions>
       </dateQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ДопустимаяДатаПереходаНачало</name>
+    <title>
+      <key>ru</key>
+      <value>Допустимая дата перехода (начало)</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Допустима дата переходу (початок)</value>
+    </title>
+    <id>5</id>
+    <valueType>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ДопустимаяДатаПереходаКонец</name>
+    <title>
+      <key>ru</key>
+      <value>Допустимая дата перехода (конец)</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Допустима дата переходу (кінець)</value>
+    </title>
+    <id>6</id>
+    <valueType>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ВидимостьДатыПерехода</name>
+    <title>
+      <key>ru</key>
+      <value>Видимость даты перехода</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Видимість дати переходу</value>
+    </title>
+    <id>7</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ИзменениеСхемыНалогообложенияПроизошлоВСерединеМесяца</name>
+    <title>
+      <key>ru</key>
+      <value>Переход не с начала месяца</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Перехід не з початку місяця</value>
+    </title>
+    <id>8</id>
+    <valueType>
+      <types>Boolean</types>
     </valueType>
     <view>
       <common>true</common>

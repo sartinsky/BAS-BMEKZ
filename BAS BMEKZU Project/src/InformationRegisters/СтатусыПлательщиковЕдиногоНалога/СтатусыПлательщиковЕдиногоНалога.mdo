@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1af096bd-40ae-42e3-86e3-68d6a538052d">
+  <producedTypes>
+    <selectionType typeId="ea063d6f-e589-4b01-beb0-58739cc44480" valueTypeId="02e844ae-be57-4076-8231-0a4426460756"/>
+    <listType typeId="e4a4aa81-7816-488d-8f98-0cfa9e133cf9" valueTypeId="ce85f6ca-9f4a-4345-89c5-59a151c75bd1"/>
+    <managerType typeId="a295ebbb-8fba-4297-8fb2-951b30bcc79e" valueTypeId="bce4626c-44b3-4e55-b4c9-1089875b062a"/>
+    <recordSetType typeId="35660f01-4fff-41f6-bf3c-627ed3f1ddff" valueTypeId="b67706ed-6d94-4cec-8039-60b31c56994f"/>
+    <recordKeyType typeId="5b2485b3-33c3-4499-afb1-2bcac050f3c6" valueTypeId="82a40e7a-8583-4c8c-9ba1-21c3972afc40"/>
+    <recordType typeId="ab7911f1-4a45-4acd-8abc-65e95e989db4" valueTypeId="5681b596-7415-4562-8504-31019652bad4"/>
+    <recordManagerType typeId="c15f01bb-61e2-4748-92ad-68207b35c8fe" valueTypeId="b0c4b745-52c7-443e-b343-7c7af5bfc142"/>
+  </producedTypes>
+  <name>СтатусыПлательщиковЕдиногоНалога</name>
+  <synonym>
+    <key>ru</key>
+    <value>Статусы плательщиков единого налога</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Статуси платників єдиного податку</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="2d45bf25-84ea-4eb5-965a-6ac5d6a73672">
+    <name>ПлательщикЕдиногоНалога</name>
+    <synonym>
+      <key>ru</key>
+      <value>Плательщик единого налога</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Платник єдиного податку</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:BooleanValue"/>
+  </resources>
+  <resources uuid="53570e55-75ed-489d-bcbe-e84d735b5951">
+    <name>ГруппаПлательщикаЕдиногоНалога</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группа плательщика единого налога</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Група платника єдиного податку</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ГруппыПлательщиковЕдиногоНалога</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="dcf972ee-6055-4f1f-a4cc-ccd3f7035d28">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

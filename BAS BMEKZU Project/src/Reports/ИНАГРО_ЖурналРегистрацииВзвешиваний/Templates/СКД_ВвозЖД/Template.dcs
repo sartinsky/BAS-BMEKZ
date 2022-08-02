@@ -159,9 +159,9 @@
 	ТТНВвозЖД.Транспорт КАК Транспорт,
 	ТТНВвозЖД.Номенклатура КАК Номенклатура,
 	ИНАГРО_ДополнительныеРеквизитыНоменклатуры.ВидКультуры КАК ВидКультуры,
-	ВЫРАЗИТЬ(ТТНВвозЖД.Влажность * ТТНВвозЖД.ВесНетто / 100 КАК ЧИСЛО(15, 0)) КАК Влажность,
-	ВЫРАЗИТЬ(ТТНВвозЖД.СорнаяПримесь * ТТНВвозЖД.ВесНетто / 100 КАК ЧИСЛО(15, 0)) КАК СорнаяПримесь,
-	ВЫРАЗИТЬ(ТТНВвозЖД.ЗерноваяПримесь * ТТНВвозЖД.ВесНетто / 100 КАК ЧИСЛО(15, 0)) КАК ЗерноваяПримесь
+	ТТНВвозЖД.Влажность КАК Влажность,
+	ТТНВвозЖД.СорнаяПримесь КАК СорнаяПримесь,
+	ТТНВвозЖД.ЗерноваяПримесь КАК ЗерноваяПримесь
 ИЗ
 	Документ.ИНАГРО_ТТНВвозЖД КАК ТТНВвозЖД
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ИНАГРО_ДополнительныеРеквизитыНоменклатуры КАК ИНАГРО_ДополнительныеРеквизитыНоменклатуры
@@ -183,15 +183,15 @@
 	</calculatedField>
 	<totalField>
 		<dataPath>СорнаяПримесь</dataPath>
-		<expression>Сумма(СорнаяПримесь)</expression>
+		<expression>Выбор Когда Сумма(Нетто)=0 Тогда 0 Иначе Сумма(СорнаяПримесь*Нетто)/Сумма(Нетто) Конец</expression>
 	</totalField>
 	<totalField>
 		<dataPath>ЗерноваяПримесь</dataPath>
-		<expression>Сумма(ЗерноваяПримесь)</expression>
+		<expression>Выбор Когда Сумма(Нетто)=0 Тогда 0 Иначе Сумма(ЗерноваяПримесь*Нетто)/Сумма(Нетто) Конец</expression>
 	</totalField>
 	<totalField>
 		<dataPath>Влажность</dataPath>
-		<expression>Сумма(Влажность)</expression>
+		<expression>Выбор Когда Сумма(Нетто)=0 Тогда 0 Иначе Сумма(Влажность*Нетто)/Сумма(Нетто) Конец</expression>
 	</totalField>
 	<totalField>
 		<dataPath>Брутто</dataPath>
@@ -7861,6 +7861,21 @@
 				<dcsat:tableCell>
 					<dcsat:item xsi:type="dcsat:Field">
 						<dcsat:value xsi:type="dcscor:Parameter">Влажность</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+								</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
 					</dcsat:item>
 					<dcsat:appearance>
 						<dcscor:item>
@@ -7934,6 +7949,21 @@
 				<dcsat:tableCell>
 					<dcsat:item xsi:type="dcsat:Field">
 						<dcsat:value xsi:type="dcscor:Parameter">СорнаяПримесь</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+								</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
 					</dcsat:item>
 					<dcsat:appearance>
 						<dcscor:item>
@@ -8007,6 +8037,21 @@
 				<dcsat:tableCell>
 					<dcsat:item xsi:type="dcsat:Field">
 						<dcsat:value xsi:type="dcscor:Parameter">ЗерноваяПримесь</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+								</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
 					</dcsat:item>
 					<dcsat:appearance>
 						<dcscor:item>
@@ -9115,6 +9160,21 @@
 				<dcsat:tableCell>
 					<dcsat:item xsi:type="dcsat:Field">
 						<dcsat:value xsi:type="dcscor:Parameter">Влажность</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+								</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
 					</dcsat:item>
 					<dcsat:appearance>
 						<dcscor:item>
@@ -9188,6 +9248,21 @@
 				<dcsat:tableCell>
 					<dcsat:item xsi:type="dcsat:Field">
 						<dcsat:value xsi:type="dcscor:Parameter">СорнаяПримесь</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+								</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
 					</dcsat:item>
 					<dcsat:appearance>
 						<dcscor:item>
@@ -9261,6 +9336,21 @@
 				<dcsat:tableCell>
 					<dcsat:item xsi:type="dcsat:Field">
 						<dcsat:value xsi:type="dcscor:Parameter">ЗерноваяПримесь</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+								</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
 					</dcsat:item>
 					<dcsat:appearance>
 						<dcscor:item>
@@ -10373,6 +10463,21 @@
 				<dcsat:tableCell>
 					<dcsat:item xsi:type="dcsat:Field">
 						<dcsat:value xsi:type="dcscor:Parameter">Влажность</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+								</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
 					</dcsat:item>
 					<dcsat:appearance>
 						<dcscor:item>
@@ -10446,6 +10551,21 @@
 				<dcsat:tableCell>
 					<dcsat:item xsi:type="dcsat:Field">
 						<dcsat:value xsi:type="dcscor:Parameter">СорнаяПримесь</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+								</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
 					</dcsat:item>
 					<dcsat:appearance>
 						<dcscor:item>
@@ -10519,6 +10639,21 @@
 				<dcsat:tableCell>
 					<dcsat:item xsi:type="dcsat:Field">
 						<dcsat:value xsi:type="dcscor:Parameter">ЗерноваяПримесь</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+								</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
 					</dcsat:item>
 					<dcsat:appearance>
 						<dcscor:item>
@@ -12353,6 +12488,21 @@
 				<dcsat:tableCell>
 					<dcsat:item xsi:type="dcsat:Field">
 						<dcsat:value xsi:type="dcscor:Parameter">Влажность</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+								</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
 					</dcsat:item>
 					<dcsat:appearance>
 						<dcscor:item>
@@ -12426,6 +12576,21 @@
 				<dcsat:tableCell>
 					<dcsat:item xsi:type="dcsat:Field">
 						<dcsat:value xsi:type="dcscor:Parameter">СорнаяПримесь</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+								</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
 					</dcsat:item>
 					<dcsat:appearance>
 						<dcscor:item>
@@ -12499,6 +12664,21 @@
 				<dcsat:tableCell>
 					<dcsat:item xsi:type="dcsat:Field">
 						<dcsat:value xsi:type="dcscor:Parameter">ЗерноваяПримесь</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+								</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
 					</dcsat:item>
 					<dcsat:appearance>
 						<dcscor:item>

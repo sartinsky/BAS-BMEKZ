@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="WINDOWS-1251"?>
+<НастройкиВнешнегоХранилища>
+	<ТипХранилища>MSSQLServer</ТипХранилища>
+	<Версия>1.0.1.0</Версия>
+	<ОбъектыБазыДанных>
+		<ОбъектБазыДанных ИмяОбъекта = "scEDI_ContentOfElectronicDocuments" Описание = "Таблица содержимого Электронных документов">
+			<СозданиеОбъекта>
+				CREATE TABLE [dbo].[scEDI_ContentOfElectronicDocuments](
+					[RecID] [varchar](36) NOT NULL,
+					[ElectronicDocuments] [varchar](36) NOT NULL,
+					[Num] [int] NOT NULL,
+					[DocBody] [text] NULL,
+					[DocBodyIm] [image] NULL,
+					[DocImage] [text] NULL,
+					[DocImageIm] [image] NULL,
+					[Attachment1] [text] NULL,
+					[AttachmentIm1] [image] NULL,
+					[Attachment2] [text] NULL,
+					[AttachmentIm2] [image] NULL,
+					[Attachment3] [text] NULL,
+					[AttachmentIm3] [image] NULL
+				) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+			</СозданиеОбъекта>
+			<ПроверкаНаличияОбъекта>
+				SELECT * 
+				FROM INFORMATION_SCHEMA.TABLES 
+				WHERE TABLE_SCHEMA = 'dbo' 
+				AND  TABLE_TYPE = 'BASE TABLE'
+				AND  TABLE_NAME = 'scEDI_ContentOfElectronicDocuments'
+			</ПроверкаНаличияОбъекта>
+			<ТестОбъекта>
+				SELECT TOP 1 [RecID]
+				      ,[ElectronicDocuments]
+				      ,[Num]
+				      ,[DocBody]
+				      ,[DocImage]
+				      ,[Attachment1]
+				      ,[Attachment2]
+				      ,[Attachment3]
+				  FROM [dbo].[scEDI_ContentOfElectronicDocuments]
+			</ТестОбъекта>
+		</ОбъектБазыДанных>
+		<ОбъектБазыДанных ИмяОбъекта = "scEDI_ContentOfElectronicDocuments_ByRecIDAndDocElectronicDocuments" Описание = "Индекс по таблице содержимого Электронных документов">
+			<СозданиеОбъекта>
+				CREATE UNIQUE INDEX [scEDI_ContentOfElectronicDocuments_ByRecIDAndDocElectronicDocuments] ON [dbo].[scEDI_ContentOfElectronicDocuments]
+				(
+					[RecID],
+					[ElectronicDocuments]
+				) ON [PRIMARY]
+			</СозданиеОбъекта>
+			<ПроверкаНаличияОбъекта>
+				SELECT *
+				FROM sys.indexes
+				WHERE object_id = OBJECT_ID(N'[dbo].[scEDI_ContentOfElectronicDocuments]')
+				AND name = N'scEDI_ContentOfElectronicDocuments_ByRecIDAndDocElectronicDocuments'
+			</ПроверкаНаличияОбъекта>
+			<ТестОбъекта/>
+		</ОбъектБазыДанных>
+		
+		
+		
+		
+		<ОбъектБазыДанных ИмяОбъекта = "scEDI_ContentOfAdditionalElectronicDocuments" Описание = "Таблица содержимого дополнительных Электронных документов">
+			<СозданиеОбъекта>
+				CREATE TABLE [dbo].[scEDI_ContentOfAdditionalElectronicDocuments](
+					[RecID] [varchar](36) NOT NULL,
+					[ElectronicDocuments] [varchar](36) NOT NULL,
+					[DocBody] [text] NULL,
+					[DocBodyIm] [image] NULL
+				) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+			</СозданиеОбъекта>
+			<ПроверкаНаличияОбъекта>
+				SELECT * 
+				FROM INFORMATION_SCHEMA.TABLES 
+				WHERE TABLE_SCHEMA = 'dbo' 
+				AND  TABLE_TYPE = 'BASE TABLE'
+				AND  TABLE_NAME = 'scEDI_ContentOfAdditionalElectronicDocuments'
+			</ПроверкаНаличияОбъекта>
+			<ТестОбъекта>
+				SELECT TOP 1 [RecID]
+				      ,[ElectronicDocuments]
+				      ,[DocBody]
+				      --,[DocImage]
+				  FROM [dbo].[scEDI_ContentOfAdditionalElectronicDocuments]
+			</ТестОбъекта>
+		</ОбъектБазыДанных>
+		<ОбъектБазыДанных ИмяОбъекта = "scEDI_ContentOfAdditionalElectronicDocuments_ByRecIDAndDocElectronicDocuments" Описание = "Индекс по таблице содержимого дополнительных Электронных документов">
+			<СозданиеОбъекта>
+				CREATE UNIQUE INDEX [scEDI_ContentOfAdditionalElectronicDocuments_ByRecIDAndDocElectronicDocuments] ON [dbo].[scEDI_ContentOfAdditionalElectronicDocuments]
+				(
+					[RecID],
+					[ElectronicDocuments]
+				) ON [PRIMARY]
+			</СозданиеОбъекта>
+			<ПроверкаНаличияОбъекта>
+				SELECT *
+				FROM sys.indexes
+				WHERE object_id = OBJECT_ID(N'[dbo].[scEDI_ContentOfAdditionalElectronicDocuments]')
+				AND name = N'scEDI_ContentOfAdditionalElectronicDocuments_ByRecIDAndDocElectronicDocuments'
+			</ПроверкаНаличияОбъекта>
+			<ТестОбъекта/>
+		</ОбъектБазыДанных>
+		
+		
+		
+		<ОбъектБазыДанных ИмяОбъекта = "scEDI_FacsimileOfElectronicDocuments" Описание = "Таблица Факсимиле Электронных документов">
+			<СозданиеОбъекта>
+				CREATE TABLE [dbo].[scEDI_FacsimileOfElectronicDocuments](
+					[RecID] [varchar](36) NOT NULL,
+					[ElectronicDocuments] [varchar](36) NOT NULL,
+					[Facsimile] [text] NULL
+				) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+			</СозданиеОбъекта>
+			<ПроверкаНаличияОбъекта>
+				SELECT * 
+				FROM INFORMATION_SCHEMA.TABLES 
+				WHERE TABLE_SCHEMA = 'dbo' 
+				AND  TABLE_TYPE = 'BASE TABLE'
+				AND  TABLE_NAME = 'scEDI_FacsimileOfElectronicDocuments'
+			</ПроверкаНаличияОбъекта>
+			<ТестОбъекта>
+				SELECT TOP 1 [RecID]
+				      ,[ElectronicDocuments]
+				      ,[Facsimile]
+				  FROM [dbo].[scEDI_FacsimileOfElectronicDocuments]
+			</ТестОбъекта>
+		</ОбъектБазыДанных>
+		<ОбъектБазыДанных ИмяОбъекта = "scEDI_FacsimileOfElectronicDocuments_ByRecIDAndDocElectronicDocuments" Описание = "Индекс по таблице Факсимиле дополнительных Электронных документов">
+			<СозданиеОбъекта>
+				CREATE UNIQUE INDEX [scEDI_FacsimileOfElectronicDocuments_ByRecIDAndDocElectronicDocuments] ON [dbo].[scEDI_FacsimileOfElectronicDocuments]
+				(
+					[RecID],
+					[ElectronicDocuments]
+				) ON [PRIMARY]
+			</СозданиеОбъекта>
+			<ПроверкаНаличияОбъекта>
+				SELECT *
+				FROM sys.indexes
+				WHERE object_id = OBJECT_ID(N'[dbo].[scEDI_FacsimileOfElectronicDocuments]')
+				AND name = N'scEDI_FacsimileOfElectronicDocuments_ByRecIDAndDocElectronicDocuments'
+			</ПроверкаНаличияОбъекта>
+			<ТестОбъекта/>
+		</ОбъектБазыДанных>
+	</ОбъектыБазыДанных>
+	<Версии>
+		<Версия>
+			<НомерВерсии>1.0.0.0</НомерВерсии>
+			<Тест>
+				select convert(bit, 1) as Ok
+				from
+				(
+					select count(*) as c
+					from
+					(
+						select convert(bit, 1) as Ok
+						from (
+						SELECT 
+							sum(case when clmns.name in ('RecID', 'ElectronicDocuments', 'Num', 'DocBody', 'DocImage', 'Attachment1', 'Attachment2', 'Attachment3') then 1 else 0 end) as e,
+							sum(case when clmns.name in ('DocBodyIm', 'DocImageIm', 'AttachmentIm1', 'AttachmentIm2', 'AttachmentIm3') then 1 else 0 end) as ne
+						FROM
+						sys.tables AS tbl
+						INNER JOIN sys.all_columns AS clmns ON clmns.object_id=tbl.object_id
+						WHERE
+						(tbl.name='scEDI_ContentOfElectronicDocuments' and SCHEMA_NAME(tbl.schema_id)='dbo')
+						) as t
+						where t.e = 8 and t.ne = 0
+
+						union all
+
+						select convert(bit, 1) as Ok
+						from (
+						SELECT 
+							sum(case when clmns.name in ('RecID', 'ElectronicDocuments', 'DocBody') then 1 else 0 end) as e,
+							sum(case when clmns.name in ('DocBodyIm') then 1 else 0 end) as ne
+						FROM
+						sys.tables AS tbl
+						INNER JOIN sys.all_columns AS clmns ON clmns.object_id=tbl.object_id
+						WHERE
+						(tbl.name='scEDI_ContentOfAdditionalElectronicDocuments' and SCHEMA_NAME(tbl.schema_id)='dbo')
+						) as t
+						where t.e = 3 and t.ne = 0
+
+						union all
+
+						select convert(bit, 1) as Ok
+						from (
+						SELECT 
+							sum(case when clmns.name in ('RecID', 'ElectronicDocuments', 'Facsimile') then 1 else 0 end) as e--,
+							--sum(case when clmns.name in ('---') then 1 else 0 end) as ne
+						FROM
+						sys.tables AS tbl
+						INNER JOIN sys.all_columns AS clmns ON clmns.object_id=tbl.object_id
+						WHERE
+						(tbl.name='scEDI_FacsimileOfElectronicDocuments' and SCHEMA_NAME(tbl.schema_id)='dbo')
+						) as t
+						where t.e = 3-- and t.ne = 0
+					) as tt
+				) as ttt
+				where ttt.c = 3
+			</Тест>
+		</Версия>
+		<Версия>
+			<НомерВерсии>1.0.1.0</НомерВерсии>
+			<Тест>
+				select convert(bit, 1) as Ok
+				from
+				(
+					select count(*) as c
+					from
+					(
+						select convert(bit, 1) as Ok
+						from (
+						SELECT 
+							sum(case when clmns.name in ('RecID', 'ElectronicDocuments', 'Num', 'DocBody', 'DocImage', 'Attachment1', 'Attachment2', 'Attachment3', 'DocBodyIm', 'DocImageIm', 'AttachmentIm1', 'AttachmentIm2', 'AttachmentIm3') then 1 else 0 end) as e--,
+							--sum(case when clmns.name in ('---') then 1 else 0 end) as ne
+						FROM
+						sys.tables AS tbl
+						INNER JOIN sys.all_columns AS clmns ON clmns.object_id=tbl.object_id
+						WHERE
+						(tbl.name='scEDI_ContentOfElectronicDocuments' and SCHEMA_NAME(tbl.schema_id)='dbo')
+						) as t
+						where t.e = 13-- and t.ne = 0
+
+						union all
+
+						select convert(bit, 1) as Ok
+						from (
+						SELECT 
+							sum(case when clmns.name in ('RecID', 'ElectronicDocuments', 'DocBody', 'DocBodyIm') then 1 else 0 end) as e--,
+							--sum(case when clmns.name in ('---') then 1 else 0 end) as ne
+						FROM
+						sys.tables AS tbl
+						INNER JOIN sys.all_columns AS clmns ON clmns.object_id=tbl.object_id
+						WHERE
+						(tbl.name='scEDI_ContentOfAdditionalElectronicDocuments' and SCHEMA_NAME(tbl.schema_id)='dbo')
+						) as t
+						where t.e = 4-- and t.ne = 0
+
+						union all
+
+						select convert(bit, 1) as Ok
+						from (
+						SELECT 
+							sum(case when clmns.name in ('RecID', 'ElectronicDocuments', 'Facsimile') then 1 else 0 end) as e--,
+							--sum(case when clmns.name in ('---') then 1 else 0 end) as ne
+						FROM
+						sys.tables AS tbl
+						INNER JOIN sys.all_columns AS clmns ON clmns.object_id=tbl.object_id
+						WHERE
+						(tbl.name='scEDI_FacsimileOfElectronicDocuments' and SCHEMA_NAME(tbl.schema_id)='dbo')
+						) as t
+						where t.e = 3-- and t.ne = 0
+					) as tt
+				) as ttt
+				where ttt.c = 3
+			</Тест>
+			<Обновление>
+				ALTER TABLE [dbo].[scEDI_ContentOfElectronicDocuments]
+					ADD
+					[DocBodyIm] [image] NULL,
+					[DocImageIm] [image] NULL,
+					[AttachmentIm1] [image] NULL,
+					[AttachmentIm2] [image] NULL,
+					[AttachmentIm3] [image] NULL
+			</Обновление>
+			<Обновление>
+				ALTER TABLE [dbo].[scEDI_ContentOfAdditionalElectronicDocuments]
+					ADD
+					[DocBodyIm] [image] NULL
+			</Обновление>
+		</Версия>
+	</Версии>
+</НастройкиВнешнегоХранилища>

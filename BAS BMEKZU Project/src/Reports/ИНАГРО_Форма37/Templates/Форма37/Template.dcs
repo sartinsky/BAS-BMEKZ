@@ -332,13 +332,13 @@
 	0,
 	0,
 	0,
-	ОстаткиКонец.КоличествоОстаток,
-	ОстаткиКонец.ВесОстаток,
+	ОстаткиКонец.КоличествоКонечныйОстаток,
+	ОстаткиКонец.ВесКонечныйОстаток,
 	NULL,
 	ИНАГРО_ДополнительныеРеквизитыНоменклатуры.ВидКультуры,
 	0
 ИЗ
-	РегистрНакопления.ИНАГРО_Остатки.Остатки(&amp;КонецПериода, ) КАК ОстаткиКонец
+	РегистрНакопления.ИНАГРО_Остатки.ОстаткиИОбороты(&amp;НачалоПериода,&amp;КонецПериода, ) КАК ОстаткиКонец
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ИНАГРО_ДополнительныеРеквизитыНоменклатуры КАК ИНАГРО_ДополнительныеРеквизитыНоменклатуры
 		ПО ОстаткиКонец.Номенклатура = ИНАГРО_ДополнительныеРеквизитыНоменклатуры.Номенклатура</query>
 	</dataSet>
@@ -632,26 +632,6 @@
 					</dcsat:appearance>
 				</dcsat:tableCell>
 				<dcsat:tableCell>
-					<dcsat:appearance>
-						<dcscor:item>
-							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
-						</dcscor:item>
-					</dcsat:appearance>
-				</dcsat:tableCell>
-				<dcsat:tableCell>
-					<dcsat:appearance>
-						<dcscor:item>
-							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
-						</dcscor:item>
-						<dcscor:item>
-							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:HorizontalAlign">Left</dcscor:value>
-						</dcscor:item>
-					</dcsat:appearance>
-				</dcsat:tableCell>
-				<dcsat:tableCell>
 					<dcsat:item xsi:type="dcsat:Field">
 						<dcsat:value xsi:type="v8:LocalStringType">
 							<v8:item>
@@ -674,7 +654,7 @@
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:HorizontalAlign">Left</dcscor:value>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Right</dcscor:value>
 						</dcscor:item>
 					</dcsat:appearance>
 				</dcsat:tableCell>
@@ -769,26 +749,6 @@
 					</dcsat:appearance>
 				</dcsat:tableCell>
 				<dcsat:tableCell>
-					<dcsat:appearance>
-						<dcscor:item>
-							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
-						</dcscor:item>
-					</dcsat:appearance>
-				</dcsat:tableCell>
-				<dcsat:tableCell>
-					<dcsat:appearance>
-						<dcscor:item>
-							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
-						</dcscor:item>
-						<dcscor:item>
-							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:HorizontalAlign">Left</dcscor:value>
-						</dcscor:item>
-					</dcsat:appearance>
-				</dcsat:tableCell>
-				<dcsat:tableCell>
 					<dcsat:item xsi:type="dcsat:Field">
 						<dcsat:value xsi:type="v8:LocalStringType">
 							<v8:item>
@@ -804,7 +764,7 @@
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:HorizontalAlign">Left</dcscor:value>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Right</dcscor:value>
 						</dcscor:item>
 					</dcsat:appearance>
 				</dcsat:tableCell>
@@ -951,34 +911,6 @@
 						<dcscor:item>
 							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
 							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
-						</dcscor:item>
-					</dcsat:appearance>
-				</dcsat:tableCell>
-				<dcsat:tableCell>
-					<dcsat:appearance>
-						<dcscor:item>
-							<dcscor:parameter>ЦветТекста</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#000000</dcscor:value>
-						</dcscor:item>
-						<dcscor:item>
-							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
-						</dcscor:item>
-						<dcscor:item>
-							<dcscor:parameter>Шрифт</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
-						</dcscor:item>
-						<dcscor:item>
-							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
-						</dcscor:item>
-					</dcsat:appearance>
-				</dcsat:tableCell>
-				<dcsat:tableCell>
-					<dcsat:appearance>
-						<dcscor:item>
-							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
 						</dcscor:item>
 					</dcsat:appearance>
 				</dcsat:tableCell>
@@ -1112,30 +1044,6 @@
 						<dcscor:item>
 							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
 							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
-						</dcscor:item>
-					</dcsat:appearance>
-				</dcsat:tableCell>
-				<dcsat:tableCell>
-					<dcsat:appearance>
-						<dcscor:item>
-							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
-						</dcscor:item>
-						<dcscor:item>
-							<dcscor:parameter>Шрифт</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
-						</dcscor:item>
-						<dcscor:item>
-							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
-						</dcscor:item>
-					</dcsat:appearance>
-				</dcsat:tableCell>
-				<dcsat:tableCell>
-					<dcsat:appearance>
-						<dcscor:item>
-							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#FFFFFF</dcscor:value>
 						</dcscor:item>
 					</dcsat:appearance>
 				</dcsat:tableCell>

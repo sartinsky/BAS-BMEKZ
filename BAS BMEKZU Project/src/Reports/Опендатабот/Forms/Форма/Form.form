@@ -2,45 +2,257 @@
 <form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
   <title>
     <key>ru</key>
-    <value>Опендатабот. Риcки</value>
+    <value>Опендатабот. Ризики</value>
   </title>
   <title>
     <key>uk</key>
     <value>Опендатабот. Ризики</value>
   </title>
   <items xsi:type="form:FormGroup">
-    <name>ГруппаСтрокаКоманднойПанели</name>
-    <id>4</id>
-    <items xsi:type="form:FormField">
-      <name>СтрокаПоиска</name>
-      <id>6</id>
+    <name>ГруппаКоманднаяПанель</name>
+    <id>122</id>
+    <items xsi:type="form:FormGroup">
+      <name>ГруппаСтрокаКоманднойПанели</name>
+      <id>4</id>
+      <items xsi:type="form:FormField">
+        <name>СтрокаПоиска</name>
+        <id>6</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>СтрокаПоиска</segments>
+        </dataPath>
+        <defaultItem>true</defaultItem>
+        <titleLocation>None</titleLocation>
+        <toolTip>
+          <key>ru</key>
+          <value>Код по ЕДРПОУ/ДРФО или ФИО
+по которому нужно сформировать отчет</value>
+        </toolTip>
+        <toolTip>
+          <key>uk</key>
+          <value>Код по ЄДРПОУ/ДРФО або ПІБ
+за яким треба сформувати звіт</value>
+        </toolTip>
+        <handlers>
+          <event>OnChange</event>
+          <name>СтрокаПоискаПриИзменении</name>
+        </handlers>
+        <extendedTooltip>
+          <name>СтрокаПоискаРасширеннаяПодсказка</name>
+          <id>8</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>СтрокаПоискаКонтекстноеМеню</name>
+          <id>7</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>InputField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:InputFieldExtInfo">
+          <width>30</width>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <horizontalStretch>false</horizontalStretch>
+          <wrap>true</wrap>
+          <clearButton>true</clearButton>
+          <chooseType>true</chooseType>
+          <typeDomainEnabled>true</typeDomainEnabled>
+          <textEdit>true</textEdit>
+          <inputHint>
+            <key>ru</key>
+            <value>Код по ЕДРПОУ/ДРФО или ФИО</value>
+          </inputHint>
+          <inputHint>
+            <key>uk</key>
+            <value>Код за ЄДРПОУ/ДРФО або ПІБ</value>
+          </inputHint>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаКнопкиКоманднойПанели</name>
+        <id>15</id>
+        <items xsi:type="form:Button">
+          <name>КнопкаСформироватьОтчет</name>
+          <id>9</id>
+          <title>
+            <key>ru</key>
+            <value>Сформировать</value>
+          </title>
+          <title>
+            <key>uk</key>
+            <value>Сформувати</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>КнопкаСформироватьОтчетРасширеннаяПодсказка</name>
+            <id>10</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.СформироватьОтчет</commandName>
+          <defaultButton>true</defaultButton>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
+          <name>КнопкаСоздатьЭлементСправочника</name>
+          <id>120</id>
+          <title>
+            <key>ru</key>
+            <value>Создать контрагента</value>
+          </title>
+          <title>
+            <key>uk</key>
+            <value>Створити контрагента</value>
+          </title>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>КнопкаСоздатьЭлементСправочникаРасширеннаяПодсказка</name>
+            <id>121</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.СоздатьКонтрагента</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:FormGroup">
+          <name>ГруппаКнопкиФормы</name>
+          <id>22</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <title>
+            <key>ru</key>
+            <value>Кнопки формы</value>
+          </title>
+          <title>
+            <key>uk</key>
+            <value>Кнопки форми</value>
+          </title>
+          <extendedTooltip>
+            <name>ГруппаКнопкиФормыРасширеннаяПодсказка</name>
+            <id>23</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <extInfo xsi:type="form:ButtonGroupExtInfo">
+            <commandSource>Form</commandSource>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Кнопки командной панели</value>
+        </title>
+        <title>
+          <key>uk</key>
+          <value>Кнопки командної панелі</value>
+        </title>
+        <extendedTooltip>
+          <name>ГруппаКнопкиКоманднойПанелиРасширеннаяПодсказка</name>
+          <id>16</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>CommandBar</type>
+        <extInfo xsi:type="form:CommandBarExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </items>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
         <common>true</common>
       </userVisible>
-      <dataPath xsi:type="form:DataPath">
-        <segments>СтрокаПоиска</segments>
-      </dataPath>
-      <defaultItem>true</defaultItem>
-      <titleLocation>None</titleLocation>
-      <toolTip>
+      <title>
         <key>ru</key>
-        <value>Код по ЕДРПОУ/ДРФО или ФИО
-по которому нужно сформировать отчет</value>
-      </toolTip>
-      <toolTip>
+        <value>Строка командной панели</value>
+      </title>
+      <title>
         <key>uk</key>
-        <value>Код по ЄДРПОУ/ДРФО або ПІБ
-за яким треба сформувати звіт</value>
-      </toolTip>
-      <handlers>
-        <event>OnChange</event>
-        <name>СтрокаПоискаПриИзменении</name>
-      </handlers>
+        <value>Рядок командної панелі</value>
+      </title>
       <extendedTooltip>
-        <name>СтрокаПоискаРасширеннаяПодсказка</name>
-        <id>8</id>
+        <name>ГруппаСтрокаКоманднойПанелиРасширеннаяПодсказка</name>
+        <id>5</id>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -53,63 +265,95 @@
           <horizontalAlign>Left</horizontalAlign>
         </extInfo>
       </extendedTooltip>
-      <contextMenu>
-        <name>СтрокаПоискаКонтекстноеМеню</name>
-        <id>7</id>
-        <visible>true</visible>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <autoFill>true</autoFill>
-      </contextMenu>
-      <type>InputField</type>
-      <editMode>Enter</editMode>
-      <showInHeader>true</showInHeader>
-      <headerHorizontalAlign>Left</headerHorizontalAlign>
-      <showInFooter>true</showInFooter>
-      <extInfo xsi:type="form:InputFieldExtInfo">
-        <width>30</width>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <horizontalStretch>false</horizontalStretch>
-        <wrap>true</wrap>
-        <clearButton>true</clearButton>
-        <chooseType>true</chooseType>
-        <typeDomainEnabled>true</typeDomainEnabled>
-        <textEdit>true</textEdit>
-        <inputHint>
-          <key>ru</key>
-          <value>Код по ЕДРПОУ/ДРФО или ФИО</value>
-        </inputHint>
-        <inputHint>
-          <key>uk</key>
-          <value>Код за ЄДРПОУ/ДРФО або ПІБ</value>
-        </inputHint>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>AlwaysHorizontal</group>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
       </extInfo>
     </items>
     <items xsi:type="form:FormGroup">
-      <name>ГруппаКнопкиКоманднойПанели</name>
-      <id>15</id>
-      <items xsi:type="form:Button">
-        <name>КнопкаСформироватьОтчет</name>
-        <id>9</id>
-        <title>
-          <key>ru</key>
-          <value>Сформировать</value>
-        </title>
-        <title>
-          <key>uk</key>
-          <value>Сформувати</value>
-        </title>
+      <name>ГруппаИнформация</name>
+      <id>124</id>
+      <items xsi:type="form:FormGroup">
+        <name>ГруппаИнформацияДекорация</name>
+        <id>126</id>
+        <items xsi:type="form:Decoration">
+          <name>ДекорацияИнформация</name>
+          <id>128</id>
+          <title>
+            <key>ru</key>
+            <value>Декорация информация</value>
+          </title>
+          <title>
+            <key>uk</key>
+            <value>Декорація інформація</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ДекорацияИнформацияРасширеннаяПодсказка</name>
+            <id>130</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ДекорацияИнформацияКонтекстноеМеню</name>
+            <id>129</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>Label</type>
+          <horizontalStretch>false</horizontalStretch>
+          <font xsi:type="core:FontRef">
+            <font>Style.NormalTextFont</font>
+          </font>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </items>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
           <common>true</common>
         </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Группа информация декорация</value>
+        </title>
+        <title>
+          <key>uk</key>
+          <value>Група інформація декорація</value>
+        </title>
+        <toolTip>
+          <key>ru</key>
+          <value>Группа информация декорация</value>
+        </toolTip>
+        <toolTip>
+          <key>uk</key>
+          <value>Група інформація декорація</value>
+        </toolTip>
         <extendedTooltip>
-          <name>КнопкаСформироватьОтчетРасширеннаяПодсказка</name>
-          <id>10</id>
+          <name>ГруппаИнформацияДекорацияРасширеннаяПодсказка</name>
+          <id>127</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -122,16 +366,19 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <commandName>Form.Command.СформироватьОтчет</commandName>
-        <defaultButton>true</defaultButton>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <placementArea>UserCmds</placementArea>
-        <representationInContextMenu>Auto</representationInContextMenu>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>Vertical</group>
+          <representation>WeakSeparation</representation>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
+        </extInfo>
       </items>
       <items xsi:type="form:FormGroup">
-        <name>ГруппаКнопкиФормы</name>
-        <id>22</id>
+        <name>ГруппаИнформацияЭлементыСправочника</name>
+        <id>131</id>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -139,15 +386,23 @@
         </userVisible>
         <title>
           <key>ru</key>
-          <value>Кнопки формы</value>
+          <value>Группа информация элементы справочника</value>
         </title>
         <title>
           <key>uk</key>
-          <value>Кнопки форми</value>
+          <value>Група інформація елементи довідника</value>
         </title>
+        <toolTip>
+          <key>ru</key>
+          <value>Группа информация элементы справочника</value>
+        </toolTip>
+        <toolTip>
+          <key>uk</key>
+          <value>Група інформація елементи довідника</value>
+        </toolTip>
         <extendedTooltip>
-          <name>ГруппаКнопкиФормыРасширеннаяПодсказка</name>
-          <id>23</id>
+          <name>ГруппаИнформацияЭлементыСправочникаРасширеннаяПодсказка</name>
+          <id>132</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -160,8 +415,14 @@
             <horizontalAlign>Left</horizontalAlign>
           </extInfo>
         </extendedTooltip>
-        <extInfo xsi:type="form:ButtonGroupExtInfo">
-          <commandSource>Form</commandSource>
+        <type>UsualGroup</type>
+        <extInfo xsi:type="form:UsualGroupExtInfo">
+          <group>Vertical</group>
+          <representation>WeakSeparation</representation>
+          <showLeftMargin>true</showLeftMargin>
+          <united>true</united>
+          <throughAlign>Auto</throughAlign>
+          <currentRowUse>Auto</currentRowUse>
         </extInfo>
       </items>
       <visible>true</visible>
@@ -171,15 +432,28 @@
       </userVisible>
       <title>
         <key>ru</key>
-        <value>Кнопки командной панели</value>
+        <value>Существуют контрагенты:</value>
       </title>
       <title>
         <key>uk</key>
-        <value>Кнопки командної панелі</value>
+        <value>Існують контрагенти</value>
       </title>
+      <titleFont xsi:type="core:FontRef">
+        <font>Style.NormalTextFont</font>
+        <height>9.0</height>
+      </titleFont>
+      <toolTip>
+        <key>ru</key>
+        <value>Группа информация</value>
+      </toolTip>
+      <toolTip>
+        <key>uk</key>
+        <value>Група інформація</value>
+      </toolTip>
+      <toolTipRepresentation>None</toolTipRepresentation>
       <extendedTooltip>
-        <name>ГруппаКнопкиКоманднойПанелиРасширеннаяПодсказка</name>
-        <id>16</id>
+        <name>ГруппаИнформацияРасширеннаяПодсказка</name>
+        <id>125</id>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -192,9 +466,15 @@
           <horizontalAlign>Left</horizontalAlign>
         </extInfo>
       </extendedTooltip>
-      <type>CommandBar</type>
-      <extInfo xsi:type="form:CommandBarExtInfo">
-        <horizontalAlign>Left</horizontalAlign>
+      <type>UsualGroup</type>
+      <extInfo xsi:type="form:UsualGroupExtInfo">
+        <group>HorizontalIfPossible</group>
+        <verticalSpacing>None</verticalSpacing>
+        <representation>WeakSeparation</representation>
+        <showLeftMargin>true</showLeftMargin>
+        <united>true</united>
+        <throughAlign>Auto</throughAlign>
+        <currentRowUse>Auto</currentRowUse>
       </extInfo>
     </items>
     <visible>true</visible>
@@ -204,15 +484,23 @@
     </userVisible>
     <title>
       <key>ru</key>
-      <value>Строка командной панели</value>
+      <value>Группа командная панель</value>
     </title>
     <title>
       <key>uk</key>
-      <value>Рядок командної панелі</value>
+      <value>Група командна панель</value>
     </title>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа командная панель</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Група командна панель</value>
+    </toolTip>
     <extendedTooltip>
-      <name>ГруппаСтрокаКоманднойПанелиРасширеннаяПодсказка</name>
-      <id>5</id>
+      <name>ГруппаКоманднаяПанельРасширеннаяПодсказка</name>
+      <id>123</id>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -227,7 +515,8 @@
     </extendedTooltip>
     <type>UsualGroup</type>
     <extInfo xsi:type="form:UsualGroupExtInfo">
-      <group>AlwaysHorizontal</group>
+      <group>Vertical</group>
+      <representation>WeakSeparation</representation>
       <showLeftMargin>true</showLeftMargin>
       <united>true</united>
       <throughAlign>Auto</throughAlign>
@@ -293,7 +582,6 @@
         <autoMaxHeight>true</autoMaxHeight>
         <wrap>true</wrap>
         <listChoiceMode>true</listChoiceMode>
-        <choiceListHeight>15</choiceListHeight>
         <typeDomainEnabled>true</typeDomainEnabled>
         <textEdit>true</textEdit>
       </extInfo>
@@ -995,6 +1283,51 @@
     </edit>
     <savedData>true</savedData>
   </attributes>
+  <attributes>
+    <name>ОтчетСформирован</name>
+    <title>
+      <key>ru</key>
+      <value>Отчет сформирован</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Звіт сформований</value>
+    </title>
+    <id>12</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>СписокДополнительныхРеквизитов</name>
+    <title>
+      <key>ru</key>
+      <value>Список дополнительных реквизитов</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Список додаткових реквізитів</value>
+    </title>
+    <id>15</id>
+    <valueType>
+      <types>ValueList</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <extInfo xsi:type="form:ValueListExtInfo">
+      <itemValueType/>
+    </extInfo>
+  </attributes>
   <formCommands>
     <name>СформироватьОтчет</name>
     <title>
@@ -1023,6 +1356,35 @@
       </handler>
     </action>
     <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>СоздатьКонтрагента</name>
+    <title>
+      <key>ru</key>
+      <value>Создать контрагента</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Створити контрагента</value>
+    </title>
+    <id>2</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Создать контрагента</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Створити контрагента</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>СоздатьКонтрагента</name>
+      </handler>
+    </action>
+    <currentRowUse>Auto</currentRowUse>
   </formCommands>
   <parameters>
     <name>Контрагент</name>
