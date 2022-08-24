@@ -359,6 +359,54 @@
           <textEdit>true</textEdit>
         </extInfo>
       </items>
+      <items xsi:type="form:FormField">
+        <name>СопоставлятьСДокументамиБУ</name>
+        <id>113</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>СопоставлятьСДокументамиБУ</segments>
+        </dataPath>
+        <titleLocation>Right</titleLocation>
+        <handlers>
+          <event>OnChange</event>
+          <name>СопоставлятьСДокументамиБУПриИзменении</name>
+        </handlers>
+        <extendedTooltip>
+          <name>СопоставлятьСДокументамиБУРасширеннаяПодсказка</name>
+          <id>115</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>СопоставлятьСДокументамиБУКонтекстноеМеню</name>
+          <id>114</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <type>CheckBoxField</type>
+        <editMode>Enter</editMode>
+        <showInHeader>true</showInHeader>
+        <headerHorizontalAlign>Left</headerHorizontalAlign>
+        <showInFooter>true</showInFooter>
+        <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+      </items>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -1419,6 +1467,340 @@
           <showTitle>true</showTitle>
         </extInfo>
       </items>
+      <items xsi:type="form:FormGroup">
+        <name>ДокументыЗвит1СГруппаБУ</name>
+        <id>116</id>
+        <items xsi:type="form:FormField">
+          <name>ДокументыЗвит1СДокументБУ</name>
+          <id>121</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ДокументыЗвит1С.ДокументБУ</segments>
+          </dataPath>
+          <toolTip>
+            <key>ru</key>
+            <value>Входящий налоговый документ (бухгалтерский учет)</value>
+          </toolTip>
+          <toolTip>
+            <key>uk</key>
+            <value>Вхідний податковий документ (бухгалтерський облік)</value>
+          </toolTip>
+          <handlers>
+            <event>OnChange</event>
+            <name>ДокументыЗвит1СДокументБУПриИзменении</name>
+          </handlers>
+          <extendedTooltip>
+            <name>ДокументыЗвит1СДокументБУРасширеннаяПодсказка</name>
+            <id>123</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ДокументыЗвит1СДокументБУКонтекстноеМеню</name>
+            <id>122</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <handlers>
+              <event>StartChoice</event>
+              <name>ДокументыЗвит1СДокументБУНачалоВыбора</name>
+            </handlers>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <dropListButton>false</dropListButton>
+            <choiceButton>false</choiceButton>
+            <clearButton>true</clearButton>
+            <spinButton>false</spinButton>
+            <openButton>true</openButton>
+            <createButton>false</createButton>
+            <quickChoice>false</quickChoice>
+            <listChoiceMode>true</listChoiceMode>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <choiceHistoryOnInput>DontUse</choiceHistoryOnInput>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ДокументыЗвит1СКомментарийБУ</name>
+          <id>118</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ДокументыЗвит1С.КомментарийБУ</segments>
+          </dataPath>
+          <titleLocation>None</titleLocation>
+          <extendedTooltip>
+            <name>ДокументыЗвит1СКомментарийБУРасширеннаяПодсказка</name>
+            <id>120</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ДокументыЗвит1СКомментарийБУКонтекстноеМеню</name>
+            <id>119</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+            <textColor xsi:type="core:ColorRef">
+              <color>Style.SpecialTextColor</color>
+            </textColor>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Документы звит1 с группа БУ</value>
+        </title>
+        <title>
+          <key>uk</key>
+          <value>Документи звіт ФРЕДО група БО</value>
+        </title>
+        <toolTip>
+          <key>ru</key>
+          <value>Документы звит1 с группа БУ</value>
+        </toolTip>
+        <toolTip>
+          <key>uk</key>
+          <value>Документи звіт ФРЕДО група БО</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>ДокументыЗвит1СГруппаБУРасширеннаяПодсказка</name>
+          <id>117</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>ColumnGroup</type>
+        <extInfo xsi:type="form:ColumnGroupExtInfo">
+          <group>Vertical</group>
+          <showTitle>true</showTitle>
+        </extInfo>
+      </items>
+      <items xsi:type="form:FormGroup">
+        <name>ДокументыЗвит1СГруппаОтсрочкаРегистрации</name>
+        <id>124</id>
+        <items xsi:type="form:FormField">
+          <name>ДокументыЗвит1СНетВозможностиРегистрацииНН</name>
+          <id>126</id>
+          <title>
+            <key>ru</key>
+            <value>Нет возможности</value>
+          </title>
+          <title>
+            <key>uk</key>
+            <value>Нема можливості</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ДокументыЗвит1С.НетВозможностиРегистрацииНН</segments>
+          </dataPath>
+          <handlers>
+            <event>OnChange</event>
+            <name>ДокументыЗвит1СНетВозможностиРегистрацииННПриИзменении</name>
+          </handlers>
+          <extendedTooltip>
+            <name>ДокументыЗвит1СНетВозможностиРегистрацииННРасширеннаяПодсказка</name>
+            <id>128</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ДокументыЗвит1СНетВозможностиРегистрацииННКонтекстноеМеню</name>
+            <id>127</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>CheckBoxField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ДокументыЗвит1ССрокРегистрацииНН</name>
+          <id>129</id>
+          <title>
+            <key>ru</key>
+            <value>Отсрочено до</value>
+          </title>
+          <title>
+            <key>uk</key>
+            <value>Відтерміновано до</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ДокументыЗвит1С.СрокРегистрацииНН</segments>
+          </dataPath>
+          <handlers>
+            <event>OnChange</event>
+            <name>ДокументыЗвит1ССрокРегистрацииННПриИзменении</name>
+          </handlers>
+          <extendedTooltip>
+            <name>ДокументыЗвит1ССрокРегистрацииННРасширеннаяПодсказка</name>
+            <id>131</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ДокументыЗвит1ССрокРегистрацииННКонтекстноеМеню</name>
+            <id>130</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>InputField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:InputFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <wrap>true</wrap>
+            <chooseType>true</chooseType>
+            <typeDomainEnabled>true</typeDomainEnabled>
+            <textEdit>true</textEdit>
+          </extInfo>
+        </items>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <title>
+          <key>ru</key>
+          <value>Обязательство регистрации НН</value>
+        </title>
+        <title>
+          <key>uk</key>
+          <value>Обов'язок реєстрації ПН</value>
+        </title>
+        <toolTip>
+          <key>ru</key>
+          <value>Документы звит1 с группа отсрочка регистрации</value>
+        </toolTip>
+        <toolTip>
+          <key>uk</key>
+          <value>Документи звит фредо група відстрочка реєстрації</value>
+        </toolTip>
+        <extendedTooltip>
+          <name>ДокументыЗвит1СГруппаОтсрочкаРегистрацииРасширеннаяПодсказка</name>
+          <id>125</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <type>ColumnGroup</type>
+        <extInfo xsi:type="form:ColumnGroupExtInfo">
+          <showTitle>true</showTitle>
+          <showInHeader>true</showInHeader>
+        </extInfo>
+      </items>
       <autoCommandBar>
         <name>ДокументыЗвит1СКоманднаяПанель</name>
         <id>34</id>
@@ -1615,6 +1997,36 @@
           <extInfo xsi:type="form:PopupGroupExtInfo">
             <representation>Auto</representation>
           </extInfo>
+        </items>
+        <items xsi:type="form:Button">
+          <name>ДокументыЗвит1СПодобратьДокументыБУ</name>
+          <id>111</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ДокументыЗвит1СПодобратьДокументыБУРасширеннаяПодсказка</name>
+            <id>112</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.ПодобратьДокументыБУ</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
         </items>
         <visible>true</visible>
         <enabled>true</enabled>
@@ -2383,6 +2795,94 @@
         <common>true</common>
       </edit>
     </columns>
+    <columns>
+      <name>ДокументБУ</name>
+      <title>
+        <key>ru</key>
+        <value>Документ БУ</value>
+      </title>
+      <title>
+        <key>uk</key>
+        <value>Документ БО</value>
+      </title>
+      <id>16</id>
+      <valueType>
+        <types>DocumentRef</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>КомментарийБУ</name>
+      <title>
+        <key>ru</key>
+        <value>Комментарий</value>
+      </title>
+      <title>
+        <key>uk</key>
+        <value>Коментар</value>
+      </title>
+      <id>17</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>НетВозможностиРегистрацииНН</name>
+      <title>
+        <key>ru</key>
+        <value>Нет возможности регистрации НН</value>
+      </title>
+      <title>
+        <key>uk</key>
+        <value>Немає можливості реєстрації ПН</value>
+      </title>
+      <id>18</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>СрокРегистрацииНН</name>
+      <title>
+        <key>ru</key>
+        <value>Срок регистрации НН</value>
+      </title>
+      <title>
+        <key>uk</key>
+        <value>Термін реєстрації ПН</value>
+      </title>
+      <id>19</id>
+      <valueType>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
   </attributes>
   <attributes>
     <name>мВалютаРегламентированногоУчета</name>
@@ -2463,6 +2963,62 @@
         <dateFractions>Date</dateFractions>
       </dateQualifiers>
     </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>СопоставлятьСДокументамиБУ</name>
+    <title>
+      <key>ru</key>
+      <value>Сопоставление с существующими документами БУ (февраль-май 2022)</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Зіставлення з існуючими документами БО (лютий - травень 2022)</value>
+    </title>
+    <id>12</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ТоварныйЧек</name>
+    <id>15</id>
+    <valueType>
+      <types>EnumRef.ВидыОперацийРегистрацияВходящегоНалоговогоДокумента</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ДопСвойствоНетВозможности</name>
+    <id>13</id>
+    <valueType/>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ДопСвойствоОтсрочкаРегистрации</name>
+    <id>14</id>
+    <valueType/>
     <view>
       <common>true</common>
     </view>
@@ -2673,6 +3229,35 @@
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>Загрузить</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ПодобратьДокументыБУ</name>
+    <title>
+      <key>ru</key>
+      <value>Подобрать документы БУ</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Підібрати документи БО</value>
+    </title>
+    <id>8</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Подобрать документы БУ</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Підібрати документи БО</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ПодобратьДокументыБУ</name>
       </handler>
     </action>
     <currentRowUse>DontUse</currentRowUse>

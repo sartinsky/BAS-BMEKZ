@@ -15,7 +15,7 @@
 	
 	WinHttp = Новый COMОбъект("WinHttp.WinHttpRequest.5.1");
 	WinHttp.Option(2,"utf-8");
-	WinHttp.Open("Get","https://pactumsys.com/api/v1/cba2911c-01f9-4ca7-833a-46fb0cc079f2/contractors/"+пЕДРПОУ+"?source=1c",0);       
+	WinHttp.Open("Get","https://pactumsys.com/api/v1/cba2911c-01f9-4ca7-833a-46fb0cc079f2/contractors/"+пЕДРПОУ+"?source=bas",0);       
 	WinHttp.SetRequestHeader("Accept-Language", "ru");
 	WinHttp.SetRequestHeader("Accept-Charset","utf-8");
 	WinHttp.setRequestHeader("Content-Language", "ru");

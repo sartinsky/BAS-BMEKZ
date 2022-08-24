@@ -378,10 +378,6 @@
         <dataPath xsi:type="form:DataPath">
           <segments>МесяцСтрока</segments>
         </dataPath>
-        <handlers>
-          <event>OnChange</event>
-          <name>МесяцСтрокаПриИзменении</name>
-        </handlers>
         <extendedTooltip>
           <name>МесяцСтрокаРасширеннаяПодсказка</name>
           <id>737</id>
@@ -414,8 +410,20 @@
         <showInFooter>true</showInFooter>
         <extInfo xsi:type="form:InputFieldExtInfo">
           <handlers>
+            <event>AutoComplete</event>
+            <name>МесяцСтрокаАвтоПодбор</name>
+          </handlers>
+          <handlers>
+            <event>StartChoice</event>
+            <name>МесяцСтрокаНачалоВыбора</name>
+          </handlers>
+          <handlers>
             <event>Tuning</event>
             <name>МесяцСтрокаРегулирование</name>
+          </handlers>
+          <handlers>
+            <event>TextEditEnd</event>
+            <name>МесяцСтрокаОкончаниеВводаТекста</name>
           </handlers>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>

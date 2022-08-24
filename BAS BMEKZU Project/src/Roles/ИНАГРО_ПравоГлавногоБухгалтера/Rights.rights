@@ -938,23 +938,6 @@
 		</right>
 	</object>
 	<object>
-		<name>CalculationRegister.ИНАГРО_Отражение</name>
-		<right>
-			<name>Read</name>
-			<value>false</value>
-			<restrictionByCondition>
-				<condition>#ОсновноеУсловиеЧтение("Организация")</condition>
-			</restrictionByCondition>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>false</value>
-			<restrictionByCondition>
-				<condition>#ОсновноеУсловиеЗапись("Организация")</condition>
-			</restrictionByCondition>
-		</right>
-	</object>
-	<object>
 		<name>AccumulationRegister.ВзаиморасчетыССотрудниками.Attribute.СуммаОкругления</name>
 		<right>
 			<name>Edit</name>
@@ -1374,23 +1357,6 @@
 		<right>
 			<name>Edit</name>
 			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>CalculationRegister.ИНАГРО_ВзносыВФонды</name>
-		<right>
-			<name>Read</name>
-			<value>false</value>
-			<restrictionByCondition>
-				<condition>#ОсновноеУсловиеЧтение("Организация")</condition>
-			</restrictionByCondition>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>false</value>
-			<restrictionByCondition>
-				<condition>#ОсновноеУсловиеЗапись("Организация")</condition>
-			</restrictionByCondition>
 		</right>
 	</object>
 	<object>
@@ -3043,23 +3009,6 @@
 		</right>
 	</object>
 	<object>
-		<name>CalculationRegister.ИНАГРО_РасчетСреднегоЗаработка</name>
-		<right>
-			<name>Read</name>
-			<value>false</value>
-			<restrictionByCondition>
-				<condition>#ОсновноеУсловиеЧтение("Организация")</condition>
-			</restrictionByCondition>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>false</value>
-			<restrictionByCondition>
-				<condition>#ОсновноеУсловиеЗапись("Организация")</condition>
-			</restrictionByCondition>
-		</right>
-	</object>
-	<object>
 		<name>ChartOfCharacteristicTypes.УдалитьИНАГРО_ПраваПользователей</name>
 		<right>
 			<name>Read</name>
@@ -4544,23 +4493,6 @@
 		</right>
 	</object>
 	<object>
-		<name>CalculationRegister.ИНАГРО_Удержания</name>
-		<right>
-			<name>Read</name>
-			<value>false</value>
-			<restrictionByCondition>
-				<condition>#ОсновноеУсловиеЧтение("Организация")</condition>
-			</restrictionByCondition>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>false</value>
-			<restrictionByCondition>
-				<condition>#ОсновноеУсловиеЗапись("Организация")</condition>
-			</restrictionByCondition>
-		</right>
-	</object>
-	<object>
 		<name>Document.УдалитьИНАГРО_ВводЛюбогоРасчета.TabularSection.Начисления.Attribute.БазовыйПериодКонец</name>
 		<right>
 			<name>View</name>
@@ -4803,23 +4735,6 @@
 		<right>
 			<name>Edit</name>
 			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>CalculationRegister.ИНАГРО_Начисления</name>
-		<right>
-			<name>Read</name>
-			<value>false</value>
-			<restrictionByCondition>
-				<condition>#ОсновноеУсловиеЧтение("Организация")</condition>
-			</restrictionByCondition>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>false</value>
-			<restrictionByCondition>
-				<condition>#ОсновноеУсловиеЗапись("Организация")</condition>
-			</restrictionByCondition>
 		</right>
 	</object>
 	<object>
@@ -5735,64 +5650,6 @@
  )
 
 #КонецЕсли</condition>
-	</restrictionTemplate>
-	<restrictionTemplate>
-		<name>ОсновноеУсловиеЗапись</name>
-		<condition>ТекущаяТаблица ИЗ #ТекущаяТаблица КАК ТекущаяТаблица        
-ГДЕ ((НЕ &amp;ИспользоватьОграниченияПравДоступаНаУровнеЗаписей)
-    ИЛИ 1 В
-        (ВЫБРАТЬ ПЕРВЫЕ 1
-            1
-        ИЗ
-            РегистрСведений.НастройкиПравДоступаПользователей КАК НастройкиПравДоступаПользователей
-        ГДЕ
-            ТекущаяТаблица.#Параметр(1) = НастройкиПравДоступаПользователей.ОбъектДоступа
-            И НастройкиПравДоступаПользователей.ВидОбъектаДоступа = ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Организации)
-            И НастройкиПравДоступаПользователей.Пользователь В (&amp;ГруппыТекущегоПользователя)
-            И НастройкиПравДоступаПользователей.Запись = ИСТИНА))</condition>
-	</restrictionTemplate>
-	<restrictionTemplate>
-		<name>ОсновноеУсловиеЗаписьИерархия</name>
-		<condition>ТекущаяТаблица ИЗ #ТекущаяТаблица КАК ТекущаяТаблица        
-ГДЕ ТекущаяТаблица.ЭтоГруппа или((НЕ &amp;ИспользоватьОграниченияПравДоступаНаУровнеЗаписей)
-    ИЛИ 1 В
-        (ВЫБРАТЬ ПЕРВЫЕ 1
-            1
-        ИЗ
-            РегистрСведений.НастройкиПравДоступаПользователей КАК НастройкиПравДоступаПользователей
-        ГДЕ
-            ТекущаяТаблица.#Параметр(1) = НастройкиПравДоступаПользователей.ОбъектДоступа
-            И НастройкиПравДоступаПользователей.ВидОбъектаДоступа = ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Организации)
-            И НастройкиПравДоступаПользователей.Пользователь В (&amp;ГруппыТекущегоПользователя)
-            И НастройкиПравДоступаПользователей.Запись = ИСТИНА))</condition>
-	</restrictionTemplate>
-	<restrictionTemplate>
-		<name>ОсновноеУсловиеЧтение</name>
-		<condition>ТекущаяТаблица ИЗ #ТекущаяТаблица КАК ТекущаяТаблица        
-ГДЕ ((НЕ &amp;ИспользоватьОграниченияПравДоступаНаУровнеЗаписей)
-    ИЛИ 1 В
-        (ВЫБРАТЬ ПЕРВЫЕ 1
-            1
-        ИЗ
-            РегистрСведений.НастройкиПравДоступаПользователей КАК НастройкиПравДоступаПользователей
-        ГДЕ
-            ТекущаяТаблица.#Параметр(1) = НастройкиПравДоступаПользователей.ОбъектДоступа
-            И НастройкиПравДоступаПользователей.ВидОбъектаДоступа = ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Организации)
-            И НастройкиПравДоступаПользователей.Пользователь В (&amp;ГруппыТекущегоПользователя)))</condition>
-	</restrictionTemplate>
-	<restrictionTemplate>
-		<name>ОсновноеУсловиеЧтениеИерархия</name>
-		<condition>ТекущаяТаблица ИЗ #ТекущаяТаблица КАК ТекущаяТаблица        
-ГДЕ ТекущаяТаблица.ЭтоГруппа или ((НЕ &amp;ИспользоватьОграниченияПравДоступаНаУровнеЗаписей)
-	ИЛИ 1 В
-		(ВЫБРАТЬ ПЕРВЫЕ 1
-			1
-		ИЗ
-			РегистрСведений.НастройкиПравДоступаПользователей КАК НастройкиПравДоступаПользователей
-		ГДЕ
-			ТекущаяТаблица.#Параметр(1) = НастройкиПравДоступаПользователей.ОбъектДоступа
-			И НастройкиПравДоступаПользователей.ВидОбъектаДоступа = ЗНАЧЕНИЕ(Перечисление.ВидыОбъектовДоступа.Организации)
-			И НастройкиПравДоступаПользователей.Пользователь В (&amp;ГруппыТекущегоПользователя)))                </condition>
 	</restrictionTemplate>
 	<restrictionTemplate>
 		<name>ПоЗначениям</name>
