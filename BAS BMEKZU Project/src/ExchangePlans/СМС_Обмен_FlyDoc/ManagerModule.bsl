@@ -60,14 +60,14 @@
 	ОписаниеВарианта.КраткаяИнформацияПоОбмену = КраткаяИнформацияПоОбмену(ИдентификаторНастройки);
 	ОписаниеВарианта.ПодробнаяИнформацияПоОбмену = ПодробнаяИнформацияПоОбмену(ИдентификаторНастройки);
 	ОписаниеВарианта.ПояснениеДляНастройкиПараметровУчета = ПояснениеДляНастройкиПараметровУчета(ИдентификаторНастройки);
-	ОписаниеВарианта.ЗаголовокКомандыДляСозданияНовогоОбменаДанными = "Business automation software for AGRO. Accounting of Elevator, Mill and Feed mill, edition 2.1(FlyDoc)";
+	ОписаниеВарианта.ЗаголовокКомандыДляСозданияНовогоОбменаДанными = "BAS AGRO. Accounting of Elevator, Mill and Feed mill, edition 2.1(FlyDoc)";
 	ОписаниеВарианта.ОбщиеДанныеУзлов = ОбщиеДанныеУзлов();
 	ОписаниеВарианта.ПутьКФайлуКомплектаПравилВКаталогеШаблонов = "";
 	
 	ОписаниеВарианта.ИмяКонфигурацииКорреспондента = "BASБухгалтерияЭлеватораМельницыИКомбикормовогоЗавода";
-	ОписаниеВарианта.ЗаголовокКомандыДляСозданияНовогоОбменаДанными = "Business automation software for AGRO. Accounting of Elevator, Mill and Feed mill, edition 2.1";
-	ОписаниеВарианта.ЗаголовокПомощникаСозданияОбмена =               НСтр("ru='Настройка синхронизации с программой ""Business automation software for AGRO. Accounting of Elevator, Mill and Feed mill, edition 2.1"" документов для FlyDoc';uk='Настройка синхронізації з програмою ""Business automation software for AGRO. Accounting of Elevator, Mill and Feed mill, edition 2.1"" документів для FlyDoc'");
-	ОписаниеВарианта.ЗаголовокУзлаПланаОбмена =                       НСтр("ru='Синхронизация с программой ""Business automation software for AGRO. Accounting of Elevator, Mill and Feed mill, edition 2.1""';uk='Business automation software for AGRO. Accounting of Elevator, Mill and Feed mill, edition 2.1""'");
+	ОписаниеВарианта.ЗаголовокКомандыДляСозданияНовогоОбменаДанными = "BAS AGRO. Accounting of Elevator, Mill and Feed mill, edition 2.1(FlyDoc)";
+	ОписаниеВарианта.ЗаголовокПомощникаСозданияОбмена =               НСтр("ru='Настройка синхронизации с программой ""BAS AGRO. Accounting of Elevator, Mill and Feed mill, edition 2.1(FlyDoc)"" документов для FlyDoc';uk='Настройка синхронізації з програмою ""BAS AGRO. Accounting of Elevator, Mill and Feed mill, edition 2.1(FlyDoc)"" документів для FlyDoc'");
+	ОписаниеВарианта.ЗаголовокУзлаПланаОбмена =                       НСтр("ru='Синхронизация с программой ""BAS AGRO. Accounting of Elevator, Mill and Feed mill, edition 2.1(FlyDoc)""';uk='BAS AGRO. Accounting of Elevator, Mill and Feed mill, edition 2.1(FlyDoc)""'");
 	ОписаниеВарианта.НаименованиеКонфигурацииКорреспондента =         "Business automation software for AGRO. Accounting of Elevator, Mill and Feed mill, edition 2.1";
 
 КонецПроцедуры
@@ -171,7 +171,6 @@
 
 // Возвращаемое значение: Строка - Ссылка на подробную информацию по настраиваемой синхронизации,
 // в виде гиперссылки или полного пути к форме
-//@skip-check doc-comment-export-function-return-section
 Функция ПодробнаяИнформацияПоОбмену(ИдентификаторНастройки) Экспорт
 	
 	Если ПолучитьФункциональнуюОпцию("РаботаВМоделиСервиса") Тогда
