@@ -2,11 +2,11 @@
 <form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
   <title>
     <key>ru</key>
-    <value>Декларация плательщика единого налога - юр.лица</value>
+    <value>Расчет единого налога на период военного положения</value>
   </title>
   <title>
     <key>uk</key>
-    <value>Декларація платника єдиного податку - юр. особи</value>
+    <value>Розрахунок єдиного податку на період воєнного стану</value>
   </title>
   <items xsi:type="form:FormGroup">
     <name>Реквизиты</name>
@@ -4798,11 +4798,9 @@
     <use>
       <common>true</common>
     </use>
-    <action xsi:type="form:FormCommandHandlerContainer">
-      <handler>
-        <name>Выгрузить</name>
-      </handler>
-    </action>
+    <picture xsi:type="core:PictureRef">
+      <picture>CommonPicture.ВыгрузитьФайлСертификата</picture>
+    </picture>
     <representation>TextPicture</representation>
     <currentRowUse>DontUse</currentRowUse>
   </formCommands>
@@ -5017,11 +5015,6 @@
     <use>
       <common>true</common>
     </use>
-    <action xsi:type="form:FormCommandHandlerContainer">
-      <handler>
-        <name>ПечататьСразу</name>
-      </handler>
-    </action>
     <currentRowUse>DontUse</currentRowUse>
   </formCommands>
   <formCommands>
@@ -5046,11 +5039,6 @@
     <use>
       <common>true</common>
     </use>
-    <action xsi:type="form:FormCommandHandlerContainer">
-      <handler>
-        <name>ПоказатьБланк</name>
-      </handler>
-    </action>
     <currentRowUse>DontUse</currentRowUse>
   </formCommands>
   <formCommands>

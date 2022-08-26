@@ -183,7 +183,37 @@
       </extInfo>
     </items>
     <items xsi:type="form:Button">
-      <name>ФормаЗагрузитьКурсыВалют</name>
+      <name>ФормаЗагрузитьКурсыВалютНСИС</name>
+      <id>87</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаЗагрузитьКурсыВалютНСИСРасширеннаяПодсказка</name>
+        <id>88</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.ЗагрузитьКурсыВалютНСИС</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <items xsi:type="form:Button">
+      <name>ФормаЗагрузитьКурсыВалютФинансУА</name>
       <id>43</id>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -191,7 +221,7 @@
         <common>true</common>
       </userVisible>
       <extendedTooltip>
-        <name>ФормаЗагрузитьКурсыВалютExtendedTooltip</name>
+        <name>ФормаЗагрузитьКурсыВалютФинансУАРасширеннаяПодсказка</name>
         <id>50</id>
         <visible>true</visible>
         <enabled>true</enabled>
@@ -205,12 +235,13 @@
           <horizontalAlign>Left</horizontalAlign>
         </extInfo>
       </extendedTooltip>
-      <commandName>Form.Command.ЗагрузитьКурсыВалют</commandName>
+      <commandName>Form.Command.ЗагрузитьКурсыВалютФинансУА</commandName>
       <representation>Auto</representation>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
+      <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
     </items>
     <items xsi:type="form:Button">
       <name>Справка</name>
@@ -916,14 +947,14 @@
     <currentRowUse>DontUse</currentRowUse>
   </formCommands>
   <formCommands>
-    <name>ЗагрузитьКурсыВалют</name>
+    <name>ЗагрузитьКурсыВалютФинансУА</name>
     <title>
       <key>ru</key>
-      <value>Загрузить курсы валют...</value>
+      <value>Загрузить курсы валют с finance.ua...</value>
     </title>
     <title>
       <key>uk</key>
-      <value>Завантажити курси валют...</value>
+      <value>Завантажити курси валют з finance.ua...</value>
     </title>
     <id>2</id>
     <toolTip>
@@ -939,10 +970,38 @@
     </use>
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
-        <name>ЗагрузитьКурсыВалют</name>
+        <name>ЗагрузитьКурсыВалютФинансУА</name>
       </handler>
     </action>
-    <functionalOptions>FunctionalOption.СтандартныеПодсистемыВЛокальномРежиме</functionalOptions>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ЗагрузитьКурсыВалютНСИС</name>
+    <title>
+      <key>ru</key>
+      <value>Загрузить курсы валют (RDI)...</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Завантажити курси валют (RDI)...</value>
+    </title>
+    <id>3</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Загрузить курсы валют из сервиса RDI</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Завантажити курси валют з сервісу RDI</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ЗагрузитьКурсыВалютНСИС</name>
+      </handler>
+    </action>
     <currentRowUse>DontUse</currentRowUse>
   </formCommands>
   <commandInterface>
