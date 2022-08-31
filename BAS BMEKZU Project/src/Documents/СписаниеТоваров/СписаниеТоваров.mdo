@@ -98,6 +98,7 @@
   <realTimePosting>Deny</realTimePosting>
   <registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
   <sequenceFilling>AutoFillOff</sequenceFilling>
+  <registerRecords>AccumulationRegister.РозничныеПродажиПодакцизныхТоваров</registerRecords>
   <registerRecords>AccountingRegister.Хозрасчетный</registerRecords>
   <registerRecords>AccumulationRegister.РеализованныеТоварыКомитентов</registerRecords>
   <registerRecords>AccumulationRegister.ИНАГРО_МатериалыСписанныеНаТранспорт</registerRecords>
@@ -585,6 +586,25 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="c93fd919-1c60-44bc-832d-2ae550c19b1c">
+    <name>СтатьяДекларацииПоАкцизномуНалогу</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ст. дек. акцизного налога</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Ст. дек. акцизного податку</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиНалоговыхДеклараций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <forms uuid="eb14bd31-22fb-44df-bd3c-4a5e7cdb7118">
     <name>ФормаДокументаОбщая</name>
     <synonym>
@@ -988,6 +1008,29 @@
         <stringQualifiers>
           <length>10</length>
         </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="34adcad5-0fd8-4a60-91f2-605d6f909748">
+      <name>СуммаАкцизногоНалога</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма акциза</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Сума акцизу</value>
+      </synonym>
+      <comment>(Общ)</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
