@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0d864cd2-3c22-4d47-b5f7-a008b104e7ea">
+  <name>СМС_ОбменДаннымиОбмен_СчетаРасходные_ПоОрганизацииПередУдалением</name>
+  <synonym>
+    <key>uk</key>
+    <value>Обмен данными обмен счета расходные по организации перед удалением</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен данными обмен счета расходные по организации перед удалением</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.СчетНаОплатуПокупателю</types>
+    <types>DocumentObject.РеализацияТоваровУслуг</types>
+  </source>
+  <event>BeforeDelete</event>
+  <handler>CommonModule.СМС_ОбменДаннымиСобытия.ОбменДаннымиОбмен_СчетаРасходные_ПоОрганизацииПередУдалением</handler>
+</mdclass:EventSubscription>
