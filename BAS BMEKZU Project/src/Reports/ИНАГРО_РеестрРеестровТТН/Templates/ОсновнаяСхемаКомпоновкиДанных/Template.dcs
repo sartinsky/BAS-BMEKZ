@@ -443,6 +443,26 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВлажностьЗХС5</dataPath>
+			<field>ВлажностьЗХС5</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Влажность ЗХС5</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СорнаяПримесьЗХС5</dataPath>
+			<field>СорнаяПримесьЗХС5</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сорная примесь ЗХС5</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗЛИЧНЫЕ
 	ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.Номер КАК Номер,
@@ -466,17 +486,31 @@
 	ИНАГРО_РеестрТТНВвозСписокТТН.ТТН.Номенклатура КАК НоменклатураТТН,
 	ИНАГРО_РеестрТТНВвозСписокТТН.ТТН.Номер КАК НомерТТН,
 	ИНАГРО_ДополнительныеРеквизитыНоменклатуры.ВидКультуры КАК ВидКультуры,
-	ВЫРАЗИТЬ((ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.ФизическийВес + ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.ВесОбразцов) * ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.Влажность / 100 КАК ЧИСЛО(19, 2)) КАК ВлСумма,
-	ВЫРАЗИТЬ((ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.ФизическийВес + ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.ВесОбразцов) * ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.СорнаяПримесь / 100 КАК ЧИСЛО(19, 2)) КАК СорСумма,
+	ВЫБОР
+		КОГДА ИНАГРО_ПараметрыУчетаЭлеватораСрезПоследних.НеУчитыватьВесОбразцов
+			ТОГДА ВЫРАЗИТЬ(ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.ФизическийВес * ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.Влажность / 100 КАК ЧИСЛО(19, 2))
+		ИНАЧЕ ВЫРАЗИТЬ((ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.ФизическийВес + ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.ВесОбразцов) * ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.Влажность / 100 КАК ЧИСЛО(19, 2))
+	КОНЕЦ КАК ВлСумма,
+	ВЫБОР
+		КОГДА ИНАГРО_ПараметрыУчетаЭлеватораСрезПоследних.НеУчитыватьВесОбразцов
+			ТОГДА ВЫРАЗИТЬ(ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.ФизическийВес * ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.СорнаяПримесь / 100 КАК ЧИСЛО(19, 2))
+		ИНАЧЕ ВЫРАЗИТЬ((ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.ФизическийВес + ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.ВесОбразцов) * ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.СорнаяПримесь / 100 КАК ЧИСЛО(19, 2))
+	КОНЕЦ КАК СорСумма,
 	ИНАГРО_РеестрТТНВвозСписокТТН.ТТН.Владелец КАК ТТНВладелец,
-	ВЫРАЗИТЬ((ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.ФизическийВес + ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.ВесОбразцов) * ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.ЗерноваяПримесь / 100 КАК ЧИСЛО(19, 2)) КАК ЗерСумма,
+	ВЫБОР
+		КОГДА ИНАГРО_ПараметрыУчетаЭлеватораСрезПоследних.НеУчитыватьВесОбразцов
+			ТОГДА ВЫРАЗИТЬ(ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.ФизическийВес * ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.ЗерноваяПримесь / 100 КАК ЧИСЛО(19, 2))
+		ИНАЧЕ ВЫРАЗИТЬ((ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.ФизическийВес + ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.ВесОбразцов) * ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.ЗерноваяПримесь / 100 КАК ЧИСЛО(19, 2))
+	КОНЕЦ КАК ЗерСумма,
 	ВЫБОР
 		КОГДА ИНАГРО_ПараметрыУчетаЭлеватораСрезПоследних.НеУчитыватьВесОбразцов
 			ТОГДА ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.ФизическийВес
 		ИНАЧЕ ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.ФизическийВес + ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.ВесОбразцов
 	КОНЕЦ КАК ОбщийФизическийВес,
 	ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.ВесОбразцов КАК ВесОбразцов,
-	ЕСТЬNULL(ИНАГРО_ПараметрыУчетаЭлеватораСрезПоследних.НеУчитыватьВесОбразцов, ЛОЖЬ) КАК НеУчитыватьВесОбразцов
+	ЕСТЬNULL(ИНАГРО_ПараметрыУчетаЭлеватораСрезПоследних.НеУчитыватьВесОбразцов, ЛОЖЬ) КАК НеУчитыватьВесОбразцов,
+	ВЫРАЗИТЬ(ЕСТЬNULL(ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.Влажность, 0) КАК ЧИСЛО(5, 2)) КАК ВлажностьЗХС5,
+	ВЫРАЗИТЬ(ЕСТЬNULL(ИНАГРО_РеестрТТНВвозСписокТТН.Ссылка.СорнаяПримесь, 0) КАК ЧИСЛО(5, 2)) КАК СорнаяПримесьЗХС5
 ПОМЕСТИТЬ ВТ_Реестры
 ИЗ
 	Документ.ИНАГРО_РеестрТТНВвоз.СписокТТН КАК ИНАГРО_РеестрТТНВвозСписокТТН
@@ -512,17 +546,31 @@
 	ИНАГРО_РеестрТТНВывозСписокТТН.ТТН.Номенклатура,
 	ИНАГРО_РеестрТТНВывозСписокТТН.ТТН.Номер,
 	ИНАГРО_ДополнительныеРеквизитыНоменклатуры.ВидКультуры,
-	ВЫРАЗИТЬ((ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.ФизическийВес + ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.ВесОбразцов) * ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.Влажность / 100 КАК ЧИСЛО(19, 2)),
-	ВЫРАЗИТЬ((ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.ФизическийВес + ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.ВесОбразцов) * ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.СорнаяПримесь / 100 КАК ЧИСЛО(19, 2)),
+	ВЫБОР
+		КОГДА ИНАГРО_ПараметрыУчетаЭлеватораСрезПоследних.НеУчитыватьВесОбразцов
+			ТОГДА ВЫРАЗИТЬ(ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.ФизическийВес * ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.Влажность / 100 КАК ЧИСЛО(19, 2))
+		ИНАЧЕ ВЫРАЗИТЬ((ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.ФизическийВес + ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.ВесОбразцов) * ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.Влажность / 100 КАК ЧИСЛО(19, 2))
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА ИНАГРО_ПараметрыУчетаЭлеватораСрезПоследних.НеУчитыватьВесОбразцов
+			ТОГДА ВЫРАЗИТЬ(ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.ФизическийВес * ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.СорнаяПримесь / 100 КАК ЧИСЛО(19, 2))
+		ИНАЧЕ ВЫРАЗИТЬ((ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.ФизическийВес + ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.ВесОбразцов) * ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.СорнаяПримесь / 100 КАК ЧИСЛО(19, 2))
+	КОНЕЦ,
 	ИНАГРО_РеестрТТНВывозСписокТТН.ТТН.Владелец,
-	ВЫРАЗИТЬ((ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.ФизическийВес + ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.ВесОбразцов) * ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.ЗерноваяПримесь / 100 КАК ЧИСЛО(19, 2)),
+	ВЫБОР
+		КОГДА ИНАГРО_ПараметрыУчетаЭлеватораСрезПоследних.НеУчитыватьВесОбразцов
+			ТОГДА ВЫРАЗИТЬ(ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.ФизическийВес * ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.ЗерноваяПримесь / 100 КАК ЧИСЛО(19, 2))
+		ИНАЧЕ ВЫРАЗИТЬ((ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.ФизическийВес + ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.ВесОбразцов) * ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.ЗерноваяПримесь / 100 КАК ЧИСЛО(19, 2))
+	КОНЕЦ,
 	ВЫБОР
 		КОГДА ИНАГРО_ПараметрыУчетаЭлеватораСрезПоследних.НеУчитыватьВесОбразцов
 			ТОГДА ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.ФизическийВес
 		ИНАЧЕ ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.ФизическийВес + ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.ВесОбразцов
 	КОНЕЦ,
 	ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.ВесОбразцов,
-	ЕСТЬNULL(ИНАГРО_ПараметрыУчетаЭлеватораСрезПоследних.НеУчитыватьВесОбразцов, ЛОЖЬ)
+	ЕСТЬNULL(ИНАГРО_ПараметрыУчетаЭлеватораСрезПоследних.НеУчитыватьВесОбразцов, ЛОЖЬ),
+	ВЫРАЗИТЬ(ЕСТЬNULL(ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.Влажность, 0) КАК ЧИСЛО(5, 2)),
+	ВЫРАЗИТЬ(ЕСТЬNULL(ИНАГРО_РеестрТТНВывозСписокТТН.Ссылка.СорнаяПримесь, 0) КАК ЧИСЛО(5, 2))
 ИЗ
 	Документ.ИНАГРО_РеестрТТНВывоз.СписокТТН КАК ИНАГРО_РеестрТТНВывозСписокТТН
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ИНАГРО_ДополнительныеРеквизитыНоменклатуры КАК ИНАГРО_ДополнительныеРеквизитыНоменклатуры
@@ -563,7 +611,9 @@
 	ВЫРАЗИТЬ(ИНАГРО_РеестрТТНВнутрСписокТТН.ФизическийВес * ИНАГРО_РеестрТТНВнутрСписокТТН.ЗерноваяПримесь / 100 КАК ЧИСЛО(19, 2)),
 	ЕСТЬNULL(ИНАГРО_РеестрТТНВнутрСписокТТН.ФизическийВес, 0),
 	0,
-	ЛОЖЬ
+	ЛОЖЬ,
+	ВЫРАЗИТЬ(ЕСТЬNULL(ИНАГРО_РеестрТТНВнутрСписокТТН.Влажность, 0) КАК ЧИСЛО(5, 2)),
+	ВЫРАЗИТЬ(ЕСТЬNULL(ИНАГРО_РеестрТТНВнутрСписокТТН.СорнаяПримесь, 0) КАК ЧИСЛО(5, 2))
 ИЗ
 	Документ.ИНАГРО_РеестрТТНВнутр.СписокТТН КАК ИНАГРО_РеестрТТНВнутрСписокТТН
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ИНАГРО_ДополнительныеРеквизитыНоменклатуры КАК ИНАГРО_ДополнительныеРеквизитыНоменклатуры
@@ -603,7 +653,9 @@
 	ВТ_Реестры.НеУчитыватьВесОбразцов КАК НеУчитыватьВесОбразцов,
 	ВТ_Реестры.ДатаДок КАК ДатаДок,
 	ВТ_Реестры.ВлСумма КАК ВлСумма,
-	ВТ_Реестры.Влажность КАК Влажность
+	ВТ_Реестры.Влажность КАК Влажность,
+	ВТ_Реестры.ВлажностьЗХС5 КАК ВлажностьЗХС5,
+	ВТ_Реестры.СорнаяПримесьЗХС5 КАК СорнаяПримесьЗХС5
 ИЗ
 	ВТ_Реестры КАК ВТ_Реестры
 ГДЕ
@@ -693,7 +745,7 @@
 	</calculatedField>
 	<totalField>
 		<dataPath>ВесТТН</dataPath>
-		<expression>Максимум(ВесТТН)</expression>
+		<expression>Сумма(ВесТТН)</expression>
 	</totalField>
 	<totalField>
 		<dataPath>ЗачетныйВес</dataPath>
@@ -714,20 +766,14 @@
 	</totalField>
 	<totalField>
 		<dataPath>СорнаяПримесь</dataPath>
-		<expression>Вычислить("ВЫБОР 
-	КОГДА ОбщийФизическийВес = 0 ТОГДА 0
-	ИНАЧЕ  Сумма(СорСумма)/Сумма(ОбщийФизическийВес)*100
-КОНЕЦ")	
+		<expression>Сумма(Массив(ТаблицаЗначений(Различные СорСумма, Ссылка)))/Сумма(Массив(ТаблицаЗначений(Различные ОбщийФизическийВес, Ссылка)))*100
 </expression>
 		<group>Вмести</group>
 		<group>ДЕНЬ</group>
 	</totalField>
 	<totalField>
 		<dataPath>ЗерноваяПримесь</dataPath>
-		<expression>Вычислить("ВЫБОР 
-	КОГДА ОбщийФизическийВес = 0 ТОГДА 0
-	ИНАЧЕ  Сумма(ЗерСумма)/Сумма(ОбщийФизическийВес)*100
-КОНЕЦ")	
+		<expression>Сумма(Массив(ТаблицаЗначений(Различные ЗерСумма, Ссылка)))/Сумма(Массив(ТаблицаЗначений(Различные ОбщийФизическийВес, Ссылка)))*100
 </expression>
 		<group>Вмести</group>
 		<group>ДЕНЬ</group>
@@ -749,11 +795,23 @@
 	</totalField>
 	<totalField>
 		<dataPath>ЦентПроцВлажность</dataPath>
-		<expression>Максимум(ОбщийФизическийВес * Влажность / 100)</expression>
+		<expression>Выбор 
+Когда &amp;РеестрТТН = "РеестрыТТНАвтоВнутр" Тогда
+	Сумма(ОбщийФизическийВес * Влажность / 100)
+Иначе
+	Максимум(ОбщийФизическийВес * Влажность / 100)
+Конец</expression>
+		<group>Ссылка</group>
 	</totalField>
 	<totalField>
 		<dataPath>ЦентПроцСорность</dataPath>
-		<expression>Максимум(ОбщийФизическийВес * СорнаяПримесь / 100)</expression>
+		<expression>Выбор 
+Когда &amp;РеестрТТН = "РеестрыТТНАвтоВнутр" Тогда
+	Сумма(ОбщийФизическийВес * СорнаяПримесь / 100)
+Иначе
+	Максимум(ОбщийФизическийВес * СорнаяПримесь / 100)
+Конец</expression>
+		<group>Ссылка</group>
 	</totalField>
 	<totalField>
 		<dataPath>ВесТТН</dataPath>
@@ -762,13 +820,47 @@
 	</totalField>
 	<totalField>
 		<dataPath>ЦентПроцВлажность</dataPath>
-		<expression>Сумма(Массив(ТаблицаЗначений(Различные ОбщийФизическийВес, Ссылка)))*Среднее(Влажность)/100</expression>
+		<expression>Сумма(Массив(ТаблицаЗначений(Различные ОбщийФизическийВес * Влажность / 100, Ссылка)))</expression>
 		<group>Вмести</group>
 	</totalField>
 	<totalField>
 		<dataPath>ЦентПроцСорность</dataPath>
-		<expression>Сумма(Массив(ТаблицаЗначений(Различные ОбщийФизическийВес, Ссылка)))*Среднее(СорнаяПримесь)/100</expression>
+		<expression>Сумма(Массив(ТаблицаЗначений(Различные ОбщийФизическийВес * СорнаяПримесь / 100, Ссылка)))</expression>
 		<group>Вмести</group>
+	</totalField>
+	<totalField>
+		<dataPath>Влажность</dataPath>
+		<expression>Максимум(Влажность)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Влажность</dataPath>
+		<expression>Сумма(Массив(ТаблицаЗначений(Различные ВлСумма, Ссылка)))/Сумма(Массив(ТаблицаЗначений(Различные ОбщийФизическийВес, Ссылка)))*100
+</expression>
+		<group>Вмести</group>
+		<group>ДЕНЬ</group>
+	</totalField>
+	<totalField>
+		<dataPath>ВесТТН</dataPath>
+		<expression>Сумма(Массив(ТаблицаЗначений(Различные ОбщийФизическийВес, Ссылка)))</expression>
+		<group>Ссылка</group>
+	</totalField>
+	<totalField>
+		<dataPath>Влажность</dataPath>
+		<expression>Сумма(Массив(ТаблицаЗначений(Различные ВлСумма, Ссылка)))/Сумма(Массив(ТаблицаЗначений(Различные ОбщийФизическийВес, Ссылка)))*100
+</expression>
+		<group>НоменклатураГрупировка</group>
+	</totalField>
+	<totalField>
+		<dataPath>СорнаяПримесь</dataPath>
+		<expression>Сумма(Массив(ТаблицаЗначений(Различные СорСумма, Ссылка)))/Сумма(Массив(ТаблицаЗначений(Различные ОбщийФизическийВес, Ссылка)))*100
+</expression>
+		<group>НоменклатураГрупировка</group>
+	</totalField>
+	<totalField>
+		<dataPath>ЗерноваяПримесь</dataPath>
+		<expression>Сумма(Массив(ТаблицаЗначений(Различные ЗерСумма, Ссылка)))/Сумма(Массив(ТаблицаЗначений(Различные ОбщийФизическийВес, Ссылка)))*100
+</expression>
+		<group>НоменклатураГрупировка</group>
 	</totalField>
 	<totalField>
 		<dataPath>Влажность</dataPath>
@@ -776,19 +868,25 @@
 		<group>Ссылка</group>
 	</totalField>
 	<totalField>
-		<dataPath>Влажность</dataPath>
-		<expression>Вычислить("ВЫБОР 
-	КОГДА ОбщийФизическийВес ТОГДА 0
-	ИНАЧЕ  Сумма(ВлСумма)/Сумма(ОбщийФизическийВес)*100
-КОНЕЦ")	
-</expression>
-		<group>Вмести</group>
-		<group>ДЕНЬ</group>
+		<dataPath>СорнаяПримесь</dataPath>
+		<expression>Максимум(СорнаяПримесь)</expression>
+		<group>Ссылка</group>
 	</totalField>
 	<totalField>
-		<dataPath>ВесТТН</dataPath>
-		<expression>Максимум(ОбщийФизическийВес)</expression>
+		<dataPath>ЗерноваяПримесь</dataPath>
+		<expression>Максимум(ЗерноваяПримесь)</expression>
 		<group>Ссылка</group>
+	</totalField>
+	<totalField>
+		<dataPath>ВлажностьЗХС5</dataPath>
+		<expression>Сумма(Массив(ТаблицаЗначений(Различные ВлСумма, Ссылка)))/Сумма(Массив(ТаблицаЗначений(Различные ОбщийФизическийВес, Ссылка)))*100</expression>
+		<group>Вмести</group>
+	</totalField>
+	<totalField>
+		<dataPath>СорнаяПримесьЗХС5</dataPath>
+		<expression>Сумма(Массив(ТаблицаЗначений(Различные СорСумма, Ссылка)))/Сумма(Массив(ТаблицаЗначений(Различные ОбщийФизическийВес, Ссылка)))*100
+</expression>
+		<group>Вмести</group>
 	</totalField>
 	<parameter>
 		<name>Период</name>
@@ -1322,17 +1420,20 @@
 			</totalField>
 			<totalField>
 				<dataPath>Влажность</dataPath>
-				<expression>Среднее(Влажность)</expression>
+				<expression>Сумма(Массив(ТаблицаЗначений(Различные ВлСумма, Ссылка)))/Сумма(Массив(ТаблицаЗначений(Различные Нетто, Ссылка)))*100
+</expression>
 				<group>Всего</group>
 			</totalField>
 			<totalField>
 				<dataPath>ЗерноваяПримесь</dataPath>
-				<expression>Среднее(ЗерноваяПримесь)</expression>
+				<expression>Сумма(Массив(ТаблицаЗначений(Различные ЗерСумма, Ссылка)))/Сумма(Массив(ТаблицаЗначений(Различные Нетто, Ссылка)))*100
+</expression>
 				<group>Всего</group>
 			</totalField>
 			<totalField>
 				<dataPath>СорнаяПримесь</dataPath>
-				<expression>Среднее(Массив(ТаблицаЗначений(Различные СорнаяПримесь, Ссылка,Дата,Номенклатура,Склад)))</expression>
+				<expression>Сумма(Массив(ТаблицаЗначений(Различные СорСумма, Ссылка)))/Сумма(Массив(ТаблицаЗначений(Различные Нетто, Ссылка)))*100
+</expression>
 				<group>Всего</group>
 			</totalField>
 			<parameter>
@@ -7797,7 +7898,16 @@
 								<dcsat:appearance>
 									<dcscor:item>
 										<dcscor:parameter>Формат</dcscor:parameter>
-										<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+										<dcscor:value xsi:type="v8:LocalStringType">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>ЧДЦ=2</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>ЧДЦ=2</v8:content>
+											</v8:item>
+										</dcscor:value>
 									</dcscor:item>
 								</dcsat:appearance>
 							</dcsat:item>
@@ -7864,7 +7974,16 @@
 								<dcsat:appearance>
 									<dcscor:item>
 										<dcscor:parameter>Формат</dcscor:parameter>
-										<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+										<dcscor:value xsi:type="v8:LocalStringType">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>ЧДЦ=2</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>ЧДЦ=2</v8:content>
+											</v8:item>
+										</dcscor:value>
 									</dcscor:item>
 								</dcsat:appearance>
 							</dcsat:item>
@@ -7931,7 +8050,16 @@
 								<dcsat:appearance>
 									<dcscor:item>
 										<dcscor:parameter>Формат</dcscor:parameter>
-										<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+										<dcscor:value xsi:type="v8:LocalStringType">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>ЧДЦ=2</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>ЧДЦ=2</v8:content>
+											</v8:item>
+										</dcscor:value>
 									</dcscor:item>
 								</dcsat:appearance>
 							</dcsat:item>
@@ -8990,7 +9118,7 @@
 				</template>
 				<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 					<dcsat:name>Вместе</dcsat:name>
-					<dcsat:expression>ВЫБОР КОГДА ПараметрыДанных.РеестрЖД = "РеестрТТНВвозЖД" ТОГДА НСтр("ru = 'Вместе по приему'; uk = 'Разом по приому'") ИНАЧЕ НСтр("ru = 'Вместе по отпуску'; uk = 'Разом по відпустці'") КОНЕЦ</dcsat:expression>
+					<dcsat:expression>ВЫБОР КОГДА ПараметрыДанных.РеестрЖД = "РеестрТТНВвозЖД" ТОГДА НСтр("ru = 'Вместе по приему'; uk = 'Разом по прийому'") ИНАЧЕ НСтр("ru = 'Вместе по отпуску'; uk = 'Разом по відпустці'") КОНЕЦ</dcsat:expression>
 				</parameter>
 				<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 					<dcsat:name>ИтогНетто</dcsat:name>
@@ -9677,6 +9805,21 @@
 						<dcsat:tableCell>
 							<dcsat:item xsi:type="dcsat:Field">
 								<dcsat:value xsi:type="dcscor:Parameter">Влажность</dcsat:value>
+								<dcsat:appearance>
+									<dcscor:item>
+										<dcscor:parameter>Формат</dcscor:parameter>
+										<dcscor:value xsi:type="v8:LocalStringType">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>ЧДЦ=2</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>ЧДЦ=2</v8:content>
+											</v8:item>
+										</dcscor:value>
+									</dcscor:item>
+								</dcsat:appearance>
 							</dcsat:item>
 							<dcsat:appearance>
 								<dcscor:item>
@@ -9726,6 +9869,21 @@
 						<dcsat:tableCell>
 							<dcsat:item xsi:type="dcsat:Field">
 								<dcsat:value xsi:type="dcscor:Parameter">СорнаяПримесь</dcsat:value>
+								<dcsat:appearance>
+									<dcscor:item>
+										<dcscor:parameter>Формат</dcscor:parameter>
+										<dcscor:value xsi:type="v8:LocalStringType">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>ЧДЦ=2</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>ЧДЦ=2</v8:content>
+											</v8:item>
+										</dcscor:value>
+									</dcscor:item>
+								</dcsat:appearance>
 							</dcsat:item>
 							<dcsat:appearance>
 								<dcscor:item>
@@ -9775,6 +9933,21 @@
 						<dcsat:tableCell>
 							<dcsat:item xsi:type="dcsat:Field">
 								<dcsat:value xsi:type="dcscor:Parameter">ЗерноваяПримесь</dcsat:value>
+								<dcsat:appearance>
+									<dcscor:item>
+										<dcscor:parameter>Формат</dcscor:parameter>
+										<dcscor:value xsi:type="v8:LocalStringType">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>ЧДЦ=2</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uk</v8:lang>
+												<v8:content>ЧДЦ=2</v8:content>
+											</v8:item>
+										</dcscor:value>
+									</dcscor:item>
+								</dcsat:appearance>
 							</dcsat:item>
 							<dcsat:appearance>
 								<dcscor:item>
@@ -12099,7 +12272,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:FormTextColor</dcscor:value>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FormTextColor</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>СтильГраницы</dcscor:parameter>
@@ -12179,7 +12352,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:FormTextColor</dcscor:value>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FormTextColor</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>Шрифт</dcscor:parameter>
@@ -12391,7 +12564,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:FormTextColor</dcscor:value>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FormTextColor</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>СтильГраницы</dcscor:parameter>
@@ -12423,7 +12596,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:FormTextColor</dcscor:value>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FormTextColor</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>СтильГраницы</dcscor:parameter>
@@ -12467,7 +12640,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:FormTextColor</dcscor:value>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FormTextColor</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>СтильГраницы</dcscor:parameter>
@@ -13653,7 +13826,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:FormTextColor</dcscor:value>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FormTextColor</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>СтильГраницы</dcscor:parameter>
@@ -13753,7 +13926,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:FormTextColor</dcscor:value>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FormTextColor</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>СтильГраницы</dcscor:parameter>
@@ -13781,7 +13954,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:FormTextColor</dcscor:value>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FormTextColor</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>СтильГраницы</dcscor:parameter>
@@ -13976,7 +14149,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:FormTextColor</dcscor:value>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FormTextColor</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>СтильГраницы</dcscor:parameter>
@@ -14388,6 +14561,21 @@
 				<dcsat:tableCell>
 					<dcsat:item xsi:type="dcsat:Field">
 						<dcsat:value xsi:type="dcscor:Parameter">Влажность</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+								</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
 					</dcsat:item>
 					<dcsat:appearance>
 						<dcscor:item>
@@ -14486,6 +14674,21 @@
 				<dcsat:tableCell>
 					<dcsat:item xsi:type="dcsat:Field">
 						<dcsat:value xsi:type="dcscor:Parameter">СорнаяПримесь</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+								</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
 					</dcsat:item>
 					<dcsat:appearance>
 						<dcscor:item>
@@ -14593,7 +14796,7 @@
 		</parameter>
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 			<dcsat:name>Влажность</dcsat:name>
-			<dcsat:expression>Влажность</dcsat:expression>
+			<dcsat:expression>ВлажностьЗХС5</dcsat:expression>
 		</parameter>
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 			<dcsat:name>ЦентПроцВлажность</dcsat:name>
@@ -14601,7 +14804,7 @@
 		</parameter>
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 			<dcsat:name>СорнаяПримесь</dcsat:name>
-			<dcsat:expression>СорнаяПримесь</dcsat:expression>
+			<dcsat:expression>СорнаяПримесьЗХС5</dcsat:expression>
 		</parameter>
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 			<dcsat:name>ЦентПроцСорность</dcsat:name>
@@ -15194,6 +15397,21 @@
 				<dcsat:tableCell>
 					<dcsat:item xsi:type="dcsat:Field">
 						<dcsat:value xsi:type="dcscor:Parameter">Влажность</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+								</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
 					</dcsat:item>
 					<dcsat:appearance>
 						<dcscor:item>
@@ -15247,6 +15465,21 @@
 				<dcsat:tableCell>
 					<dcsat:item xsi:type="dcsat:Field">
 						<dcsat:value xsi:type="dcscor:Parameter">ЦентПроцВлажность</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+								</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
 					</dcsat:item>
 					<dcsat:appearance>
 						<dcscor:item>
@@ -15300,6 +15533,21 @@
 				<dcsat:tableCell>
 					<dcsat:item xsi:type="dcsat:Field">
 						<dcsat:value xsi:type="dcscor:Parameter">СорнаяПримесь</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+								</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
 					</dcsat:item>
 					<dcsat:appearance>
 						<dcscor:item>
@@ -15353,6 +15601,21 @@
 				<dcsat:tableCell>
 					<dcsat:item xsi:type="dcsat:Field">
 						<dcsat:value xsi:type="dcscor:Parameter">ЦентПроцСорность</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+								</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
 					</dcsat:item>
 					<dcsat:appearance>
 						<dcscor:item>
@@ -15411,7 +15674,7 @@
 		</parameter>
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 			<dcsat:name>Влажность</dcsat:name>
-			<dcsat:expression>Влажность</dcsat:expression>
+			<dcsat:expression>ВлажностьЗХС5</dcsat:expression>
 		</parameter>
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 			<dcsat:name>ЦентПроцВлажность</dcsat:name>
@@ -15419,7 +15682,7 @@
 		</parameter>
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 			<dcsat:name>СорнаяПримесь</dcsat:name>
-			<dcsat:expression>СорнаяПримесь</dcsat:expression>
+			<dcsat:expression>СорнаяПримесьЗХС5</dcsat:expression>
 		</parameter>
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 			<dcsat:name>ЦентПроцСорность</dcsat:name>
@@ -16241,7 +16504,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:FormTextColor</dcscor:value>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FormTextColor</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>Шрифт</dcscor:parameter>
@@ -16261,7 +16524,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:FormTextColor</dcscor:value>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FormTextColor</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>Шрифт</dcscor:parameter>
@@ -16281,7 +16544,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:FormTextColor</dcscor:value>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FormTextColor</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>Шрифт</dcscor:parameter>
@@ -16383,7 +16646,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:FormTextColor</dcscor:value>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FormTextColor</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>Шрифт</dcscor:parameter>
@@ -16407,7 +16670,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:FormTextColor</dcscor:value>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FormTextColor</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>Шрифт</dcscor:parameter>
@@ -16431,7 +16694,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:FormTextColor</dcscor:value>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FormTextColor</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>Шрифт</dcscor:parameter>
@@ -16532,7 +16795,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:FormTextColor</dcscor:value>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FormTextColor</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>СтильГраницы</dcscor:parameter>
@@ -16612,7 +16875,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:FormTextColor</dcscor:value>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FormTextColor</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>Шрифт</dcscor:parameter>
@@ -16776,7 +17039,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:FormTextColor</dcscor:value>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FormTextColor</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>СтильГраницы</dcscor:parameter>
@@ -16808,7 +17071,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:FormTextColor</dcscor:value>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FormTextColor</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>СтильГраницы</dcscor:parameter>
@@ -16852,7 +17115,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:FormTextColor</dcscor:value>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FormTextColor</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>СтильГраницы</dcscor:parameter>
@@ -17895,7 +18158,16 @@
 						<dcsat:appearance>
 							<dcscor:item>
 								<dcscor:parameter>Формат</dcscor:parameter>
-								<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+								</dcscor:value>
 							</dcscor:item>
 						</dcsat:appearance>
 					</dcsat:item>
@@ -18005,7 +18277,16 @@
 						<dcsat:appearance>
 							<dcscor:item>
 								<dcscor:parameter>Формат</dcscor:parameter>
-								<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+								</dcscor:value>
 							</dcscor:item>
 						</dcsat:appearance>
 					</dcsat:item>
@@ -18129,7 +18410,7 @@
 		</parameter>
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 			<dcsat:name>Влажность</dcsat:name>
-			<dcsat:expression>Влажность</dcsat:expression>
+			<dcsat:expression>ВлажностьЗХС5</dcsat:expression>
 		</parameter>
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 			<dcsat:name>ЦентПроцВлажность</dcsat:name>
@@ -18137,7 +18418,7 @@
 		</parameter>
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 			<dcsat:name>СорнаяПримесь</dcsat:name>
-			<dcsat:expression>СорнаяПримесь</dcsat:expression>
+			<dcsat:expression>СорнаяПримесьЗХС5</dcsat:expression>
 		</parameter>
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 			<dcsat:name>ЦентПроцСорность</dcsat:name>
@@ -18269,7 +18550,16 @@
 						<dcsat:appearance>
 							<dcscor:item>
 								<dcscor:parameter>Формат</dcscor:parameter>
-								<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+								</dcscor:value>
 							</dcscor:item>
 						</dcsat:appearance>
 					</dcsat:item>
@@ -18328,7 +18618,16 @@
 						<dcsat:appearance>
 							<dcscor:item>
 								<dcscor:parameter>Формат</dcscor:parameter>
-								<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+								</dcscor:value>
 							</dcscor:item>
 						</dcsat:appearance>
 					</dcsat:item>
@@ -18387,7 +18686,16 @@
 						<dcsat:appearance>
 							<dcscor:item>
 								<dcscor:parameter>Формат</dcscor:parameter>
-								<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+								</dcscor:value>
 							</dcscor:item>
 						</dcsat:appearance>
 					</dcsat:item>
@@ -18446,7 +18754,16 @@
 						<dcsat:appearance>
 							<dcscor:item>
 								<dcscor:parameter>Формат</dcscor:parameter>
-								<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>uk</v8:lang>
+										<v8:content>ЧДЦ=2</v8:content>
+									</v8:item>
+								</dcscor:value>
 							</dcscor:item>
 						</dcsat:appearance>
 					</dcsat:item>
@@ -18655,7 +18972,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:FormTextColor</dcscor:value>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FormTextColor</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>СтильГраницы</dcscor:parameter>
@@ -18683,7 +19000,7 @@
 					<dcsat:appearance>
 						<dcscor:item>
 							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">d8p1:FormTextColor</dcscor:value>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Color">style:FormTextColor</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
 							<dcscor:parameter>СтильГраницы</dcscor:parameter>
@@ -18715,7 +19032,7 @@
 		</parameter>
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 			<dcsat:name>Влажность</dcsat:name>
-			<dcsat:expression>Влажность</dcsat:expression>
+			<dcsat:expression>ВлажностьЗХС5</dcsat:expression>
 		</parameter>
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 			<dcsat:name>ЦентПроцВлажность</dcsat:name>
@@ -18723,7 +19040,7 @@
 		</parameter>
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 			<dcsat:name>СорнаяПримесь</dcsat:name>
-			<dcsat:expression>СорнаяПримесь</dcsat:expression>
+			<dcsat:expression>СорнаяПримесьЗХС5</dcsat:expression>
 		</parameter>
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 			<dcsat:name>ЦентПроцСорность</dcsat:name>
@@ -19004,10 +19321,10 @@
 						<dcsset:field>Влажность</dcsset:field>
 					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:SelectedItemField">
-						<dcsset:field>ЗерноваяПримесь</dcsset:field>
+						<dcsset:field>СорнаяПримесь</dcsset:field>
 					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:SelectedItemField">
-						<dcsset:field>СорнаяПримесь</dcsset:field>
+						<dcsset:field>ЗерноваяПримесь</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:outputParameters>
@@ -19043,10 +19360,10 @@
 							<dcsset:field>Влажность</dcsset:field>
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
-							<dcsset:field>ЗерноваяПримесь</dcsset:field>
+							<dcsset:field>СорнаяПримесь</dcsset:field>
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
-							<dcsset:field>СорнаяПримесь</dcsset:field>
+							<dcsset:field>ЗерноваяПримесь</dcsset:field>
 						</dcsset:item>
 					</dcsset:selection>
 					<dcsset:outputParameters>
@@ -19142,10 +19459,10 @@
 								<dcsset:field>Влажность</dcsset:field>
 							</dcsset:item>
 							<dcsset:item xsi:type="dcsset:SelectedItemField">
-								<dcsset:field>ЗерноваяПримесь</dcsset:field>
+								<dcsset:field>СорнаяПримесь</dcsset:field>
 							</dcsset:item>
 							<dcsset:item xsi:type="dcsset:SelectedItemField">
-								<dcsset:field>СорнаяПримесь</dcsset:field>
+								<dcsset:field>ЗерноваяПримесь</dcsset:field>
 							</dcsset:item>
 						</dcsset:selection>
 						<dcsset:item xsi:type="dcsset:StructureItemGroup">
@@ -19456,10 +19773,10 @@
 						<dcsset:field>Влажность</dcsset:field>
 					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:SelectedItemField">
-						<dcsset:field>ЗерноваяПримесь</dcsset:field>
+						<dcsset:field>СорнаяПримесь</dcsset:field>
 					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:SelectedItemField">
-						<dcsset:field>СорнаяПримесь</dcsset:field>
+						<dcsset:field>ЗерноваяПримесь</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:outputParameters>
@@ -19495,10 +19812,10 @@
 							<dcsset:field>Влажность</dcsset:field>
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
-							<dcsset:field>ЗерноваяПримесь</dcsset:field>
+							<dcsset:field>СорнаяПримесь</dcsset:field>
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
-							<dcsset:field>СорнаяПримесь</dcsset:field>
+							<dcsset:field>ЗерноваяПримесь</dcsset:field>
 						</dcsset:item>
 					</dcsset:selection>
 					<dcsset:outputParameters>
@@ -19584,10 +19901,10 @@
 								<dcsset:field>Влажность</dcsset:field>
 							</dcsset:item>
 							<dcsset:item xsi:type="dcsset:SelectedItemField">
-								<dcsset:field>ЗерноваяПримесь</dcsset:field>
+								<dcsset:field>СорнаяПримесь</dcsset:field>
 							</dcsset:item>
 							<dcsset:item xsi:type="dcsset:SelectedItemField">
-								<dcsset:field>СорнаяПримесь</dcsset:field>
+								<dcsset:field>ЗерноваяПримесь</dcsset:field>
 							</dcsset:item>
 						</dcsset:selection>
 						<dcsset:item xsi:type="dcsset:StructureItemGroup">
