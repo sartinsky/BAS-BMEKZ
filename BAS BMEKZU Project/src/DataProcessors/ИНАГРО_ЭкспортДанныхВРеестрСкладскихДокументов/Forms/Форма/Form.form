@@ -564,9 +564,165 @@
           <showInFooter>true</showInFooter>
           <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
         </items>
+        <items xsi:type="form:FormField">
+          <name>СписокСкладскихКвитанцийЦифроваяФорма</name>
+          <id>80</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Объект.СписокСкладскихКвитанций.ЦифроваяФорма</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>СписокСкладскихКвитанцийЦифроваяФормаРасширеннаяПодсказка</name>
+            <id>82</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>СписокСкладскихКвитанцийЦифроваяФормаКонтекстноеМеню</name>
+            <id>81</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>CheckBoxField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        </items>
         <autoCommandBar>
           <name>СписокСкладскихКвитанцийКоманднаяПанель</name>
           <id>19</id>
+          <items xsi:type="form:FormGroup">
+            <name>СписокСкладскихКвитанцийГруппа1</name>
+            <id>83</id>
+            <items xsi:type="form:Button">
+              <name>УстановитьФлаги</name>
+              <id>85</id>
+              <title>
+                <key>ru</key>
+                <value>Установить для &quot;Цифровая форма&quot;</value>
+              </title>
+              <title>
+                <key>uk</key>
+                <value>Встановити для &quot;Цифровая форма&quot;</value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>УстановитьФлагиРасширеннаяПодсказка</name>
+                <id>86</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.КомандаУстановитьФлаги</commandName>
+              <representation>PictureAndText</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <picture xsi:type="core:PictureRef">
+                <picture>StdPicture.CheckAll</picture>
+              </picture>
+              <representationInContextMenu>Auto</representationInContextMenu>
+              <pictureLocation>Right</pictureLocation>
+            </items>
+            <items xsi:type="form:Button">
+              <name>СнятьФлаги</name>
+              <id>87</id>
+              <title>
+                <key>ru</key>
+                <value> </value>
+              </title>
+              <title>
+                <key>uk</key>
+                <value> </value>
+              </title>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>СнятьФлагиРасширеннаяПодсказка</name>
+                <id>88</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <commandName>Form.Command.КомандаСнятьФлаги</commandName>
+              <representation>PictureAndText</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <picture xsi:type="core:PictureRef">
+                <picture>StdPicture.UncheckAll</picture>
+              </picture>
+              <representationInContextMenu>Auto</representationInContextMenu>
+              <pictureLocation>Right</pictureLocation>
+            </items>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <title>
+              <key>uk</key>
+              <value>Заполнить Цифровая форма</value>
+            </title>
+            <extendedTooltip>
+              <name>СписокСкладскихКвитанцийГруппа1РасширеннаяПодсказка</name>
+              <id>84</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <extInfo xsi:type="form:ButtonGroupExtInfo"/>
+          </items>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -1539,6 +1695,52 @@
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>ОчиститьПапку</name>
+      </handler>
+    </action>
+    <currentRowUse>Auto</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>КомандаУстановитьФлаги</name>
+    <title>
+      <key>uk</key>
+      <value>Команда установить флаги</value>
+    </title>
+    <id>5</id>
+    <toolTip>
+      <key>uk</key>
+      <value>Команда установить флаги</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>УстановитьФлаги</name>
+      </handler>
+    </action>
+    <currentRowUse>Auto</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>КомандаСнятьФлаги</name>
+    <title>
+      <key>ru</key>
+      <value>роиориро</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Команда снять флаги</value>
+    </title>
+    <id>6</id>
+    <toolTip>
+      <key>uk</key>
+      <value>Команда снять флаги</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>СнятьФлаги</name>
       </handler>
     </action>
     <currentRowUse>Auto</currentRowUse>
