@@ -57,14 +57,10 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>FIRM_EDRPOU</dataPath>
 			<field>ЕДРПОУОрганизации</field>
-			<appearance/>
-			<inputParameters/>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>SIDE_OTV_FIO</dataPath>
 			<field>ОтветственноеЛицоКонтрагента</field>
-			<appearance/>
-			<inputParameters/>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Отчество</dataPath>
@@ -823,6 +819,9 @@
 					<dcsset:field>DATA_END</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>SIDE_EDRPOU_K</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>SIDE_DEPT_K</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -842,9 +841,10 @@
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>Организация</dcscor:parameter>
-					<dcscor:value xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d6p1:CatalogRef.скEDI_Организации">00000000-0000-0000-0000-000000000000</dcscor:value>
+					<dcscor:value xsi:type="xs:string">00000000-0000-0000-0000-000000000000</dcscor:value>
 				</dcscor:item>
 			</dcsset:dataParameters>
+			<dcsset:outputParameters/>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:order>
 					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
@@ -852,6 +852,7 @@
 				<dcsset:selection>
 					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 				</dcsset:selection>
+				<dcsset:outputParameters/>
 			</dcsset:item>
 		</dcsset:settings>
 	</settingsVariant>

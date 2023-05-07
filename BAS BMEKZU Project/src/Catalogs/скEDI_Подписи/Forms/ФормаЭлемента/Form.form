@@ -251,9 +251,35 @@
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
           <wrap>true</wrap>
+          <listChoiceMode>true</listChoiceMode>
           <chooseType>true</chooseType>
           <typeDomainEnabled>true</typeDomainEnabled>
           <textEdit>true</textEdit>
+          <choiceList>
+            <value xsi:type="core:ReferenceValue">
+              <value>Enum.скEDI_РолиПодписей.EnumValue.Неопределено</value>
+            </value>
+          </choiceList>
+          <choiceList>
+            <value xsi:type="core:ReferenceValue">
+              <value>Enum.скEDI_РолиПодписей.EnumValue.ПодписьДиректора</value>
+            </value>
+          </choiceList>
+          <choiceList>
+            <value xsi:type="core:ReferenceValue">
+              <value>Enum.скEDI_РолиПодписей.EnumValue.ПодписьБухгалтера</value>
+            </value>
+          </choiceList>
+          <choiceList>
+            <value xsi:type="core:ReferenceValue">
+              <value>Enum.скEDI_РолиПодписей.EnumValue.ПодписьОтветственногоЛица</value>
+            </value>
+          </choiceList>
+          <choiceList>
+            <value xsi:type="core:ReferenceValue">
+              <value>Enum.скEDI_РолиПодписей.EnumValue.ПечатьОрганизации</value>
+            </value>
+          </choiceList>
         </extInfo>
       </items>
       <items xsi:type="form:FormField">
@@ -267,6 +293,10 @@
         <dataPath xsi:type="form:DataPath">
           <segments>Объект.ИспользованиеКлюча</segments>
         </dataPath>
+        <handlers>
+          <event>OnChange</event>
+          <name>ИспользованиеКлючаПриИзменении</name>
+        </handlers>
         <extendedTooltip>
           <name>ИспользованиеКлючаРасширеннаяПодсказка</name>
           <id>90</id>
@@ -1159,6 +1189,49 @@
           <contextMenu>
             <name>СертификатыИспользоватьКонтекстноеМеню</name>
             <id>42</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>CheckBoxField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>СертификатыИспользоватьПриПриемеМассивомСертификатов</name>
+          <id>201</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>Объект.Сертификаты.ИспользоватьПриПриемеМассивомСертификатов</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>СертификатыИспользоватьПриПриемеМассивомСертификатовРасширеннаяПодсказка</name>
+            <id>203</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>СертификатыИспользоватьПриПриемеМассивомСертификатовКонтекстноеМеню</name>
+            <id>202</id>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>

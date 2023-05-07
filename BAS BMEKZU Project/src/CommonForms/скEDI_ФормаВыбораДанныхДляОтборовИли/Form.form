@@ -88,6 +88,38 @@
       <locationInCommandBar>InCommandBarAndInAdditionalSubmenu</locationInCommandBar>
     </items>
     <items xsi:type="form:Button">
+      <name>Инвертировать</name>
+      <id>48</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ИнвертироватьРасширеннаяПодсказка</name>
+        <id>49</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>UsualButton</type>
+      <commandName>Form.Command.Инвертировать</commandName>
+      <representation>Picture</representation>
+      <width>3</width>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <items xsi:type="form:Button">
       <name>СнятьВсеОтметки</name>
       <id>46</id>
       <visible>true</visible>
@@ -226,6 +258,7 @@
     <titleLocation>None</titleLocation>
     <excludedCommands>Add</excludedCommands>
     <excludedCommands>Change</excludedCommands>
+    <excludedCommands>CheckAll</excludedCommands>
     <excludedCommands>Copy</excludedCommands>
     <excludedCommands>CopyToClipboard</excludedCommands>
     <excludedCommands>Delete</excludedCommands>
@@ -238,6 +271,7 @@
     <excludedCommands>ShowRowRearrangement</excludedCommands>
     <excludedCommands>SortListAsc</excludedCommands>
     <excludedCommands>SortListDesc</excludedCommands>
+    <excludedCommands>UncheckAll</excludedCommands>
     <items xsi:type="form:FormField">
       <name>СписокДанныхДляВыбораПометка</name>
       <id>20</id>
@@ -648,6 +682,38 @@
       </handler>
     </action>
     <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>Инвертировать</name>
+    <title>
+      <key>ru</key>
+      <value>Инвертировать</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Інвертувати</value>
+    </title>
+    <id>4</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Инвертировать</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Інвертувати</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>CommonPicture.скEDI_ИнвертироватьФлажки</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>Инвертировать</name>
+      </handler>
+    </action>
+    <currentRowUse>Auto</currentRowUse>
   </formCommands>
   <commandInterface>
     <navigationPanel/>

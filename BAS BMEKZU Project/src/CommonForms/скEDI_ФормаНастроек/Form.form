@@ -1577,6 +1577,59 @@
         </dataPath>
         <titleLocation>Top</titleLocation>
         <items xsi:type="form:FormField">
+          <name>СоставГруппыПодписиКартинка</name>
+          <id>426</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>СоставГруппыПодписи.Картинка</segments>
+          </dataPath>
+          <titleLocation>None</titleLocation>
+          <extendedTooltip>
+            <name>СоставГруппыПодписиКартинкаРасширеннаяПодсказка</name>
+            <id>428</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>СоставГруппыПодписиКартинкаКонтекстноеМеню</name>
+            <id>427</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>PictureField</type>
+          <editMode>EnterOnInput</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:ImageFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <horizontalStretch>true</horizontalStretch>
+            <verticalStretch>true</verticalStretch>
+            <valuesPicture xsi:type="core:PictureRef">
+              <picture>CommonPicture.скEDI_КартинкаСтрокСправочник</picture>
+            </valuesPicture>
+            <fileDragMode>AsFileRef</fileDragMode>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
           <name>СоставГруппыПодписиПодпись</name>
           <id>218</id>
           <visible>true</visible>
@@ -5195,11 +5248,11 @@
       </userVisible>
       <title>
         <key>ru</key>
-        <value>Отображение Электронных документов</value>
+        <value>Отображение электронных документов</value>
       </title>
       <title>
         <key>uk</key>
-        <value>Відображення Електронних документів</value>
+        <value>Відображення електронних документів</value>
       </title>
       <toolTip>
         <key>ru</key>
@@ -5565,11 +5618,11 @@
       </userVisible>
       <title>
         <key>ru</key>
-        <value>Внешние хранилища содержимого Электронных документов</value>
+        <value>Внешние хранилища содержимого электронных документов</value>
       </title>
       <title>
         <key>uk</key>
-        <value>Зовнішні сховища вмісту Електронних документів</value>
+        <value>Зовнішні сховища вмісту електронних документів</value>
       </title>
       <toolTip>
         <key>ru</key>
@@ -5930,6 +5983,30 @@
       <id>5</id>
       <valueType>
         <types>CatalogRef.скEDI_Организации</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Картинка</name>
+      <title>
+        <key>ru</key>
+        <value>Картинка</value>
+      </title>
+      <title>
+        <key>uk</key>
+        <value>Картинка</value>
+      </title>
+      <id>6</id>
+      <valueType>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>1</precision>
+        </numberQualifiers>
       </valueType>
       <view>
         <common>true</common>
@@ -6583,6 +6660,60 @@
         <common>true</common>
       </edit>
     </columns>
+  </attributes>
+  <attributes>
+    <name>ДоступКСтраницеНастроекЗащищенныйНосительIsRemoteSlot</name>
+    <id>30</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ДоступКСтраницеНастроекЗащищенныйНосительUseNamedKeys</name>
+    <id>31</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ДоступКСтраницеНастроекЗащищенныйНосительTokenPassword</name>
+    <id>32</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ДоступКСтраницеНастроекЗащищенныйНосительСтрокаПодключения</name>
+    <id>33</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
   </attributes>
   <formCommands>
     <name>ЗагрузитьСертификатыИзФайла</name>
