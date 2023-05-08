@@ -1927,12 +1927,7 @@
 			<c>
 				<c>
 					<f>36</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Х</v8:content>
-						</v8:item>
-					</tl>
+					<tl/>
 				</c>
 			</c>
 			<c>
@@ -1974,51 +1969,11 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>// ищем контрагента по коду ЕДРПОУ, если не находим - создаем контрагента, заполняем контактную информацию.
-
-КодЕДРПОУ 			= ДанныеТаблицы.Получить("FIRM_EDRPOU");
-НаименованиеКонтрагента 	= ДанныеТаблицы.Получить("FIRM_NAME");
-ИНН				= ДанныеТаблицы.Получить("FIRM_INN");
-НомерСвидетельства		= ДанныеТаблицы.Получить("FIRM_SRPNDS");
-КодФилиала 			= ДанныеТаблицы.Получить("FIRM_DEPT");
-ЮрАдресКонтрагента		= ДанныеТаблицы.Получить("FIRM_ADR");
-ТелефонКонтрагента		= ДанныеТаблицы.Получить("FIRM_TELEFON");
-
-Запрос = Новый Запрос;
-Запрос.Текст = 
-"ВЫБРАТЬ ПЕРВЫЕ 1
-|	Контрагенты.Ссылка
-|ИЗ
-|	Справочник.Партнеры КАК Контрагенты
-|ГДЕ
-|	НЕ Контрагенты.ПометкаУдаления";
-
-Выборка = Запрос.Выполнить().Выбрать();
-
-Контрагент = Справочники.Партнеры.НайтиПоРеквизиту("НаименованиеПолное", НаименованиеКонтрагента);
-Если Контрагент = Справочники.Партнеры .ПустаяСсылка() Тогда
-	КонтрагентОбъект 				  = Справочники.Партнеры.СоздатьЭлемент();
-	КонтрагентОбъект.Наименование 			  = НаименованиеКонтрагента;
-	КонтрагентОбъект.НаименованиеПолное 		  = НаименованиеКонтрагента;
-	КонтрагентОбъект.Поставщик 			  = Истина;
-	КонтрагентОбъект.ГруппаДоступа        = Справочники.ГруппыДоступаПартнеров.НайтиПоНаименованию("Поставщики");
-	КонтрагентОбъект.ЮрФизЛицо 		          = ?(СтрДлина(КодЕДРПОУ) &gt; 8, Перечисления.ЮрФизЛицо.ФизЛицо, Перечисления.ЮрФизЛицо.ЮрЛицо);
-	КонтрагентОбъект.Записать();
-
-	КонтактнаяИнформация = КонтрагентОбъект.КонтактнаяИнформация.Добавить();
-	КонтактнаяИнформация.Вид	   = Справочники.ВидыКонтактнойИнформации.ЮрАдресКонтрагента;
-	КонтактнаяИнформация.Тип	   = Перечисления.ТипыКонтактнойИнформации.Адрес;
-	КонтактнаяИнформация.Представление = ЮрАдресКонтрагента;
-
-	КонтактнаяИнформация = КонтрагентОбъект.КонтактнаяИнформация.Добавить();
-	КонтактнаяИнформация.Вид	   = Справочники.ВидыКонтактнойИнформации.ТелефонКонтрагента;
-	КонтактнаяИнформация.Тип	   = Перечисления.ТипыКонтактнойИнформации.Телефон;
-	КонтактнаяИнформация.Представление = ТелефонКонтрагента;
-	КонтрагентОбъект.Записать();
-	Контрагент = КонтрагентОбъект.Ссылка;
-КонецЕсли;
-
-Результат = Контрагент;</v8:content>
+							<v8:content>//Заполняется по данным из Контрагента
+Контрагент = РеквизитыДокумента.Получить("Контрагент");
+Если ТипЗнч(Контрагент) = Тип("СправочникСсылка.Контрагенты") Тогда
+	Результат = Контрагент.Партнер;
+КонецЕсли;</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -20952,111 +20907,11 @@
 		<h>1</h>
 	</horizontalUnmerge>
 	<namedItem xsi:type="NamedItemCells">
-		<name>ПодвалТаблицы</name>
-		<area>
-			<type>Rows</type>
-			<beginRow>132</beginRow>
-			<endRow>134</endRow>
-			<beginColumn>-1</beginColumn>
-			<endColumn>-1</endColumn>
-		</area>
-	</namedItem>
-	<namedItem xsi:type="NamedItemCells">
-		<name>ПодвалТиповаяСхемма</name>
-		<area>
-			<type>Rows</type>
-			<beginRow>296</beginRow>
-			<endRow>296</endRow>
-			<beginColumn>-1</beginColumn>
-			<endColumn>-1</endColumn>
-		</area>
-	</namedItem>
-	<namedItem xsi:type="NamedItemCells">
-		<name>События</name>
-		<area>
-			<type>Rows</type>
-			<beginRow>135</beginRow>
-			<endRow>140</endRow>
-			<beginColumn>-1</beginColumn>
-			<endColumn>-1</endColumn>
-		</area>
-	</namedItem>
-	<namedItem xsi:type="NamedItemCells">
-		<name>СтрокаТаблицы</name>
-		<area>
-			<type>Rows</type>
-			<beginRow>131</beginRow>
-			<endRow>131</endRow>
-			<beginColumn>-1</beginColumn>
-			<endColumn>-1</endColumn>
-		</area>
-	</namedItem>
-	<namedItem xsi:type="NamedItemCells">
-		<name>СтрокаТаблицыВыражение</name>
-		<area>
-			<type>Rows</type>
-			<beginRow>106</beginRow>
-			<endRow>106</endRow>
-			<beginColumn>-1</beginColumn>
-			<endColumn>-1</endColumn>
-		</area>
-	</namedItem>
-	<namedItem xsi:type="NamedItemCells">
-		<name>СтрокаТиповаяСхемма</name>
-		<area>
-			<type>Rows</type>
-			<beginRow>295</beginRow>
-			<endRow>295</endRow>
-			<beginColumn>-1</beginColumn>
-			<endColumn>-1</endColumn>
-		</area>
-	</namedItem>
-	<namedItem xsi:type="NamedItemCells">
-		<name>ТиповаяСхеммаКонецНастроек</name>
-		<area>
-			<type>Rows</type>
-			<beginRow>297</beginRow>
-			<endRow>297</endRow>
-			<beginColumn>-1</beginColumn>
-			<endColumn>-1</endColumn>
-		</area>
-	</namedItem>
-	<namedItem xsi:type="NamedItemCells">
 		<name>ТиповаяСхеммаПризнак</name>
 		<area>
 			<type>Rows</type>
 			<beginRow>141</beginRow>
 			<endRow>142</endRow>
-			<beginColumn>-1</beginColumn>
-			<endColumn>-1</endColumn>
-		</area>
-	</namedItem>
-	<namedItem xsi:type="NamedItemCells">
-		<name>Шапка</name>
-		<area>
-			<type>Rows</type>
-			<beginRow>0</beginRow>
-			<endRow>6</endRow>
-			<beginColumn>-1</beginColumn>
-			<endColumn>-1</endColumn>
-		</area>
-	</namedItem>
-	<namedItem xsi:type="NamedItemCells">
-		<name>ШапкаТаблицы</name>
-		<area>
-			<type>Rows</type>
-			<beginRow>91</beginRow>
-			<endRow>94</endRow>
-			<beginColumn>-1</beginColumn>
-			<endColumn>-1</endColumn>
-		</area>
-	</namedItem>
-	<namedItem xsi:type="NamedItemCells">
-		<name>ШапкаТиповаяСхемма</name>
-		<area>
-			<type>Rows</type>
-			<beginRow>282</beginRow>
-			<endRow>286</endRow>
 			<beginColumn>-1</beginColumn>
 			<endColumn>-1</endColumn>
 		</area>

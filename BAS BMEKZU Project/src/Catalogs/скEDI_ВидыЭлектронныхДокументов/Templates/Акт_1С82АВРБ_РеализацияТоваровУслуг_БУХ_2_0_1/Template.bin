@@ -1,4 +1,5 @@
-﻿<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<dataSource>
 		<name>ИсточникДанных1</name>
 		<dataSourceType>Local</dataSourceType>
@@ -8,6 +9,8 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>TAB1_A6</dataPath>
 			<field>Сумма</field>
+			<appearance/>
+			<inputParameters/>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>TAB1_NOMENKLATURA_NUMHBUMEASURE</dataPath>
@@ -18,6 +21,8 @@
 					<v8:content>TAB1 NOMENKLATURA NUMHBUMEASURE</v8:content>
 				</v8:item>
 			</title>
+			<appearance/>
+			<inputParameters/>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>TAB1_NOMENKLATURA_CHARCODEUMEASURE</dataPath>
@@ -28,49 +33,61 @@
 					<v8:content>TAB1 NOMENKLATURA CHARCODEUMEASURE</v8:content>
 				</v8:item>
 			</title>
+			<appearance/>
+			<inputParameters/>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>TAB1_A5</dataPath>
 			<field>Цена</field>
+			<appearance/>
+			<inputParameters/>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>TAB1_A3</dataPath>
 			<field>Количество</field>
+			<appearance/>
+			<inputParameters/>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>TAB1_NOMENKLATURA_NAME</dataPath>
 			<field>НоменклатураНаименование</field>
+			<appearance/>
+			<inputParameters/>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Организация</dataPath>
 			<field>Организация</field>
+			<appearance/>
+			<inputParameters/>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Дата</dataPath>
 			<field>Дата</field>
+			<appearance/>
+			<inputParameters/>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	РеализацияТоваровУслугУслуги.Номенклатура.НаименованиеПолное КАК НоменклатураНаименование,
+	РеализацияТоваровУслугУслуги.Содержание КАК НоменклатураНаименование,
 	СУММА(РеализацияТоваровУслугУслуги.Количество) КАК Количество,
-	РеализацияТоваровУслугУслуги.Цена,
+	РеализацияТоваровУслугУслуги.Цена КАК Цена,
 	СУММА(РеализацияТоваровУслугУслуги.Сумма) КАК Сумма,
 	РеализацияТоваровУслугУслуги.Номенклатура.БазоваяЕдиницаИзмерения.Наименование КАК ЕдИзмНаименование,
 	РеализацияТоваровУслугУслуги.Номенклатура.БазоваяЕдиницаИзмерения.Код КАК ЕдИзмКод,
-	РеализацияТоваровУслугУслуги.Ссылка.Организация,
-	РеализацияТоваровУслугУслуги.Ссылка.Дата
+	РеализацияТоваровУслугУслуги.Ссылка.Организация КАК Организация,
+	РеализацияТоваровУслугУслуги.Ссылка.Дата КАК Дата
 ИЗ
 	Документ.РеализацияТоваровУслуг.Услуги КАК РеализацияТоваровУслугУслуги
 ГДЕ
 	РеализацияТоваровУслугУслуги.Ссылка = &amp;Ссылка
 
 СГРУППИРОВАТЬ ПО
-	РеализацияТоваровУслугУслуги.Номенклатура.НаименованиеПолное,
 	РеализацияТоваровУслугУслуги.Цена,
 	РеализацияТоваровУслугУслуги.Номенклатура.БазоваяЕдиницаИзмерения.Наименование,
 	РеализацияТоваровУслугУслуги.Номенклатура.БазоваяЕдиницаИзмерения.Код,
 	РеализацияТоваровУслугУслуги.Ссылка.Организация,
-	РеализацияТоваровУслугУслуги.Ссылка.Дата</query>
+	РеализацияТоваровУслугУслуги.Ссылка.Дата,
+	РеализацияТоваровУслугУслуги.Содержание</query>
 	</dataSet>
 	<calculatedField>
 		<dataPath>УчитыватьНДС</dataPath>

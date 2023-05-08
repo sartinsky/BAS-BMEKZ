@@ -495,7 +495,7 @@
 	ИНАГРО_ЗатратыОрганизацийОстатки.КоличествоОстаток,
 	ИНАГРО_ЗатратыОрганизацийОстатки.СуммаОстаток
 ИЗ
-	РегистрНакопления.ИНАГРО_ЗатратыОрганизаций.Остатки({(&amp;КонецПериода)}, ) КАК ИНАГРО_ЗатратыОрганизацийОстатки</query>
+	РегистрНакопления.ИНАГРО_ЗатратыОрганизаций.Остатки({(&amp;КонецПериодаОстКон)}, ) КАК ИНАГРО_ЗатратыОрганизацийОстатки</query>
 	</dataSet>
 	<totalField>
 		<dataPath>КоличествоКонечныйОстаток</dataPath>
@@ -688,6 +688,19 @@
 		<useRestriction>false</useRestriction>
 		<expression>&amp;Период.ДатаОкончания</expression>
 		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>КонецПериодаОстКон</name>
+		<title xsi:type="xs:string">Конец периода ост кон</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<expression>ДобавитьКДате(&amp;Период.ДатаОкончания,"Секунда",1)</expression>
 	</parameter>
 	<parameter>
 		<name>Период</name>
