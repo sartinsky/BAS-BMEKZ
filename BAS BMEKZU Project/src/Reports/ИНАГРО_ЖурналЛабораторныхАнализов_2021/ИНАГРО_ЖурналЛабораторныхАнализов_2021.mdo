@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="77dda6c1-778b-4122-b577-31cb368c435e">
+<mdclass:Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="77dda6c1-778b-4122-b577-31cb368c435e">
   <producedTypes>
     <objectType typeId="ed8d0f03-db97-4691-828e-9c5829b2c38e" valueTypeId="d8f436bd-b2a6-4847-8c55-c2fecce5b048"/>
     <managerType typeId="e4616404-f566-46f1-8a2f-8c960ae0de90" valueTypeId="f88f027b-8d95-4160-b70e-f14a9dfbc764"/>
@@ -14,20 +14,43 @@
     <value>Журнал лабораторних аналізів (2021)</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
-  <mainDataCompositionSchema>Report.ИНАГРО_ЖурналЛабораторныхАнализов_2021.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
-  <templates uuid="c5caf4a2-f575-4475-981a-a7bb4d46dd99">
-    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+  <mainDataCompositionSchema>Report.ИНАГРО_ЖурналЛабораторныхАнализов_2021.Template.ОсновнаяСхемаКомпоновкиДанныхОбщ</mainDataCompositionSchema>
+  <attributes uuid="ad1c61ed-5ccb-466b-bc88-f0df71f17bea">
+    <name>ВидФормы</name>
     <synonym>
       <key>ru</key>
-      <value>Основная схема компоновки данных</value>
+      <value>Вид формы</value>
     </synonym>
-    <templateType>DataCompositionSchema</templateType>
-  </templates>
+    <synonym>
+      <key>uk</key>
+      <value>Вид форми</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
   <templates uuid="18a447d3-5d77-4df0-8d49-31a35e55c565">
     <name>ПФ_MXL_UK_ЗХС_49</name>
     <synonym>
       <key>ru</key>
       <value>П ф MXL u k ЗХС 49</value>
     </synonym>
+  </templates>
+  <templates uuid="8865f2e8-7c2f-4947-a228-18928618cc26">
+    <name>ОсновнаяСхемаКомпоновкиДанныхОбщ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных общ</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Основная схема компоновки данных общ</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
   </templates>
 </mdclass:Report>
