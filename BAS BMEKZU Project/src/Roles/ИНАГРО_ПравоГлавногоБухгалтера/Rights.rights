@@ -48,13 +48,6 @@
 		</right>
 	</object>
 	<object>
-		<name>CommonForm.ИНАГРО_ФормаВыбораВладельцев</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.ИНАГРО_БригадныйНаряд.TabularSection.Начисления.Attribute.КалендарныеДни</name>
 		<right>
 			<name>View</name>
@@ -589,13 +582,6 @@
 		<right>
 			<name>Edit</name>
 			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>CommonCommand.ИНАГРО_ПараметрыУчетаЭлеватор</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -3009,45 +2995,6 @@
 		</right>
 	</object>
 	<object>
-		<name>ChartOfCharacteristicTypes.УдалитьИНАГРО_ПраваПользователей</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Insert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveInsert</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveSetDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InteractiveClearDeletionMark</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.ИНАГРО_БригадныйНаряд.Attribute.СчетЗатрат</name>
 		<right>
 			<name>View</name>
@@ -3637,13 +3584,6 @@
 		<right>
 			<name>Edit</name>
 			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>CommonForm.ИНАГРО_ФормаВыбораКультуры</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -4861,6 +4801,67 @@
 		</right>
 	</object>
 	<object>
+		<name>AccumulationRegister.ИНАГРО_ЗакупкиОрганизаций</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляРегистра("ИдентификаторыОбъектовМетаданных.РегистрНакопленияЗакупкиОрганизаций", "Организация", "", "", "", "")
+#Иначе
+// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ЗакупкиОрганизаций", "Чтение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)
+#КонецЕсли
+</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляРегистра("ИдентификаторыОбъектовМетаданных.РегистрНакопленияЗакупкиОрганизаций", "Организация", "", "", "", "")
+#Иначе
+// ОсновноеУсловиеЧтение
+// Можно читать если есть доступ к (по или)
+// Организации
+#ПоЗначениям("РегистрНакопления.ИНАГРО_ЗакупкиОрганизаций", "Изменение", "",
+"Организации", "Организация",
+"","",
+"","",
+"","",
+"","","","","","","","",
+"","","","","","","","",
+"","","","","","","",""
+)
+#КонецЕсли
+</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>CommonCommand.ИНАГРО_УчетнаяПолитикаОрганизаций</name>
 		<right>
 			<name>View</name>
@@ -4951,21 +4952,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.УдалитьИНАГРО_ИзмененияОбъектов</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>AccumulationRegister.ВзаиморасчетыССотрудниками.Dimension.СчетУчета</name>
 		<right>
 			<name>Edit</name>
@@ -5047,25 +5033,6 @@
 		<right>
 			<name>Edit</name>
 			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ИНАГРО_ПараметрыУчетаЭлеватора</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>

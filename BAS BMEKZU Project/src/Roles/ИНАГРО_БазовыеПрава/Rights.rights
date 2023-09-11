@@ -234,6 +234,26 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ИНАГРО_РаспределениеЗатрат</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+
+#Иначе
+#ПоЗначениям( "Документ.ИНАГРО_РаспределениеЗатрат","Чтение","","Организации","Организация","","","","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+
+#КонецЕсли</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ИНАГРО_КадровоеПеремещениеОрганизаций.TabularSection.НачисленияДо.Attribute.Размер</name>
 		<right>
 			<name>View</name>
@@ -726,17 +746,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.УдалитьИНАГРО_ПереносОстатков2312.Attribute.СтатьяЗатрат</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.ИНАГРО_УвольнениеИзОрганизаций.TabularSection.РаботникиОрганизации.Attribute.ОснованиеУвольнения</name>
 		<right>
 			<name>View</name>
@@ -929,17 +938,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ИНАГРО_СформированныеДокументы.Dimension.ПорядковыйНомерТиповогоДокумента</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.ИНАГРО_ЗарплатаКВыплатеОрганизаций.TabularSection.Взносы.Attribute.ДатаОкончания</name>
 		<right>
 			<name>Edit</name>
@@ -948,17 +946,6 @@
 	</object>
 	<object>
 		<name>Document.ИНАГРО_КадровоеПеремещениеОрганизаций.TabularSection.НачисленияДо.Attribute.ЗаменаВидРасчета</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ИНАГРО_СформированныеДокументы.Resource.ЗапретРедактирования</name>
 		<right>
 			<name>View</name>
 			<value>false</value>
@@ -1283,50 +1270,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ИНАГРО_СформированныеДокументы.StandardAttribute.Active</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ИНАГРО_СформированныеДокументы.StandardAttribute.LineNumber</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ИНАГРО_СформированныеДокументы.StandardAttribute.Recorder</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ИНАГРО_СформированныеДокументы.StandardAttribute.Period</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.ИНАГРО_КадровоеПеремещениеОрганизаций.TabularSection.Начисления.Attribute.ВидНачисления</name>
 		<right>
 			<name>View</name>
@@ -1335,6 +1278,26 @@
 		<right>
 			<name>Edit</name>
 			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ОперацияБух</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+
+#Иначе
+#ПоЗначениям( "Документ.ОперацияБух","Чтение","","Организации","Организация","","","","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+
+#КонецЕсли</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -1558,17 +1521,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.УдалитьИНАГРО_ПереносОстатков2312.Attribute.СчетЗакрытия</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.ИНАГРО_КадровоеПеремещениеОрганизаций.TabularSection.НачисленияПосле.Attribute.Сотрудник</name>
 		<right>
 			<name>View</name>
@@ -1621,17 +1573,6 @@
 	</object>
 	<object>
 		<name>Document.ИНАГРО_ЗарплатаКВыплатеОрганизаций.TabularSection.НДФЛ.Attribute.Доход</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.УдалитьИНАГРО_ПереносОстатков2312.Attribute.СчетЗатрат</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -1786,7 +1727,7 @@
 		</right>
 	</object>
 	<object>
-		<name>CommonCommand.ИНАГРО_СтруктураПодчиненности</name>
+		<name>CommonCommand.УдалитьИНАГРО_СтруктураПодчиненности</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -1833,17 +1774,6 @@
 	</object>
 	<object>
 		<name>Document.ИНАГРО_ПриходныйОрдерНаТовары.Attribute.НомерВходящегоДокумента</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ИНАГРО_СформированныеДокументы.Resource.УдалитьТиповыйДокумент</name>
 		<right>
 			<name>View</name>
 			<value>false</value>
@@ -2004,17 +1934,6 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.ИНАГРО_СформированныеДокументы.Dimension.ИмяТиповогоДокумента</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.ИНАГРО_ЗарплатаКВыплатеОрганизаций.TabularSection.ВзносыФОТ.Attribute.База</name>
 		<right>
 			<name>Edit</name>
@@ -2059,6 +1978,26 @@
 		<right>
 			<name>Edit</name>
 			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ИНАГРО_КорректировкаЗатрат</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+
+#Иначе
+#ПоЗначениям( "Документ.ИНАГРО_КорректировкаЗатрат","Чтение","","Организации","Организация","","","","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+
+#КонецЕсли</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -2484,7 +2423,7 @@
 		</right>
 	</object>
 	<object>
-		<name>CommonCommand.ИНАГРО_ДополнительныеСведенияКоманднаяПанель</name>
+		<name>CommonCommand.УдалитьИНАГРО_ДополнительныеСведенияКоманднаяПанель</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -2870,17 +2809,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.УдалитьИНАГРО_ПереносОстатков2312.Attribute.Подразделение</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.ИНАГРО_ПриемНаРаботуВОрганизацию.TabularSection.Удержания.Attribute.Показатель5</name>
 		<right>
 			<name>View</name>
@@ -3211,13 +3139,6 @@
 		</right>
 	</object>
 	<object>
-		<name>CommonCommand.ИНАГРО_ПоказатьДвиженияДокумента</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.ИНАГРО_ЗарплатаКВыплатеОрганизаций.TabularSection.РаботникиОрганизации.Attribute.Сотрудник</name>
 		<right>
 			<name>Edit</name>
@@ -3403,17 +3324,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.УдалитьИНАГРО_ПереносОстатков2312.Attribute.НалоговоеНазначение</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.ИНАГРО_ПриемНаРаботуВОрганизацию.TabularSection.Начисления.Attribute.ВидНачисления</name>
 		<right>
 			<name>View</name>
@@ -3557,17 +3467,6 @@
 		<right>
 			<name>InputByString</name>
 			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.УдалитьИНАГРО_ПереносОстатков2312.Attribute.Ответственный</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -3859,61 +3758,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.УдалитьИНАГРО_ПереносОстатков2312.StandardAttribute.Posted</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.УдалитьИНАГРО_ПереносОстатков2312.StandardAttribute.Ref</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.УдалитьИНАГРО_ПереносОстатков2312.StandardAttribute.DeletionMark</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.УдалитьИНАГРО_ПереносОстатков2312.StandardAttribute.Date</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.УдалитьИНАГРО_ПереносОстатков2312.StandardAttribute.Number</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.УдалитьИНАГРО_РасчетКорректировкиСтоимости.TabularSection.ДанныеРаспределения.Attribute.СубконтоДт2</name>
 		<right>
 			<name>Edit</name>
@@ -3929,17 +3773,6 @@
 	</object>
 	<object>
 		<name>Document.УдалитьИНАГРО_РасчетКорректировкиСтоимости.Attribute.АвторасчетНДС</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.УдалитьИНАГРО_ПереносОстатков2312.Attribute.НоменклатурнаяГруппа</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
@@ -4350,17 +4183,6 @@
 	</object>
 	<object>
 		<name>Document.ИНАГРО_ПриемНаРаботуВОрганизацию.TabularSection.РаботникиОрганизации.Attribute.УжеРаботает</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ИНАГРО_СформированныеДокументы.Dimension.ДокументИсточник</name>
 		<right>
 			<name>View</name>
 			<value>false</value>
@@ -4865,17 +4687,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.УдалитьИНАГРО_ПереносОстатков2312.Attribute.Комментарий</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.ИНАГРО_КадровоеПеремещениеОрганизаций.TabularSection.НачисленияПосле.Attribute.ЗаменаПриказ</name>
 		<right>
 			<name>View</name>
@@ -5029,17 +4840,6 @@
 	</object>
 	<object>
 		<name>Document.ИНАГРО_ПриемНаРаботуВОрганизацию.Attribute.Организация</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ИНАГРО_СформированныеДокументы.Dimension.ТиповыйДокумент</name>
 		<right>
 			<name>View</name>
 			<value>false</value>
@@ -5362,6 +5162,13 @@
 		<right>
 			<name>Edit</name>
 			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ОтветственныеЛицаОрганизаций</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -5900,17 +5707,6 @@
 		<right>
 			<name>TotalsControl</name>
 			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.УдалитьИНАГРО_ПереносОстатков2312.Attribute.Организация</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
 		</right>
 	</object>
 	<object>

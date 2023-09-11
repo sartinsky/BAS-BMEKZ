@@ -117,6 +117,8 @@
 					<v8:content>FIRM NMBANK</v8:content>
 				</v8:item>
 			</title>
+			<appearance/>
+			<inputParameters/>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>SIDE_OTV_FIO</dataPath>
@@ -691,7 +693,7 @@
 	РеализацияТоваровУслуг.Контрагент.КодФилиала КАК КодФилиалаКонтрагента,
 	РеализацияТоваровУслуг.Контрагент.КодПоЕДРПОУ КАК КодЕДРПОУКонтрагента,
 	РеализацияТоваровУслуг.ПредставительОрганизации.Наименование КАК ПредставительОрганизацииНаименование,
-	РеализацияТоваровУслуг.ПредставительКонтрагента КАК ОтветственноеЛицоКонтрагента,
+	РеализацияТоваровУслуг.КонтактноеЛицо.Наименование КАК ОтветственноеЛицоКонтрагента,
 	ЕСТЬNULL(РеализацияТоваровУслуг.Склад.Наименование, "") КАК Склад,
 	ВЫБОР
 		КОГДА ЕСТЬNULL(РеализацияТоваровУслуг.Склад.Наименование, "") = ""
@@ -850,14 +852,9 @@
 			ОтветственныеЛицаОрганизаций.Должность КАК Должность,
 			ОтветственныеЛицаОрганизаций.ФизическоеЛицо.Наименование КАК ФизическоеЛицоНаименование
 		ИЗ
-			Документ.РеализацияТоваровУслуг КАК РеализацияТоваровУслуг
-				ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ОтветственныеЛицаОрганизаций КАК ОтветственныеЛицаОрганизаций
-				ПО (НАЧАЛОПЕРИОДА(РеализацияТоваровУслуг.Дата, ДЕНЬ) &gt;= ОтветственныеЛицаОрганизаций.ДатаНачала)
-					И (НАЧАЛОПЕРИОДА(РеализацияТоваровУслуг.Дата, ДЕНЬ) &lt;= ОтветственныеЛицаОрганизаций.ДатаОкончания
-						ИЛИ ОтветственныеЛицаОрганизаций.ДатаОкончания = ДАТАВРЕМЯ(1, 1, 1))
+			Справочник.ОтветственныеЛицаОрганизаций КАК ОтветственныеЛицаОрганизаций
 		ГДЕ
-			ОтветственныеЛицаОрганизаций.ОтветственноеЛицо = ЗНАЧЕНИЕ(Перечисление.ОтветственныеЛицаОрганизаций.Руководитель)
-			И РеализацияТоваровУслуг.Ссылка = &amp;Ссылка) КАК ОтветственныеЛицаОрганизации
+			ОтветственныеЛицаОрганизаций.ОтветственноеЛицо = ЗНАЧЕНИЕ(Перечисление.ОтветственныеЛицаОрганизаций.Руководитель)) КАК ОтветственныеЛицаОрганизации
 		ПО РеализацияТоваровУслуг.Организация = ОтветственныеЛицаОрганизации.Владелец
 		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
 			КонтактныеЛицаПартнеров.Владелец КАК Владелец,
@@ -1052,26 +1049,25 @@
 		<useRestriction>false</useRestriction>
 	</parameter>
 	<parameter>
-		<name>Ссылка_Контрагент</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Ссылка контрагент</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Контрагенты</v8:Type>
-			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ФизическиеЛица</v8:Type>
-		</valueType>
-		<value xsi:nil="true"/>
-		<useRestriction>false</useRestriction>
-	</parameter>
-	<parameter>
 		<name>Ссылка_Организация</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
-				<v8:lang>ru</v8:lang>
+				<v8:lang>uk</v8:lang>
 				<v8:content>Ссылка организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Ссылка_Контрагент</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>Ссылка контрагент</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -1243,11 +1239,11 @@
 					<dcscor:value xsi:type="xs:string">00000000-0000-0000-0000-000000000000</dcscor:value>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>Ссылка_Контрагент</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
+					<dcscor:parameter>Ссылка_Организация</dcscor:parameter>
+					<dcscor:value xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d6p1:CatalogRef.Организации">00000000-0000-0000-0000-000000000000</dcscor:value>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>Ссылка_Организация</dcscor:parameter>
+					<dcscor:parameter>Ссылка_Контрагент</dcscor:parameter>
 					<dcscor:value xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d6p1:CatalogRef.Организации">00000000-0000-0000-0000-000000000000</dcscor:value>
 				</dcscor:item>
 			</dcsset:dataParameters>
