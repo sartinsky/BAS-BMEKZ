@@ -242,6 +242,16 @@
 			<dataPath>VO_NAME</dataPath>
 			<field>ПредставительОрганизацииФИО</field>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>OSN_TIP</dataPath>
+			<field>ОснованиеТип</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>OSN TIP</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	РеализацияТоваровУслуг.Дата КАК Дата,
@@ -357,7 +367,14 @@
 	РеализацияТоваровУслуг.ДоверенностьДата,
 	РеализацияТоваровУслуг.ДоверенностьСерия,
 	РеализацияТоваровУслуг.ДоверенностьНомер,
-	ЕСТЬNULL(ДанныеПоТабличнойЧасти.Скидка, 0) КАК Скидка
+	ЕСТЬNULL(ДанныеПоТабличнойЧасти.Скидка, 0) КАК Скидка,
+	ВЫБОР
+		КОГДА РеализацияТоваровУслуг.Сделка ССЫЛКА Документ.ЗаказПокупателя
+			ТОГДА "Замовлення покупця"
+		КОГДА РеализацияТоваровУслуг.Сделка ССЫЛКА Документ.СчетНаОплатуПокупателю
+			ТОГДА "Рахунок на оплату покупцю"
+		ИНАЧЕ ""
+	КОНЕЦ КАК ОснованиеТип
 ИЗ
 	Документ.РеализацияТоваровУслуг КАК РеализацияТоваровУслуг
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ФИОФизЛиц.СрезПоследних КАК ФИОФизЛицПредставительОрганизации
@@ -727,6 +744,9 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>VO_POSTNAME</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>OSN_TIP</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:dataParameters>

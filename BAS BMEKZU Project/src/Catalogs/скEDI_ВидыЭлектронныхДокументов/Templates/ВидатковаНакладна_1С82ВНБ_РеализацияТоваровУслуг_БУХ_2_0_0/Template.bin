@@ -123,6 +123,8 @@
 					<v8:content>FIRM RS</v8:content>
 				</v8:item>
 			</title>
+			<appearance/>
+			<inputParameters/>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>FIRM_NMBANK</dataPath>
@@ -496,6 +498,108 @@
 			<dataPath>VO_POSTNAME</dataPath>
 			<field>ДолжностьПредставителяОрганизации</field>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГоловнаяОрганизация</dataPath>
+			<field>ГоловнаяОрганизация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Цена</dataPath>
+			<field>Цена</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Скидка</dataPath>
+			<field>Скидка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скидка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Объект</dataPath>
+			<field>Объект</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕдиницаИзмерения</dataPath>
+			<field>ЕдиницаИзмерения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СхемаНалогообложенияНаименование</dataPath>
+			<field>СхемаНалогообложенияНаименование</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизическоеЛицо</dataPath>
+			<field>ФизическоеЛицо</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Представление</dataPath>
+			<field>Представление</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Код</dataPath>
+			<field>Код</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Филиал</dataPath>
+			<field>Филиал</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация1С</dataPath>
+			<field>Организация1С</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Должность</dataPath>
+			<field>Должность</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должность</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтруктурнаяЕдиница</dataPath>
+			<field>СтруктурнаяЕдиница</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтветственноеЛицо</dataPath>
+			<field>ОтветственноеЛицо</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>OSN_TIP</dataPath>
+			<field>ОснованиеТип</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>OSN TIP</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ZNYGKA</dataPath>
+			<field>СуммаСкидки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ZNYGKA</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	РеализацияТоваровУслуг.Дата КАК Дата,
@@ -566,7 +670,7 @@
 			ТОГДА ""
 		ИНАЧЕ "Розр. док.:"
 	КОНЕЦ КАК ОснованиеТекст,
-	РеализацияТоваровУслуг.Ссылка,
+	РеализацияТоваровУслуг.Ссылка КАК Ссылка,
 	РеализацияТоваровУслуг.Сделка.Ссылка КАК ОснованиеСсылка,
 	ЕСТЬNULL(ЮрАдресКонтрагента.Представление, "") КАК ЮрАресКонтрагента,
 	ЕСТЬNULL(ТелефонПоЮрАдресуКонтрагента.Представление, "") КАК ТелефонПоЮрАдресуКонтрагент,
@@ -586,14 +690,14 @@
 	"код за ЄДРПОУ " КАК ЕДРПОУКонтрагентаТекст,
 	ЕСТЬNULL(УчетнаяПолитика.СхемаНалогообложенияНаименование, "") КАК СхемаНалогообложения,
 	ЕСТЬNULL(ОрганизацияEDI.Филиал, "") КАК ФилиалОрганизации,
-	ДанныеПоТабличнойЧасти.Сумма,
+	ДанныеПоТабличнойЧасти.Сумма КАК Сумма,
 	ДанныеПоТабличнойЧасти.Сумма КАК СуммаТекст,
 	ДанныеПоТабличнойЧасти.КоличествоНоменклатур КАК КоличествоНоменклатур,
 	ЕСТЬNULL(РеализацияТоваровУслуг.Контрагент.ИНН, "") КАК КонтрагентИНН,
 	ЕСТЬNULL(РеализацияТоваровУслуг.Контрагент.НомерСвидетельства, 0) КАК КонтрагентНомерСвидетельства,
 	ЕСТЬNULL(ДанныеПоТабличнойЧасти.СуммаБезНДС, 0) КАК СуммаБезНДС,
 	ЕСТЬNULL(ДанныеПоТабличнойЧасти.СуммаБезНДС, 0) КАК СуммаБезНДС_Текст,
-	РеализацияТоваровУслуг.Номер,
+	РеализацияТоваровУслуг.Номер КАК Номер,
 	ВЫБОР
 		КОГДА РеализацияТоваровУслуг.Сделка.Ссылка ЕСТЬ NULL
 			ТОГДА ""
@@ -605,11 +709,17 @@
 	ЕСТЬNULL(ОтветственныеЛицаКонтрагентов.ФИОРуководительКонтрагент, "") КАК ФИОРуководительКонтрагент,
 	ЕСТЬNULL(РеализацияТоваровУслуг.Ответственный.Наименование, "") КАК ОтветственныйДокумента,
 	РеализацияТоваровУслуг.ПредставительОрганизации.Наименование КАК ПредставительОрганизацииНаименование,
-	РеализацияТоваровУслуг.Организация,
-	РеализацияТоваровУслуг.ДоверенностьСерия,
-	РеализацияТоваровУслуг.ДоверенностьНомер,
-	РеализацияТоваровУслуг.ДоверенностьДата,
-	ЕСТЬNULL(КадроваяИсторияСотрудниковСрезПоследних.Должность.Наименование, "") КАК ДолжностьПредставителяОрганизации
+	РеализацияТоваровУслуг.Организация КАК Организация,
+	РеализацияТоваровУслуг.ДоверенностьСерия КАК ДоверенностьСерия,
+	РеализацияТоваровУслуг.ДоверенностьНомер КАК ДоверенностьНомер,
+	РеализацияТоваровУслуг.ДоверенностьДата КАК ДоверенностьДата,
+	ЕСТЬNULL(КадроваяИсторияСотрудниковСрезПоследних.Должность.Наименование, "") КАК ДолжностьПредставителяОрганизации,
+	ВЫБОР
+		КОГДА РеализацияТоваровУслуг.Сделка ССЫЛКА Документ.СчетНаОплатуПокупателю
+			ТОГДА "Рахунок на оплату покупцю"
+		ИНАЧЕ ""
+	КОНЕЦ КАК ОснованиеТип,
+	ЕСТЬNULL(ДанныеПоТабличнойЧасти.Скидка, 0) КАК СуммаСкидки
 ИЗ
 	Документ.РеализацияТоваровУслуг КАК РеализацияТоваровУслуг
 		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
@@ -661,7 +771,7 @@
 							ТОГДА РеализацияТоваровУслугТовары.Сумма - РеализацияТоваровУслугТовары.СуммаНДС
 						ИНАЧЕ РеализацияТоваровУслугТовары.Сумма
 					КОНЕЦ) КАК СуммаБезНДС,
-				СУММА(РеализацияТоваровУслугТовары.Цена * РеализацияТоваровУслугТовары.Количество - РеализацияТоваровУслугТовары.Сумма) КАК Скидка
+				СУММА(РеализацияТоваровУслугТовары.СуммаСкидки) КАК Скидка
 			ИЗ
 				Документ.РеализацияТоваровУслуг.Товары КАК РеализацияТоваровУслугТовары
 			ГДЕ
@@ -1033,6 +1143,12 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>SKLAD_T</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>OSN_TIP</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ZNYGKA</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:dataParameters>

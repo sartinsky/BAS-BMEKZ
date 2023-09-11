@@ -24,7 +24,7 @@
   <defaultRoles>Role.АдминистраторСистемы</defaultRoles>
   <defaultRoles>Role.ИнтерактивноеОткрытиеВнешнихОтчетовИОбработок</defaultRoles>
   <vendor>NetHelp</vendor>
-  <version>2.1.30.1</version>
+  <version>2.1.30.2</version>
   <updateCatalogAddress>http://downloads.bas-soft.eu/tmplts/</updateCatalogAddress>
   <useManagedFormInOrdinaryApplication>true</useManagedFormInOrdinaryApplication>
   <useOrdinaryFormInManagedApplication>true</useOrdinaryFormInManagedApplication>
@@ -3096,6 +3096,7 @@
   <commonForms>CommonForm.скEDI_ФормаНастройкиПодписейЭлектронныхДокументов</commonForms>
   <commonForms>CommonForm.скEDI_ФормаОтображенияНовостей</commonForms>
   <commonForms>CommonForm.скEDI_ФормаПубликацияШаблона</commonForms>
+  <commonForms>CommonForm.скEDI_ФормаПредварительныйПросмотр</commonForms>
   <catalogs>Catalog.АвансовыйОтчетПрисоединенныеФайлы</catalogs>
   <catalogs>Catalog.АктОбОказанииПроизводственныхУслугПрисоединенныеФайлы</catalogs>
   <catalogs>Catalog.АктСверкиВзаиморасчетовПрисоединенныеФайлы</catalogs>
@@ -4283,8 +4284,8 @@
   <dataProcessors>DataProcessor.РекомендацияПоПовышениюСкоростиРаботы</dataProcessors>
   <dataProcessors>DataProcessor.СверткаИнформационнойБазы</dataProcessors>
   <dataProcessors>DataProcessor.СдвигГраницыИтогов</dataProcessors>
-  <dataProcessors>DataProcessor.скEDI</dataProcessors>
   <dataProcessors>DataProcessor.Сканирование</dataProcessors>
+  <dataProcessors>DataProcessor.СкрытиеКонфиденциальнойИнформации</dataProcessors>
   <dataProcessors>DataProcessor.СопоставлениеОбъектовИнформационныхБаз</dataProcessors>
   <dataProcessors>DataProcessor.ТранспортСообщенийОбменаEMAIL</dataProcessors>
   <dataProcessors>DataProcessor.ТранспортСообщенийОбменаFILE</dataProcessors>
@@ -4311,9 +4312,9 @@
   <dataProcessors>DataProcessor.ИНАГРО_ФормированиеСпискаРаботников</dataProcessors>
   <dataProcessors>DataProcessor.ИНАГРО_ЭкспортДанныхВРеестрСкладскихДокументов</dataProcessors>
   <dataProcessors>DataProcessor.скEDI_МониторРегламентныхЗаданий</dataProcessors>
+  <dataProcessors>DataProcessor.скEDI</dataProcessors>
   <dataProcessors>DataProcessor.скEDI_JSON</dataProcessors>
   <dataProcessors>DataProcessor.скEDI_НастройкаДемоБазы</dataProcessors>
-  <dataProcessors>DataProcessor.СкрытиеКонфиденциальнойИнформации</dataProcessors>
   <informationRegisters>InformationRegister.АвансыСотрудникам</informationRegisters>
   <informationRegisters>InformationRegister.БезопасноеХранилищеДанных</informationRegisters>
   <informationRegisters>InformationRegister.БезопасноеХранилищеДанныхОбластейДанных</informationRegisters>
@@ -4578,6 +4579,7 @@
   <informationRegisters>InformationRegister.УдалитьОбъектыИнформационныхБаз</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьОчередьЗаданий</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьОчередьИзвлеченияТекста</informationRegisters>
+  <informationRegisters>InformationRegister.ИНАГРО_ПараметрыВыплатыЗПРаботников</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьПараметрыИнтернетПоддержкиПользователей</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьПараметрыРасчетаИндексации</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьПаспортныеДанныеФизЛиц</informationRegisters>
@@ -4586,20 +4588,17 @@
   <informationRegisters>InformationRegister.УдалитьПраваДоступаПользователей</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьПраваПоЗначениямДоступа</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьПрисоединенныеФайлы</informationRegisters>
+  <informationRegisters>InformationRegister.ИНАГРО_РаботникиОрганизаций</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьРейтингАктивностиОбластейДанных</informationRegisters>
+  <informationRegisters>InformationRegister.ИНАГРО_СведенияОВыплатахРаботникамОрганизацийПоПлатежнымВедомостям</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьСоответствиеОбъектовДляОбмена</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьСоответствияОбъектовИнформационныхБаз</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьСохраненныеНастройки</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьСтраныМира</informationRegisters>
+  <informationRegisters>InformationRegister.ИНАГРО_УчетнаяПолитикаПоПерсоналу</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьХранимыеФайлыВерсий</informationRegisters>
   <informationRegisters>InformationRegister.УчетнаяПолитикаОрганизаций</informationRegisters>
   <informationRegisters>InformationRegister.ФайлыВРабочемКаталоге</informationRegisters>
-  <informationRegisters>InformationRegister.ФайлыОбластейДанных</informationRegisters>
-  <informationRegisters>InformationRegister.ФИОФизическихЛиц</informationRegisters>
-  <informationRegisters>InformationRegister.ХранилищеСертификатов</informationRegisters>
-  <informationRegisters>InformationRegister.ЦеныНоменклатуры</informationRegisters>
-  <informationRegisters>InformationRegister.ШкалаСтавокНалогов</informationRegisters>
-  <informationRegisters>InformationRegister.ЭлектронныеПодписи</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ВариантыАлгоритмовРасчетаЗарплаты</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ВзносыВФондыПоГруппам</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ВзносыВФондыРаботниковОрганизаций</informationRegisters>
@@ -4633,7 +4632,7 @@
   <informationRegisters>InformationRegister.ИНАГРО_НачальныеСведенияОСтажеРаботниковОрганизации</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_НачисленияДляПредварительногоРасчета</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_НумерацияЖурналовЭлеватора</informationRegisters>
-  <informationRegisters>InformationRegister.ИНАГРО_ПараметрыВыплатыЗПРаботников</informationRegisters>
+  <informationRegisters>InformationRegister.ФайлыОбластейДанных</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ПараметрыУчетаЭлеватора</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ПараметрыФиксированнойИндексации</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ПлановыеНачисленияРаботниковОрганизаций</informationRegisters>
@@ -4643,12 +4642,12 @@
   <informationRegisters>InformationRegister.ИНАГРО_ПоказанияСпидометраИБака</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ПраваПользователейЭлеватор</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ПредопределеннаяНоменклатура</informationRegisters>
-  <informationRegisters>InformationRegister.ИНАГРО_РаботникиОрганизаций</informationRegisters>
+  <informationRegisters>InformationRegister.ФИОФизическихЛиц</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_РазмерыЗаконодательноУстановленныхВыплат</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_РегламентированныйПроизводственныйКалендарь</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_РезультатыНаблюденияСостоянияЗерна</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_СведенияОВодителе</informationRegisters>
-  <informationRegisters>InformationRegister.ИНАГРО_СведенияОВыплатахРаботникамОрганизацийПоПлатежнымВедомостям</informationRegisters>
+  <informationRegisters>InformationRegister.ХранилищеСертификатов</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_СводОтчисленийВФондыНастройкиОтчета</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_Сельхозтехника</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_СемейноеПоложениеФизЛиц</informationRegisters>
@@ -4662,7 +4661,8 @@
   <informationRegisters>InformationRegister.ИНАГРО_СформированныеДокументы</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ТранспортныеСредства</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_УчетнаяПолитика</informationRegisters>
-  <informationRegisters>InformationRegister.ИНАГРО_УчетнаяПолитикаПоПерсоналу</informationRegisters>
+  <informationRegisters>InformationRegister.ЦеныНоменклатуры</informationRegisters>
+  <informationRegisters>InformationRegister.ШкалаСтавокНалогов</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_Форма49</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ЦветНоменклатурнойГруппы</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ЦеныНаУслуги</informationRegisters>
@@ -4687,41 +4687,42 @@
   <informationRegisters>InformationRegister.УдалитьИНАГРО_ФормированиеДокументовТабличнаяЧасть</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьИНАГРО_ФормированиеДокументовШапкаДокумента</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьИНАГРО_ЦепочкаЗадачБизнесОпераций</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_ВипискиПоЛимитуРегистрацииВЕРНН</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_ВложенияЭлектронныхДокументов</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_ВыполненныеОперацииОбработкиДокументов</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_ГруппыПодписей</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_ДанныеПоРежимуСинхронизации</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_ДатаПоследнегоПолученияНовостей</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_ДеталиВыполненияРегЗаданий</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_КонтактныеДанныеКонтрагентов</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_НастройкиПользователей</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_НастройкиРегламентныхЗаданий</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_ОбработаныеДокументы</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_ОбработкаПослеПолучения</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_ОтображениеЭлектронныхДокументов</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_ПовторныеОтправкиЭлектронныхДокументов</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_ПодпискиНаСобытияЭлектронныхДокументов</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_ПоказателиПлательщикаНалогов</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_ПоказателиПлательщикаНалоговАктуальность</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_ПравилаВыгрузки</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_ПравилаЗагрузки</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_РабочийСтол_НастройкиПользователейПоУмолчанию</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_СвязиЭлектронныхДокументов</informationRegisters>
   <informationRegisters>InformationRegister.скEDI_СобытияЭлектронныхДокументов</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_СодержимоеДополнительныхЭлектронныхДокументовДФС</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_СодержимоеЭлектронныхДокументов</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_СоответствиеВидовЭлектронныхИУчетныхДокументов</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_СохраненныеНастройкиПоПодписям</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_СтатусыЛицензии</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_ПравилаВыгрузки</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_ВыполненныеОперацииОбработкиДокументов</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_ДатаПоследнегоПолученияНовостей</informationRegisters>
   <informationRegisters>InformationRegister.скEDI_Счетчики</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_СчетчикиДополнительныхЭлектронныхДокументовДФС</informationRegisters>
   <informationRegisters>InformationRegister.скEDI_УсловияДокументов1С</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_СохраненныеНастройкиПоПодписям</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_ДеталиВыполненияРегЗаданий</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_НастройкиРегламентныхЗаданий</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_ОтображениеЭлектронныхДокументов</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_СоответствиеВидовЭлектронныхИУчетныхДокументов</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_СодержимоеЭлектронныхДокументов</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_ВложенияЭлектронныхДокументов</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_ГруппыПодписей</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_ЭлектронныеДокументы</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_ФаксимилеЭлектронныхДокументов</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_ОбработкаПослеПолучения</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_СчетчикиДополнительныхЭлектронныхДокументовДФС</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_СодержимоеДополнительныхЭлектронныхДокументовДФС</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_ОбработаныеДокументы</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_РабочийСтол_НастройкиПользователейПоУмолчанию</informationRegisters>
   <informationRegisters>InformationRegister.скEDI_УстановкаДатыРегистрацииВЕРНН_Выписка</informationRegisters>
   <informationRegisters>InformationRegister.скEDI_УстановкаДатыРегистрацииВЕРНН_ЭлектронныйДокумент</informationRegisters>
   <informationRegisters>InformationRegister.скEDI_Факсимиле</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_ФаксимилеЭлектронныхДокументов</informationRegisters>
-  <informationRegisters>InformationRegister.скEDI_ЭлектронныеДокументы</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_ВипискиПоЛимитуРегистрацииВЕРНН</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_ПовторныеОтправкиЭлектронныхДокументов</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_ПоказателиПлательщикаНалогов</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_ПоказателиПлательщикаНалоговАктуальность</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_КонтактныеДанныеКонтрагентов</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_СтатусыЛицензии</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_ДанныеПоРежимуСинхронизации</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_ПравилаЗагрузки</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_ПодпискиНаСобытияЭлектронныхДокументов</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_НастройкиПользователей</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_СвязиЭлектронныхДокументов</informationRegisters>
+  <informationRegisters>InformationRegister.ЭлектронныеПодписи</informationRegisters>
   <accumulationRegisters>AccumulationRegister.ВзаиморасчетыПоВзносамВФонды</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ВзаиморасчетыПоНДФЛ</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ВзаиморасчетыПоУдержаниям</accumulationRegisters>
