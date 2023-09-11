@@ -24,7 +24,7 @@
   <defaultRoles>Role.АдминистраторСистемы</defaultRoles>
   <defaultRoles>Role.ИнтерактивноеОткрытиеВнешнихОтчетовИОбработок</defaultRoles>
   <vendor>NetHelp</vendor>
-  <version>2.1.23.1</version>
+  <version>2.1.28.2</version>
   <updateCatalogAddress>http://downloads.bas-soft.eu/tmplts/</updateCatalogAddress>
   <useManagedFormInOrdinaryApplication>true</useManagedFormInOrdinaryApplication>
   <useOrdinaryFormInManagedApplication>true</useOrdinaryFormInManagedApplication>
@@ -951,6 +951,8 @@
   <commonPictures>CommonPicture.скEDI_Справка_УстановитьОтметкуОбработано</commonPictures>
   <commonPictures>CommonPicture.скEDI_СтатусСообщения</commonPictures>
   <commonPictures>CommonPicture.скEDI_ЭлПисьмо</commonPictures>
+  <commonPictures>CommonPicture.скEDI_ПодписьПомеченаНаУдаление</commonPictures>
+  <commonPictures>CommonPicture.скEDI_КартинкаСтрокСправочник</commonPictures>
   <sessionParameters>SessionParameter.АвторизованныйПользователь</sessionParameters>
   <sessionParameters>SessionParameter.БуферОбмена</sessionParameters>
   <sessionParameters>SessionParameter.ВерсииШаблоновОграниченияДоступа</sessionParameters>
@@ -1181,7 +1183,6 @@
   <commonTemplates>CommonTemplate.КомпонентаTWAIN</commonTemplates>
   <commonTemplates>CommonTemplate.КомпонентаПечатиQRКода</commonTemplates>
   <commonTemplates>CommonTemplate.КомпонентаПоискаСтрок</commonTemplates>
-  <commonTemplates>CommonTemplate.КомпонентаСклоненияФИО</commonTemplates>
   <commonTemplates>CommonTemplate.МакетОформленияКомпоновкиДанныхРеестра</commonTemplates>
   <commonTemplates>CommonTemplate.МониторРуководителя</commonTemplates>
   <commonTemplates>CommonTemplate.ОбщиеОбластиСтандартногоОтчета</commonTemplates>
@@ -1970,6 +1971,8 @@
   <commonModules>CommonModule.ЭлектроннаяПодписьСлужебный</commonModules>
   <commonModules>CommonModule.ЭлектроннаяПодписьСлужебныйВызовСервера</commonModules>
   <commonModules>CommonModule.ЭлектроннаяПодписьСлужебныйКлиент</commonModules>
+  <commonModules>CommonModule.ЭлектроннаяПодписьСлужебныйКлиентСервер</commonModules>
+  <commonModules>CommonModule.ЭлектроннаяПодписьСлужебныйПовтИсп</commonModules>
   <commonModules>CommonModule.ИНАГРО_ДирективыПрепроцессору</commonModules>
   <commonModules>CommonModule.ИНАГРО_Зарплата</commonModules>
   <commonModules>CommonModule.ИНАГРО_ЗарплатаКадрыРасширенный</commonModules>
@@ -2036,8 +2039,6 @@
   <commonModules>CommonModule.скEDI_Сервис2</commonModules>
   <commonModules>CommonModule.скEDI_СозданиеДокументов</commonModules>
   <commonModules>CommonModule.скEDI_СозданиеДокументовСервер</commonModules>
-  <commonModules>CommonModule.ЭлектроннаяПодписьСлужебныйКлиентСервер</commonModules>
-  <commonModules>CommonModule.ЭлектроннаяПодписьСлужебныйПовтИсп</commonModules>
   <commonAttributes>CommonAttribute.ОбластьДанныхВспомогательныеДанные</commonAttributes>
   <commonAttributes>CommonAttribute.ОбластьДанныхОсновныеДанные</commonAttributes>
   <exchangePlans>ExchangePlan.АвтономнаяРабота</exchangePlans>
@@ -2508,9 +2509,7 @@
   <definedTypes>DefinedType.ИНАГРО_ЗначениеПоказателяРасчетаЗарплаты</definedTypes>
   <commonCommands>CommonCommand.АвтономнаяРабота</commonCommands>
   <commonCommands>CommonCommand.АвтономнаяРаботаВМоделиСервиса</commonCommands>
-  <commonCommands>CommonCommand.АмортизацияНМА</commonCommands>
   <commonCommands>CommonCommand.АмортизацияОС</commonCommands>
-  <commonCommands>CommonCommand.АнализСубконто</commonCommands>
   <commonCommands>CommonCommand.АнализСчета</commonCommands>
   <commonCommands>CommonCommand.ВвестиХозяйственнуюОперацию</commonCommands>
   <commonCommands>CommonCommand.ВерсииФайла</commonCommands>
@@ -2699,6 +2698,10 @@
   <commonCommands>CommonCommand.ИНАГРО_ФормированиеПлатежныхДокументовПоНалогам</commonCommands>
   <commonCommands>CommonCommand.ИНАГРО_ФормированиеРКО</commonCommands>
   <commonCommands>CommonCommand.скEDI_ОткрытьФормуНастроек</commonCommands>
+  <commonCommands>CommonCommand.АмортизацияНМА</commonCommands>
+  <commonCommands>CommonCommand.АнализСубконто</commonCommands>
+  <commonCommands>CommonCommand.скEDI_ОткрытьФормуПовторноеУтверждение</commonCommands>
+  <commonCommands>CommonCommand.скEDI_ОткрытьФормуРабочегоСтола</commonCommands>
   <commandGroups>CommandGroup.Выгрузка</commandGroups>
   <commandGroups>CommandGroup.Документы</commandGroups>
   <commandGroups>CommandGroup.Информация</commandGroups>
@@ -2743,6 +2746,7 @@
   <constants>Constant.ВыполнятьСинхронизациюV77</constants>
   <constants>Constant.ГлавныйУзел</constants>
   <constants>Constant.ДанныеДляОтложенногоОбновления</constants>
+  <constants>Constant.ДанныеРегистрации</constants>
   <constants>Constant.ДатаВступленияВСилуПриказа1379</constants>
   <constants>Constant.ДатаНачалаИспользованияФормыННПоЛекарствам</constants>
   <constants>Constant.ДатаНачалаПереоценкиВалютыПоПравиламПриказа627</constants>
@@ -2769,6 +2773,7 @@
   <constants>Constant.ИспользоватьВалютныйУчет</constants>
   <constants>Constant.ИспользоватьВерсионированиеОбъектов</constants>
   <constants>Constant.ИспользоватьВнешнихПользователей</constants>
+  <constants>Constant.ИспользоватьВстроенныеРегламентированныеОтчеты</constants>
   <constants>Constant.ИспользоватьГруппыПользователей</constants>
   <constants>Constant.ИспользоватьДатыЗапретаЗагрузки</constants>
   <constants>Constant.ИспользоватьДатыЗапретаИзменения</constants>
@@ -2900,8 +2905,6 @@
   <constants>Constant.УчетЗарплатыИКадровСредствамиБухгалтерии</constants>
   <constants>Constant.ФорматСохраненияРегистровУчета</constants>
   <constants>Constant.ХранитьФайлыВТомахНаДиске</constants>
-  <constants>Constant.ЧасовойПоясОбластиДанных</constants>
-  <constants>Constant.ЭтоАвтономноеРабочееМесто</constants>
   <constants>Constant.ИНАГРО_ВидРасчетаДопЗарплаты</constants>
   <constants>Constant.ИНАГРО_ВидРасчетаДопЗарплатыГПХ</constants>
   <constants>Constant.ИНАГРО_ВидРасчетаДоплатаЗаКлассностьГПХ</constants>
@@ -2941,8 +2944,8 @@
   <constants>Constant.скEDI_ПоследняяДатаПолученияНовостей</constants>
   <constants>Constant.скEDI_СерверEDIПровайдера</constants>
   <constants>Constant.скEDI_ТекущееВнешнееХранилищеСодержимогоЭлектронныхДокументов</constants>
-  <constants>Constant.ДанныеРегистрации</constants>
-  <constants>Constant.ИспользоватьВстроенныеРегламентированныеОтчеты</constants>
+  <constants>Constant.ЧасовойПоясОбластиДанных</constants>
+  <constants>Constant.ЭтоАвтономноеРабочееМесто</constants>
   <commonForms>CommonForm.АвтономнаяРабота</commonForms>
   <commonForms>CommonForm.АвтономнаяРаботаВМоделиСервиса</commonForms>
   <commonForms>CommonForm.АутентификацияВСервисе</commonForms>
@@ -3066,7 +3069,6 @@
   <commonForms>CommonForm.ФормаНастройкаПоСубконто</commonForms>
   <commonForms>CommonForm.ФормаОтчета</commonForms>
   <commonForms>CommonForm.ФормаПоиска</commonForms>
-  <commonForms>CommonForm.ФормаРекламыФинансУА</commonForms>
   <commonForms>CommonForm.ФормаСообщение</commonForms>
   <commonForms>CommonForm.ФормаУстановкиЗначенийРеквизитовНоменклатуры</commonForms>
   <commonForms>CommonForm.ФормаЦеныИВалюта</commonForms>
@@ -3085,8 +3087,10 @@
   <commonForms>CommonForm.скEDI_НастройкаДоступаКEDIПровайдеру</commonForms>
   <commonForms>CommonForm.скEDI_НастройкаОтправкиСсылкиНаДокумент</commonForms>
   <commonForms>CommonForm.скEDI_ОтображениеЭлектронныхДокументов</commonForms>
+  <commonForms>CommonForm.скEDI_ПовторноеУтверждение</commonForms>
   <commonForms>CommonForm.скEDI_ФормаВыбораДанныхДляОтборов</commonForms>
   <commonForms>CommonForm.скEDI_ФормаВыбораДанныхДляОтборовИли</commonForms>
+  <commonForms>CommonForm.скEDI_ФормаВыбораДокумента1С</commonForms>
   <commonForms>CommonForm.скEDI_ФормаВыбораШаблонаДокумента</commonForms>
   <commonForms>CommonForm.скEDI_ФормаДляЭкспортаДокументаСПодписями</commonForms>
   <commonForms>CommonForm.скEDI_ФормаИнформацияОбОбновлениях</commonForms>
@@ -3304,6 +3308,7 @@
   <catalogs>Catalog.ИНАГРО_КлассификаторЗерна</catalogs>
   <catalogs>Catalog.ИНАГРО_КлассификаторИспользованияРабочегоВремени</catalogs>
   <catalogs>Catalog.ИНАГРО_КлассификаторСпециальностейПоОбразованию</catalogs>
+  <catalogs>Catalog.ИНАГРО_КодификаторКАТОТТГ</catalogs>
   <catalogs>Catalog.ИНАГРО_КоммунальныеЛьготы</catalogs>
   <catalogs>Catalog.ИНАГРО_МестаХранения</catalogs>
   <catalogs>Catalog.ИНАГРО_МоделиТС</catalogs>
@@ -3603,7 +3608,6 @@
   <documentJournals>DocumentJournal.скEDI_ДополнительныеДокументыДФС</documentJournals>
   <enums>Enum.БазаРаспределенияВнутреннихУслуг</enums>
   <enums>Enum.ВариантВыраженияВнутреннихУслуг</enums>
-  <enums>Enum.ВариантыSMTPАутентификации</enums>
   <enums>Enum.ВариантыАлгоритмовРасчетНДФЛ17</enums>
   <enums>Enum.ВариантыВерсионированияОбъектов</enums>
   <enums>Enum.ВариантыИспользованияВнешнихКомпонент</enums>
@@ -3893,6 +3897,7 @@
   <enums>Enum.ИНАГРО_ВидыФункцийОтчета</enums>
   <enums>Enum.ИНАГРО_ГодностьКВоеннойСлужбе</enums>
   <enums>Enum.ИНАГРО_ГруппыВоинскогоУчета</enums>
+  <enums>Enum.ВариантыSMTPАутентификации</enums>
   <enums>Enum.ИНАГРО_ДниНедели</enums>
   <enums>Enum.ИНАГРО_Запахи</enums>
   <enums>Enum.ИНАГРО_ИзменениеПоказателейСхемМотивации</enums>
@@ -3977,11 +3982,13 @@
   <enums>Enum.скEDI_ТипыДоступаКШаблону</enums>
   <enums>Enum.скEDI_ТипыКвитанций</enums>
   <enums>Enum.скEDI_ТипыКвитанцийДФС</enums>
+  <enums>Enum.скEDI_ТипыСвязейЭлектронныхДокументов</enums>
   <enums>Enum.скEDI_ТипыСодержимогоДополнительныхЭлектронныхДокуметовДФС</enums>
   <enums>Enum.скEDI_ТипыЭлектронныхДокументов</enums>
   <enums>Enum.скEDI_Условия</enums>
   <enums>Enum.скEDI_УсловияОтбораСтрока</enums>
   <enums>Enum.скEDI_ЮрФизЛицо</enums>
+  <enums>Enum.ИНАГРО_ГруппыУчетаКарточкиВоинскогоУчета</enums>
   <reports>Report.АнализВерсийОбъектов</reports>
   <reports>Report.АнализДвиженийДенежныхСредств</reports>
   <reports>Report.АнализЖурналаРегистрации</reports>
@@ -4111,6 +4118,7 @@
   <reports>Report.ИНАГРО_БанковскаяВыписка</reports>
   <reports>Report.ИНАГРО_ВедомостьДвиженияМатериалов</reports>
   <reports>Report.ИНАГРО_ВедомостьЗППоПутевыхЛистах</reports>
+  <reports>Report.ИНАГРО_ВедомостьОперативногоУчетаВоеннообязанных</reports>
   <reports>Report.ИНАГРО_ВедомостьПоВидамДеятельности</reports>
   <reports>Report.ИНАГРО_ВедомостьПоИсполнительнымЛистам</reports>
   <reports>Report.ИНАГРО_ВедомостьПоТехнологическимОперациям</reports>
@@ -4168,6 +4176,7 @@
   <reports>Report.ИНАГРО_СводноеКачество</reports>
   <reports>Report.ИНАГРО_СводОтчисленийВФонды</reports>
   <reports>Report.ИНАГРО_СводПоПриходамЗаДень</reports>
+  <reports>Report.ИНАГРО_СпискиПерсональногоВоинскогоУчета</reports>
   <reports>Report.ИНАГРО_СпискиРаботниковОрганизации</reports>
   <reports>Report.ИНАГРО_СпискиРаботниковПоГПХ</reports>
   <reports>Report.ИНАГРО_СреднеучетнаяЧисленностьСотрудников</reports>
@@ -4286,8 +4295,8 @@
   <dataProcessors>DataProcessor.РезультатыОбновленияПрограммы</dataProcessors>
   <dataProcessors>DataProcessor.РекомендацияПоПовышениюСкоростиРаботы</dataProcessors>
   <dataProcessors>DataProcessor.СверткаИнформационнойБазы</dataProcessors>
-  <dataProcessors>DataProcessor.скEDI</dataProcessors>
   <dataProcessors>DataProcessor.СдвигГраницыИтогов</dataProcessors>
+  <dataProcessors>DataProcessor.скEDI</dataProcessors>
   <dataProcessors>DataProcessor.Сканирование</dataProcessors>
   <dataProcessors>DataProcessor.СопоставлениеОбъектовИнформационныхБаз</dataProcessors>
   <dataProcessors>DataProcessor.ТранспортСообщенийОбменаEMAIL</dataProcessors>
@@ -4300,6 +4309,7 @@
   <dataProcessors>DataProcessor.ФормированиеНалоговыхНакладных</dataProcessors>
   <dataProcessors>DataProcessor.ФормированиеНалоговыхНакладныхПоРознице</dataProcessors>
   <dataProcessors>DataProcessor.ФормированиеНалоговыхНакладныхПоРозницеБезНоменклатурногоСостава</dataProcessors>
+  <dataProcessors>DataProcessor.ФормированиеПлатежныхДокументовПоНалогам</dataProcessors>
   <dataProcessors>DataProcessor.ИНАГРО_ГрупповоеПерепроведениеДокументов</dataProcessors>
   <dataProcessors>DataProcessor.ИНАГРО_КорректировкаЗатрат</dataProcessors>
   <dataProcessors>DataProcessor.ИНАГРО_ОбновлениеИнформационнойБазы</dataProcessors>
@@ -4314,7 +4324,6 @@
   <dataProcessors>DataProcessor.ИНАГРО_ФормированиеСпискаРаботников</dataProcessors>
   <dataProcessors>DataProcessor.ИНАГРО_ЭкспортДанныхВРеестрСкладскихДокументов</dataProcessors>
   <dataProcessors>DataProcessor.скEDI_МониторРегламентныхЗаданий</dataProcessors>
-  <dataProcessors>DataProcessor.ФормированиеПлатежныхДокументовПоНалогам</dataProcessors>
   <informationRegisters>InformationRegister.АвансыСотрудникам</informationRegisters>
   <informationRegisters>InformationRegister.БезопасноеХранилищеДанных</informationRegisters>
   <informationRegisters>InformationRegister.БезопасноеХранилищеДанныхОбластейДанных</informationRegisters>
@@ -4581,7 +4590,6 @@
   <informationRegisters>InformationRegister.УдалитьОбъектыИнформационныхБаз</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьОчередьЗаданий</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьОчередьИзвлеченияТекста</informationRegisters>
-  <informationRegisters>InformationRegister.ИНАГРО_ПараметрыВыплатыЗПРаботников</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьПараметрыИнтернетПоддержкиПользователей</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьПараметрыРасчетаИндексации</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьПаспортныеДанныеФизЛиц</informationRegisters>
@@ -4590,18 +4598,20 @@
   <informationRegisters>InformationRegister.УдалитьПраваДоступаПользователей</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьПраваПоЗначениямДоступа</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьПрисоединенныеФайлы</informationRegisters>
-  <informationRegisters>InformationRegister.ИНАГРО_РаботникиОрганизаций</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьРейтингАктивностиОбластейДанных</informationRegisters>
-  <informationRegisters>InformationRegister.ИНАГРО_СведенияОВыплатахРаботникамОрганизацийПоПлатежнымВедомостям</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьСоответствиеОбъектовДляОбмена</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьСоответствияОбъектовИнформационныхБаз</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьСохраненныеНастройки</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьСтраныМира</informationRegisters>
-  <informationRegisters>InformationRegister.ИНАГРО_УчетнаяПолитикаПоПерсоналу</informationRegisters>
   <informationRegisters>InformationRegister.УдалитьХранимыеФайлыВерсий</informationRegisters>
   <informationRegisters>InformationRegister.УчетнаяПолитикаОрганизаций</informationRegisters>
   <informationRegisters>InformationRegister.ФайлыВРабочемКаталоге</informationRegisters>
   <informationRegisters>InformationRegister.ФайлыОбластейДанных</informationRegisters>
+  <informationRegisters>InformationRegister.ФИОФизическихЛиц</informationRegisters>
+  <informationRegisters>InformationRegister.ХранилищеСертификатов</informationRegisters>
+  <informationRegisters>InformationRegister.ЦеныНоменклатуры</informationRegisters>
+  <informationRegisters>InformationRegister.ШкалаСтавокНалогов</informationRegisters>
+  <informationRegisters>InformationRegister.ЭлектронныеПодписи</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ВариантыАлгоритмовРасчетаЗарплаты</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ВзносыВФондыПоГруппам</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ВзносыВФондыРаботниковОрганизаций</informationRegisters>
@@ -4635,7 +4645,7 @@
   <informationRegisters>InformationRegister.ИНАГРО_НачальныеСведенияОСтажеРаботниковОрганизации</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_НачисленияДляПредварительногоРасчета</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_НумерацияЖурналовЭлеватора</informationRegisters>
-  <informationRegisters>InformationRegister.ФИОФизическихЛиц</informationRegisters>
+  <informationRegisters>InformationRegister.ИНАГРО_ПараметрыВыплатыЗПРаботников</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ПараметрыУчетаЭлеватора</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ПараметрыФиксированнойИндексации</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ПлановыеНачисленияРаботниковОрганизаций</informationRegisters>
@@ -4645,12 +4655,12 @@
   <informationRegisters>InformationRegister.ИНАГРО_ПоказанияСпидометраИБака</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ПраваПользователейЭлеватор</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ПредопределеннаяНоменклатура</informationRegisters>
-  <informationRegisters>InformationRegister.ХранилищеСертификатов</informationRegisters>
+  <informationRegisters>InformationRegister.ИНАГРО_РаботникиОрганизаций</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_РазмерыЗаконодательноУстановленныхВыплат</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_РегламентированныйПроизводственныйКалендарь</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_РезультатыНаблюденияСостоянияЗерна</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_СведенияОВодителе</informationRegisters>
-  <informationRegisters>InformationRegister.ЦеныНоменклатуры</informationRegisters>
+  <informationRegisters>InformationRegister.ИНАГРО_СведенияОВыплатахРаботникамОрганизацийПоПлатежнымВедомостям</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_СводОтчисленийВФондыНастройкиОтчета</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_Сельхозтехника</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_СемейноеПоложениеФизЛиц</informationRegisters>
@@ -4664,7 +4674,7 @@
   <informationRegisters>InformationRegister.ИНАГРО_СформированныеДокументы</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ТранспортныеСредства</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_УчетнаяПолитика</informationRegisters>
-  <informationRegisters>InformationRegister.ШкалаСтавокНалогов</informationRegisters>
+  <informationRegisters>InformationRegister.ИНАГРО_УчетнаяПолитикаПоПерсоналу</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_Форма49</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ЦветНоменклатурнойГруппы</informationRegisters>
   <informationRegisters>InformationRegister.ИНАГРО_ЦеныНаУслуги</informationRegisters>
@@ -4709,6 +4719,7 @@
   <informationRegisters>InformationRegister.скEDI_ПравилаВыгрузки</informationRegisters>
   <informationRegisters>InformationRegister.скEDI_ПравилаЗагрузки</informationRegisters>
   <informationRegisters>InformationRegister.скEDI_РабочийСтол_НастройкиПользователейПоУмолчанию</informationRegisters>
+  <informationRegisters>InformationRegister.скEDI_СвязиЭлектронныхДокументов</informationRegisters>
   <informationRegisters>InformationRegister.скEDI_СобытияЭлектронныхДокументов</informationRegisters>
   <informationRegisters>InformationRegister.скEDI_СодержимоеДополнительныхЭлектронныхДокументовДФС</informationRegisters>
   <informationRegisters>InformationRegister.скEDI_СодержимоеЭлектронныхДокументов</informationRegisters>
@@ -4725,7 +4736,6 @@
   <informationRegisters>InformationRegister.скEDI_ЭлектронныеДокументы</informationRegisters>
   <informationRegisters>InformationRegister.СМС_АналитикаУчетаКультуры</informationRegisters>
   <informationRegisters>InformationRegister.СМС_ПодробнаяИнформацияПоВидамФасовки</informationRegisters>
-  <informationRegisters>InformationRegister.ЭлектронныеПодписи</informationRegisters>
   <accumulationRegisters>AccumulationRegister.ВзаиморасчетыПоВзносамВФонды</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ВзаиморасчетыПоНДФЛ</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ВзаиморасчетыПоУдержаниям</accumulationRegisters>

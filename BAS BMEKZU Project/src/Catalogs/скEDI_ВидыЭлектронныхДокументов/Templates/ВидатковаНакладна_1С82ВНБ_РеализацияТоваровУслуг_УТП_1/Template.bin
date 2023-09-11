@@ -1,4 +1,5 @@
-﻿<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<dataSource>
 		<name>ИсточникДанных1</name>
 		<dataSourceType>Local</dataSourceType>
@@ -8,34 +9,50 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>TAB1_NOMENKLATURA_NUM</dataPath>
 			<field>Артикул</field>
+			<appearance/>
+			<inputParameters/>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>TAB1_NOMENKLATURA_NUMHBUMEASURE</dataPath>
 			<field>ЕдИзмКод</field>
+			<appearance/>
+			<inputParameters/>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>TAB1_NOMENKLATURA_CHARCODEUMEASURE</dataPath>
 			<field>ЕдИзмНаименование</field>
+			<appearance/>
+			<inputParameters/>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>TAB1_A3</dataPath>
 			<field>Количество</field>
+			<appearance/>
+			<inputParameters/>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>TAB1_NOMENKLATURA_NAME</dataPath>
 			<field>НоменклатураНаименование</field>
+			<appearance/>
+			<inputParameters/>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>TAB1_A6</dataPath>
 			<field>Сумма</field>
+			<appearance/>
+			<inputParameters/>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>TAB1_A5</dataPath>
 			<field>Цена</field>
+			<appearance/>
+			<inputParameters/>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>TAB1_A4</dataPath>
 			<field>Скидка</field>
+			<appearance/>
+			<inputParameters/>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>TAB1_T</dataPath>
@@ -46,6 +63,8 @@
 					<v8:content>TAB1 T</v8:content>
 				</v8:item>
 			</title>
+			<appearance/>
+			<inputParameters/>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
@@ -54,7 +73,19 @@
 	СУММА(РеализацияТоваровУслугТовары.Сумма) КАК Сумма,
 	РеализацияТоваровУслугТовары.ЕдиницаИзмерения.ЕдиницаПоКлассификатору.Наименование КАК ЕдИзмНаименование,
 	РеализацияТоваровУслугТовары.ЕдиницаИзмерения.ЕдиницаПоКлассификатору.Код КАК ЕдИзмКод,
-	ВЫРАЗИТЬ(РеализацияТоваровУслугТовары.Номенклатура.НаименованиеПолное КАК СТРОКА(1000)) КАК НоменклатураНаименование,
+	ВЫБОР
+		КОГДА РеализацияТоваровУслугТовары.ХарактеристикаНоменклатуры = ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)
+			ТОГДА ВЫБОР
+					КОГДА РеализацияТоваровУслугТовары.СерияНоменклатуры = ЗНАЧЕНИЕ(Справочник.СерииНоменклатуры.ПустаяСсылка)
+						ТОГДА ВЫРАЗИТЬ(РеализацияТоваровУслугТовары.Номенклатура.НаименованиеПолное КАК СТРОКА(1000))
+					ИНАЧЕ (ВЫРАЗИТЬ(РеализацияТоваровУслугТовары.Номенклатура.НаименованиеПолное КАК СТРОКА(1000))) + " (" + РеализацияТоваровУслугТовары.СерияНоменклатуры.Наименование + ")"
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА РеализацияТоваровУслугТовары.СерияНоменклатуры = ЗНАЧЕНИЕ(Справочник.СерииНоменклатуры.ПустаяСсылка)
+					ТОГДА (ВЫРАЗИТЬ(РеализацияТоваровУслугТовары.Номенклатура.НаименованиеПолное КАК СТРОКА(1000))) + " (" + РеализацияТоваровУслугТовары.ХарактеристикаНоменклатуры.Наименование + ")"
+				ИНАЧЕ (ВЫРАЗИТЬ(РеализацияТоваровУслугТовары.Номенклатура.НаименованиеПолное КАК СТРОКА(1000))) + " (" + РеализацияТоваровУслугТовары.ХарактеристикаНоменклатуры.Наименование + "; " + РеализацияТоваровУслугТовары.СерияНоменклатуры.Наименование + ")"
+			КОНЕЦ
+	КОНЕЦ КАК НоменклатураНаименование,
 	РеализацияТоваровУслугТовары.Номенклатура.Артикул КАК Артикул,
 	СУММА(РеализацияТоваровУслугТовары.Цена * РеализацияТоваровУслугТовары.Количество - РеализацияТоваровУслугТовары.Сумма) КАК Скидка,
 	"Т" КАК ТипНоменклатуры
@@ -68,7 +99,19 @@
 	РеализацияТоваровУслугТовары.Номенклатура.Артикул,
 	РеализацияТоваровУслугТовары.ЕдиницаИзмерения.ЕдиницаПоКлассификатору.Наименование,
 	РеализацияТоваровУслугТовары.ЕдиницаИзмерения.ЕдиницаПоКлассификатору.Код,
-	ВЫРАЗИТЬ(РеализацияТоваровУслугТовары.Номенклатура.НаименованиеПолное КАК СТРОКА(1000))</query>
+	ВЫБОР
+		КОГДА РеализацияТоваровУслугТовары.ХарактеристикаНоменклатуры = ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)
+			ТОГДА ВЫБОР
+					КОГДА РеализацияТоваровУслугТовары.СерияНоменклатуры = ЗНАЧЕНИЕ(Справочник.СерииНоменклатуры.ПустаяСсылка)
+						ТОГДА ВЫРАЗИТЬ(РеализацияТоваровУслугТовары.Номенклатура.НаименованиеПолное КАК СТРОКА(1000))
+					ИНАЧЕ (ВЫРАЗИТЬ(РеализацияТоваровУслугТовары.Номенклатура.НаименованиеПолное КАК СТРОКА(1000))) + " (" + РеализацияТоваровУслугТовары.СерияНоменклатуры.Наименование + ")"
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА РеализацияТоваровУслугТовары.СерияНоменклатуры = ЗНАЧЕНИЕ(Справочник.СерииНоменклатуры.ПустаяСсылка)
+					ТОГДА (ВЫРАЗИТЬ(РеализацияТоваровУслугТовары.Номенклатура.НаименованиеПолное КАК СТРОКА(1000))) + " (" + РеализацияТоваровУслугТовары.ХарактеристикаНоменклатуры.Наименование + ")"
+				ИНАЧЕ (ВЫРАЗИТЬ(РеализацияТоваровУслугТовары.Номенклатура.НаименованиеПолное КАК СТРОКА(1000))) + " (" + РеализацияТоваровУслугТовары.ХарактеристикаНоменклатуры.Наименование + "; " + РеализацияТоваровУслугТовары.СерияНоменклатуры.Наименование + ")"
+			КОНЕЦ
+	КОНЕЦ</query>
 	</dataSet>
 	<calculatedField>
 		<dataPath>TAB1_A1</dataPath>

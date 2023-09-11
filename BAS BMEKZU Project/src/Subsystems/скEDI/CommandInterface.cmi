@@ -110,12 +110,24 @@
       <visible/>
     </visibilityFragments>
     <visibilityFragments>
+      <command>CommonCommand.скEDI_ОткрытьФормуРабочегоСтола</command>
+      <visible>
+        <common>true</common>
+      </visible>
+    </visibilityFragments>
+    <visibilityFragments>
       <command>Constant.скEDI_ПоследняяДатаПолученияНовостей.StandardCommand.Open</command>
       <visible/>
     </visibilityFragments>
     <visibilityFragments>
       <command>100:5e2f3253-fe97-4223-bcb0-56a10830ad75</command>
       <visible/>
+    </visibilityFragments>
+    <visibilityFragments>
+      <command>CommonCommand.скEDI_ОткрытьФормуПовторноеУтверждение</command>
+      <visible>
+        <common>true</common>
+      </visible>
     </visibilityFragments>
     <visibilityFragments>
       <command>CommonForm.скEDI_НастройкаДоступаКEDIПровайдеру.StandardCommand.Open</command>
@@ -144,6 +156,11 @@
   </commandsVisibility>
   <commandsPlacement>
     <placementFragments>
+      <group>ActionsPanelTools</group>
+      <commands>CommonCommand.скEDI_ОткрытьФормуРабочегоСтола</commands>
+      <commands>CommonCommand.скEDI_ОткрытьФормуПовторноеУтверждение</commands>
+    </placementFragments>
+    <placementFragments>
       <group>CommandGroup.скEDI_Настройки</group>
       <commands>CommonForm.скEDI_НастройкаДоступаКEDIПровайдеру.StandardCommand.Open</commands>
       <commands>DataProcessor.скEDI_МониторРегламентныхЗаданий.StandardCommand.Open</commands>
@@ -154,12 +171,13 @@
   <commandsOrder>
     <orderFragments>
       <group>ActionsPanelTools</group>
-      <commands>DataProcessor.скEDI.StandardCommand.Open</commands>
+      <commands>CommonCommand.скEDI_ОткрытьФормуРабочегоСтола</commands>
       <commands>CommonForm.скEDI_ФормаОтображенияНовостей.StandardCommand.Open</commands>
       <commands>CommonForm.скEDI_ИнформацияОПодсистеме.StandardCommand.Open</commands>
       <commands>CommonForm.скEDI_ФормаИнформацияОбОбновлениях.StandardCommand.Open</commands>
       <commands>Constant.скEDI_ПоследняяДатаПолученияНовостей.StandardCommand.Open</commands>
       <commands>100:5e2f3253-fe97-4223-bcb0-56a10830ad75</commands>
+      <commands>CommonCommand.скEDI_ОткрытьФормуПовторноеУтверждение</commands>
     </orderFragments>
     <orderFragments>
       <group>CommandGroup.скEDI_Настройки</group>
@@ -168,6 +186,7 @@
       <commands>DataProcessor.скEDI_МониторРегламентныхЗаданий.StandardCommand.Open</commands>
       <commands>CommonForm.скEDI_ФормаПубликацияШаблона.StandardCommand.Open</commands>
       <commands>CommonForm.скEDI_ФормаКонвертацииКлючаJKS.StandardCommand.Open</commands>
+      <commands>0:21dad663-927c-4efe-85c1-7cc8e5f942dc</commands>
     </orderFragments>
   </commandsOrder>
 </cmi:CommandInterface>

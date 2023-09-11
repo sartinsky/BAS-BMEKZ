@@ -203,12 +203,12 @@
           <name>ДекорацияДанныеПоЛицензии</name>
           <id>1577</id>
           <title>
-            <key>ru</key>
-            <value>Данные по лицензии</value>
-          </title>
-          <title>
             <key>uk</key>
             <value>Дані про ліцензію</value>
+          </title>
+          <title>
+            <key>ru</key>
+            <value>Данные по лицензии</value>
           </title>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -221,7 +221,7 @@
           </toolTip>
           <toolTip>
             <key>uk</key>
-            <value>Інформация про ліцензію</value>
+            <value>Інформація про ліцензію</value>
           </toolTip>
           <extendedTooltip>
             <name>ДекорацияДанныеПоЛицензииРасширеннаяПодсказка</name>
@@ -783,7 +783,7 @@
                   </title>
                   <title>
                     <key>uk</key>
-                    <value>Вид електронного док-ту</value>
+                    <value>Вид електронного док-та</value>
                   </title>
                   <visible>true</visible>
                   <enabled>true</enabled>
@@ -1866,6 +1866,9 @@
                   <showInHeader>true</showInHeader>
                   <headerHorizontalAlign>Left</headerHorizontalAlign>
                   <showInFooter>true</showInFooter>
+                  <footerDataPath xsi:type="form:DataPath">
+                    <segments>СписокИтогКоличествоДокументов</segments>
+                  </footerDataPath>
                   <extInfo xsi:type="form:LabelFieldExtInfo">
                     <autoMaxWidth>true</autoMaxWidth>
                     <autoMaxHeight>true</autoMaxHeight>
@@ -2080,6 +2083,59 @@
                   <contextMenu>
                     <name>СписокДокументовВхИсхКонтекстноеМеню</name>
                     <id>117</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <autoFill>true</autoFill>
+                  </contextMenu>
+                  <type>LabelField</type>
+                  <editMode>Enter</editMode>
+                  <showInHeader>true</showInHeader>
+                  <headerHorizontalAlign>Left</headerHorizontalAlign>
+                  <showInFooter>true</showInFooter>
+                  <extInfo xsi:type="form:LabelFieldExtInfo">
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                  </extInfo>
+                </items>
+                <items xsi:type="form:FormField">
+                  <name>СписокДокументовГдеСоздан</name>
+                  <id>2946</id>
+                  <title>
+                    <key>ru</key>
+                    <value>Где созден документ</value>
+                  </title>
+                  <title>
+                    <key>uk</key>
+                    <value>Де створено документ</value>
+                  </title>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <dataPath xsi:type="form:DataPath">
+                    <segments>СписокДокументов.ГдеСоздан</segments>
+                  </dataPath>
+                  <extendedTooltip>
+                    <name>СписокДокументовГдеСозданРасширеннаяПодсказка</name>
+                    <id>2948</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <contextMenu>
+                    <name>СписокДокументовГдеСозданКонтекстноеМеню</name>
+                    <id>2947</id>
                     <visible>true</visible>
                     <enabled>true</enabled>
                     <userVisible>
@@ -3052,187 +3108,6 @@
                 <name>ГруппаКолонокДокумент1С</name>
                 <id>466</id>
                 <items xsi:type="form:FormField">
-                  <name>СписокДокументовНеобходимоПроведениеДокумента1С</name>
-                  <id>346</id>
-                  <enabled>true</enabled>
-                  <userVisible>
-                    <common>true</common>
-                  </userVisible>
-                  <dataPath xsi:type="form:DataPath">
-                    <segments>СписокДокументов.НеобходимоПроведениеДокумента1С</segments>
-                  </dataPath>
-                  <extendedTooltip>
-                    <name>СписокДокументовНеобходимоПроведениеДокумента1СРасширеннаяПодсказка</name>
-                    <id>830</id>
-                    <visible>true</visible>
-                    <enabled>true</enabled>
-                    <userVisible>
-                      <common>true</common>
-                    </userVisible>
-                    <type>Label</type>
-                    <autoMaxWidth>true</autoMaxWidth>
-                    <autoMaxHeight>true</autoMaxHeight>
-                    <extInfo xsi:type="form:LabelDecorationExtInfo">
-                      <horizontalAlign>Left</horizontalAlign>
-                    </extInfo>
-                  </extendedTooltip>
-                  <contextMenu>
-                    <name>СписокДокументовНеобходимоПроведениеДокумента1СКонтекстноеМеню</name>
-                    <id>347</id>
-                    <visible>true</visible>
-                    <enabled>true</enabled>
-                    <userVisible>
-                      <common>true</common>
-                    </userVisible>
-                    <autoFill>true</autoFill>
-                  </contextMenu>
-                  <type>CheckBoxField</type>
-                  <editMode>Enter</editMode>
-                  <showInHeader>true</showInHeader>
-                  <headerHorizontalAlign>Left</headerHorizontalAlign>
-                  <showInFooter>true</showInFooter>
-                  <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
-                </items>
-                <items xsi:type="form:FormField">
-                  <name>СписокДокументовОбработано</name>
-                  <id>352</id>
-                  <enabled>true</enabled>
-                  <userVisible>
-                    <common>true</common>
-                  </userVisible>
-                  <dataPath xsi:type="form:DataPath">
-                    <segments>СписокДокументов.Обработано</segments>
-                  </dataPath>
-                  <extendedTooltip>
-                    <name>СписокДокументовОбработаноРасширеннаяПодсказка</name>
-                    <id>831</id>
-                    <visible>true</visible>
-                    <enabled>true</enabled>
-                    <userVisible>
-                      <common>true</common>
-                    </userVisible>
-                    <type>Label</type>
-                    <autoMaxWidth>true</autoMaxWidth>
-                    <autoMaxHeight>true</autoMaxHeight>
-                    <extInfo xsi:type="form:LabelDecorationExtInfo">
-                      <horizontalAlign>Left</horizontalAlign>
-                    </extInfo>
-                  </extendedTooltip>
-                  <contextMenu>
-                    <name>СписокДокументовОбработаноКонтекстноеМеню</name>
-                    <id>353</id>
-                    <visible>true</visible>
-                    <enabled>true</enabled>
-                    <userVisible>
-                      <common>true</common>
-                    </userVisible>
-                    <autoFill>true</autoFill>
-                  </contextMenu>
-                  <type>CheckBoxField</type>
-                  <editMode>Enter</editMode>
-                  <showInHeader>true</showInHeader>
-                  <headerHorizontalAlign>Left</headerHorizontalAlign>
-                  <showInFooter>true</showInFooter>
-                  <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
-                </items>
-                <items xsi:type="form:FormField">
-                  <name>СписокДокументовДатаОбработки</name>
-                  <id>355</id>
-                  <enabled>true</enabled>
-                  <userVisible>
-                    <common>true</common>
-                  </userVisible>
-                  <dataPath xsi:type="form:DataPath">
-                    <segments>СписокДокументов.ДатаОбработки</segments>
-                  </dataPath>
-                  <extendedTooltip>
-                    <name>СписокДокументовДатаОбработкиРасширеннаяПодсказка</name>
-                    <id>832</id>
-                    <visible>true</visible>
-                    <enabled>true</enabled>
-                    <userVisible>
-                      <common>true</common>
-                    </userVisible>
-                    <type>Label</type>
-                    <autoMaxWidth>true</autoMaxWidth>
-                    <autoMaxHeight>true</autoMaxHeight>
-                    <extInfo xsi:type="form:LabelDecorationExtInfo">
-                      <horizontalAlign>Left</horizontalAlign>
-                    </extInfo>
-                  </extendedTooltip>
-                  <contextMenu>
-                    <name>СписокДокументовДатаОбработкиКонтекстноеМеню</name>
-                    <id>356</id>
-                    <visible>true</visible>
-                    <enabled>true</enabled>
-                    <userVisible>
-                      <common>true</common>
-                    </userVisible>
-                    <autoFill>true</autoFill>
-                  </contextMenu>
-                  <type>LabelField</type>
-                  <editMode>Enter</editMode>
-                  <showInHeader>true</showInHeader>
-                  <headerHorizontalAlign>Left</headerHorizontalAlign>
-                  <showInFooter>true</showInFooter>
-                  <extInfo xsi:type="form:LabelFieldExtInfo">
-                    <autoMaxWidth>true</autoMaxWidth>
-                    <autoMaxHeight>true</autoMaxHeight>
-                  </extInfo>
-                </items>
-                <items xsi:type="form:FormField">
-                  <name>СписокДокументовИндексКартинкиДокумента</name>
-                  <id>469</id>
-                  <visible>true</visible>
-                  <enabled>true</enabled>
-                  <userVisible>
-                    <common>true</common>
-                  </userVisible>
-                  <dataPath xsi:type="form:DataPath">
-                    <segments>СписокДокументов.ИндексКартинкиДокументаСправочника</segments>
-                  </dataPath>
-                  <titleLocation>None</titleLocation>
-                  <extendedTooltip>
-                    <name>СписокДокументовИндексКартинкиДокументаРасширеннаяПодсказка</name>
-                    <id>833</id>
-                    <visible>true</visible>
-                    <enabled>true</enabled>
-                    <userVisible>
-                      <common>true</common>
-                    </userVisible>
-                    <type>Label</type>
-                    <autoMaxWidth>true</autoMaxWidth>
-                    <autoMaxHeight>true</autoMaxHeight>
-                    <extInfo xsi:type="form:LabelDecorationExtInfo">
-                      <horizontalAlign>Left</horizontalAlign>
-                    </extInfo>
-                  </extendedTooltip>
-                  <contextMenu>
-                    <name>СписокДокументовИндексКартинкиДокументаКонтекстноеМеню</name>
-                    <id>470</id>
-                    <visible>true</visible>
-                    <enabled>true</enabled>
-                    <userVisible>
-                      <common>true</common>
-                    </userVisible>
-                    <autoFill>true</autoFill>
-                  </contextMenu>
-                  <type>PictureField</type>
-                  <editMode>Enter</editMode>
-                  <showInHeader>true</showInHeader>
-                  <headerHorizontalAlign>Left</headerHorizontalAlign>
-                  <showInFooter>true</showInFooter>
-                  <extInfo xsi:type="form:ImageFieldExtInfo">
-                    <autoMaxWidth>true</autoMaxWidth>
-                    <autoMaxHeight>true</autoMaxHeight>
-                    <horizontalStretch>true</horizontalStretch>
-                    <verticalStretch>true</verticalStretch>
-                    <valuesPicture xsi:type="core:PictureRef">
-                      <picture>CommonPicture.скEDI_СостоянияДокументовИСправочников</picture>
-                    </valuesPicture>
-                  </extInfo>
-                </items>
-                <items xsi:type="form:FormField">
                   <name>СписокДокументовДокумент1С</name>
                   <id>125</id>
                   <title>
@@ -3511,17 +3386,26 @@
                   </extInfo>
                 </items>
                 <items xsi:type="form:FormField">
-                  <name>СписокДокументовСсылка</name>
-                  <id>907</id>
+                  <name>СписокДокументовНеобходимоПроведениеДокумента1С</name>
+                  <id>346</id>
+                  <title>
+                    <key>ru</key>
+                    <value>Проведение</value>
+                  </title>
+                  <title>
+                    <key>uk</key>
+                    <value>Проведення</value>
+                  </title>
+                  <enabled>true</enabled>
                   <userVisible>
                     <common>true</common>
                   </userVisible>
                   <dataPath xsi:type="form:DataPath">
-                    <segments>СписокДокументов.Ссылка</segments>
+                    <segments>СписокДокументов.НеобходимоПроведениеДокумента1С</segments>
                   </dataPath>
                   <extendedTooltip>
-                    <name>СписокДокументовСсылкаРасширеннаяПодсказка</name>
-                    <id>909</id>
+                    <name>СписокДокументовНеобходимоПроведениеДокумента1СРасширеннаяПодсказка</name>
+                    <id>830</id>
                     <visible>true</visible>
                     <enabled>true</enabled>
                     <userVisible>
@@ -3535,8 +3419,108 @@
                     </extInfo>
                   </extendedTooltip>
                   <contextMenu>
-                    <name>СписокДокументовСсылкаКонтекстноеМеню</name>
-                    <id>908</id>
+                    <name>СписокДокументовНеобходимоПроведениеДокумента1СКонтекстноеМеню</name>
+                    <id>347</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <autoFill>true</autoFill>
+                  </contextMenu>
+                  <type>CheckBoxField</type>
+                  <editMode>Enter</editMode>
+                  <showInHeader>true</showInHeader>
+                  <headerHorizontalAlign>Left</headerHorizontalAlign>
+                  <showInFooter>true</showInFooter>
+                  <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+                </items>
+                <items xsi:type="form:FormField">
+                  <name>СписокДокументовОбработано</name>
+                  <id>352</id>
+                  <title>
+                    <key>ru</key>
+                    <value>Обработано</value>
+                  </title>
+                  <title>
+                    <key>uk</key>
+                    <value>Опрацьовано</value>
+                  </title>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <dataPath xsi:type="form:DataPath">
+                    <segments>СписокДокументов.Обработано</segments>
+                  </dataPath>
+                  <extendedTooltip>
+                    <name>СписокДокументовОбработаноРасширеннаяПодсказка</name>
+                    <id>831</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <contextMenu>
+                    <name>СписокДокументовОбработаноКонтекстноеМеню</name>
+                    <id>353</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <autoFill>true</autoFill>
+                  </contextMenu>
+                  <type>CheckBoxField</type>
+                  <editMode>Enter</editMode>
+                  <showInHeader>true</showInHeader>
+                  <headerHorizontalAlign>Left</headerHorizontalAlign>
+                  <showInFooter>true</showInFooter>
+                  <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+                </items>
+                <items xsi:type="form:FormField">
+                  <name>СписокДокументовДатаОбработки</name>
+                  <id>355</id>
+                  <title>
+                    <key>ru</key>
+                    <value>Дата обработки</value>
+                  </title>
+                  <title>
+                    <key>uk</key>
+                    <value>Дата опрацювання</value>
+                  </title>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <dataPath xsi:type="form:DataPath">
+                    <segments>СписокДокументов.ДатаОбработки</segments>
+                  </dataPath>
+                  <extendedTooltip>
+                    <name>СписокДокументовДатаОбработкиРасширеннаяПодсказка</name>
+                    <id>832</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <contextMenu>
+                    <name>СписокДокументовДатаОбработкиКонтекстноеМеню</name>
+                    <id>356</id>
                     <visible>true</visible>
                     <enabled>true</enabled>
                     <userVisible>
@@ -3743,6 +3727,36 @@
                   </extendedTooltip>
                   <commandName>Form.Command.ПодписатьИОтправитьЭлектронныеДокументы</commandName>
                   <representation>PictureAndText</representation>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <placementArea>UserCmds</placementArea>
+                  <representationInContextMenu>Auto</representationInContextMenu>
+                </items>
+                <items xsi:type="form:Button">
+                  <name>СписокДокументовПодписатьИОтправить_Переподписать</name>
+                  <id>2944</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <extendedTooltip>
+                    <name>СписокДокументовПодписатьИОтправить_ПереподписатьРасширеннаяПодсказка</name>
+                    <id>2945</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <commandName>Form.Command.ПодписатьИОтправитьЭлектронныеДокументы_Переподписать</commandName>
+                  <representation>Auto</representation>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
                   <placementArea>UserCmds</placementArea>
@@ -3992,6 +4006,36 @@
                   <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
                 </items>
                 <items xsi:type="form:Button">
+                  <name>СписокДокументовАннулироватьЭлектронныйДокумент</name>
+                  <id>2938</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <extendedTooltip>
+                    <name>СписокДокументовАннулироватьЭлектронныйДокументРасширеннаяПодсказка</name>
+                    <id>2939</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <commandName>Form.Command.АннулироватьЭлектронныйДокумент</commandName>
+                  <representation>Auto</representation>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <placementArea>UserCmds</placementArea>
+                  <representationInContextMenu>Auto</representationInContextMenu>
+                </items>
+                <items xsi:type="form:Button">
                   <name>СписокДокументовОтправитьПовторно</name>
                   <id>1580</id>
                   <visible>true</visible>
@@ -4227,6 +4271,36 @@
                     </extInfo>
                   </extendedTooltip>
                   <commandName>Form.Command.СформироватьНовыйВариантПодписатьИОтправитьЭлектронныеДокументы</commandName>
+                  <representation>Auto</representation>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <placementArea>UserCmds</placementArea>
+                  <representationInContextMenu>Auto</representationInContextMenu>
+                </items>
+                <items xsi:type="form:Button">
+                  <name>СписокДокументовУстановитьОсновнойВариантЭлектронногоДокумента</name>
+                  <id>2940</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <extendedTooltip>
+                    <name>СписокДокументовУстановитьОсновнойВариантЭлектронногоДокументаРасширеннаяПодсказка</name>
+                    <id>2941</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <commandName>Form.Command.УстановитьОсновнойВариантЭлектронногоДокумента</commandName>
                   <representation>Auto</representation>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
@@ -7011,9 +7085,6 @@
                   <horizontalStretch>true</horizontalStretch>
                   <verticalStretch>true</verticalStretch>
                   <enableStartDrag>true</enableStartDrag>
-                  <rowPictureDataPath xsi:type="form:DataPath">
-                    <segments>СписокВариантыДокументов.DefaultPicture</segments>
-                  </rowPictureDataPath>
                   <extInfo xsi:type="form:DynamicListTableExtInfo">
                     <autoRefreshPeriod>60</autoRefreshPeriod>
                     <period>
@@ -7062,6 +7133,744 @@
                   <showTitle>true</showTitle>
                   <titleDataPath xsi:type="form:DataPath">
                     <segments>ЗаголовокЗакладкиВариантыДокументов</segments>
+                  </titleDataPath>
+                </extInfo>
+              </items>
+              <items xsi:type="form:FormGroup">
+                <name>ГруппаСвязанныеДокументы</name>
+                <id>2429</id>
+                <items xsi:type="form:Table">
+                  <name>СписокСвязанныеДокументы</name>
+                  <id>2431</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <dataPath xsi:type="form:DataPath">
+                    <segments>СписокСвязанныеДокументы</segments>
+                  </dataPath>
+                  <titleLocation>None</titleLocation>
+                  <excludedCommands>CancelSearch</excludedCommands>
+                  <excludedCommands>Change</excludedCommands>
+                  <excludedCommands>ChangeHistory</excludedCommands>
+                  <excludedCommands>Copy</excludedCommands>
+                  <excludedCommands>Create</excludedCommands>
+                  <excludedCommands>Delete</excludedCommands>
+                  <excludedCommands>DynamicListStandardSettings</excludedCommands>
+                  <excludedCommands>Find</excludedCommands>
+                  <excludedCommands>FindByCurrentValue</excludedCommands>
+                  <excludedCommands>ListSettings</excludedCommands>
+                  <excludedCommands>LoadDynamicListSettings</excludedCommands>
+                  <excludedCommands>OutputList</excludedCommands>
+                  <excludedCommands>SaveDynamicListSettings</excludedCommands>
+                  <excludedCommands>SearchHistory</excludedCommands>
+                  <excludedCommands>ShowMultipleSelection</excludedCommands>
+                  <items xsi:type="form:FormField">
+                    <name>СписокСвязанныеДокументыИндексКартинки</name>
+                    <id>2564</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <dataPath xsi:type="form:DataPath">
+                      <segments>СписокСвязанныеДокументы.ИндексКартинки</segments>
+                    </dataPath>
+                    <titleLocation>None</titleLocation>
+                    <extendedTooltip>
+                      <name>СписокСвязанныеДокументыИндексКартинкиРасширеннаяПодсказка</name>
+                      <id>2566</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>СписокСвязанныеДокументыИндексКартинкиКонтекстноеМеню</name>
+                      <id>2565</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>PictureField</type>
+                    <editMode>Enter</editMode>
+                    <showInHeader>true</showInHeader>
+                    <headerHorizontalAlign>Left</headerHorizontalAlign>
+                    <showInFooter>true</showInFooter>
+                    <extInfo xsi:type="form:ImageFieldExtInfo">
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <horizontalStretch>true</horizontalStretch>
+                      <verticalStretch>true</verticalStretch>
+                      <valuesPicture xsi:type="core:PictureRef">
+                        <picture>CommonPicture.скEDI_КартинкаСтрок</picture>
+                      </valuesPicture>
+                      <fileDragMode>AsFileRef</fileDragMode>
+                    </extInfo>
+                  </items>
+                  <items xsi:type="form:FormField">
+                    <name>СписокСвязанныеДокументыВидЭлектронногоДокумента</name>
+                    <id>2522</id>
+                    <title>
+                      <key>ru</key>
+                      <value>Вид электронного документа</value>
+                    </title>
+                    <title>
+                      <key>uk</key>
+                      <value>Вид електронного документа</value>
+                    </title>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <dataPath xsi:type="form:DataPath">
+                      <segments>СписокСвязанныеДокументы.ВидЭлектронногоДокумента</segments>
+                    </dataPath>
+                    <extendedTooltip>
+                      <name>СписокСвязанныеДокументыВидЭлектронногоДокументаРасширеннаяПодсказка</name>
+                      <id>2524</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>СписокСвязанныеДокументыВидЭлектронногоДокументаКонтекстноеМеню</name>
+                      <id>2523</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>LabelField</type>
+                    <editMode>Enter</editMode>
+                    <showInHeader>true</showInHeader>
+                    <headerHorizontalAlign>Left</headerHorizontalAlign>
+                    <showInFooter>true</showInFooter>
+                    <extInfo xsi:type="form:LabelFieldExtInfo">
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                    </extInfo>
+                  </items>
+                  <items xsi:type="form:FormField">
+                    <name>СписокСвязанныеДокументыСостояние</name>
+                    <id>2633</id>
+                    <title>
+                      <key>ru</key>
+                      <value>Состояние</value>
+                    </title>
+                    <title>
+                      <key>uk</key>
+                      <value>Стан</value>
+                    </title>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <dataPath xsi:type="form:DataPath">
+                      <segments>СписокСвязанныеДокументы.Состояние</segments>
+                    </dataPath>
+                    <extendedTooltip>
+                      <name>СписокСвязанныеДокументыСостояниеРасширеннаяПодсказка</name>
+                      <id>2635</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>СписокСвязанныеДокументыСостояниеКонтекстноеМеню</name>
+                      <id>2634</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>LabelField</type>
+                    <editMode>Enter</editMode>
+                    <showInHeader>true</showInHeader>
+                    <headerHorizontalAlign>Left</headerHorizontalAlign>
+                    <showInFooter>true</showInFooter>
+                    <extInfo xsi:type="form:LabelFieldExtInfo">
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                    </extInfo>
+                  </items>
+                  <items xsi:type="form:FormField">
+                    <name>СписокСвязанныеДокументыВхИсх</name>
+                    <id>2525</id>
+                    <title>
+                      <key>ru</key>
+                      <value>Вх/Исх</value>
+                    </title>
+                    <title>
+                      <key>uk</key>
+                      <value>Вх/Вих</value>
+                    </title>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <dataPath xsi:type="form:DataPath">
+                      <segments>СписокСвязанныеДокументы.ВхИсх</segments>
+                    </dataPath>
+                    <extendedTooltip>
+                      <name>СписокСвязанныеДокументыВхИсхРасширеннаяПодсказка</name>
+                      <id>2527</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>СписокСвязанныеДокументыВхИсхКонтекстноеМеню</name>
+                      <id>2526</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>LabelField</type>
+                    <editMode>Enter</editMode>
+                    <showInHeader>true</showInHeader>
+                    <headerHorizontalAlign>Left</headerHorizontalAlign>
+                    <showInFooter>true</showInFooter>
+                    <extInfo xsi:type="form:LabelFieldExtInfo">
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                    </extInfo>
+                  </items>
+                  <items xsi:type="form:FormField">
+                    <name>СписокСвязанныеДокументыЭлектронныйДокументНомерДокумента</name>
+                    <id>2678</id>
+                    <title>
+                      <key>ru</key>
+                      <value>Номер</value>
+                    </title>
+                    <title>
+                      <key>uk</key>
+                      <value>Номер</value>
+                    </title>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <dataPath xsi:type="form:DataPath">
+                      <segments>СписокСвязанныеДокументы.ЭлектронныйДокументНомерДокумента</segments>
+                    </dataPath>
+                    <extendedTooltip>
+                      <name>СписокСвязанныеДокументыЭлектронныйДокументНомерДокументаРасширеннаяПодсказка</name>
+                      <id>2680</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>СписокСвязанныеДокументыЭлектронныйДокументНомерДокументаКонтекстноеМеню</name>
+                      <id>2679</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>LabelField</type>
+                    <editMode>Enter</editMode>
+                    <showInHeader>true</showInHeader>
+                    <headerHorizontalAlign>Left</headerHorizontalAlign>
+                    <showInFooter>true</showInFooter>
+                    <extInfo xsi:type="form:LabelFieldExtInfo">
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                    </extInfo>
+                  </items>
+                  <items xsi:type="form:FormField">
+                    <name>СписокСвязанныеДокументыДата</name>
+                    <id>2531</id>
+                    <title>
+                      <key>ru</key>
+                      <value>Дата</value>
+                    </title>
+                    <title>
+                      <key>uk</key>
+                      <value>Дата</value>
+                    </title>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <dataPath xsi:type="form:DataPath">
+                      <segments>СписокСвязанныеДокументы.Дата</segments>
+                    </dataPath>
+                    <extendedTooltip>
+                      <name>СписокСвязанныеДокументыДатаРасширеннаяПодсказка</name>
+                      <id>2533</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>СписокСвязанныеДокументыДатаКонтекстноеМеню</name>
+                      <id>2532</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>LabelField</type>
+                    <editMode>Enter</editMode>
+                    <showInHeader>true</showInHeader>
+                    <headerHorizontalAlign>Left</headerHorizontalAlign>
+                    <showInFooter>true</showInFooter>
+                    <extInfo xsi:type="form:LabelFieldExtInfo">
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                    </extInfo>
+                  </items>
+                  <items xsi:type="form:FormField">
+                    <name>СписокСвязанныеДокументыСуммаБезНДСЭлектронногоДокумента</name>
+                    <id>2645</id>
+                    <title>
+                      <key>ru</key>
+                      <value>Сумма без НДС</value>
+                    </title>
+                    <title>
+                      <key>uk</key>
+                      <value>Сума без ПДВ</value>
+                    </title>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <dataPath xsi:type="form:DataPath">
+                      <segments>СписокСвязанныеДокументы.СуммаБезНДСЭлектронногоДокумента</segments>
+                    </dataPath>
+                    <extendedTooltip>
+                      <name>СписокСвязанныеДокументыСуммаБезНДСЭлектронногоДокументаРасширеннаяПодсказка</name>
+                      <id>2647</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>СписокСвязанныеДокументыСуммаБезНДСЭлектронногоДокументаКонтекстноеМеню</name>
+                      <id>2646</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>LabelField</type>
+                    <editMode>Enter</editMode>
+                    <showInHeader>true</showInHeader>
+                    <headerHorizontalAlign>Left</headerHorizontalAlign>
+                    <showInFooter>true</showInFooter>
+                    <extInfo xsi:type="form:LabelFieldExtInfo">
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                    </extInfo>
+                  </items>
+                  <items xsi:type="form:FormField">
+                    <name>СписокСвязанныеДокументыСуммаНДСЭлектронногоДокумента</name>
+                    <id>2654</id>
+                    <title>
+                      <key>ru</key>
+                      <value>Сумма НДС</value>
+                    </title>
+                    <title>
+                      <key>uk</key>
+                      <value>Сума ПДВ</value>
+                    </title>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <dataPath xsi:type="form:DataPath">
+                      <segments>СписокСвязанныеДокументы.СуммаНДСЭлектронногоДокумента</segments>
+                    </dataPath>
+                    <extendedTooltip>
+                      <name>СписокСвязанныеДокументыСуммаНДСЭлектронногоДокументаРасширеннаяПодсказка</name>
+                      <id>2656</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>СписокСвязанныеДокументыСуммаНДСЭлектронногоДокументаКонтекстноеМеню</name>
+                      <id>2655</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>LabelField</type>
+                    <editMode>Enter</editMode>
+                    <showInHeader>true</showInHeader>
+                    <headerHorizontalAlign>Left</headerHorizontalAlign>
+                    <showInFooter>true</showInFooter>
+                    <extInfo xsi:type="form:LabelFieldExtInfo">
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                    </extInfo>
+                  </items>
+                  <items xsi:type="form:FormField">
+                    <name>СписокСвязанныеДокументыСуммаЭлектронногоДокумента</name>
+                    <id>2657</id>
+                    <title>
+                      <key>ru</key>
+                      <value>Сумма</value>
+                    </title>
+                    <title>
+                      <key>uk</key>
+                      <value>Сума</value>
+                    </title>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <dataPath xsi:type="form:DataPath">
+                      <segments>СписокСвязанныеДокументы.СуммаЭлектронногоДокумента</segments>
+                    </dataPath>
+                    <extendedTooltip>
+                      <name>СписокСвязанныеДокументыСуммаЭлектронногоДокументаРасширеннаяПодсказка</name>
+                      <id>2659</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>СписокСвязанныеДокументыСуммаЭлектронногоДокументаКонтекстноеМеню</name>
+                      <id>2658</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>LabelField</type>
+                    <editMode>Enter</editMode>
+                    <showInHeader>true</showInHeader>
+                    <headerHorizontalAlign>Left</headerHorizontalAlign>
+                    <showInFooter>true</showInFooter>
+                    <extInfo xsi:type="form:LabelFieldExtInfo">
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                    </extInfo>
+                  </items>
+                  <autoCommandBar>
+                    <name>СписокСвязанныеДокументыКоманднаяПанель</name>
+                    <id>2433</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <horizontalAlign>Left</horizontalAlign>
+                  </autoCommandBar>
+                  <handlers>
+                    <event>Selection</event>
+                    <name>СписокСвязанныеДокументыВыбор</name>
+                  </handlers>
+                  <searchStringAddition>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <name>СписокСвязанныеДокументыСтрокаПоиска</name>
+                    <id>2435</id>
+                    <extendedTooltip>
+                      <name>СписокСвязанныеДокументыСтрокаПоискаРасширеннаяПодсказка</name>
+                      <id>2437</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>СписокСвязанныеДокументыСтрокаПоискаКонтекстноеМеню</name>
+                      <id>2436</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+                      <autoMaxWidth>true</autoMaxWidth>
+                    </extInfo>
+                  </searchStringAddition>
+                  <viewStatusAddition>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <name>СписокСвязанныеДокументыСостояниеПросмотра</name>
+                    <id>2438</id>
+                    <extendedTooltip>
+                      <name>СписокСвязанныеДокументыСостояниеПросмотраРасширеннаяПодсказка</name>
+                      <id>2440</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>СписокСвязанныеДокументыСостояниеПросмотраКонтекстноеМеню</name>
+                      <id>2439</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>ViewStatusAddition</type>
+                    <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+                      <autoMaxWidth>true</autoMaxWidth>
+                    </extInfo>
+                  </viewStatusAddition>
+                  <searchControlAddition>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <name>СписокСвязанныеДокументыУправлениеПоиском</name>
+                    <id>2441</id>
+                    <extendedTooltip>
+                      <name>СписокСвязанныеДокументыУправлениеПоискомРасширеннаяПодсказка</name>
+                      <id>2443</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>СписокСвязанныеДокументыУправлениеПоискомКонтекстноеМеню</name>
+                      <id>2442</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>SearchControlAddition</type>
+                    <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+                      <autoMaxWidth>true</autoMaxWidth>
+                    </extInfo>
+                  </searchControlAddition>
+                  <extendedTooltip>
+                    <name>СписокСвязанныеДокументыРасширеннаяПодсказка</name>
+                    <id>2434</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <contextMenu>
+                    <name>СписокСвязанныеДокументыКонтекстноеМеню</name>
+                    <id>2432</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <autoFill>true</autoFill>
+                  </contextMenu>
+                  <representation>HierarchicalList</representation>
+                  <readOnly>true</readOnly>
+                  <changeRowSet>true</changeRowSet>
+                  <changeRowOrder>true</changeRowOrder>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <height>4</height>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <autoMaxRowsCount>true</autoMaxRowsCount>
+                  <selectionMode>MultiRow</selectionMode>
+                  <header>true</header>
+                  <headerHeight>1</headerHeight>
+                  <footerHeight>1</footerHeight>
+                  <horizontalScrollBar>AutoUse</horizontalScrollBar>
+                  <verticalScrollBar>AutoUse</verticalScrollBar>
+                  <horizontalLines>true</horizontalLines>
+                  <verticalLines>true</verticalLines>
+                  <useAlternationRowColor>true</useAlternationRowColor>
+                  <searchOnInput>Auto</searchOnInput>
+                  <initialListView>Auto</initialListView>
+                  <horizontalStretch>true</horizontalStretch>
+                  <verticalStretch>true</verticalStretch>
+                  <enableStartDrag>true</enableStartDrag>
+                  <extInfo xsi:type="form:DynamicListTableExtInfo">
+                    <autoRefreshPeriod>60</autoRefreshPeriod>
+                    <period>
+                      <startDate>0001-01-01T00:00:00</startDate>
+                      <endDate>0001-01-01T00:00:00</endDate>
+                    </period>
+                    <topLevelParent xsi:type="core:UndefinedValue"/>
+                    <showRoot>true</showRoot>
+                  </extInfo>
+                </items>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <title>
+                  <key>ru</key>
+                  <value>Связанные документы</value>
+                </title>
+                <title>
+                  <key>uk</key>
+                  <value>Пов'язані документи</value>
+                </title>
+                <toolTip>
+                  <key>uk</key>
+                  <value>Группа связанные документы</value>
+                </toolTip>
+                <extendedTooltip>
+                  <name>ГруппаСвязанныеДокументыРасширеннаяПодсказка</name>
+                  <id>2430</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>Page</type>
+                <extInfo xsi:type="form:PageGroupExtInfo">
+                  <group>Vertical</group>
+                  <showTitle>true</showTitle>
+                  <titleDataPath xsi:type="form:DataPath">
+                    <segments>ЗаголовокЗакладкиСвязанныеДокументы</segments>
                   </titleDataPath>
                 </extInfo>
               </items>
@@ -8097,7 +8906,7 @@
                   </title>
                   <title>
                     <key>uk</key>
-                    <value>Вид електронного док-ту</value>
+                    <value>Вид електронного док-та</value>
                   </title>
                   <visible>true</visible>
                   <enabled>true</enabled>
@@ -9434,6 +10243,9 @@
                   <showInHeader>true</showInHeader>
                   <headerHorizontalAlign>Left</headerHorizontalAlign>
                   <showInFooter>true</showInFooter>
+                  <footerDataPath xsi:type="form:DataPath">
+                    <segments>СписокИтогКоличествоДокументовДокументыНДС</segments>
+                  </footerDataPath>
                   <extInfo xsi:type="form:LabelFieldExtInfo">
                     <autoMaxWidth>true</autoMaxWidth>
                     <autoMaxHeight>true</autoMaxHeight>
@@ -9650,6 +10462,59 @@
                   <contextMenu>
                     <name>СписокДокументовДокументыНДСВхИсхКонтекстноеМеню</name>
                     <id>2095</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <autoFill>true</autoFill>
+                  </contextMenu>
+                  <type>LabelField</type>
+                  <editMode>Enter</editMode>
+                  <showInHeader>true</showInHeader>
+                  <headerHorizontalAlign>Left</headerHorizontalAlign>
+                  <showInFooter>true</showInFooter>
+                  <extInfo xsi:type="form:LabelFieldExtInfo">
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                  </extInfo>
+                </items>
+                <items xsi:type="form:FormField">
+                  <name>СписокДокументовДокументыНДСГдеСоздан</name>
+                  <id>2949</id>
+                  <title>
+                    <key>ru</key>
+                    <value>Где создан документ</value>
+                  </title>
+                  <title>
+                    <key>uk</key>
+                    <value>Де створено документ</value>
+                  </title>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <dataPath xsi:type="form:DataPath">
+                    <segments>СписокДокументовДокументыНДС.ГдеСоздан</segments>
+                  </dataPath>
+                  <extendedTooltip>
+                    <name>СписокДокументовДокументыНДСГдеСозданРасширеннаяПодсказка</name>
+                    <id>2951</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <contextMenu>
+                    <name>СписокДокументовДокументыНДСГдеСозданКонтекстноеМеню</name>
+                    <id>2950</id>
                     <visible>true</visible>
                     <enabled>true</enabled>
                     <userVisible>
@@ -11052,135 +11917,6 @@
                 <name>ГруппаКолонокДокумент1СДокументыНДС</name>
                 <id>1784</id>
                 <items xsi:type="form:FormField">
-                  <name>СписокДокументовДокументыНДСНеобходимоПроведениеДокумента1С</name>
-                  <id>2154</id>
-                  <enabled>true</enabled>
-                  <userVisible>
-                    <common>true</common>
-                  </userVisible>
-                  <dataPath xsi:type="form:DataPath">
-                    <segments>СписокДокументовДокументыНДС.НеобходимоПроведениеДокумента1С</segments>
-                  </dataPath>
-                  <extendedTooltip>
-                    <name>СписокДокументовДокументыНДСНеобходимоПроведениеДокумента1СРасширеннаяПодсказка</name>
-                    <id>2156</id>
-                    <visible>true</visible>
-                    <enabled>true</enabled>
-                    <userVisible>
-                      <common>true</common>
-                    </userVisible>
-                    <type>Label</type>
-                    <autoMaxWidth>true</autoMaxWidth>
-                    <autoMaxHeight>true</autoMaxHeight>
-                    <extInfo xsi:type="form:LabelDecorationExtInfo">
-                      <horizontalAlign>Left</horizontalAlign>
-                    </extInfo>
-                  </extendedTooltip>
-                  <contextMenu>
-                    <name>СписокДокументовДокументыНДСНеобходимоПроведениеДокумента1СКонтекстноеМеню</name>
-                    <id>2155</id>
-                    <visible>true</visible>
-                    <enabled>true</enabled>
-                    <userVisible>
-                      <common>true</common>
-                    </userVisible>
-                    <autoFill>true</autoFill>
-                  </contextMenu>
-                  <type>CheckBoxField</type>
-                  <editMode>Enter</editMode>
-                  <showInHeader>true</showInHeader>
-                  <headerHorizontalAlign>Left</headerHorizontalAlign>
-                  <showInFooter>true</showInFooter>
-                  <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
-                </items>
-                <items xsi:type="form:FormField">
-                  <name>СписокДокументовДокументыНДСОбработано</name>
-                  <id>2169</id>
-                  <enabled>true</enabled>
-                  <userVisible>
-                    <common>true</common>
-                  </userVisible>
-                  <dataPath xsi:type="form:DataPath">
-                    <segments>СписокДокументовДокументыНДС.Обработано</segments>
-                  </dataPath>
-                  <extendedTooltip>
-                    <name>СписокДокументовДокументыНДСОбработаноРасширеннаяПодсказка</name>
-                    <id>2171</id>
-                    <visible>true</visible>
-                    <enabled>true</enabled>
-                    <userVisible>
-                      <common>true</common>
-                    </userVisible>
-                    <type>Label</type>
-                    <autoMaxWidth>true</autoMaxWidth>
-                    <autoMaxHeight>true</autoMaxHeight>
-                    <extInfo xsi:type="form:LabelDecorationExtInfo">
-                      <horizontalAlign>Left</horizontalAlign>
-                    </extInfo>
-                  </extendedTooltip>
-                  <contextMenu>
-                    <name>СписокДокументовДокументыНДСОбработаноКонтекстноеМеню</name>
-                    <id>2170</id>
-                    <visible>true</visible>
-                    <enabled>true</enabled>
-                    <userVisible>
-                      <common>true</common>
-                    </userVisible>
-                    <autoFill>true</autoFill>
-                  </contextMenu>
-                  <type>CheckBoxField</type>
-                  <editMode>Enter</editMode>
-                  <showInHeader>true</showInHeader>
-                  <headerHorizontalAlign>Left</headerHorizontalAlign>
-                  <showInFooter>true</showInFooter>
-                  <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
-                </items>
-                <items xsi:type="form:FormField">
-                  <name>СписокДокументовДокументыНДСДатаОбработки</name>
-                  <id>2103</id>
-                  <enabled>true</enabled>
-                  <userVisible>
-                    <common>true</common>
-                  </userVisible>
-                  <dataPath xsi:type="form:DataPath">
-                    <segments>СписокДокументовДокументыНДС.ДатаОбработки</segments>
-                  </dataPath>
-                  <extendedTooltip>
-                    <name>СписокДокументовДокументыНДСДатаОбработкиРасширеннаяПодсказка</name>
-                    <id>2105</id>
-                    <visible>true</visible>
-                    <enabled>true</enabled>
-                    <userVisible>
-                      <common>true</common>
-                    </userVisible>
-                    <type>Label</type>
-                    <autoMaxWidth>true</autoMaxWidth>
-                    <autoMaxHeight>true</autoMaxHeight>
-                    <extInfo xsi:type="form:LabelDecorationExtInfo">
-                      <horizontalAlign>Left</horizontalAlign>
-                    </extInfo>
-                  </extendedTooltip>
-                  <contextMenu>
-                    <name>СписокДокументовДокументыНДСДатаОбработкиКонтекстноеМеню</name>
-                    <id>2104</id>
-                    <visible>true</visible>
-                    <enabled>true</enabled>
-                    <userVisible>
-                      <common>true</common>
-                    </userVisible>
-                    <autoFill>true</autoFill>
-                  </contextMenu>
-                  <type>LabelField</type>
-                  <editMode>Enter</editMode>
-                  <showInHeader>true</showInHeader>
-                  <headerHorizontalAlign>Left</headerHorizontalAlign>
-                  <showInFooter>true</showInFooter>
-                  <extInfo xsi:type="form:LabelFieldExtInfo">
-                    <autoMaxWidth>true</autoMaxWidth>
-                    <autoMaxHeight>true</autoMaxHeight>
-                  </extInfo>
-                </items>
-                <items xsi:type="form:FormField">
                   <name>СписокДокументовДокументыНДСДокумент1С</name>
                   <id>2115</id>
                   <title>
@@ -11459,17 +12195,26 @@
                   </extInfo>
                 </items>
                 <items xsi:type="form:FormField">
-                  <name>СписокДокументовДокументыНДССсылка</name>
-                  <id>2208</id>
+                  <name>СписокДокументовДокументыНДСНеобходимоПроведениеДокумента1С</name>
+                  <id>2154</id>
+                  <title>
+                    <key>ru</key>
+                    <value>Проведение</value>
+                  </title>
+                  <title>
+                    <key>uk</key>
+                    <value>Проведення</value>
+                  </title>
+                  <enabled>true</enabled>
                   <userVisible>
                     <common>true</common>
                   </userVisible>
                   <dataPath xsi:type="form:DataPath">
-                    <segments>СписокДокументовДокументыНДС.Ссылка</segments>
+                    <segments>СписокДокументовДокументыНДС.НеобходимоПроведениеДокумента1С</segments>
                   </dataPath>
                   <extendedTooltip>
-                    <name>СписокДокументовДокументыНДССсылкаРасширеннаяПодсказка</name>
-                    <id>2210</id>
+                    <name>СписокДокументовДокументыНДСНеобходимоПроведениеДокумента1СРасширеннаяПодсказка</name>
+                    <id>2156</id>
                     <visible>true</visible>
                     <enabled>true</enabled>
                     <userVisible>
@@ -11483,8 +12228,108 @@
                     </extInfo>
                   </extendedTooltip>
                   <contextMenu>
-                    <name>СписокДокументовДокументыНДССсылкаКонтекстноеМеню</name>
-                    <id>2209</id>
+                    <name>СписокДокументовДокументыНДСНеобходимоПроведениеДокумента1СКонтекстноеМеню</name>
+                    <id>2155</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <autoFill>true</autoFill>
+                  </contextMenu>
+                  <type>CheckBoxField</type>
+                  <editMode>Enter</editMode>
+                  <showInHeader>true</showInHeader>
+                  <headerHorizontalAlign>Left</headerHorizontalAlign>
+                  <showInFooter>true</showInFooter>
+                  <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+                </items>
+                <items xsi:type="form:FormField">
+                  <name>СписокДокументовДокументыНДСОбработано</name>
+                  <id>2169</id>
+                  <title>
+                    <key>ru</key>
+                    <value>Обработано</value>
+                  </title>
+                  <title>
+                    <key>uk</key>
+                    <value>Опрацьовано</value>
+                  </title>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <dataPath xsi:type="form:DataPath">
+                    <segments>СписокДокументовДокументыНДС.Обработано</segments>
+                  </dataPath>
+                  <extendedTooltip>
+                    <name>СписокДокументовДокументыНДСОбработаноРасширеннаяПодсказка</name>
+                    <id>2171</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <contextMenu>
+                    <name>СписокДокументовДокументыНДСОбработаноКонтекстноеМеню</name>
+                    <id>2170</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <autoFill>true</autoFill>
+                  </contextMenu>
+                  <type>CheckBoxField</type>
+                  <editMode>Enter</editMode>
+                  <showInHeader>true</showInHeader>
+                  <headerHorizontalAlign>Left</headerHorizontalAlign>
+                  <showInFooter>true</showInFooter>
+                  <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+                </items>
+                <items xsi:type="form:FormField">
+                  <name>СписокДокументовДокументыНДСДатаОбработки</name>
+                  <id>2103</id>
+                  <title>
+                    <key>ru</key>
+                    <value>Дата обработки</value>
+                  </title>
+                  <title>
+                    <key>uk</key>
+                    <value>Дата опрацювання</value>
+                  </title>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <dataPath xsi:type="form:DataPath">
+                    <segments>СписокДокументовДокументыНДС.ДатаОбработки</segments>
+                  </dataPath>
+                  <extendedTooltip>
+                    <name>СписокДокументовДокументыНДСДатаОбработкиРасширеннаяПодсказка</name>
+                    <id>2105</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <contextMenu>
+                    <name>СписокДокументовДокументыНДСДатаОбработкиКонтекстноеМеню</name>
+                    <id>2104</id>
                     <visible>true</visible>
                     <enabled>true</enabled>
                     <userVisible>
@@ -15249,9 +16094,6 @@
                   <horizontalStretch>true</horizontalStretch>
                   <verticalStretch>true</verticalStretch>
                   <enableStartDrag>true</enableStartDrag>
-                  <rowPictureDataPath xsi:type="form:DataPath">
-                    <segments>СписокВариантыДокументовДокументыНДС.DefaultPicture</segments>
-                  </rowPictureDataPath>
                   <extInfo xsi:type="form:DynamicListTableExtInfo">
                     <autoRefreshPeriod>60</autoRefreshPeriod>
                     <period>
@@ -15304,6 +16146,748 @@
                   <showTitle>true</showTitle>
                   <titleDataPath xsi:type="form:DataPath">
                     <segments>ЗаголовокЗакладкиВариантыДокументовДокументыНДС</segments>
+                  </titleDataPath>
+                </extInfo>
+              </items>
+              <items xsi:type="form:FormGroup">
+                <name>ГруппаСвязанныеДокументыНДС</name>
+                <id>2687</id>
+                <items xsi:type="form:Table">
+                  <name>СписокСвязанныеДокументыДокументыНДС</name>
+                  <id>2689</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <dataPath xsi:type="form:DataPath">
+                    <segments>СписокСвязанныеДокументыДокументыНДС</segments>
+                  </dataPath>
+                  <titleLocation>None</titleLocation>
+                  <excludedCommands>CancelSearch</excludedCommands>
+                  <excludedCommands>Change</excludedCommands>
+                  <excludedCommands>ChangeHistory</excludedCommands>
+                  <excludedCommands>Copy</excludedCommands>
+                  <excludedCommands>Create</excludedCommands>
+                  <excludedCommands>Delete</excludedCommands>
+                  <excludedCommands>DynamicListStandardSettings</excludedCommands>
+                  <excludedCommands>Find</excludedCommands>
+                  <excludedCommands>FindByCurrentValue</excludedCommands>
+                  <excludedCommands>ListSettings</excludedCommands>
+                  <excludedCommands>LoadDynamicListSettings</excludedCommands>
+                  <excludedCommands>OutputList</excludedCommands>
+                  <excludedCommands>SaveDynamicListSettings</excludedCommands>
+                  <excludedCommands>SearchHistory</excludedCommands>
+                  <excludedCommands>ShowMultipleSelection</excludedCommands>
+                  <items xsi:type="form:FormField">
+                    <name>СписокСвязанныеДокументыДокументыНДСИндексКартинки</name>
+                    <id>2839</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <dataPath xsi:type="form:DataPath">
+                      <segments>СписокСвязанныеДокументыДокументыНДС.ИндексКартинки</segments>
+                    </dataPath>
+                    <titleLocation>None</titleLocation>
+                    <extendedTooltip>
+                      <name>СписокСвязанныеДокументыДокументыНДСИндексКартинкиРасширеннаяПодсказка</name>
+                      <id>2841</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>СписокСвязанныеДокументыДокументыНДСИндексКартинкиКонтекстноеМеню</name>
+                      <id>2840</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>PictureField</type>
+                    <editMode>Enter</editMode>
+                    <showInHeader>true</showInHeader>
+                    <headerHorizontalAlign>Left</headerHorizontalAlign>
+                    <showInFooter>true</showInFooter>
+                    <extInfo xsi:type="form:ImageFieldExtInfo">
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <horizontalStretch>true</horizontalStretch>
+                      <verticalStretch>true</verticalStretch>
+                      <valuesPicture xsi:type="core:PictureRef">
+                        <picture>CommonPicture.скEDI_КартинкаСтрок</picture>
+                      </valuesPicture>
+                      <fileDragMode>AsFileRef</fileDragMode>
+                    </extInfo>
+                  </items>
+                  <items xsi:type="form:FormField">
+                    <name>СписокСвязанныеДокументыДокументыНДСВидЭлектронногоДокумента</name>
+                    <id>2797</id>
+                    <title>
+                      <key>ru</key>
+                      <value>Вид электронного документа</value>
+                    </title>
+                    <title>
+                      <key>uk</key>
+                      <value>Вид електронного документа</value>
+                    </title>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <dataPath xsi:type="form:DataPath">
+                      <segments>СписокСвязанныеДокументыДокументыНДС.ВидЭлектронногоДокумента</segments>
+                    </dataPath>
+                    <extendedTooltip>
+                      <name>СписокСвязанныеДокументыДокументыНДСВидЭлектронногоДокументаРасширеннаяПодсказка</name>
+                      <id>2799</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>СписокСвязанныеДокументыДокументыНДСВидЭлектронногоДокументаКонтекстноеМеню</name>
+                      <id>2798</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>LabelField</type>
+                    <editMode>Enter</editMode>
+                    <showInHeader>true</showInHeader>
+                    <headerHorizontalAlign>Left</headerHorizontalAlign>
+                    <showInFooter>true</showInFooter>
+                    <extInfo xsi:type="form:LabelFieldExtInfo">
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                    </extInfo>
+                  </items>
+                  <items xsi:type="form:FormField">
+                    <name>СписокСвязанныеДокументыДокументыНДССостояние</name>
+                    <id>2908</id>
+                    <title>
+                      <key>ru</key>
+                      <value>Состояние</value>
+                    </title>
+                    <title>
+                      <key>uk</key>
+                      <value>Стан</value>
+                    </title>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <dataPath xsi:type="form:DataPath">
+                      <segments>СписокСвязанныеДокументыДокументыНДС.Состояние</segments>
+                    </dataPath>
+                    <extendedTooltip>
+                      <name>СписокСвязанныеДокументыДокументыНДССостояниеРасширеннаяПодсказка</name>
+                      <id>2910</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>СписокСвязанныеДокументыДокументыНДССостояниеКонтекстноеМеню</name>
+                      <id>2909</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>LabelField</type>
+                    <editMode>Enter</editMode>
+                    <showInHeader>true</showInHeader>
+                    <headerHorizontalAlign>Left</headerHorizontalAlign>
+                    <showInFooter>true</showInFooter>
+                    <extInfo xsi:type="form:LabelFieldExtInfo">
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                    </extInfo>
+                  </items>
+                  <items xsi:type="form:FormField">
+                    <name>СписокСвязанныеДокументыДокументыНДСВхИсх</name>
+                    <id>2800</id>
+                    <title>
+                      <key>ru</key>
+                      <value>Вх/Исх</value>
+                    </title>
+                    <title>
+                      <key>uk</key>
+                      <value>Вх/Вих</value>
+                    </title>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <dataPath xsi:type="form:DataPath">
+                      <segments>СписокСвязанныеДокументыДокументыНДС.ВхИсх</segments>
+                    </dataPath>
+                    <extendedTooltip>
+                      <name>СписокСвязанныеДокументыДокументыНДСВхИсхРасширеннаяПодсказка</name>
+                      <id>2802</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>СписокСвязанныеДокументыДокументыНДСВхИсхКонтекстноеМеню</name>
+                      <id>2801</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>LabelField</type>
+                    <editMode>Enter</editMode>
+                    <showInHeader>true</showInHeader>
+                    <headerHorizontalAlign>Left</headerHorizontalAlign>
+                    <showInFooter>true</showInFooter>
+                    <extInfo xsi:type="form:LabelFieldExtInfo">
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                    </extInfo>
+                  </items>
+                  <items xsi:type="form:FormField">
+                    <name>СписокСвязанныеДокументыДокументыНДСЭлектронныйДокументНомер</name>
+                    <id>2935</id>
+                    <title>
+                      <key>ru</key>
+                      <value>Номер</value>
+                    </title>
+                    <title>
+                      <key>uk</key>
+                      <value>Номер</value>
+                    </title>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <dataPath xsi:type="form:DataPath">
+                      <segments>СписокСвязанныеДокументыДокументыНДС.ЭлектронныйДокументНомер</segments>
+                    </dataPath>
+                    <extendedTooltip>
+                      <name>СписокСвязанныеДокументыДокументыНДСЭлектронныйДокументНомерРасширеннаяПодсказка</name>
+                      <id>2937</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>СписокСвязанныеДокументыДокументыНДСЭлектронныйДокументНомерКонтекстноеМеню</name>
+                      <id>2936</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>LabelField</type>
+                    <editMode>Enter</editMode>
+                    <showInHeader>true</showInHeader>
+                    <headerHorizontalAlign>Left</headerHorizontalAlign>
+                    <showInFooter>true</showInFooter>
+                    <extInfo xsi:type="form:LabelFieldExtInfo">
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                    </extInfo>
+                  </items>
+                  <items xsi:type="form:FormField">
+                    <name>СписокСвязанныеДокументыДокументыНДСДата</name>
+                    <id>2806</id>
+                    <title>
+                      <key>ru</key>
+                      <value>Дата</value>
+                    </title>
+                    <title>
+                      <key>uk</key>
+                      <value>Дата</value>
+                    </title>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <dataPath xsi:type="form:DataPath">
+                      <segments>СписокСвязанныеДокументыДокументыНДС.Дата</segments>
+                    </dataPath>
+                    <extendedTooltip>
+                      <name>СписокСвязанныеДокументыДокументыНДСДатаРасширеннаяПодсказка</name>
+                      <id>2808</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>СписокСвязанныеДокументыДокументыНДСДатаКонтекстноеМеню</name>
+                      <id>2807</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>LabelField</type>
+                    <editMode>Enter</editMode>
+                    <showInHeader>true</showInHeader>
+                    <headerHorizontalAlign>Left</headerHorizontalAlign>
+                    <showInFooter>true</showInFooter>
+                    <extInfo xsi:type="form:LabelFieldExtInfo">
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                    </extInfo>
+                  </items>
+                  <items xsi:type="form:FormField">
+                    <name>СписокСвязанныеДокументыДокументыНДССуммаБезНДСЭлектронногоДокумента</name>
+                    <id>2920</id>
+                    <title>
+                      <key>ru</key>
+                      <value>Сумма без НДС</value>
+                    </title>
+                    <title>
+                      <key>uk</key>
+                      <value>Сума дез ПДВ</value>
+                    </title>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <dataPath xsi:type="form:DataPath">
+                      <segments>СписокСвязанныеДокументыДокументыНДС.СуммаБезНДСЭлектронногоДокумента</segments>
+                    </dataPath>
+                    <extendedTooltip>
+                      <name>СписокСвязанныеДокументыДокументыНДССуммаБезНДСЭлектронногоДокументаРасширеннаяПодсказка</name>
+                      <id>2922</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>СписокСвязанныеДокументыДокументыНДССуммаБезНДСЭлектронногоДокументаКонтекстноеМеню</name>
+                      <id>2921</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>LabelField</type>
+                    <editMode>Enter</editMode>
+                    <showInHeader>true</showInHeader>
+                    <headerHorizontalAlign>Left</headerHorizontalAlign>
+                    <showInFooter>true</showInFooter>
+                    <extInfo xsi:type="form:LabelFieldExtInfo">
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                    </extInfo>
+                  </items>
+                  <items xsi:type="form:FormField">
+                    <name>СписокСвязанныеДокументыДокументыНДССуммаНДСЭлектронногоДокумента</name>
+                    <id>2929</id>
+                    <title>
+                      <key>ru</key>
+                      <value>Сумма НДС</value>
+                    </title>
+                    <title>
+                      <key>uk</key>
+                      <value>Сума ПДВ</value>
+                    </title>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <dataPath xsi:type="form:DataPath">
+                      <segments>СписокСвязанныеДокументыДокументыНДС.СуммаНДСЭлектронногоДокумента</segments>
+                    </dataPath>
+                    <extendedTooltip>
+                      <name>СписокСвязанныеДокументыДокументыНДССуммаНДСЭлектронногоДокументаРасширеннаяПодсказка</name>
+                      <id>2931</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>СписокСвязанныеДокументыДокументыНДССуммаНДСЭлектронногоДокументаКонтекстноеМеню</name>
+                      <id>2930</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>LabelField</type>
+                    <editMode>Enter</editMode>
+                    <showInHeader>true</showInHeader>
+                    <headerHorizontalAlign>Left</headerHorizontalAlign>
+                    <showInFooter>true</showInFooter>
+                    <extInfo xsi:type="form:LabelFieldExtInfo">
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                    </extInfo>
+                  </items>
+                  <items xsi:type="form:FormField">
+                    <name>СписокСвязанныеДокументыДокументыНДССуммаЭлектронногоДокумента</name>
+                    <id>2932</id>
+                    <title>
+                      <key>ru</key>
+                      <value>Сумма</value>
+                    </title>
+                    <title>
+                      <key>uk</key>
+                      <value>Сума</value>
+                    </title>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <dataPath xsi:type="form:DataPath">
+                      <segments>СписокСвязанныеДокументыДокументыНДС.СуммаЭлектронногоДокумента</segments>
+                    </dataPath>
+                    <extendedTooltip>
+                      <name>СписокСвязанныеДокументыДокументыНДССуммаЭлектронногоДокументаРасширеннаяПодсказка</name>
+                      <id>2934</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>СписокСвязанныеДокументыДокументыНДССуммаЭлектронногоДокументаКонтекстноеМеню</name>
+                      <id>2933</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>LabelField</type>
+                    <editMode>Enter</editMode>
+                    <showInHeader>true</showInHeader>
+                    <headerHorizontalAlign>Left</headerHorizontalAlign>
+                    <showInFooter>true</showInFooter>
+                    <extInfo xsi:type="form:LabelFieldExtInfo">
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                    </extInfo>
+                  </items>
+                  <autoCommandBar>
+                    <name>СписокСвязанныеДокументыДокументыНДСКоманднаяПанель</name>
+                    <id>2691</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <horizontalAlign>Left</horizontalAlign>
+                  </autoCommandBar>
+                  <handlers>
+                    <event>Selection</event>
+                    <name>СписокСвязанныеДокументыДокументыНДСВыбор</name>
+                  </handlers>
+                  <searchStringAddition>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <name>СписокСвязанныеДокументыДокументыНДССтрокаПоиска</name>
+                    <id>2693</id>
+                    <extendedTooltip>
+                      <name>СписокСвязанныеДокументыДокументыНДССтрокаПоискаРасширеннаяПодсказка</name>
+                      <id>2695</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>СписокСвязанныеДокументыДокументыНДССтрокаПоискаКонтекстноеМеню</name>
+                      <id>2694</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+                      <autoMaxWidth>true</autoMaxWidth>
+                    </extInfo>
+                  </searchStringAddition>
+                  <viewStatusAddition>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <name>СписокСвязанныеДокументыДокументыНДССостояниеПросмотра</name>
+                    <id>2696</id>
+                    <extendedTooltip>
+                      <name>СписокСвязанныеДокументыДокументыНДССостояниеПросмотраРасширеннаяПодсказка</name>
+                      <id>2698</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>СписокСвязанныеДокументыДокументыНДССостояниеПросмотраКонтекстноеМеню</name>
+                      <id>2697</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>ViewStatusAddition</type>
+                    <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+                      <autoMaxWidth>true</autoMaxWidth>
+                    </extInfo>
+                  </viewStatusAddition>
+                  <searchControlAddition>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <name>СписокСвязанныеДокументыДокументыНДСУправлениеПоиском</name>
+                    <id>2699</id>
+                    <extendedTooltip>
+                      <name>СписокСвязанныеДокументыДокументыНДСУправлениеПоискомРасширеннаяПодсказка</name>
+                      <id>2701</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <type>Label</type>
+                      <autoMaxWidth>true</autoMaxWidth>
+                      <autoMaxHeight>true</autoMaxHeight>
+                      <extInfo xsi:type="form:LabelDecorationExtInfo">
+                        <horizontalAlign>Left</horizontalAlign>
+                      </extInfo>
+                    </extendedTooltip>
+                    <contextMenu>
+                      <name>СписокСвязанныеДокументыДокументыНДСУправлениеПоискомКонтекстноеМеню</name>
+                      <id>2700</id>
+                      <visible>true</visible>
+                      <enabled>true</enabled>
+                      <userVisible>
+                        <common>true</common>
+                      </userVisible>
+                      <autoFill>true</autoFill>
+                    </contextMenu>
+                    <type>SearchControlAddition</type>
+                    <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+                      <autoMaxWidth>true</autoMaxWidth>
+                    </extInfo>
+                  </searchControlAddition>
+                  <extendedTooltip>
+                    <name>СписокСвязанныеДокументыДокументыНДСРасширеннаяПодсказка</name>
+                    <id>2692</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <contextMenu>
+                    <name>СписокСвязанныеДокументыДокументыНДСКонтекстноеМеню</name>
+                    <id>2690</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <autoFill>true</autoFill>
+                  </contextMenu>
+                  <representation>HierarchicalList</representation>
+                  <readOnly>true</readOnly>
+                  <changeRowSet>true</changeRowSet>
+                  <changeRowOrder>true</changeRowOrder>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <height>4</height>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <autoMaxRowsCount>true</autoMaxRowsCount>
+                  <selectionMode>MultiRow</selectionMode>
+                  <header>true</header>
+                  <headerHeight>1</headerHeight>
+                  <footerHeight>1</footerHeight>
+                  <horizontalScrollBar>AutoUse</horizontalScrollBar>
+                  <verticalScrollBar>AutoUse</verticalScrollBar>
+                  <horizontalLines>true</horizontalLines>
+                  <verticalLines>true</verticalLines>
+                  <useAlternationRowColor>true</useAlternationRowColor>
+                  <searchOnInput>Auto</searchOnInput>
+                  <initialListView>Auto</initialListView>
+                  <horizontalStretch>true</horizontalStretch>
+                  <verticalStretch>true</verticalStretch>
+                  <enableStartDrag>true</enableStartDrag>
+                  <extInfo xsi:type="form:DynamicListTableExtInfo">
+                    <autoRefreshPeriod>60</autoRefreshPeriod>
+                    <period>
+                      <startDate>0001-01-01T00:00:00</startDate>
+                      <endDate>0001-01-01T00:00:00</endDate>
+                    </period>
+                    <topLevelParent xsi:type="core:UndefinedValue"/>
+                    <showRoot>true</showRoot>
+                  </extInfo>
+                </items>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <title>
+                  <key>ru</key>
+                  <value>Связанные документы</value>
+                </title>
+                <title>
+                  <key>uk</key>
+                  <value>Пов'язані документи</value>
+                </title>
+                <toolTip>
+                  <key>ru</key>
+                  <value>Группа варианты</value>
+                </toolTip>
+                <toolTip>
+                  <key>uk</key>
+                  <value>Группа варианты документы НДС</value>
+                </toolTip>
+                <extendedTooltip>
+                  <name>ГруппаСвязанныеДокументыНДСРасширеннаяПодсказка</name>
+                  <id>2688</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <type>Label</type>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <extInfo xsi:type="form:LabelDecorationExtInfo">
+                    <horizontalAlign>Left</horizontalAlign>
+                  </extInfo>
+                </extendedTooltip>
+                <type>Page</type>
+                <extInfo xsi:type="form:PageGroupExtInfo">
+                  <group>Vertical</group>
+                  <showTitle>true</showTitle>
+                  <titleDataPath xsi:type="form:DataPath">
+                    <segments>ЗаголовокЗакладкиСвязанныеДокументыДокументыНДС</segments>
                   </titleDataPath>
                 </extInfo>
               </items>
@@ -15987,6 +17571,37 @@
               <placementArea>UserCmds</placementArea>
               <representationInContextMenu>Auto</representationInContextMenu>
             </items>
+            <items xsi:type="form:Button">
+              <name>ОткрытьЗапросНаПолученияСпискаДокументов</name>
+              <id>2942</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <extendedTooltip>
+                <name>ОткрытьЗапросНаПолученияСпискаДокументовРасширеннаяПодсказка</name>
+                <id>2943</id>
+                <visible>true</visible>
+                <enabled>true</enabled>
+                <userVisible>
+                  <common>true</common>
+                </userVisible>
+                <type>Label</type>
+                <autoMaxWidth>true</autoMaxWidth>
+                <autoMaxHeight>true</autoMaxHeight>
+                <extInfo xsi:type="form:LabelDecorationExtInfo">
+                  <horizontalAlign>Left</horizontalAlign>
+                </extInfo>
+              </extendedTooltip>
+              <type>UsualButton</type>
+              <commandName>Form.Command.ОткрытьЗапросНаПолученияСпискаДокументов</commandName>
+              <representation>Auto</representation>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <placementArea>UserCmds</placementArea>
+              <representationInContextMenu>Auto</representationInContextMenu>
+            </items>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -16631,6 +18246,14 @@
               </userVisible>
               <horizontalAlign>Left</horizontalAlign>
             </autoCommandBar>
+            <handlers>
+              <event>Selection</event>
+              <name>СписокСверкаСЕРННВыбор</name>
+            </handlers>
+            <handlers>
+              <event>OnActivateRow</event>
+              <name>СписокСверкаСЕРННПриАктивизацииСтроки</name>
+            </handlers>
             <searchStringAddition>
               <visible>true</visible>
               <enabled>true</enabled>
@@ -19857,10 +21480,13 @@
       <segments>СписокДокументов.ЭлектронныйДокумент</segments>
     </notDefaultUseAlwaysAttributes>
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокДокументов.ЭлектронныйДокументНомерДокумента</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
       <segments>СписокДокументов.ЭтоОсновнойВариант</segments>
     </notDefaultUseAlwaysAttributes>
     <extInfo xsi:type="form:DynamicListExtInfo">
-      <queryText>ВЫБРАТЬ
+      <queryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	скEDI_ЭлектронныеДокументы.Организация КАК Организация,
 	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент КАК ЭлектронныйДокумент,
 	скEDI_ЭлектронныеДокументы.Документ1С КАК Документ1С,
@@ -19937,8 +21563,8 @@
 		КОГДА скEDI_ЭлектронныеДокументы.ВидДокумента1С В (ЗНАЧЕНИЕ(Перечисление.скEDI_ВидыДокументов1С.НалоговаяНакладная), ЗНАЧЕНИЕ(Перечисление.скEDI_ВидыДокументов1С.Приложение2КНалоговойНакладной))
 			ТОГДА ВЫБОР
 					КОГДА ДЕНЬ(скEDI_ЭлектронныеДокументы.Документ1СДата) &lt;= 15
-						ТОГДА КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ)
-					ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 15)
+						ТОГДА ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 5)
+					ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 18)
 				КОНЕЦ
 	КОНЕЦ КАК КрайнийСрокРегистрацииДФС,
 	ВЫБОР
@@ -19948,25 +21574,25 @@
 						ТОГДА ВЫБОР
 								КОГДА РАЗНОСТЬДАТ(ВЫБОР
 											КОГДА ДЕНЬ(скEDI_ЭлектронныеДокументы.Документ1СДата) &lt;= 15
-												ТОГДА КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ)
-											ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 15)
+												ТОГДА ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 5)
+											ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 18)
 										КОНЕЦ, скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаРегистрацииВДФС, ДЕНЬ) > 0
 									ТОГДА РАЗНОСТЬДАТ(ВЫБОР
 												КОГДА ДЕНЬ(скEDI_ЭлектронныеДокументы.Документ1СДата) &lt;= 15
-													ТОГДА КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ)
-												ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 15)
+													ТОГДА ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 5)
+												ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 18)
 											КОНЕЦ, скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаРегистрацииВДФС, ДЕНЬ)
 							КОНЕЦ
 					ИНАЧЕ ВЫБОР
 							КОГДА РАЗНОСТЬДАТ(ВЫБОР
 										КОГДА ДЕНЬ(скEDI_ЭлектронныеДокументы.Документ1СДата) &lt;= 15
-											ТОГДА КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ)
-										ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 15)
+											ТОГДА ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 5)
+										ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 18)
 									КОНЕЦ, &amp;ТекущаяДата, ДЕНЬ) > 0
 								ТОГДА РАЗНОСТЬДАТ(ВЫБОР
 											КОГДА ДЕНЬ(скEDI_ЭлектронныеДокументы.Документ1СДата) &lt;= 15
-												ТОГДА КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ)
-											ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 15)
+												ТОГДА ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 5)
+											ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 18)
 										КОНЕЦ, &amp;ТекущаяДата, ДЕНЬ)
 						КОНЕЦ
 				КОНЕЦ
@@ -20077,7 +21703,7 @@
 	И (&amp;ДатаОкончания = ДАТАВРЕМЯ(1, 1, 1)
 			ИЛИ ЕСТЬNULL(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.Дата, скEDI_ЭлектронныеДокументы.Документ1СДата) = ДАТАВРЕМЯ(1, 1, 1)
 			ИЛИ РАЗНОСТЬДАТ(ЕСТЬNULL(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.Дата, скEDI_ЭлектронныеДокументы.Документ1СДата), &amp;ДатаОкончания, ДЕНЬ) >= 0)
-	И скEDI_ЭлектронныеДокументы.ВидЭлектронногоДокумента.ТипДокумента В (ЗНАЧЕНИЕ(Перечисление.скEDI_ТипыЭлектронныхДокументов.ДокументСВложениями), ЗНАЧЕНИЕ(Перечисление.скEDI_ТипыЭлектронныхДокументов.ПервичныйДокумент))</queryText>
+	И скEDI_ЭлектронныеДокументы.ВидЭлектронногоДокумента.ТипДокумента В (ЗНАЧЕНИЕ(Перечисление.скEDI_ТипыЭлектронныхДокументов.ДокументСВложениями), ЗНАЧЕНИЕ(Перечисление.скEDI_ТипыЭлектронныхДокументов.ПервичныйДокумент), ЗНАЧЕНИЕ(Перечисление.скEDI_ТипыЭлектронныхДокументов.СоглашениеОАнулированииДокумента))</queryText>
       <mainTable>InformationRegister.скEDI_ЭлектронныеДокументы</mainTable>
       <dynamicDataRead>true</dynamicDataRead>
       <autoFillAvailableFields>true</autoFillAvailableFields>
@@ -20552,7 +22178,7 @@
     </title>
     <title>
       <key>uk</key>
-      <value>Вид електронного документу</value>
+      <value>Вид електронного документа</value>
     </title>
     <id>32</id>
     <valueType>
@@ -22451,7 +24077,7 @@
     </title>
     <title>
       <key>uk</key>
-      <value>Вид електронного документу</value>
+      <value>Вид електронного документа</value>
     </title>
     <id>58</id>
     <valueType>
@@ -22707,10 +24333,13 @@
       <segments>СписокДокументовДокументыНДС.ЭлектронныйДокумент</segments>
     </notDefaultUseAlwaysAttributes>
     <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокДокументовДокументыНДС.ЭлектронныйДокументНомерДокумента</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
       <segments>СписокДокументовДокументыНДС.ЭтоОсновнойВариант</segments>
     </notDefaultUseAlwaysAttributes>
     <extInfo xsi:type="form:DynamicListExtInfo">
-      <queryText>ВЫБРАТЬ
+      <queryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	скEDI_ЭлектронныеДокументы.Организация КАК Организация,
 	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент КАК ЭлектронныйДокумент,
 	скEDI_ЭлектронныеДокументы.Документ1С КАК Документ1С,
@@ -22793,13 +24422,13 @@
 		КОГДА скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент = ЗНАЧЕНИЕ(Документ.скEDI_ЭлектронныйДокумент.ПустаяСсылка)
 			ТОГДА ВЫБОР
 					КОГДА ДЕНЬ(скEDI_ЭлектронныеДокументы.Документ1СДата) &lt;= 15
-						ТОГДА КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ)
-					ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 15)
+						ТОГДА ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 5)
+					ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 18)
 				КОНЕЦ
 		ИНАЧЕ ВЫБОР
 				КОГДА ДЕНЬ(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента) &lt;= 15
-					ТОГДА КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента, МЕСЯЦ)
-				ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента, МЕСЯЦ), ДЕНЬ, 15)
+					ТОГДА ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента, МЕСЯЦ), ДЕНЬ, 5)
+				ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента, МЕСЯЦ), ДЕНЬ, 18)
 			КОНЕЦ
 	КОНЕЦ КАК КрайнийСрокРегистрацииДФС,
 	ВЫБОР
@@ -22807,38 +24436,38 @@
 			ТОГДА ВЫБОР
 					КОГДА РАЗНОСТЬДАТ(ВЫБОР
 								КОГДА ДЕНЬ(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента) &lt;= 15
-									ТОГДА КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента, МЕСЯЦ)
-								ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента, МЕСЯЦ), ДЕНЬ, 15)
+									ТОГДА ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента, МЕСЯЦ), ДЕНЬ, 5)
+								ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента, МЕСЯЦ), ДЕНЬ, 18)
 							КОНЕЦ, скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаРегистрацииВДФС, ДЕНЬ) > 0
 						ТОГДА РАЗНОСТЬДАТ(ВЫБОР
 									КОГДА ДЕНЬ(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента) &lt;= 15
-										ТОГДА КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента, МЕСЯЦ)
-									ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента, МЕСЯЦ), ДЕНЬ, 15)
+										ТОГДА ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента, МЕСЯЦ), ДЕНЬ, 5)
+									ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента, МЕСЯЦ), ДЕНЬ, 18)
 								КОНЕЦ, скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаРегистрацииВДФС, ДЕНЬ)
 				КОНЕЦ
 		КОГДА скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент = ЗНАЧЕНИЕ(Документ.скEDI_ЭлектронныйДокумент.ПустаяСсылка)
 			ТОГДА ВЫБОР
 					КОГДА РАЗНОСТЬДАТ(ВЫБОР
 								КОГДА ДЕНЬ(скEDI_ЭлектронныеДокументы.Документ1СДата) &lt;= 15
-									ТОГДА КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ)
-								ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 15)
+									ТОГДА ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 5)
+								ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 18)
 							КОНЕЦ, &amp;ТекущаяДата, ДЕНЬ) > 0
 						ТОГДА РАЗНОСТЬДАТ(ВЫБОР
 									КОГДА ДЕНЬ(скEDI_ЭлектронныеДокументы.Документ1СДата) &lt;= 15
-										ТОГДА КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ)
-									ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 15)
+										ТОГДА ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 5)
+									ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 18)
 								КОНЕЦ, &amp;ТекущаяДата, ДЕНЬ)
 				КОНЕЦ
 		ИНАЧЕ ВЫБОР
 				КОГДА РАЗНОСТЬДАТ(ВЫБОР
 							КОГДА ДЕНЬ(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента) &lt;= 15
-								ТОГДА КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента, МЕСЯЦ)
-							ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента, МЕСЯЦ), ДЕНЬ, 15)
+								ТОГДА ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента, МЕСЯЦ), ДЕНЬ, 5)
+							ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента, МЕСЯЦ), ДЕНЬ, 18)
 						КОНЕЦ, &amp;ТекущаяДата, ДЕНЬ) > 0
 					ТОГДА РАЗНОСТЬДАТ(ВЫБОР
 								КОГДА ДЕНЬ(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента) &lt;= 15
-									ТОГДА КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента, МЕСЯЦ)
-								ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента, МЕСЯЦ), ДЕНЬ, 15)
+									ТОГДА ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента, МЕСЯЦ), ДЕНЬ, 5)
+								ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента, МЕСЯЦ), ДЕНЬ, 18)
 							КОНЕЦ, &amp;ТекущаяДата, ДЕНЬ)
 			КОНЕЦ
 	КОНЕЦ КАК КоличествоДнейПросрочкиРегистрацииДФС,
@@ -22926,7 +24555,9 @@
 				Контрагенты.КодПоЕДРПОУ КАК КодПоЕДРПОУ,
 				&quot;ЗАМЕНА3_Контрагенты.КодФилиала&quot; КАК КодФилиала
 			ИЗ
-				Справочник.Контрагенты КАК Контрагенты) КАК Контрагенты
+				Справочник.Контрагенты КАК Контрагенты
+			ГДЕ
+				НЕ Контрагенты.ПометкаУдаления) КАК Контрагенты
 		
 		СГРУППИРОВАТЬ ПО
 			Контрагенты.КодПоЕДРПОУ,
@@ -23984,6 +25615,712 @@
       </edit>
     </columns>
   </attributes>
+  <attributes>
+    <name>СписокСвязанныеДокументы</name>
+    <title>
+      <key>ru</key>
+      <value>Список связанных документов</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Список пов'язаних документів</value>
+    </title>
+    <id>49</id>
+    <valueType>
+      <types>DynamicList</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.ВхИсхДФС</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.ЭтоОсновнойЭлектронныйДокумент</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.ВидДокумента1С</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.ВидЭлектронногоДокумента</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.ВхИсх</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.ГдеСоздан</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.Дата</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.ДатаОбработки</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.Документ1С</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.Документ1СПроведен</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.ЕстьФинальнаяКвитанцияДФС</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.ИндексКартинки</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.ИндексКартинкиДокумент1С</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.ИндексКартинкиЭлектронныйДокумент</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.НеобходимоПроведениеДокумента1С</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.Обработано</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.Организация</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.ОшибкаШифрованияПриОтправке</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.РегистрируетсяВЕРННПокупателем</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.СоответствиеДокументов</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.Состояние</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.СостояниеРегистрацияВДФС</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.ТипДокумента</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.ЭлектронныйДокумент</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументы.ЭтоОсновнойВариант</segments>
+    </notDefaultUseAlwaysAttributes>
+    <extInfo xsi:type="form:DynamicListExtInfo">
+      <queryText>ВЫБРАТЬ
+	скEDI_ЭлектронныеДокументы.Организация КАК Организация,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент КАК ЭлектронныйДокумент,
+	скEDI_ЭлектронныеДокументы.Документ1С КАК Документ1С,
+	скEDI_ЭлектронныеДокументы.ВидЭлектронногоДокумента КАК ВидЭлектронногоДокумента,
+	скEDI_ЭлектронныеДокументы.ВидЭлектронногоДокумента.ТипДокумента КАК ТипДокумента,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ЕДРПОУВладельцаШаблона КАК ЕДРПОУВладельцаШаблона,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ИмяШаблона КАК Код,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ВерсияШаблона КАК ВерсияШаблона,
+	ЕСТЬNULL(НАЧАЛОПЕРИОДА(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента, ДЕНЬ), НАЧАЛОПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, ДЕНЬ)) КАК Дата,
+	скEDI_ЭлектронныеДокументы.ВхИсх КАК ВхИсх,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ГдеСоздан КАК ГдеСоздан,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент = ЗНАЧЕНИЕ(Документ.скEDI_ЭлектронныйДокумент.ПустаяСсылка)
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.ЕстьТолькоДокумент1С)
+		ИНАЧЕ скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.Состояние
+	КОНЕЦ КАК Состояние,
+	скEDI_ЭлектронныеДокументы.РегистрируетсяВЕРННПокупателем КАК РегистрируетсяВЕРННПокупателем,
+	скEDI_ЭлектронныеДокументы.ВидДокумента1С КАК ВидДокумента1С,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.Документ1СКонтрагент = ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)
+			ТОГДА Контрагенты.Ссылка
+		ИНАЧЕ скEDI_ЭлектронныеДокументы.Документ1СКонтрагент
+	КОНЕЦ КАК Контрагент,
+	ЕСТЬNULL(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ЕДРПОУКонтрагента, скEDI_ЭлектронныеДокументы.Документ1СКонтрагент.КодПоЕДРПОУ) КАК ЕДРПОУКонтрагента,
+	ЕСТЬNULL(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ФилиалКонтрагента, &quot;ЗАМЕНА1_скEDI_ЭлектронныеДокументы.Документ1СКонтрагент.КодФилиала&quot;) КАК ФилиалКонтрагента,
+	скEDI_ЭлектронныеДокументы.Документ1СДоговорКонтрагента КАК ДоговорКонтрагента,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент = ЗНАЧЕНИЕ(Документ.скEDI_ЭлектронныйДокумент.ПустаяСсылка)
+			ТОГДА 3
+		КОГДА скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.Состояние В (ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.ПолученоПодтверждение), ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.ОтправленоПодтверждение), ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.ПолученоПодтверждениеОтДФС))
+			ТОГДА 1
+		КОГДА скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.Состояние В (ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.ПолученоОтклонение), ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.ОтправленоОтклонение), ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.ОтозванОтправителем), ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.ДокументОтозван), ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.ПолученоОтклонениеОтДФС))
+			ТОГДА 2
+		ИНАЧЕ 3
+	КОНЕЦ КАК ИндексКартинки,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.Документ1С = НЕОПРЕДЕЛЕНО
+			ТОГДА 2
+		КОГДА скEDI_ЭлектронныеДокументы.Документ1СПометкаУдаления
+			ТОГДА 4
+		КОГДА скEDI_ЭлектронныеДокументы.Документ1СПроведен
+			ТОГДА 3
+		ИНАЧЕ 1
+	КОНЕЦ КАК ИндексКартинкиДокумент1С,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент = ЗНАЧЕНИЕ(Документ.скEDI_ЭлектронныйДокумент.ПустаяСсылка)
+			ТОГДА 2
+		КОГДА Вложения.ЭлектронныйДокумент ЕСТЬ NULL
+			ТОГДА 1
+		ИНАЧЕ 3
+	КОНЕЦ КАК ИндексКартинкиЭлектронныйДокумент,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.Документ1С = НЕОПРЕДЕЛЕНО
+			ТОГДА ВЫБОР
+					КОГДА скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент = ЗНАЧЕНИЕ(Документ.скEDI_ЭлектронныйДокумент.ПустаяСсылка)
+						ТОГДА ЗНАЧЕНИЕ(Перечисление.скEDI_СоответствиеДокументов1СиЭлектронныхДокументов.ПустаяСсылка)
+					ИНАЧЕ ЗНАЧЕНИЕ(Перечисление.скEDI_СоответствиеДокументов1СиЭлектронныхДокументов.ЕстьЭлектронныйДокументНетДокумент1С)
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент = ЗНАЧЕНИЕ(Документ.скEDI_ЭлектронныйДокумент.ПустаяСсылка)
+					ТОГДА ЗНАЧЕНИЕ(Перечисление.скEDI_СоответствиеДокументов1СиЭлектронныхДокументов.ЕстьДокумент1СнетЭлектронногоДокумента)
+				ИНАЧЕ ЗНАЧЕНИЕ(Перечисление.скEDI_СоответствиеДокументов1СиЭлектронныхДокументов.ЕстьДокумент1СиЭлектронныйДокумент)
+			КОНЕЦ
+	КОНЕЦ КАК СоответствиеДокументов,
+	скEDI_ЭлектронныеДокументы.Документ1СПроведен КАК Документ1СПроведен,
+	скEDI_ЭлектронныеДокументы.Документ1СМожетБытьПроведен КАК НеобходимоПроведениеДокумента1С,
+	ЕСТЬNULL(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.СостояниеРегистрацияВДФС, ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументовРегистрацияВДФС.ПустаяСсылка)) КАК СостояниеРегистрацияВДФС,
+	ЕСТЬNULL(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ЕстьФинальнаяКвитанцияДФС, ЛОЖЬ) КАК ЕстьФинальнаяКвитанцияДФС,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ЗарегистрированВДФС КАК ЗарегистрированВДФС,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаРегистрацииВДФС КАК ДатаРегистрацииВДФС,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.РегистрационныйНомерДФС КАК РегистрационныйНомерДФС,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ПричинаОтклоненияДФС КАК ПричинаОтклоненияДФС,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.ВидДокумента1С В (ЗНАЧЕНИЕ(Перечисление.скEDI_ВидыДокументов1С.НалоговаяНакладная), ЗНАЧЕНИЕ(Перечисление.скEDI_ВидыДокументов1С.Приложение2КНалоговойНакладной))
+			ТОГДА ВЫБОР
+					КОГДА ДЕНЬ(скEDI_ЭлектронныеДокументы.Документ1СДата) &lt; 15
+						ТОГДА КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ)
+					ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 15)
+				КОНЕЦ
+	КОНЕЦ КАК КрайнийСрокРегистрацииДФС,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.ВидДокумента1С В (ЗНАЧЕНИЕ(Перечисление.скEDI_ВидыДокументов1С.НалоговаяНакладная), ЗНАЧЕНИЕ(Перечисление.скEDI_ВидыДокументов1С.Приложение2КНалоговойНакладной))
+			ТОГДА ВЫБОР
+					КОГДА ЕСТЬNULL(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ЗарегистрированВДФС, ЛОЖЬ)
+						ТОГДА ВЫБОР
+								КОГДА РАЗНОСТЬДАТ(ВЫБОР
+											КОГДА ДЕНЬ(скEDI_ЭлектронныеДокументы.Документ1СДата) &lt; 15
+												ТОГДА КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ)
+											ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 15)
+										КОНЕЦ, скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаРегистрацииВДФС, ДЕНЬ) > 0
+									ТОГДА РАЗНОСТЬДАТ(ВЫБОР
+												КОГДА ДЕНЬ(скEDI_ЭлектронныеДокументы.Документ1СДата) &lt; 15
+													ТОГДА КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ)
+												ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 15)
+											КОНЕЦ, скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаРегистрацииВДФС, ДЕНЬ)
+							КОНЕЦ
+					ИНАЧЕ ВЫБОР
+							КОГДА РАЗНОСТЬДАТ(ВЫБОР
+										КОГДА ДЕНЬ(скEDI_ЭлектронныеДокументы.Документ1СДата) &lt; 15
+											ТОГДА КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ)
+										ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 15)
+									КОНЕЦ, &amp;ТекущаяДата, ДЕНЬ) > 0
+								ТОГДА РАЗНОСТЬДАТ(ВЫБОР
+											КОГДА ДЕНЬ(скEDI_ЭлектронныеДокументы.Документ1СДата) &lt; 15
+												ТОГДА КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ)
+											ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 15)
+										КОНЕЦ, &amp;ТекущаяДата, ДЕНЬ)
+						КОНЕЦ
+				КОНЕЦ
+	КОНЕЦ КАК КоличествоДнейПросрочкиРегистрацииДФС,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаСоздания КАК ДатаСозданияЭлектронногоДокумента,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ПоследняяОперация КАК ПоследняяОперация,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ПричинаОтклоненияКонтрагентом КАК ПричинаОтклоненияКонтрагентом,
+	ВЫБОР
+		КОГДА скEDI_ОбработаныеДокументы.ЭлектронныйДокумент ЕСТЬ NULL
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ ИСТИНА
+	КОНЕЦ КАК Обработано,
+	скEDI_ОбработаныеДокументы.ДатаОбработки КАК ДатаОбработки,
+	скEDI_ЭлектронныеДокументы.Документ1ССуммаДокумента КАК СуммаДокумента1С,
+	скEDI_ЭлектронныеДокументы.Документ1ССуммаНДСДокумента КАК СуммаНДСДокумента1С,
+	скEDI_ЭлектронныеДокументы.Документ1ССуммаБезНДСДокумента КАК СуммаБезНДСДокумента1С,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.СуммаДокумента КАК СуммаЭлектронногоДокумента,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.СуммаНДС КАК СуммаНДСЭлектронногоДокумента,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.СуммаБезНДС КАК СуммаБезНДСЭлектронногоДокумента,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.Документ1С = НЕОПРЕДЕЛЕНО
+			ТОГДА ЛОЖЬ
+		КОГДА скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.СуммаДокумента &lt;> скEDI_ЭлектронныеДокументы.Документ1ССуммаДокумента
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК НеСоответствиеПоСуммеДокумента,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ЕДРПОУКонтрагента &lt;> скEDI_ЭлектронныеДокументы.Документ1СКонтрагент.КодПоЕДРПОУ
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК НеСоответствиеПоЕДРПОУКонтрагента,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ФилиалКонтрагента &lt;> &quot;ЗАМЕНА2_скEDI_ЭлектронныеДокументы.Документ1СКонтрагент.КодФилиала&quot;
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК НеСоответствиеПоФилиалКонтрагента,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.Документ1СДата = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+			ТОГДА ЛОЖЬ
+		КОГДА РАЗНОСТЬДАТ(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента, скEDI_ЭлектронныеДокументы.Документ1СДата, ДЕНЬ) &lt;> 0
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК НеСоответствиеПоДате,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ОсновнойЭлектронныйДокумент КАК ОсновнойЭлектронныйДокумент,
+	скEDI_ЭлектронныеДокументы.Документ1С КАК Ссылка,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.Номер КАК ЭлектронныйДокументНомер,
+	ЕСТЬNULL(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.НомерДокумента, скEDI_ЭлектронныеДокументы.Документ1СНомер) КАК ЭлектронныйДокументНомерДокумента,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ОсновнойЭлектронныйДокумент ЕСТЬ NULL
+				ИЛИ скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ОсновнойЭлектронныйДокумент = скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент
+				ИЛИ скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ОсновнойЭлектронныйДокумент = ЗНАЧЕНИЕ(Документ.скEDI_ЭлектронныйДокумент.ПустаяСсылка)
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ЭтоОсновнойВариант,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.COMMENT КАК ЭлектронныйДокументCOMMENT,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.ВидЭлектронногоДокумента.ТипДокумента = ЗНАЧЕНИЕ(Перечисление.скEDI_ТипыЭлектронныхДокументов.ПервичныйДокумент)
+			ТОГДА ВЫБОР
+					КОГДА скEDI_ЭлектронныеДокументы.ВхИсх = ЗНАЧЕНИЕ(Перечисление.скEDI_ВхИсхЭлектронныйДокумент.Исходящий)
+							И ЕСТЬNULL(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ГдеСоздан, ЗНАЧЕНИЕ(Перечисление.скEDI_ГдеСоздан.ВДаннойИнформационнойБазе)) = ЗНАЧЕНИЕ(Перечисление.скEDI_ГдеСоздан.ВДаннойИнформационнойБазе)
+						ТОГДА ВЫБОР
+								КОГДА ЕСТЬNULL(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.Состояние, ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.ЕстьТолькоДокумент1С)) В (ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.ЕстьТолькоДокумент1С), ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.Создан), ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.ПустаяСсылка))
+									ТОГДА ВЫБОР
+											КОГДА скEDI_ЭлектронныеДокументы.ВидЭлектронногоДокумента.ОтправлятьКомментарий = ИСТИНА
+													И скEDI_ЭлектронныеДокументы.Документ1СКомментарий &lt;> &quot;&quot;
+												ТОГДА скEDI_ЭлектронныеДокументы.Документ1СКомментарий
+											ИНАЧЕ ЕСТЬNULL(ВЫРАЗИТЬ(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.NOTATION КАК СТРОКА(255)), &quot;&quot;)
+										КОНЕЦ
+								ИНАЧЕ ЕСТЬNULL(ВЫРАЗИТЬ(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.NOTATION КАК СТРОКА(255)), &quot;&quot;)
+							КОНЕЦ
+					ИНАЧЕ ЕСТЬNULL(ВЫРАЗИТЬ(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.NOTATION КАК СТРОКА(255)), &quot;&quot;)
+				КОНЕЦ
+		ИНАЧЕ ЕСТЬNULL(ВЫРАЗИТЬ(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.NOTATION КАК СТРОКА(255)), &quot;&quot;)
+	КОНЕЦ КАК Примечание,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.DOCNAME КАК ЭлектронныйДокументDOCNAME,
+	ЕСТЬNULL(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ОшибкаШифрованияПриОтправке, ЛОЖЬ) КАК ОшибкаШифрованияПриОтправке
+ИЗ
+	РегистрСведений.скEDI_ЭлектронныеДокументы КАК скEDI_ЭлектронныеДокументы
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			МАКСИМУМ(Контрагенты.Ссылка) КАК Ссылка,
+			Контрагенты.КодПоЕДРПОУ КАК КодПоЕДРПОУ,
+			Контрагенты.КодФилиала КАК КодФилиала
+		ИЗ
+			(ВЫБРАТЬ
+				Контрагенты.Ссылка КАК Ссылка,
+				Контрагенты.КодПоЕДРПОУ КАК КодПоЕДРПОУ,
+				&quot;ЗАМЕНА3_Контрагенты.КодФилиала&quot; КАК КодФилиала
+			ИЗ
+				Справочник.Контрагенты КАК Контрагенты) КАК Контрагенты
+		
+		СГРУППИРОВАТЬ ПО
+			Контрагенты.КодПоЕДРПОУ,
+			Контрагенты.КодФилиала) КАК Контрагенты
+		ПО скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ЕДРПОУКонтрагента = Контрагенты.КодПоЕДРПОУ
+			И скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ФилиалКонтрагента = Контрагенты.КодФилиала
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.скEDI_ОбработаныеДокументы КАК скEDI_ОбработаныеДокументы
+		ПО скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент = скEDI_ОбработаныеДокументы.ЭлектронныйДокумент
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+			скEDI_ВложенияЭлектронныхДокументов.ЭлектронныйДокумент КАК ЭлектронныйДокумент
+		ИЗ
+			РегистрСведений.скEDI_ВложенияЭлектронныхДокументов КАК скEDI_ВложенияЭлектронныхДокументов) КАК Вложения
+		ПО скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент = Вложения.ЭлектронныйДокумент
+ГДЕ
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент В(&amp;СписокЭлектронныхДокументов)</queryText>
+      <mainTable>InformationRegister.скEDI_ЭлектронныеДокументы</mainTable>
+      <dynamicDataRead>true</dynamicDataRead>
+      <autoFillAvailableFields>true</autoFillAvailableFields>
+      <customQuery>true</customQuery>
+      <autoSaveUserSettings>true</autoSaveUserSettings>
+      <getInvisibleFieldPresentations>true</getInvisibleFieldPresentations>
+    </extInfo>
+  </attributes>
+  <attributes>
+    <name>ЗаголовокЗакладкиСвязанныеДокументы</name>
+    <id>81</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>СписокСвязанныеДокументыДокументыНДС</name>
+    <title>
+      <key>ru</key>
+      <value>Список связанных документов</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Список пов'язаних документів</value>
+    </title>
+    <id>82</id>
+    <valueType>
+      <types>DynamicList</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.ВхИсхДФС</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.ЭтоОсновнойЭлектронныйДокумент</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.ВидДокумента1С</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.ВидЭлектронногоДокумента</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.ВхИсх</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.ГдеСоздан</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.Дата</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.ДатаОбработки</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.Документ1С</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.Документ1СПроведен</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.ЕстьФинальнаяКвитанцияДФС</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.ИндексКартинки</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.ИндексКартинкиДокумент1С</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.ИндексКартинкиЭлектронныйДокумент</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.НеобходимоПроведениеДокумента1С</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.Обработано</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.Организация</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.ОшибкаШифрованияПриОтправке</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.РегистрируетсяВЕРННПокупателем</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.СоответствиеДокументов</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.Состояние</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.СостояниеРегистрацияВДФС</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.ТипДокумента</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.ЭлектронныйДокумент</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>СписокСвязанныеДокументыДокументыНДС.ЭтоОсновнойВариант</segments>
+    </notDefaultUseAlwaysAttributes>
+    <extInfo xsi:type="form:DynamicListExtInfo">
+      <queryText>ВЫБРАТЬ
+	скEDI_ЭлектронныеДокументы.Организация КАК Организация,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент КАК ЭлектронныйДокумент,
+	скEDI_ЭлектронныеДокументы.Документ1С КАК Документ1С,
+	скEDI_ЭлектронныеДокументы.ВидЭлектронногоДокумента КАК ВидЭлектронногоДокумента,
+	скEDI_ЭлектронныеДокументы.ВидЭлектронногоДокумента.ТипДокумента КАК ТипДокумента,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ЕДРПОУВладельцаШаблона КАК ЕДРПОУВладельцаШаблона,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ИмяШаблона КАК Код,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ВерсияШаблона КАК ВерсияШаблона,
+	ЕСТЬNULL(НАЧАЛОПЕРИОДА(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента, ДЕНЬ), НАЧАЛОПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, ДЕНЬ)) КАК Дата,
+	скEDI_ЭлектронныеДокументы.ВхИсх КАК ВхИсх,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ГдеСоздан КАК ГдеСоздан,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент = ЗНАЧЕНИЕ(Документ.скEDI_ЭлектронныйДокумент.ПустаяСсылка)
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.ЕстьТолькоДокумент1С)
+		ИНАЧЕ скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.Состояние
+	КОНЕЦ КАК Состояние,
+	скEDI_ЭлектронныеДокументы.РегистрируетсяВЕРННПокупателем КАК РегистрируетсяВЕРННПокупателем,
+	скEDI_ЭлектронныеДокументы.ВидДокумента1С КАК ВидДокумента1С,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.Документ1СКонтрагент = ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)
+			ТОГДА Контрагенты.Ссылка
+		ИНАЧЕ скEDI_ЭлектронныеДокументы.Документ1СКонтрагент
+	КОНЕЦ КАК Контрагент,
+	ЕСТЬNULL(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ЕДРПОУКонтрагента, скEDI_ЭлектронныеДокументы.Документ1СКонтрагент.КодПоЕДРПОУ) КАК ЕДРПОУКонтрагента,
+	ЕСТЬNULL(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ФилиалКонтрагента, &quot;ЗАМЕНА1_скEDI_ЭлектронныеДокументы.Документ1СКонтрагент.КодФилиала&quot;) КАК ФилиалКонтрагента,
+	скEDI_ЭлектронныеДокументы.Документ1СДоговорКонтрагента КАК ДоговорКонтрагента,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент = ЗНАЧЕНИЕ(Документ.скEDI_ЭлектронныйДокумент.ПустаяСсылка)
+			ТОГДА 3
+		КОГДА скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.Состояние В (ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.ПолученоПодтверждение), ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.ОтправленоПодтверждение), ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.ПолученоПодтверждениеОтДФС))
+			ТОГДА 1
+		КОГДА скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.Состояние В (ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.ПолученоОтклонение), ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.ОтправленоОтклонение), ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.ОтозванОтправителем), ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.ДокументОтозван), ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.ПолученоОтклонениеОтДФС))
+			ТОГДА 2
+		ИНАЧЕ 3
+	КОНЕЦ КАК ИндексКартинки,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.Документ1С = НЕОПРЕДЕЛЕНО
+			ТОГДА 2
+		КОГДА скEDI_ЭлектронныеДокументы.Документ1СПометкаУдаления
+			ТОГДА 4
+		КОГДА скEDI_ЭлектронныеДокументы.Документ1СПроведен
+			ТОГДА 3
+		ИНАЧЕ 1
+	КОНЕЦ КАК ИндексКартинкиДокумент1С,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент = ЗНАЧЕНИЕ(Документ.скEDI_ЭлектронныйДокумент.ПустаяСсылка)
+			ТОГДА 2
+		КОГДА Вложения.ЭлектронныйДокумент ЕСТЬ NULL
+			ТОГДА 1
+		ИНАЧЕ 3
+	КОНЕЦ КАК ИндексКартинкиЭлектронныйДокумент,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.Документ1С = НЕОПРЕДЕЛЕНО
+			ТОГДА ВЫБОР
+					КОГДА скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент = ЗНАЧЕНИЕ(Документ.скEDI_ЭлектронныйДокумент.ПустаяСсылка)
+						ТОГДА ЗНАЧЕНИЕ(Перечисление.скEDI_СоответствиеДокументов1СиЭлектронныхДокументов.ПустаяСсылка)
+					ИНАЧЕ ЗНАЧЕНИЕ(Перечисление.скEDI_СоответствиеДокументов1СиЭлектронныхДокументов.ЕстьЭлектронныйДокументНетДокумент1С)
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент = ЗНАЧЕНИЕ(Документ.скEDI_ЭлектронныйДокумент.ПустаяСсылка)
+					ТОГДА ЗНАЧЕНИЕ(Перечисление.скEDI_СоответствиеДокументов1СиЭлектронныхДокументов.ЕстьДокумент1СнетЭлектронногоДокумента)
+				ИНАЧЕ ЗНАЧЕНИЕ(Перечисление.скEDI_СоответствиеДокументов1СиЭлектронныхДокументов.ЕстьДокумент1СиЭлектронныйДокумент)
+			КОНЕЦ
+	КОНЕЦ КАК СоответствиеДокументов,
+	скEDI_ЭлектронныеДокументы.Документ1СПроведен КАК Документ1СПроведен,
+	скEDI_ЭлектронныеДокументы.Документ1СМожетБытьПроведен КАК НеобходимоПроведениеДокумента1С,
+	ЕСТЬNULL(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.СостояниеРегистрацияВДФС, ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументовРегистрацияВДФС.ПустаяСсылка)) КАК СостояниеРегистрацияВДФС,
+	ЕСТЬNULL(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ЕстьФинальнаяКвитанцияДФС, ЛОЖЬ) КАК ЕстьФинальнаяКвитанцияДФС,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ЗарегистрированВДФС КАК ЗарегистрированВДФС,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаРегистрацииВДФС КАК ДатаРегистрацииВДФС,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.РегистрационныйНомерДФС КАК РегистрационныйНомерДФС,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ПричинаОтклоненияДФС КАК ПричинаОтклоненияДФС,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.ВидДокумента1С В (ЗНАЧЕНИЕ(Перечисление.скEDI_ВидыДокументов1С.НалоговаяНакладная), ЗНАЧЕНИЕ(Перечисление.скEDI_ВидыДокументов1С.Приложение2КНалоговойНакладной))
+			ТОГДА ВЫБОР
+					КОГДА ДЕНЬ(скEDI_ЭлектронныеДокументы.Документ1СДата) &lt; 15
+						ТОГДА КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ)
+					ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 15)
+				КОНЕЦ
+	КОНЕЦ КАК КрайнийСрокРегистрацииДФС,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.ВидДокумента1С В (ЗНАЧЕНИЕ(Перечисление.скEDI_ВидыДокументов1С.НалоговаяНакладная), ЗНАЧЕНИЕ(Перечисление.скEDI_ВидыДокументов1С.Приложение2КНалоговойНакладной))
+			ТОГДА ВЫБОР
+					КОГДА ЕСТЬNULL(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ЗарегистрированВДФС, ЛОЖЬ)
+						ТОГДА ВЫБОР
+								КОГДА РАЗНОСТЬДАТ(ВЫБОР
+											КОГДА ДЕНЬ(скEDI_ЭлектронныеДокументы.Документ1СДата) &lt; 15
+												ТОГДА КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ)
+											ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 15)
+										КОНЕЦ, скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаРегистрацииВДФС, ДЕНЬ) > 0
+									ТОГДА РАЗНОСТЬДАТ(ВЫБОР
+												КОГДА ДЕНЬ(скEDI_ЭлектронныеДокументы.Документ1СДата) &lt; 15
+													ТОГДА КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ)
+												ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 15)
+											КОНЕЦ, скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаРегистрацииВДФС, ДЕНЬ)
+							КОНЕЦ
+					ИНАЧЕ ВЫБОР
+							КОГДА РАЗНОСТЬДАТ(ВЫБОР
+										КОГДА ДЕНЬ(скEDI_ЭлектронныеДокументы.Документ1СДата) &lt; 15
+											ТОГДА КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ)
+										ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 15)
+									КОНЕЦ, &amp;ТекущаяДата, ДЕНЬ) > 0
+								ТОГДА РАЗНОСТЬДАТ(ВЫБОР
+											КОГДА ДЕНЬ(скEDI_ЭлектронныеДокументы.Документ1СДата) &lt; 15
+												ТОГДА КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ)
+											ИНАЧЕ ДОБАВИТЬКДАТЕ(КОНЕЦПЕРИОДА(скEDI_ЭлектронныеДокументы.Документ1СДата, МЕСЯЦ), ДЕНЬ, 15)
+										КОНЕЦ, &amp;ТекущаяДата, ДЕНЬ)
+						КОНЕЦ
+				КОНЕЦ
+	КОНЕЦ КАК КоличествоДнейПросрочкиРегистрацииДФС,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаСоздания КАК ДатаСозданияЭлектронногоДокумента,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ПоследняяОперация КАК ПоследняяОперация,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ПричинаОтклоненияКонтрагентом КАК ПричинаОтклоненияКонтрагентом,
+	ВЫБОР
+		КОГДА скEDI_ОбработаныеДокументы.ЭлектронныйДокумент ЕСТЬ NULL
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ ИСТИНА
+	КОНЕЦ КАК Обработано,
+	скEDI_ОбработаныеДокументы.ДатаОбработки КАК ДатаОбработки,
+	скEDI_ЭлектронныеДокументы.Документ1ССуммаДокумента КАК СуммаДокумента1С,
+	скEDI_ЭлектронныеДокументы.Документ1ССуммаНДСДокумента КАК СуммаНДСДокумента1С,
+	скEDI_ЭлектронныеДокументы.Документ1ССуммаБезНДСДокумента КАК СуммаБезНДСДокумента1С,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.СуммаДокумента КАК СуммаЭлектронногоДокумента,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.СуммаНДС КАК СуммаНДСЭлектронногоДокумента,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.СуммаБезНДС КАК СуммаБезНДСЭлектронногоДокумента,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.Документ1С = НЕОПРЕДЕЛЕНО
+			ТОГДА ЛОЖЬ
+		КОГДА скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.СуммаДокумента &lt;> скEDI_ЭлектронныеДокументы.Документ1ССуммаДокумента
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК НеСоответствиеПоСуммеДокумента,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ЕДРПОУКонтрагента &lt;> скEDI_ЭлектронныеДокументы.Документ1СКонтрагент.КодПоЕДРПОУ
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК НеСоответствиеПоЕДРПОУКонтрагента,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ФилиалКонтрагента &lt;> &quot;ЗАМЕНА2_скEDI_ЭлектронныеДокументы.Документ1СКонтрагент.КодФилиала&quot;
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК НеСоответствиеПоФилиалКонтрагента,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.Документ1СДата = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+			ТОГДА ЛОЖЬ
+		КОГДА РАЗНОСТЬДАТ(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ДатаДокумента, скEDI_ЭлектронныеДокументы.Документ1СДата, ДЕНЬ) &lt;> 0
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК НеСоответствиеПоДате,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ОсновнойЭлектронныйДокумент КАК ОсновнойЭлектронныйДокумент,
+	скEDI_ЭлектронныеДокументы.Документ1С КАК Ссылка,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.Номер КАК ЭлектронныйДокументНомер,
+	ЕСТЬNULL(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.НомерДокумента, скEDI_ЭлектронныеДокументы.Документ1СНомер) КАК ЭлектронныйДокументНомерДокумента,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ОсновнойЭлектронныйДокумент ЕСТЬ NULL
+				ИЛИ скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ОсновнойЭлектронныйДокумент = скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент
+				ИЛИ скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ОсновнойЭлектронныйДокумент = ЗНАЧЕНИЕ(Документ.скEDI_ЭлектронныйДокумент.ПустаяСсылка)
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ЭтоОсновнойВариант,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.COMMENT КАК ЭлектронныйДокументCOMMENT,
+	ВЫБОР
+		КОГДА скEDI_ЭлектронныеДокументы.ВидЭлектронногоДокумента.ТипДокумента = ЗНАЧЕНИЕ(Перечисление.скEDI_ТипыЭлектронныхДокументов.ПервичныйДокумент)
+			ТОГДА ВЫБОР
+					КОГДА скEDI_ЭлектронныеДокументы.ВхИсх = ЗНАЧЕНИЕ(Перечисление.скEDI_ВхИсхЭлектронныйДокумент.Исходящий)
+							И ЕСТЬNULL(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ГдеСоздан, ЗНАЧЕНИЕ(Перечисление.скEDI_ГдеСоздан.ВДаннойИнформационнойБазе)) = ЗНАЧЕНИЕ(Перечисление.скEDI_ГдеСоздан.ВДаннойИнформационнойБазе)
+						ТОГДА ВЫБОР
+								КОГДА ЕСТЬNULL(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.Состояние, ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.ЕстьТолькоДокумент1С)) В (ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.ЕстьТолькоДокумент1С), ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.Создан), ЗНАЧЕНИЕ(Перечисление.скEDI_СостоянияЭлектронныхДокументов.ПустаяСсылка))
+									ТОГДА ВЫБОР
+											КОГДА скEDI_ЭлектронныеДокументы.ВидЭлектронногоДокумента.ОтправлятьКомментарий = ИСТИНА
+													И скEDI_ЭлектронныеДокументы.Документ1СКомментарий &lt;> &quot;&quot;
+												ТОГДА скEDI_ЭлектронныеДокументы.Документ1СКомментарий
+											ИНАЧЕ ЕСТЬNULL(ВЫРАЗИТЬ(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.NOTATION КАК СТРОКА(255)), &quot;&quot;)
+										КОНЕЦ
+								ИНАЧЕ ЕСТЬNULL(ВЫРАЗИТЬ(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.NOTATION КАК СТРОКА(255)), &quot;&quot;)
+							КОНЕЦ
+					ИНАЧЕ ЕСТЬNULL(ВЫРАЗИТЬ(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.NOTATION КАК СТРОКА(255)), &quot;&quot;)
+				КОНЕЦ
+		ИНАЧЕ ЕСТЬNULL(ВЫРАЗИТЬ(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.NOTATION КАК СТРОКА(255)), &quot;&quot;)
+	КОНЕЦ КАК Примечание,
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.DOCNAME КАК ЭлектронныйДокументDOCNAME,
+	ЕСТЬNULL(скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ОшибкаШифрованияПриОтправке, ЛОЖЬ) КАК ОшибкаШифрованияПриОтправке
+ИЗ
+	РегистрСведений.скEDI_ЭлектронныеДокументы КАК скEDI_ЭлектронныеДокументы
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			МАКСИМУМ(Контрагенты.Ссылка) КАК Ссылка,
+			Контрагенты.КодПоЕДРПОУ КАК КодПоЕДРПОУ,
+			Контрагенты.КодФилиала КАК КодФилиала
+		ИЗ
+			(ВЫБРАТЬ
+				Контрагенты.Ссылка КАК Ссылка,
+				Контрагенты.КодПоЕДРПОУ КАК КодПоЕДРПОУ,
+				&quot;ЗАМЕНА3_Контрагенты.КодФилиала&quot; КАК КодФилиала
+			ИЗ
+				Справочник.Контрагенты КАК Контрагенты) КАК Контрагенты
+		
+		СГРУППИРОВАТЬ ПО
+			Контрагенты.КодПоЕДРПОУ,
+			Контрагенты.КодФилиала) КАК Контрагенты
+		ПО скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ЕДРПОУКонтрагента = Контрагенты.КодПоЕДРПОУ
+			И скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент.ФилиалКонтрагента = Контрагенты.КодФилиала
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.скEDI_ОбработаныеДокументы КАК скEDI_ОбработаныеДокументы
+		ПО скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент = скEDI_ОбработаныеДокументы.ЭлектронныйДокумент
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+			скEDI_ВложенияЭлектронныхДокументов.ЭлектронныйДокумент КАК ЭлектронныйДокумент
+		ИЗ
+			РегистрСведений.скEDI_ВложенияЭлектронныхДокументов КАК скEDI_ВложенияЭлектронныхДокументов) КАК Вложения
+		ПО скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент = Вложения.ЭлектронныйДокумент
+ГДЕ
+	скEDI_ЭлектронныеДокументы.ЭлектронныйДокумент В(&amp;СписокЭлектронныхДокументов)</queryText>
+      <mainTable>InformationRegister.скEDI_ЭлектронныеДокументы</mainTable>
+      <dynamicDataRead>true</dynamicDataRead>
+      <autoFillAvailableFields>true</autoFillAvailableFields>
+      <customQuery>true</customQuery>
+      <autoSaveUserSettings>true</autoSaveUserSettings>
+      <getInvisibleFieldPresentations>true</getInvisibleFieldPresentations>
+    </extInfo>
+  </attributes>
+  <attributes>
+    <name>ЗаголовокЗакладкиСвязанныеДокументыДокументыНДС</name>
+    <id>83</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>СписокИтогКоличествоДокументовДокументыНДС</name>
+    <title>
+      <key>ru</key>
+      <value>Количество документов (документы НДС)</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Кількість документів (документи ПДВ)</value>
+    </title>
+    <id>84</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>СписокИтогКоличествоДокументов</name>
+    <title>
+      <key>ru</key>
+      <value>Количество документов</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Кількість документів</value>
+    </title>
+    <id>85</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
   <formCommands>
     <name>ПодписатьИОтправитьЭлектронныеДокументы</name>
     <title>
@@ -24078,20 +26415,20 @@
     <name>ПровестиДокументы1С</name>
     <title>
       <key>ru</key>
-      <value>Провести Учетные документы</value>
+      <value>Провести учетные документы</value>
     </title>
     <title>
       <key>uk</key>
-      <value>Провести Облікові Документи</value>
+      <value>Провести облікові документи</value>
     </title>
     <id>2</id>
     <toolTip>
       <key>ru</key>
-      <value>Провести Учетные документы</value>
+      <value>Провести учетные документы</value>
     </toolTip>
     <toolTip>
       <key>uk</key>
-      <value>Провести Облікові документи</value>
+      <value>Провести облікові документи</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -24110,20 +26447,20 @@
     <name>СоздатьДокументы1С</name>
     <title>
       <key>ru</key>
-      <value>Создать Учетные документы</value>
+      <value>Создать учетные документы</value>
     </title>
     <title>
       <key>uk</key>
-      <value>Створити Облікові документи</value>
+      <value>Створити облікові документи</value>
     </title>
     <id>6</id>
     <toolTip>
       <key>ru</key>
-      <value>Создать Учетные документы</value>
+      <value>Создать учетные документы</value>
     </toolTip>
     <toolTip>
       <key>uk</key>
-      <value>Створити Облікові документи</value>
+      <value>Створити облікові документи</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -24296,11 +26633,11 @@
     <name>ОткрытьДокумент1С</name>
     <title>
       <key>ru</key>
-      <value>Открыть Учетный документ</value>
+      <value>Открыть учетный документ</value>
     </title>
     <title>
       <key>uk</key>
-      <value>Відкрити Обліковий документ</value>
+      <value>Відкрити обліковий документ</value>
     </title>
     <id>12</id>
     <toolTip>
@@ -24384,11 +26721,11 @@
     <id>17</id>
     <toolTip>
       <key>ru</key>
-      <value>Подписать и отправить электронные документы в ГФС</value>
+      <value>Подписать и отправить электронные документы в ГНС</value>
     </toolTip>
     <toolTip>
       <key>uk</key>
-      <value>Підписати і відправити електронні документи до ДФС</value>
+      <value>Підписати і відправити електронні документи до ДПС</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -24417,7 +26754,7 @@
     </toolTip>
     <toolTip>
       <key>uk</key>
-      <value>Проверить электронный документ документы НДС</value>
+      <value>Перевірити електронний документ</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -24627,11 +26964,11 @@
     <name>ОтправитьЗапросы1ВЕРНН</name>
     <title>
       <key>ru</key>
-      <value>Отправить Запросы в ЕРНН</value>
+      <value>Отправить запросы в ЕРНН</value>
     </title>
     <title>
       <key>uk</key>
-      <value>Відправити Запити до ЄРПН</value>
+      <value>Відправити запити до ЄРПН</value>
     </title>
     <id>27</id>
     <toolTip>
@@ -25212,11 +27549,11 @@
     <name>ОткрытьДокумент1СДокументыНДС</name>
     <title>
       <key>ru</key>
-      <value>Открыть Учетный документ</value>
+      <value>Открыть учетный документ</value>
     </title>
     <title>
       <key>uk</key>
-      <value>Відкрити Обліковий документ</value>
+      <value>Відкрити обліковий документ</value>
     </title>
     <id>44</id>
     <toolTip>
@@ -25396,20 +27733,20 @@
     <name>СоздатьДокументы1СДокументыНДС</name>
     <title>
       <key>ru</key>
-      <value>Создать Учетные документы</value>
+      <value>Создать учетные документы</value>
     </title>
     <title>
       <key>uk</key>
-      <value>Створити Облікові документи</value>
+      <value>Створити облікові документи</value>
     </title>
     <id>50</id>
     <toolTip>
       <key>ru</key>
-      <value>Создать Учетные документы</value>
+      <value>Создать учетные документы</value>
     </toolTip>
     <toolTip>
       <key>uk</key>
-      <value>Створити Облікові документи</value>
+      <value>Створити облікові документи</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -25428,20 +27765,20 @@
     <name>ПровестиДокументы1СДокументыНДС</name>
     <title>
       <key>ru</key>
-      <value>Провести Учетные документы</value>
+      <value>Провести учетные документы</value>
     </title>
     <title>
       <key>uk</key>
-      <value>Провести Облікові Документи</value>
+      <value>Провести облікові документи</value>
     </title>
     <id>51</id>
     <toolTip>
       <key>ru</key>
-      <value>Провести Учетные документы</value>
+      <value>Провести учетные документы</value>
     </toolTip>
     <toolTip>
       <key>uk</key>
-      <value>Провести Облікові документи</value>
+      <value>Провести облікові документи</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -25865,6 +28202,122 @@
       </handler>
     </action>
     <currentRowUse>Auto</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>АннулироватьЭлектронныйДокумент</name>
+    <title>
+      <key>ru</key>
+      <value>Аннулировать</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Анулювати</value>
+    </title>
+    <id>65</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Аннулировать электронный документ</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Анулювати електронний документ</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>АннулироватьЭлектронныйДокумент</name>
+      </handler>
+    </action>
+    <currentRowUse>Auto</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>УстановитьОсновнойВариантЭлектронногоДокумента</name>
+    <title>
+      <key>ru</key>
+      <value>Установить основной вариант</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Встановити основний варіант</value>
+    </title>
+    <id>66</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Использовать данный электронный документ как основной вариант</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Використовувати даний електронний документ як основний варіант</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>УстановитьОсновнойВариантЭлектронногоДокумента</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ОткрытьЗапросНаПолученияСпискаДокументов</name>
+    <title>
+      <key>ru</key>
+      <value>Открыть запрос на получения списка документов</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Відкрити запит на отримання списку документів</value>
+    </title>
+    <id>67</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Открыть запрос на получения списка документов</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Відкрити запит на отримання списку документів</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ОткрытьЗапросНаПолученияСпискаДокументов</name>
+      </handler>
+    </action>
+    <currentRowUse>Auto</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ПодписатьИОтправитьЭлектронныеДокументы_Переподписать</name>
+    <title>
+      <key>ru</key>
+      <value>Повторно утвердить и отправить Контрагенту</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Повторно затвердити і відправити Контрагенту</value>
+    </title>
+    <id>68</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Повторно утвердить и отправить Контрагенту</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Повторно затвердити і відправити Контрагенту</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ПодписатьИОтправитьЭлектронныеДокументы_Переподписать</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
   </formCommands>
   <commandInterface>
     <navigationPanel/>
