@@ -596,6 +596,32 @@
 			<xs:pattern value="([1-9]{1}[0-9]{0,6}){1}(/{1}([2|3|4]){0,1}(([0]{2}[1-9]{1})|([0]{1}[1-9]{1}[0-9]{1})|([1-9]{1}[0-9]{2})){0,1}){0,1}"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<!--Загальний тип "Реєстраційний номер митної декларації"
+формується за такою схемою - PPUAММММММНННННННК, де:
+PP					- останні 2 цифри року, в якому прийнято МД;
+UAММММММ	- код згідно з Класифікатором митних органів підрозділу митного оформлення, яким прийнято МД; (UA101130, UA100K01);
+ННННННН		- 7-значна цифрова (цифрово-літерна) складова реєстраційного номера МД, що не має повторюватись для підрозділу протягом календарного року;
+К						- контрольний символ.
+ -->
+	<xs:simpleType name="DGNUM_MD">
+		<xs:annotation>
+			<xs:documentation>18-значний реєстраційний номер митної декларації (МД)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{2}UA[0-9]{3}[K0-9][0-9]{2}[A-Z0-9]{7}."/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--Загальний тип "Реєстраційний номер митної декларації" в колонці-->
+	<xs:complexType name="NUM_MD_Column">
+		<xs:annotation>
+			<xs:documentation>18-значний реєстраційний номер митної декларації (МД) для колонки</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="DGNUM_MD">
+				<xs:attribute name="ROWNUM" type="rowInt" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
 	<!--Загальний тип "Число від 1 до ... 9999999" використовується для вказання кількості, номера рядка-->
 	<xs:simpleType name="DGI7nom">
 		<xs:restriction base="xs:unsignedLong">
@@ -939,7 +965,7 @@
 		<xs:annotation>
 			<xs:documentation>ПОРЯДОК заповнення податкової накладної (Наказ Міністерства фінансів України від 01.11.11 № 1379)
 п.8. Усі примірники податкових накладних, окремі особливості заповнення яких викладені в підпунктах 8.1-8.4 цього пункту, залишаються в особи, що їх виписала, і зберігаються відповідно до викладеного в підпунктах 6.1 та 6.4 пункту 6 цього Порядку.
- Можливі значення значення 01, 02, ..., 17, 20, 21</xs:documentation>
+ Можливі значення значення 01, 02, ..., 17, 20, 21, 22 (Наказ Міністерства фінансів України від 17.05.2023 № 256)</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="01">
@@ -1075,6 +1101,13 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="22">
+				<xs:annotation>
+					<xs:documentation>
+						Складена на операції з вивезення за межі митної території України товарів, до яких застосовано режим експортного забезпечення, що підлягають оподаткуванню податком на додану вартість за основною ставкою або ставкою 14%
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- Нові типи необхідні для проекту -->
@@ -1786,9 +1819,9 @@
 	<!--Загальний тип "проценти розподілу, питома вага, числові дані, можливо з 2 знаками після коми, від 0 до 100 включно"-->
 	<xs:simpleType name="DGpercentAlloc">
 		<xs:restriction base="xs:decimal">
-			<xs:pattern value="\-{0,1}[0-9]+\.[0-9]{2}"/>
 			<xs:minInclusive value="0.00"/>
 			<xs:maxInclusive value="100.00"/>
+			<xs:pattern value="\-{0,1}[0-9]+\.[0-9]{2}"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<!--Загальний тип "Проценти (числові дані від 0 до 100 включно з 2 знаками після коми в колонці)"-->
@@ -2050,6 +2083,27 @@
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:extension base="DGIpnPDV">
+				<xs:attribute name="ROWNUM" type="rowInt" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- Загальний тип "Унікальний номер запису в Єдиному державному демографічному реєстрі" -->
+	<xs:simpleType name="DGUNZR">
+		<xs:annotation>
+			<xs:documentation>Унікальний номер запису в Єдиному державному демографічному реєстрі (УНЗР)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="14"/>
+			<xs:pattern value="(((\d{4}((0[13578]|1[02])(0[1-9]|[12]\d|3[01])|(0[13456789]|1[012])(0[1-9]|[12]\d|30)|02(0[1-9]|1\d|2[0-8])))|((([02468][048]|[13579][26])00|\d{2}([13579][26]|0[48]|[2468][048])))0229))\-(000[1-9]\d|00[1-9]\d\d|0[1-9]\d{2}\d|[1-9]\d{3}\d)"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Загальний тип "Унікальний номер запису в Єдиному державному демографічному реєстрі" для колонки" -->
+	<xs:complexType name="DGUNZR_Column">
+		<xs:annotation>
+			<xs:documentation>Унікальний номер запису в Єдиному державному демографічному реєстрі (УНЗР) в колонці таблиці</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="DGUNZR">
 				<xs:attribute name="ROWNUM" type="rowInt" use="required"/>
 			</xs:extension>
 		</xs:simpleContent>

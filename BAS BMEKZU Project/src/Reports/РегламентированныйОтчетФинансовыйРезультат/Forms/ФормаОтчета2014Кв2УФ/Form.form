@@ -836,6 +836,7 @@
           </extInfo>
         </extendedTooltip>
         <commandName>Form.Command.СохранитьОтчет</commandName>
+        <representation>Auto</representation>
         <defaultButton>true</defaultButton>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -892,6 +893,7 @@
           </extInfo>
         </extendedTooltip>
         <commandName>Form.Command.Заполнить</commandName>
+        <representation>Auto</representation>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
         <placementArea>UserCmds</placementArea>
@@ -1190,7 +1192,14 @@
           <key>uk</key>
           <value>Друк</value>
         </title>
-        <toolTipRepresentation>None</toolTipRepresentation>
+        <toolTip>
+          <key>ru</key>
+          <value>Печать</value>
+        </toolTip>
+        <toolTip>
+          <key>uk</key>
+          <value>Друк</value>
+        </toolTip>
         <extendedTooltip>
           <name>ПодменюПечатьРасширеннаяПодсказка</name>
           <id>142</id>
@@ -1207,7 +1216,12 @@
           </extInfo>
         </extendedTooltip>
         <type>Popup</type>
-        <extInfo xsi:type="form:PopupGroupExtInfo"/>
+        <extInfo xsi:type="form:PopupGroupExtInfo">
+          <picture xsi:type="core:PictureRef">
+            <picture>StdPicture.Print</picture>
+          </picture>
+          <representation>Auto</representation>
+        </extInfo>
       </items>
       <items xsi:type="form:FormGroup">
         <name>ПодменюОтправка</name>
@@ -1322,9 +1336,13 @@
         </extInfo>
       </extendedTooltip>
       <commandName>Form.Command.Обновить</commandName>
+      <representation>Auto</representation>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <placementArea>UserCmds</placementArea>
+      <picture xsi:type="core:PictureRef">
+        <picture>StdPicture.Refresh</picture>
+      </picture>
       <toolTipRepresentation>None</toolTipRepresentation>
       <representationInContextMenu>Auto</representationInContextMenu>
       <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
@@ -3753,15 +3771,26 @@
       <value>Вивантажити  в XML</value>
     </title>
     <id>1</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Выгрузить</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Вивантажити</value>
+    </toolTip>
     <use>
       <common>true</common>
     </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>CommonPicture.ВыгрузитьФайлСертификата</picture>
+    </picture>
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>Выгрузить</name>
       </handler>
     </action>
-    <representation>Text</representation>
+    <representation>TextPicture</representation>
     <currentRowUse>DontUse</currentRowUse>
   </formCommands>
   <formCommands>
@@ -3878,22 +3907,33 @@
     <name>СохранитьОтчет</name>
     <title>
       <key>ru</key>
-      <value>Записать</value>
+      <value>Сохранить</value>
     </title>
     <title>
       <key>uk</key>
-      <value>Записати</value>
+      <value>Зберегти</value>
     </title>
     <id>14</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Сохранить</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Зберегти</value>
+    </toolTip>
     <use>
       <common>true</common>
     </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.Write</picture>
+    </picture>
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>СохранитьОтчет</name>
       </handler>
     </action>
-    <representation>Text</representation>
+    <representation>TextPicture</representation>
     <currentRowUse>DontUse</currentRowUse>
   </formCommands>
   <formCommands>
@@ -3907,15 +3947,26 @@
       <value>Заповнити</value>
     </title>
     <id>4</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Заполнить</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Заповнити</value>
+    </toolTip>
     <use>
       <common>true</common>
     </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.GenerateReport</picture>
+    </picture>
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>ЗаполнитьАвто</name>
       </handler>
     </action>
-    <representation>Text</representation>
+    <representation>TextPicture</representation>
     <currentRowUse>DontUse</currentRowUse>
   </formCommands>
   <formCommands>
