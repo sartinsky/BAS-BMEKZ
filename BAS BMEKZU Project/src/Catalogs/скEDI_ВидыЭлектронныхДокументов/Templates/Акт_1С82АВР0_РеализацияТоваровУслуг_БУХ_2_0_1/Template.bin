@@ -66,6 +66,18 @@
 			<appearance/>
 			<inputParameters/>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_A4</dataPath>
+			<field>Скидка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>TAB1 a4</v8:content>
+				</v8:item>
+			</title>
+			<appearance/>
+			<inputParameters/>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	РеализацияТоваровУслугУслуги.Содержание КАК НоменклатураНаименование,
@@ -75,7 +87,8 @@
 	РеализацияТоваровУслугУслуги.Номенклатура.БазоваяЕдиницаИзмерения.Наименование КАК ЕдИзмНаименование,
 	РеализацияТоваровУслугУслуги.Номенклатура.БазоваяЕдиницаИзмерения.Код КАК ЕдИзмКод,
 	РеализацияТоваровУслугУслуги.Ссылка.Организация КАК Организация,
-	РеализацияТоваровУслугУслуги.Ссылка.Дата КАК Дата
+	РеализацияТоваровУслугУслуги.Ссылка.Дата КАК Дата,
+	СУММА(РеализацияТоваровУслугУслуги.СуммаСкидки) КАК Скидка
 ИЗ
 	Документ.РеализацияТоваровУслуг.Услуги КАК РеализацияТоваровУслугУслуги
 ГДЕ
@@ -152,6 +165,9 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>TAB1_NOMENKLATURA_NUMHBUMEASURE</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_A4</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:dataParameters>

@@ -4248,6 +4248,36 @@
                   <representationInContextMenu>Auto</representationInContextMenu>
                 </items>
                 <items xsi:type="form:Button">
+                  <name>СписокДокументовПечатьПредварительныйПросмотр</name>
+                  <id>2956</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <extendedTooltip>
+                    <name>СписокДокументовПечатьПредварительныйПросмотрРасширеннаяПодсказка</name>
+                    <id>2957</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <commandName>Form.Command.ПечатьПредварительныйПросмотр</commandName>
+                  <representation>Auto</representation>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <placementArea>UserCmds</placementArea>
+                  <representationInContextMenu>Auto</representationInContextMenu>
+                </items>
+                <items xsi:type="form:Button">
                   <name>СписокДокументовСформироватьНовыйВариантПодписатьИОтправитьЭлектронныеДокументы</name>
                   <id>1532</id>
                   <visible>true</visible>
@@ -12962,6 +12992,36 @@
                     </extInfo>
                   </extendedTooltip>
                   <commandName>Form.Command.ЭкспортДокументовДокументыНДС</commandName>
+                  <representation>Auto</representation>
+                  <autoMaxWidth>true</autoMaxWidth>
+                  <autoMaxHeight>true</autoMaxHeight>
+                  <placementArea>UserCmds</placementArea>
+                  <representationInContextMenu>Auto</representationInContextMenu>
+                </items>
+                <items xsi:type="form:Button">
+                  <name>СписокДокументовПечатьПредварительныйПросмотрДокументы1С</name>
+                  <id>2954</id>
+                  <visible>true</visible>
+                  <enabled>true</enabled>
+                  <userVisible>
+                    <common>true</common>
+                  </userVisible>
+                  <extendedTooltip>
+                    <name>СписокДокументовПечатьПредварительныйПросмотрДокументы1СРасширеннаяПодсказка</name>
+                    <id>2955</id>
+                    <visible>true</visible>
+                    <enabled>true</enabled>
+                    <userVisible>
+                      <common>true</common>
+                    </userVisible>
+                    <type>Label</type>
+                    <autoMaxWidth>true</autoMaxWidth>
+                    <autoMaxHeight>true</autoMaxHeight>
+                    <extInfo xsi:type="form:LabelDecorationExtInfo">
+                      <horizontalAlign>Left</horizontalAlign>
+                    </extInfo>
+                  </extendedTooltip>
+                  <commandName>Form.Command.ПечатьПредварительныйПросмотрДокументы1С</commandName>
                   <representation>Auto</representation>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
@@ -28318,6 +28378,70 @@
       </handler>
     </action>
     <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ПечатьПредварительныйПросмотр</name>
+    <title>
+      <key>ru</key>
+      <value>Печать ...</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Друк ...</value>
+    </title>
+    <id>69</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Печать (предварительный просмотр)</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Друк (попередній перегляд)</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.Print</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ПечатьПредварительныйПросмотр</name>
+      </handler>
+    </action>
+    <currentRowUse>Auto</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ПечатьПредварительныйПросмотрДокументы1С</name>
+    <title>
+      <key>ru</key>
+      <value>Печать ...</value>
+    </title>
+    <title>
+      <key>uk</key>
+      <value>Друк ...</value>
+    </title>
+    <id>70</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Печать (предварительный просмотр)</value>
+    </toolTip>
+    <toolTip>
+      <key>uk</key>
+      <value>Друк (попередній перегляд)</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.Print</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ПечатьПредварительныйПросмотрДокументы1С</name>
+      </handler>
+    </action>
+    <currentRowUse>Auto</currentRowUse>
   </formCommands>
   <commandInterface>
     <navigationPanel/>

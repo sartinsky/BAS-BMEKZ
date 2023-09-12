@@ -486,6 +486,26 @@
 			<dataPath>DOG_NAME</dataPath>
 			<field>ДоговорНаименование</field>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>OSN_TIP</dataPath>
+			<field>ОснованиеТип</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>OSN TIP</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ZNYGKA</dataPath>
+			<field>Скидка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ZNYGKA</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	РеализацияТоваровУслуг.Дата КАК Дата,
@@ -603,7 +623,15 @@
 		КОГДА РеализацияТоваровУслуг.Сделка.Ссылка ЕСТЬ NULL
 			ТОГДА ""
 		ИНАЧЕ РеализацияТоваровУслуг.Сделка.Номер
-	КОНЕЦ КАК ОснованиеНомер
+	КОНЕЦ КАК ОснованиеНомер,
+	ВЫБОР
+		КОГДА РеализацияТоваровУслуг.Сделка ССЫЛКА Документ.ЗаказПокупателя
+			ТОГДА "Замовлення покупця"
+		КОГДА РеализацияТоваровУслуг.Сделка ССЫЛКА Документ.СчетНаОплатуПокупателю
+			ТОГДА "Рахунок на оплату покупцю"
+		ИНАЧЕ ""
+	КОНЕЦ КАК ОснованиеТип,
+	ЕСТЬNULL(ДанныеПоТабличнойЧасти.Скидка, 0) КАК Скидка
 ИЗ
 	Документ.РеализацияТоваровУслуг КАК РеализацияТоваровУслуг
 		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
@@ -636,7 +664,8 @@
 					КОГДА РеализацияТоваровУслугУслуги.Ссылка.СуммаВключаетНДС
 						ТОГДА РеализацияТоваровУслугУслуги.Сумма - РеализацияТоваровУслугУслуги.СуммаНДС
 					ИНАЧЕ РеализацияТоваровУслугУслуги.Сумма
-				КОНЕЦ) КАК СуммаБезНДС
+				КОНЕЦ) КАК СуммаБезНДС,
+			СУММА(РеализацияТоваровУслугУслуги.Цена * РеализацияТоваровУслугУслуги.Количество - РеализацияТоваровУслугУслуги.Сумма) КАК Скидка
 		ИЗ
 			Документ.РеализацияТоваровУслуг.Услуги КАК РеализацияТоваровУслугУслуги
 		ГДЕ
@@ -968,6 +997,12 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>DOG_NAME</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>OSN_TIP</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ZNYGKA</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:dataParameters>

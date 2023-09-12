@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="dea88594-f76f-44b9-8f16-1cf78e436eb1">
+  <producedTypes>
+    <objectType typeId="49324568-b46c-499f-a117-36f354d471ba" valueTypeId="bfd8dec3-d6a7-4e72-b98c-33edfb2a12b8"/>
+    <managerType typeId="2bd1899c-cf30-4952-9b9d-e8eb4ec61f21" valueTypeId="b7bea8dc-e253-48a5-b639-58a0db8e3a17"/>
+  </producedTypes>
+  <name>скEDI_JSON</name>
+  <synonym>
+    <key>ru</key>
+    <value>JSON</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>JSON</value>
+  </synonym>
+  <comment>JavaScript Object Notation парсер и сериализатор</comment>
+  <defaultForm>DataProcessor.скEDI_JSON.Form.ФормаУправляемая</defaultForm>
+  <auxiliaryForm>DataProcessor.скEDI_JSON.Form.ФормаОбычная</auxiliaryForm>
+  <attributes uuid="3202205d-c6ff-4f07-99f8-404ed226bd50">
+    <name>Входящий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Входящий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="96b3b326-6fa2-4a91-95bb-3a9350e8ef2c">
+    <name>ВходящийРежим</name>
+    <synonym>
+      <key>ru</key>
+      <value>Входящий режим</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="2c075ada-6f4f-4208-8fcd-4a0b07ee4316">
+    <name>Исходящий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Исходящий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="b6a1d51a-aa64-4ecb-a220-8d35ce83cdc3">
+    <name>ИсходящийРежим</name>
+    <synonym>
+      <key>ru</key>
+      <value>Исходящий режим</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="1b520e2e-dfb3-4339-91bc-c5cae11d1500">
+    <name>НекорректныеДанные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Некорректные данные</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="06fcbb61-4da3-4c19-a079-b9130cd15e27">
+    <name>ФормаУправляемая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма управляемая</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="00bea869-a217-4f32-bfc3-710d1d44a404">
+    <name>ФормаОбычная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма обычная</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="372cbafc-2b26-4d8a-a85c-05a1124a29a7">
+    <name>Макет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+</mdclass:DataProcessor>

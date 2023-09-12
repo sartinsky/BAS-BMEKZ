@@ -1,0 +1,746 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номер</dataPath>
+			<field>Номер</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаУчетаПоПартнерам</dataPath>
+			<field>АналитикаУчетаПоПартнерам</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказКлиента</dataPath>
+			<field>ЗаказКлиента</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказПоставщику</dataPath>
+			<field>ЗаказПоставщику</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютаНаименование</dataPath>
+			<field>ВалютаНаименование</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_KT_ORG</dataPath>
+			<field>СуммаНашДолг</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_DT_ORG</dataPath>
+			<field>СуммаДолгПартнера</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>TAB1_DOC_ORG</dataPath>
+			<field>ДокументПредставление</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	АналитикаУчетаПоПартнерам.КлючАналитики КАК КлючАналитики
+ПОМЕСТИТЬ ОтборПоАналитике
+ИЗ
+	РегистрСведений.АналитикаУчетаПоПартнерам КАК АналитикаУчетаПоПартнерам
+ГДЕ
+	АналитикаУчетаПоПартнерам.Организация = &amp;Ссылка_Организация
+	И АналитикаУчетаПоПартнерам.Контрагент = &amp;Ссылка_Контрагент
+	И (АналитикаУчетаПоПартнерам.Партнер = &amp;Ссылка_Партнер
+			ИЛИ &amp;НеИспользоватьОтборПоПартнеру)
+	И (АналитикаУчетаПоПартнерам.Договор = &amp;Ссылка_Договор
+			ИЛИ &amp;НеИспользоватьОтборПоДоговору)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДанныеДокумента.Ссылка КАК Документ,
+	ДанныеДокумента.НомерВходящегоДокумента КАК Номер,
+	ДанныеДокумента.ДатаВходящегоДокумента КАК ДатаВходящегоДокумента,
+	ДанныеДокумента.Дата КАК Дата,
+	ИСТИНА КАК ЭтоВходящийДокумент
+ПОМЕСТИТЬ ДокументыИнтеркампани
+ИЗ
+	Документ.ОтчетПоКомиссииМеждуОрганизациями КАК ДанныеДокумента
+ГДЕ
+	ДанныеДокумента.Проведен
+	И ДанныеДокумента.Организация = &amp;Ссылка_Организация
+	И ДанныеДокумента.Контрагент = &amp;Ссылка_Контрагент
+	И ДанныеДокумента.Дата МЕЖДУ &amp;Ссылка_НачалоПериода И &amp;Ссылка_КонецПериода
+	И ДанныеДокумента.РасчетыЧерезОтдельногоКонтрагента
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ДанныеДокумента.Ссылка,
+	ДанныеДокумента.Номер,
+	ДанныеДокумента.ДатаВходящегоДокумента,
+	ДанныеДокумента.Дата,
+	ЛОЖЬ
+ИЗ
+	Документ.ОтчетПоКомиссииМеждуОрганизациями КАК ДанныеДокумента
+ГДЕ
+	ДанныеДокумента.Проведен
+	И ДанныеДокумента.Комиссионер = &amp;Ссылка_Организация
+	И ДанныеДокумента.Контрагент = &amp;Ссылка_Контрагент
+	И ДанныеДокумента.Дата МЕЖДУ &amp;Ссылка_НачалоПериода И &amp;Ссылка_КонецПериода
+	И ДанныеДокумента.РасчетыЧерезОтдельногоКонтрагента
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ДанныеДокумента.Ссылка,
+	ДанныеДокумента.НомерВходящегоДокумента,
+	ДанныеДокумента.ДатаВходящегоДокумента,
+	ДанныеДокумента.Дата,
+	ИСТИНА
+ИЗ
+	Документ.ПередачаТоваровМеждуОрганизациями КАК ДанныеДокумента
+ГДЕ
+	ДанныеДокумента.Проведен
+	И ДанныеДокумента.ОрганизацияПолучатель = &amp;Ссылка_Организация
+	И ДанныеДокумента.Контрагент = &amp;Ссылка_Контрагент
+	И ДанныеДокумента.Дата МЕЖДУ &amp;Ссылка_НачалоПериода И &amp;Ссылка_КонецПериода
+	И ДанныеДокумента.РасчетыЧерезОтдельногоКонтрагента
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ДанныеДокумента.Ссылка,
+	ДанныеДокумента.Номер,
+	ДанныеДокумента.ДатаВходящегоДокумента,
+	ДанныеДокумента.Дата,
+	ЛОЖЬ
+ИЗ
+	Документ.ПередачаТоваровМеждуОрганизациями КАК ДанныеДокумента
+ГДЕ
+	ДанныеДокумента.Проведен
+	И ДанныеДокумента.Организация = &amp;Ссылка_Организация
+	И ДанныеДокумента.Контрагент = &amp;Ссылка_Контрагент
+	И ДанныеДокумента.Дата МЕЖДУ &amp;Ссылка_НачалоПериода И &amp;Ссылка_КонецПериода
+	И ДанныеДокумента.РасчетыЧерезОтдельногоКонтрагента
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	РасчетыСКлиентамиОстаткиИОбороты.Период КАК Период,
+	ЕСТЬNULL(РасчетыСКлиентамиОстаткиИОбороты.Регистратор, НЕОПРЕДЕЛЕНО) КАК Документ,
+	ВЫБОР
+		КОГДА ДокументыИнтеркампани.Документ ЕСТЬ NULL
+			ТОГДА ВЫБОР
+					КОГДА РасчетыСКлиентамиОстаткиИОбороты.Регистратор ССЫЛКА Документ.СписаниеБезналичныхДенежныхСредств
+						ТОГДА РасчетыСКлиентамиОстаткиИОбороты.Регистратор.Номер
+					ИНАЧЕ ЕСТЬNULL(РасчетыСКлиентамиОстаткиИОбороты.Регистратор.НомерВходящегоДокумента, РасчетыСКлиентамиОстаткиИОбороты.Регистратор.Номер)
+				КОНЕЦ
+		ИНАЧЕ ДокументыИнтеркампани.Номер
+	КОНЕЦ КАК Номер,
+	ВЫБОР
+		КОГДА ДокументыИнтеркампани.Документ ЕСТЬ NULL
+			ТОГДА РасчетыСКлиентамиОстаткиИОбороты.Регистратор.Дата
+		ИНАЧЕ ДокументыИнтеркампани.Дата
+	КОНЕЦ КАК Дата,
+	ВЫБОР
+		КОГДА ДокументыИнтеркампани.Документ ЕСТЬ NULL
+			ТОГДА ЕСТЬNULL(РасчетыСКлиентамиОстаткиИОбороты.Регистратор.ДатаВходящегоДокумента, РасчетыСКлиентамиОстаткиИОбороты.Регистратор.Дата)
+		ИНАЧЕ ДокументыИнтеркампани.Дата
+	КОНЕЦ КАК ДатаВходящегоДокумента,
+	РегистрАналитикаУчетаПоПартнерам.Партнер КАК Партнер,
+	РегистрАналитикаУчетаПоПартнерам.Договор КАК Договор,
+	РасчетыСКлиентамиОстаткиИОбороты.Валюта КАК Валюта,
+	ВЫБОР
+		КОГДА ДокументыИнтеркампани.Документ ЕСТЬ NULL
+			ТОГДА ВЫБОР
+					КОГДА РасчетыСКлиентамиОстаткиИОбороты.Регистратор.НомерВходящегоДокумента ЕСТЬ NULL
+							ИЛИ РасчетыСКлиентамиОстаткиИОбороты.Регистратор ССЫЛКА Документ.СписаниеБезналичныхДенежныхСредств
+						ТОГДА ЛОЖЬ
+					ИНАЧЕ ИСТИНА
+				КОНЕЦ
+		ИНАЧЕ ДокументыИнтеркампани.ЭтоВходящийДокумент
+	КОНЕЦ КАК ЭтоВходящийДокумент,
+	ВЫБОР
+		КОГДА РасчетыСКлиентамиОстаткиИОбороты.СуммаРасход &lt; 0
+			ТОГДА -РасчетыСКлиентамиОстаткиИОбороты.СуммаРасход
+		КОГДА РасчетыСКлиентамиОстаткиИОбороты.СуммаПриход &gt; 0
+			ТОГДА РасчетыСКлиентамиОстаткиИОбороты.СуммаПриход
+	КОНЕЦ КАК СуммаДолгПартнера,
+	ВЫБОР
+		КОГДА РасчетыСКлиентамиОстаткиИОбороты.СуммаПриход &lt; 0
+			ТОГДА -РасчетыСКлиентамиОстаткиИОбороты.СуммаПриход
+		КОГДА РасчетыСКлиентамиОстаткиИОбороты.СуммаРасход &gt; 0
+			ТОГДА РасчетыСКлиентамиОстаткиИОбороты.СуммаРасход
+	КОНЕЦ КАК СуммаНашДолг,
+	РасчетыСКлиентамиОстаткиИОбороты.СуммаНачальныйОстаток КАК СуммаНачальныйОстаток,
+	РасчетыСКлиентамиОстаткиИОбороты.СуммаКонечныйОстаток КАК СуммаКонечныйОстаток,
+	ЕСТЬNULL(РеализацияТоваровУслугРеглУчет.Организация, НЕОПРЕДЕЛЕНО) КАК ОрганизацияРеглУчет
+ПОМЕСТИТЬ ВТ_ДетальныеРасчеты
+ИЗ
+	РегистрНакопления.РасчетыСКлиентами.ОстаткиИОбороты(
+			&amp;Ссылка_НачалоПериода,
+			&amp;КонецДняКонецПериода,
+			Регистратор,
+			ДвиженияИГраницыПериода,
+			АналитикаУчетаПоПартнерам В
+				(ВЫБРАТЬ
+					ОтборПоАналитике.КлючАналитики
+				ИЗ
+					ОтборПоАналитике)) КАК РасчетыСКлиентамиОстаткиИОбороты
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.АналитикаУчетаПоПартнерам КАК РегистрАналитикаУчетаПоПартнерам
+		ПО РасчетыСКлиентамиОстаткиИОбороты.АналитикаУчетаПоПартнерам = РегистрАналитикаУчетаПоПартнерам.КлючАналитики
+		ЛЕВОЕ СОЕДИНЕНИЕ ДокументыИнтеркампани КАК ДокументыИнтеркампани
+		ПО РасчетыСКлиентамиОстаткиИОбороты.Регистратор = ДокументыИнтеркампани.Документ
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.РеализацияТоваровУслуг КАК РеализацияТоваровУслугРеглУчет
+		ПО РасчетыСКлиентамиОстаткиИОбороты.Регистратор = РеализацияТоваровУслугРеглУчет.Ссылка
+			И (РеализацияТоваровУслугРеглУчет.ХозяйственнаяОперация = ЗНАЧЕНИЕ(Перечисление.ХозяйственныеОперации.РеализацияКлиентуРеглУчет))
+			И (&amp;Ссылка_Организация = ЗНАЧЕНИЕ(Справочник.Организации.УправленческаяОрганизация))
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	РасчетыСПоставщикамиОстаткиИОбороты.Период,
+	ЕСТЬNULL(РасчетыСПоставщикамиОстаткиИОбороты.Регистратор, НЕОПРЕДЕЛЕНО),
+	ВЫБОР
+		КОГДА ДокументыИнтеркампани.Документ ЕСТЬ NULL
+			ТОГДА ВЫБОР
+					КОГДА РасчетыСПоставщикамиОстаткиИОбороты.Регистратор ССЫЛКА Документ.СписаниеБезналичныхДенежныхСредств
+						ТОГДА РасчетыСПоставщикамиОстаткиИОбороты.Регистратор.Номер
+					ИНАЧЕ ЕСТЬNULL(РасчетыСПоставщикамиОстаткиИОбороты.Регистратор.НомерВходящегоДокумента, РасчетыСПоставщикамиОстаткиИОбороты.Регистратор.Номер)
+				КОНЕЦ
+		ИНАЧЕ ДокументыИнтеркампани.Номер
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА ДокументыИнтеркампани.Документ ЕСТЬ NULL
+			ТОГДА РасчетыСПоставщикамиОстаткиИОбороты.Регистратор.Дата
+		ИНАЧЕ ДокументыИнтеркампани.Дата
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА ДокументыИнтеркампани.Документ ЕСТЬ NULL
+			ТОГДА ВЫБОР
+					КОГДА РасчетыСПоставщикамиОстаткиИОбороты.Регистратор ССЫЛКА Документ.СписаниеБезналичныхДенежныхСредств
+						ТОГДА РасчетыСПоставщикамиОстаткиИОбороты.Регистратор.Дата
+					ИНАЧЕ ЕСТЬNULL(РасчетыСПоставщикамиОстаткиИОбороты.Регистратор.ДатаВходящегоДокумента, РасчетыСПоставщикамиОстаткиИОбороты.Регистратор.Дата)
+				КОНЕЦ
+		ИНАЧЕ ДокументыИнтеркампани.Дата
+	КОНЕЦ,
+	РегистрАналитикаУчетаПоПартнерам.Партнер,
+	РегистрАналитикаУчетаПоПартнерам.Договор,
+	РасчетыСПоставщикамиОстаткиИОбороты.Валюта,
+	ВЫБОР
+		КОГДА ДокументыИнтеркампани.Документ ЕСТЬ NULL
+			ТОГДА ВЫБОР
+					КОГДА РасчетыСПоставщикамиОстаткиИОбороты.Регистратор.НомерВходящегоДокумента ЕСТЬ NULL
+							ИЛИ РасчетыСПоставщикамиОстаткиИОбороты.Регистратор ССЫЛКА Документ.СписаниеБезналичныхДенежныхСредств
+						ТОГДА ЛОЖЬ
+					ИНАЧЕ ИСТИНА
+				КОНЕЦ
+		ИНАЧЕ ДокументыИнтеркампани.ЭтоВходящийДокумент
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА РасчетыСПоставщикамиОстаткиИОбороты.СуммаРасход &lt; 0
+			ТОГДА -РасчетыСПоставщикамиОстаткиИОбороты.СуммаРасход
+		КОГДА РасчетыСПоставщикамиОстаткиИОбороты.СуммаПриход &gt; 0
+			ТОГДА РасчетыСПоставщикамиОстаткиИОбороты.СуммаПриход
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА РасчетыСПоставщикамиОстаткиИОбороты.СуммаПриход &lt; 0
+			ТОГДА -РасчетыСПоставщикамиОстаткиИОбороты.СуммаПриход
+		КОГДА РасчетыСПоставщикамиОстаткиИОбороты.СуммаРасход &gt; 0
+			ТОГДА РасчетыСПоставщикамиОстаткиИОбороты.СуммаРасход
+	КОНЕЦ,
+	РасчетыСПоставщикамиОстаткиИОбороты.СуммаНачальныйОстаток,
+	РасчетыСПоставщикамиОстаткиИОбороты.СуммаКонечныйОстаток,
+	ЕСТЬNULL(ПоступлениеТоваровУслугРеглУчет.Организация, НЕОПРЕДЕЛЕНО)
+ИЗ
+	РегистрНакопления.РасчетыСПоставщиками.ОстаткиИОбороты(
+			&amp;Ссылка_НачалоПериода,
+			&amp;КонецДняКонецПериода,
+			Регистратор,
+			ДвиженияИГраницыПериода,
+			АналитикаУчетаПоПартнерам В
+				(ВЫБРАТЬ
+					ОтборПоАналитике.КлючАналитики
+				ИЗ
+					ОтборПоАналитике)) КАК РасчетыСПоставщикамиОстаткиИОбороты
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.АналитикаУчетаПоПартнерам КАК РегистрАналитикаУчетаПоПартнерам
+		ПО РасчетыСПоставщикамиОстаткиИОбороты.АналитикаУчетаПоПартнерам = РегистрАналитикаУчетаПоПартнерам.КлючАналитики
+		ЛЕВОЕ СОЕДИНЕНИЕ ДокументыИнтеркампани КАК ДокументыИнтеркампани
+		ПО РасчетыСПоставщикамиОстаткиИОбороты.Регистратор = ДокументыИнтеркампани.Документ
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ПоступлениеТоваровУслуг КАК ПоступлениеТоваровУслугРеглУчет
+		ПО РасчетыСПоставщикамиОстаткиИОбороты.Регистратор = ПоступлениеТоваровУслугРеглУчет.Ссылка
+			И (ПоступлениеТоваровУслугРеглУчет.ХозяйственнаяОперация = ЗНАЧЕНИЕ(Перечисление.ХозяйственныеОперации.ЗакупкаУПоставщикаРеглУчет))
+			И (&amp;Ссылка_Организация = ЗНАЧЕНИЕ(Справочник.Организации.УправленческаяОрганизация))
+ГДЕ
+	(РасчетыСПоставщикамиОстаткиИОбороты.Регистратор ЕСТЬ NULL
+			ИЛИ НЕ РасчетыСПоставщикамиОстаткиИОбороты.Регистратор ССЫЛКА Документ.АвансовыйОтчет)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ДанныеДокумента.Дата,
+	ДанныеДокумента.Ссылка,
+	Расшифровка.НомерВходящегоДокумента,
+	Расшифровка.ДатаВходящегоДокумента,
+	Расшифровка.ДатаВходящегоДокумента,
+	Расшифровка.Поставщик,
+	ВЫБОР
+		КОГДА Расшифровка.Заказ ССЫЛКА Справочник.ДоговорыКонтрагентов
+			ТОГДА Расшифровка.Заказ
+		ИНАЧЕ Расшифровка.Заказ.Договор
+	КОНЕЦ,
+	Расшифровка.ВалютаВзаиморасчетов,
+	ИСТИНА,
+	Расшифровка.СуммаВзаиморасчетов,
+	0,
+	0,
+	0,
+	НЕОПРЕДЕЛЕНО
+ИЗ
+	Документ.АвансовыйОтчет КАК ДанныеДокумента
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.АвансовыйОтчет.ОплатаПоставщикам КАК Расшифровка
+		ПО (Расшифровка.Ссылка = ДанныеДокумента.Ссылка)
+ГДЕ
+	ДанныеДокумента.Проведен
+	И ДанныеДокумента.Организация = &amp;Ссылка_Организация
+	И Расшифровка.Контрагент = &amp;Ссылка_Контрагент
+	И ДанныеДокумента.Дата МЕЖДУ &amp;Ссылка_НачалоПериода И &amp;Ссылка_КонецПериода
+	И (&amp;НеИспользоватьОтборПоДоговору
+			ИЛИ ВЫБОР
+				КОГДА Расшифровка.Заказ ССЫЛКА Справочник.ДоговорыКонтрагентов
+					ТОГДА Расшифровка.Заказ
+				ИНАЧЕ Расшифровка.Заказ.Договор
+			КОНЕЦ = &amp;Ссылка_Договор)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СУММА(ЕСТЬNULL(ВТ_ДетальныеРасчеты.СуммаДолгПартнера, 0)) КАК СуммаДолгПартнера,
+	СУММА(ЕСТЬNULL(ВТ_ДетальныеРасчеты.СуммаНашДолг, 0)) КАК СуммаНашДолг,
+	ВТ_ДетальныеРасчеты.Период КАК Период,
+	ВТ_ДетальныеРасчеты.Номер,
+	ВТ_ДетальныеРасчеты.Дата,
+	ПРЕДСТАВЛЕНИЕССЫЛКИ(ВТ_ДетальныеРасчеты.Документ) КАК ДокументПредставление,
+	ВТ_ДетальныеРасчеты.Валюта.Наименование КАК ВалютаНаименование
+ИЗ
+	ВТ_ДетальныеРасчеты КАК ВТ_ДетальныеРасчеты
+ГДЕ
+	ВТ_ДетальныеРасчеты.Документ &lt;&gt; НЕОПРЕДЕЛЕНО
+	И ВТ_ДетальныеРасчеты.Валюта = &amp;Валюта
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ДетальныеРасчеты.Период,
+	ВТ_ДетальныеРасчеты.Номер,
+	ВТ_ДетальныеРасчеты.Дата,
+	ВТ_ДетальныеРасчеты.Валюта.Наименование,
+	ВТ_ДетальныеРасчеты.Документ
+
+УПОРЯДОЧИТЬ ПО
+	Период</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>DOCDATE</dataPath>
+		<expression>Выбор Когда Дата = ДАТАВРЕМЯ(1, 1, 1) Тогда "" Иначе Формат(Дата, "ДФ = 'dd.MM.yyyy'") Конец</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>DOCDATE</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>DOG_DATE</dataPath>
+		<expression>Выбор Когда ДоговорДата = ДАТАВРЕМЯ(1, 1, 1) Тогда "" Иначе Формат(ДоговорДата, "ДФ = 'dd.MM.yyyy'") Конец</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>uk</v8:lang>
+				<v8:content>DOG DATE</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>TAB1_DATA_ORG</dataPath>
+		<expression>Выбор Когда Период = ДАТАВРЕМЯ(1, 1, 1) Тогда "" Иначе Формат(Период, "ДФ = 'dd.MM.yyyy'") Конец</expression>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>TAB1_DOC_SIDE</dataPath>
+		<expression>TAB1_DOC_ORG</expression>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>TAB1_DATA_SIDE</dataPath>
+		<expression>Выбор Когда Период = ДАТАВРЕМЯ(1, 1, 1) Тогда "" Иначе Формат(Период, "ДФ = 'dd.MM.yyyy'") Конец</expression>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>TAB1_DT_SIDE</dataPath>
+		<expression>TAB1_KT_ORG</expression>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>TAB1_KT_SIDE</dataPath>
+		<expression>TAB1_DT_ORG</expression>
+	</calculatedField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецДняКонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец дня конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>КОНЕЦПЕРИОДА(&amp;Ссылка_КонецПериода, "День")</expression>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Ссылка_Договор</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ссылка договор</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ПоступлениеТоваровУслуг</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ТаможеннаяДекларацияИмпорт</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ОтчетКомиссионера</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ЗаказПоставщику</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ВозвратТоваровПоставщику</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ЗаказПереработчику</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ОтчетПоКомиссииМеждуОрганизациями</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ОтчетКомитенту</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ВыбытиеДенежныхДокументов</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ПоступлениеДенежныхДокументов</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ОтчетПоКомиссииМеждуОрганизациямиОСписании</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ОтчетКомитентуОСписании</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ОтчетПереработчика</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ПоступлениеУслугПрочихАктивов</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ПередачаТоваровМеждуОрганизациями</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ВыкупВозвратнойТарыУПоставщика</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Ссылка_КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ссылка конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Ссылка_Контрагент</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ссылка контрагент</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Контрагенты</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Ссылка_НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ссылка начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Ссылка_Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ссылка организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Ссылка_Партнер</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ссылка партнер</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Партнеры</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Партнеры.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>НеИспользоватьОтборПоПартнеру</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Не использовать отбор по партнеру</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Ссылка_Партнер = ЗНАЧЕНИЕ(Справочник.Партнеры.ПустаяСсылка)</expression>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>НеИспользоватьОтборПоДоговору</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Не использовать отбор по договору</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Ссылка_Договор = ЗНАЧЕНИЕ(Справочник.ДоговорыКонтрагентов.ПустаяСсылка)</expression>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Валюта</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Валюта</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Валюты</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Валюты.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<expression>Справочники.Валюты.НайтиПоКоду("980")</expression>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Ссылка</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ссылка</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.СверкаВзаиморасчетов</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Документ.СверкаВзаиморасчетов.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>DOCDATE</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_DATA_ORG</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_DATA_SIDE</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_DOC_SIDE</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_DT_SIDE</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_KT_SIDE</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_DOC_ORG</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_DT_ORG</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>TAB1_KT_ORG</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВалютаНаименование</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>КонецДняКонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Ссылка_Договор</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Ссылка_КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Ссылка_Контрагент</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Ссылка_НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Ссылка_Организация</dcscor:parameter>
+					<dcscor:value xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d6p1:CatalogRef.Организации">00000000-0000-0000-0000-000000000000</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Ссылка_Партнер</dcscor:parameter>
+					<dcscor:value xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d6p1:CatalogRef.Партнеры">00000000-0000-0000-0000-000000000000</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>НеИспользоватьОтборПоПартнеру</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>НеИспользоватьОтборПоДоговору</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Валюта</dcscor:parameter>
+					<dcscor:value xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d6p1:CatalogRef.Валюты">5983b6f4-8b98-11e6-9c0f-14dda9e161b8</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Ссылка</dcscor:parameter>
+					<dcscor:value xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d6p1:DocumentRef.СверкаВзаиморасчетов">00000000-0000-0000-0000-000000000000</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Период</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>TAB1_DOC_ORG</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
